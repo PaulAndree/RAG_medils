@@ -6,4 +6,4 @@ scrape_configs:
 
     static_configs:
       - targets:
-          - "app:8008"
+          - "api:8000"

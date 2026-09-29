@@ -10,24 +10,27 @@ from sql_rag.semantic_search import (
 
 class RAGState(TypedDict):
     question: str
+    limit: int
     documents: list
 
 
 def retrieve(state: RAGState):
+    results = search_documents(
+        question=state["question"],
+        limit=state["limit"],
+    )
 
-    question = state["question"]
-    results = search_documents(question)
-    documents = []
+    documents = [
+        {
+            "id": point.payload["document_id"],
+            "title": point.payload["title"],
+            "content": point.payload.get("content"),
+            "score": point.score,
+        }
+        for point in results
+    ]
 
-    for result in results:
-
-        document_id = result.payload["document_id"]
-        document = get_document(document_id)
-        documents.append(document)
-
-    return {
-        "documents": documents
-    }
+    return {"documents": documents}
 
 builder = StateGraph(RAGState)
 
