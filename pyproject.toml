@@ -9,5 +9,6 @@ dependencies = [
     "prometheus-client",
     "psycopg[binary]>=3.3.6",
     "qdrant-client[fastembed]>=1.19.1",
+    "requests>=2.34.2",
     "uvicorn[standard]>=0.54.0",
 ]

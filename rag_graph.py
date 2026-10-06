@@ -23,6 +23,7 @@ def retrieve(state: RAGState):
     documents = [
         {
             "id": point.payload["document_id"],
+            "doc_name": point.payload["doc_name"],
             "title": point.payload["title"],
             "content": point.payload.get("content"),
             "score": point.score,

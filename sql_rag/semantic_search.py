@@ -41,7 +41,7 @@ def get_document(document_id):
 
     cursor = conn.execute(
         """
-        SELECT id, title, content
+        SELECT id, doc_name, title, content
         FROM documents
         WHERE id = %s
         """,

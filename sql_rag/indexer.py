@@ -59,7 +59,7 @@ def index_documents(collection_name, documents):
     vectors = []
     payloads = []
 
-    for document_id, title, content in documents:
+    for document_id, doc_name, title, content in documents:
         ids.append(document_id)
         vectors.append(
             models.Document(
@@ -70,6 +70,7 @@ def index_documents(collection_name, documents):
         payloads.append(
             {
                 "document_id": document_id,
+                "doc_name": doc_name,
                 "title": title,
                 "content": content,
             }

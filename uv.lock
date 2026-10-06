@@ -614,6 +614,7 @@ dependencies = [
     { name = "prometheus-client" },
     { name = "psycopg", extra = ["binary"] },
     { name = "qdrant-client", extra = ["fastembed"] },
+    { name = "requests" },
     { name = "uvicorn", extra = ["standard"] },
 ]
 
@@ -624,6 +625,7 @@ requires-dist = [
     { name = "prometheus-client" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.3.6" },
     { name = "qdrant-client", extras = ["fastembed"], specifier = ">=1.19.1" },
+    { name = "requests", specifier = ">=2.34.2" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.54.0" },
 ]
 
