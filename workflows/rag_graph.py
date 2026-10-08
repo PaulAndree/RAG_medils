@@ -2,7 +2,7 @@ from typing import TypedDict
 
 from langgraph.graph import StateGraph, START, END
 
-from sql_rag.semantic_search import (
+from retrieval.semantic_search import (
     search_documents,
     get_document,
 )

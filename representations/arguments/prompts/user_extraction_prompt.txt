@@ -1,0 +1,6 @@
+Extract the major claims and their associated evidence from the following scientific text.
+
+Section ID: {section_id}
+
+Text:
+{chunk_text}

@@ -24,7 +24,7 @@ services:
     command:
       - python
       - -m
-      - sql_rag.indexer
+      - stores.indexer
     environment:
       QDRANT_URL: http://qdrant:6333
       QDRANT_ALIAS: documents_embeddings_live

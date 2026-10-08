@@ -6,7 +6,7 @@ pdf_path = Path(
     "/home/peyzaguirre/learning_1/data/pdf_docs/example.pdf"
 )
 outputh_path = Path(
-    "/home/peyzaguirre/learning_1/data/pdf_parsed_output/"
+    "/home/peyzaguirre/learning_1/data/passages_chunk/"
 )
 
 with pdf_path.open("rb") as pdf_file:

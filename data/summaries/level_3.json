@@ -1,0 +1,77 @@
+{
+  "level": 3,
+  "nodes": [
+    {
+      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L3_C0",
+      "text": "**Semantic-Cluster Summary**  \n\n**Cluster 1: Multi-Agent AI Risk Escalation and Governance Challenges**  \n- Emergent risks (miscoordination, conflict, collusion) in multi-agent AI differ from single-agent settings.  \n- Risk amplification occurs rapidly at machine speeds, leading to systemic failures before human intervention.  \n- Methods from power grids, traffic engineering, financial markets, and air traffic control are evaluated for risk management.  \n\n**Cluster 2: Governance Mechanisms and Observables**  \n- CAIF/Brookings IASEAI memo outlines five governance actions (Evaluate, Identify, Monitor, Report, Incentivise), with \"Monitor\" as the only mature regulation (financial markets).  \n- Stability is achieved by monitoring collective behavior (not individual agents), assessed against metrics like behavioral clustering, divergences, feedback loops, and behavioral drift.  \n- Candidate observables are proposed for risk escalation assessment and threshold design.  \n\n**Cluster 3: Threshold Design Principles and Project Outputs**  \n- Focus on defining measurable quantities, trigger levels, responsible entities, and contextual variations by agent archetype.  \n- Primary outputs: working paper/preprint for technical/policy audiences, short-form version for tech-policy venues.  \n\n**Cluster 4: Incentive Misalignment in AI Audits**  \n- Third-party safety audits face litigation risks from AI incidents, with AI-generated audit records treated as ordinary business records, incentivizing labs to restrict audit access.  \n- Human auditor communications may be protected, but AI-generated records risk chilling auditors’ ability to document rigorous evaluations.  \n\n**Cluster 5: Legal and Policy Challenges**  \n- Courts’ treatment of machine-generated audit records is unclear, with existing law potentially inadequate.  \n- Project with AVERI aims to analyze legal frameworks and propose solutions inspired by safety-critical industries.  \n- Focus on protecting third-party auditors’ work product while ensuring audit integrity.  \n\n**Cluster 6: Role of AI in Auditing and Litigation**  \n- Auditors increasingly rely on AI tools to evaluate complex models.  \n- AI-generated records could become critical evidence in litigation, complicating trust between labs and auditors.  \n- Uncertainty about legal protections for audit records may hinder transparency and safety.  \n\n**Cluster 7: Digital Sovereignty and AI Access Regimes**  \n- Divergent state interpretations of \"digital sovereignty\" (e.g., reducing dependency on external AI stacks, domestic AI development) and unclear convergence/divergence by region or economic position.  \n- Sovereignty and AI access are linked through competing interpretations (e.g., sovereignty as governance of AI, access as dependency or substitute).  \n- Ambiguity in sovereignty definitions; AI development remains concentrated, leaving most states dependent on external terms.  \n\n**Cluster 8: Risk Modelling for AI-Enabled Political Manipulation**  \n- Objective: Quantify real-world harm from AI-enabled political manipulation (e.g., elections) via metrics (e.g., \"empowered voters\"), causal pathways, and risk comparisons.  \n- Outputs: Research pre-prints/policy reports; integration into CeSIA’s risk models for EU AI Office evaluations.  \n- Uncertainty: Subjectivity in translating evaluation results to real-world risk thresholds; reliance on benchmark results and attack pathway estimates.  \n\n**Cluster 9: Project Scope and Governance Challenges**  \n- Entities: EU General-Purpose AI Code of Practice (systemic risks, Commitments 2–4); CeSIA (risk model visualization).  \n- Experimental conditions: Adaptation of safety-critical industry risk models (e.g., aviation/nuclear) to AI-enabled cyber threats and political manipulation.  \n- Limitations: Current risk assessments depend on subjective judgment; need for explicit, standardized models.  \n\n**Cluster 10: Uncertainty in AI Development Trajectories**  \n- Key issues: High uncertainty in advanced AI’s future (e.g., divergent expert timelines, abrupt emergence of dangerous capabilities).  \n- Governance gaps: Lack of cross-domain strategies for deep uncertainty in AI, despite prior success in other high-risk areas (e.g., defense, finance).  \n- Project aim: Develop adaptable governance frameworks to address AI risks without relying on precise predictions.  \n\n**Cluster 11: Early Warning and Response in High-Consequence Settings**  \n- Focus: Governance responses to early warning signs of AI cascades in critical sectors (e.g., finance, healthcare).  \n- Challenges: Alerts may lack clarity on root causes, propagation extent, or mitigation actions; need to define roles/responsibilities for monitoring and intervention.  \n- Methodology: Reviews technical research and incident-response practices from adjacent domains (e.g., cybersecurity, industrial control systems).  \n- Limitations: Reliance on indirect evidence from agentic deployments; no universal thresholds or new detection tools proposed.  \n\n**Cluster 12: Cross-Cluster Limitations and Uncertainties**  \n- Shared limitations: Ambiguity in sovereignty definitions; subjective risk assessments; lack of standardized models for AI governance.  \n- Uncertainties: Unpredictability of AI risks; unresolved challenges in translating evaluation results to real-world thresholds; no explicit limitations in source content, but emphasis on unresolved governance gaps.  \n\n**Cluster 13: Project Objectives and Focus**  \n- Identify gaps between \"capability target\" (required AI crisis response capabilities) and \"current capability\" (government-held capabilities).  \n- Builds on prior AI Governance Taskforce work, using Delphi studies with SMEs to validate capability ratings.  \n- Emphasizes harmonizing AI governance frameworks for states and international actors, with a focus on AI middle-powers.  \n\n**Cluster 14: Methodology and Deliverables**  \n- Two-round Delphi study to validate and expand prior manual capability ratings (based on scenario/capability libraries).  \n- Core deliverables: Minimum viable product (MVP) with Delphi results, policy briefs (short for UN/international fora, longer for researchers/practitioners).  \n- Parallel work includes automating capability ratings, analyzing prior cohort data, and exploring post-MVP extensions (e.g., communicating capability gaps).  \n\n**Cluster 15: Required Expertise and Skills**  \n- Government/policy experience, high-stakes planning frameworks, institutional/capability infrastructure knowledge.  \n- Delphi study design, structured data analysis, LLM application for judgment tasks, and audit/assessment instrument design.  \n- Technical expertise in safety-critical governance (e.g., algorithmic collusion, systemic-risk modeling) and international institutional design.  \n\n**Cluster 16: Key Entities and Relationships**  \n- Entities: Advanced AI risks, government capabilities, SMEs, Delphi study, scenario/capability libraries, MVP, policy briefs.  \n- Relationships: Delphi study validates prior ratings; automation complements manual methods; policy briefs distill framework findings.  \n\n**Cluster 17: Limitations and Uncertainties**  \n- Unquantified capability gap magnitude and feasibility of closing it.  \n- Scalability of automated rating methods uncertain.  \n- Ambiguity in framework applicability, methodological validation, and scope of post-MVP work.  \n\n**Cluster 18: International and Standards Context**  \n- Focus on digital sovereignty, strategic autonomy, and benefit-sharing in AI.  \n- Engagement with international AI governance bodies and standards.  \n- Policy outputs target states, international institutions, researchers, and practitioners.",
+      "level": 3,
+      "scope": "document_cluster",
+      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "catalog_id": "default_catalog",
+      "source_node_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C0",
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C1",
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C4"
+      ],
+      "source_chunk_ids": [
+        "13faf0ea-9bcf-5577-9bef-c360154461eb",
+        "1a770df1-f693-57ad-80d6-c2b85db2d612",
+        "1b8857b5-a263-56ce-99c7-d2386cf59a06",
+        "36dda56d-b1c7-58d6-a244-fda4ac2113b5",
+        "4e9bba75-1483-5c9c-9d25-29a46b0116f4",
+        "6edac29f-427c-5c93-b4c7-27caec649894",
+        "75743dfc-ac3a-5867-bfa8-5fed79bbdd35",
+        "891726a4-4971-563a-a01a-1efa34d74295",
+        "8f495e7c-dfa9-5721-bd5f-c10bc965b15f",
+        "94662d1c-b07a-5f22-b14d-97c692936cc6",
+        "9623bbaa-22f9-542c-ba82-3bed95095b61",
+        "988505c0-35b4-564a-a993-88ca9e4268a2",
+        "9ae187ab-13b0-5d08-ac65-d59187a99e66",
+        "9f2e2321-2a6a-5be2-b9c4-7a482ccd597a",
+        "ac4c1407-e00a-5bd1-a07a-56a080020964",
+        "cc515454-2058-5d65-b978-dfeeb55dc46f",
+        "d5d2b1e5-ba16-56c0-a0ef-193319d6a7c8",
+        "f7694889-0102-5428-97dc-70066fb3cf10"
+      ],
+      "source_document_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+      ]
+    },
+    {
+      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L3_C1",
+      "text": "**Semantic-Cluster Summary**  \n\n1. **Team Composition & Skill Requirements**  \n   - **Essential Skills (4-person team):** AI evaluation, safety thresholds, multi-agent systems, technical AI/ML understanding, financial-market regulation, AI governance, analytical/synthesis skills, structured communication, multidisciplinary teamwork.  \n   - **Desirable Skills:** Post-deployment AI monitoring, cybersecurity, safety engineering, agent systems, incident analysis, high-consequence sectors (e.g., finance, healthcare).  \n   - **Note:** Complementary strengths prioritized; no software engineering, statistics, or ML training required.  \n\n2. **AI Evaluation & Risk Assessment**  \n   - **Essential:** AI evaluation, auditing, testing, safety-critical domain evaluations (e.g., red-teaming), quantitative risk assessment (Bayesian networks, Monte Carlo methods, ABMs), probabilistic modeling.  \n   - **Desirable:** Hands-on AI evaluation experience; familiarity with frontier AI safety frameworks (e.g., EU AI Act).  \n\n3. **Legal, Policy, & Systems Thinking**  \n   - **Essential:** Legal/policy analysis (statutes, regulations, court opinions); systems thinking (incentive design, causal loop modeling).  \n   - **Desirable:** Legal education/litigation experience; policy drafting; behavioral economics (principal-agent problems).  \n\n4. **Communication & Synthesis**  \n   - **Essential:** Structured written communication for multidisciplinary audiences (research, policy, technical, legal).  \n   - **Desirable:** Translating technical/legal material into policy-relevant insights.  \n\n5. **Geopolitical & Conceptual Context**  \n   - **Essential:** Understanding of advanced AI’s geopolitical/economic context (supply chain, development concentration); conceptual/definitional work (typology building/testing).  \n\n6. **Primary Source & Strategic Analysis**  \n   - **Essential:** Working with primary sources (national strategies, multilateral communiqués); familiarity with political persuasion, disinformation, or influence operations (research, OSINT, trust & safety).  \n\n7. **Cross-Domain Expertise**  \n   - **Desirable:** Background in political science, social/cognitive psychology, communication studies, computational social science (agent-based modeling); risk management in safety-critical industries (aviation, nuclear, cybersecurity).  \n\n8. **Evaluation Protocols**  \n   - Reference to WHO Joint External Evaluation (JEE) and evidence-scoring protocols (no further details provided).  \n\n9. **Project & Application Requirements**  \n   - Projects require balanced, multi-disciplinary teams combining technical/non-technical expertise, actionable policy recommendations, and clear communication.  \n   - Application process: Applicants must list a first-choice project; only first-choice projects are assessed.  \n   - Outputs must be accessible, actionable, and tailored to policymakers/decision-makers.  \n\n10. **Project Participants & Affiliations**  \n    - José Villalobos (FLI), Sean McGregor (AVERI), Markov Grey (CeSIA), Marta Bieńkiewicz (CAIF), Heather Frase (VerAItech), Isaak Mengesha (Oxford/Apollo Research).  \n    - FLI designated as \"Multilateral Governance Lead\" under Arcadia Impact AI Governance Taskforce (led by Josephine Schwab).  \n\n11. **Organizational Structure & Leadership**  \n    - **CeSIA:** Markov Grey affiliated; Technical Governance Research Team led by Yohan Mathew.  \n    - **AVERI:** Co-founded by Sean McGregor (Lead Research Engineer); research team led by Michael Celone.  \n    - **VerAItech:** Heather Frase (CEO); research team led by Omar Beno.  \n    - **CAIF:** Led by Michael Harré (focus: AI agent failure propagation detection).  \n    - **VerAItech:** Omar Beno leads project on response to AI warnings in workflows.  \n\n12. **Research Process & Taskforce Context**  \n    - Arcadia Impact AI Governance Taskforce manages research project options for Autumn 2026 cohort.  \n    - Research Team Leaders (RTLs) collaborate with expert partners to define project scopes pre-cohort.  \n    - Contact: Ben R Smith (Taskforce Lead); direct contact with RTLs/expert partners discouraged.  \n\n13. **Uncertainty/Incomplete Information**  \n    - Project numbers (e.g., \"1, 2\") lack clarification.  \n    - No explicit details provided about FLI, AVERI, CAIF, VerAItech beyond affiliations.  \n    - No stated overlaps between projects (CAIF, VerAItech) and institutions (AVERI, VerAItech, Oxford/Apollo).  \n\n14. **Academic & Research Roles**  \n    - **Isaak Mengesha:** Postdoctoral Research Associate (Oxford Martin Programme, INET); affiliated with Apollo Research (incoming Governance Staff).  \n    - **Research Leadership:** Charlie Collins oversees Isaak Mengesha’s team.",
+      "level": 3,
+      "scope": "document_cluster",
+      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "catalog_id": "default_catalog",
+      "source_node_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C2",
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C3"
+      ],
+      "source_chunk_ids": [
+        "0205c651-7b9f-5769-9cab-92566b2e0ea3",
+        "1b54a372-554b-5502-9517-ed38735c5c3f",
+        "238433a0-720f-54fe-82cd-94f6b2d6a2b4",
+        "2b9ce354-69cf-5b3c-a5d3-8baf06d3b9e2",
+        "2e6140a0-64bf-5bfb-8244-9665d7e034cb",
+        "35b8bc79-67d0-54aa-863d-721d6126fb16",
+        "39349f40-5741-5de6-a0f4-f13ffaaa039c",
+        "4e8dc1ed-4264-5f00-aa21-124ed470bc20",
+        "551f3baf-1230-5928-b797-548fee00f3f2",
+        "6ca85eef-0ecd-5197-a581-f0cdc5326076",
+        "76200c18-2fd7-58e4-9be3-0478e101cabe",
+        "7858072a-d091-5f9c-8e6e-79452d8604a6",
+        "8aa24561-5345-532b-9c22-4992fe62771e",
+        "97d03bb5-b937-58bc-8b7e-8e65b29a6f04",
+        "a3d897fe-49de-5532-b94b-60fd0528d56c",
+        "b1df45ec-3460-5a8f-8ff8-d072e229dfb0",
+        "daaa50cb-3693-51e7-bbe1-4ed7b95233a5",
+        "e7e86491-7bea-5729-b150-96333d7cf9b8",
+        "ff99ab42-97cb-57e4-b9fa-c696e44efd9a"
+      ],
+      "source_document_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+      ]
+    }
+  ]
+}

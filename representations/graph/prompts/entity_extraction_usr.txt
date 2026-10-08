@@ -1,0 +1,16 @@
+Extract scientifically meaningful entities and relationships from the following document chunk according to the system instructions.
+
+Document ID:
+{document_id}
+
+Chunk ID:
+{chunk_id}
+
+Document title:
+{document_title}
+
+Text:
+
+{chunk_text}
+
+Return only the JSON extraction.

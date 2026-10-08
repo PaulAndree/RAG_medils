@@ -5,8 +5,8 @@ from uuid import UUID
 
 import psycopg
 from psycopg.types.json import Jsonb
-
-from sql_rag.ingestion import PreparedDocument, build_chunk_id
+from psycopg.rows import dict_row
+from stores.ingestion import PreparedDocument, build_chunk_id
 
 def get_connection():
     return psycopg.connect(
@@ -286,8 +286,6 @@ def persist_document(
                 id,
                 json_hash,
                 pdf_hash,
-                json_path,
-                pdf_path,
                 version
             FROM documents
             WHERE source_key = %s
@@ -352,8 +350,31 @@ def find_stale_source_keys(
     )
 
 
-def get_documents():
-    raise RuntimeError(
-        "The legacy document reader is disabled. "
-        "The Qdrant indexer will be updated in Milestone 2."
-    )
+def get_indexable_chunks() -> list[dict]:
+    """ This returns one row per chunk. Each chunk will become one Qdrant point. """
+    
+    query = """
+        SELECT
+            c.id::text AS chunk_id,
+            d.id::text AS document_id,
+            d.name AS doc_name,
+            d.title AS document_title,
+            c.title AS chunk_title,
+            c.content,
+            c.chunk_index,
+            c.token_count,
+            c.page_start,
+            c.page_end,
+            d.language,
+            d.version AS document_version
+        FROM chunks AS c
+        JOIN documents AS d
+          ON d.id = c.document_id
+         AND d.version = c.document_version
+        ORDER BY d.source_key, c.chunk_index
+    """
+
+    with get_connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cursor:
+            cursor.execute(query)
+            return cursor.fetchall()

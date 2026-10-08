@@ -5,7 +5,7 @@ from uuid import uuid4
 from qdrant_client import QdrantClient, models
 
 from metrics import INDEX_DURATION
-from sql_rag.database_postgres import get_documents
+from stores.database_postgres import get_indexable_chunks
 
 QDRANT_URL = os.getenv("QDRANT_URL", "http://qdrant:6333")
 
@@ -54,25 +54,46 @@ def create_collection(collection_name):
 
 
 @INDEX_DURATION.time()
-def index_documents(collection_name, documents):
+def index_chunks(collection_name, chunks):
     ids = []
     vectors = []
     payloads = []
 
-    for document_id, doc_name, title, content in documents:
-        ids.append(document_id)
+    for chunk in chunks:
+        embedding_text = chunk["content"]
+
+        if chunk["chunk_title"]:
+            embedding_text = (
+                f"{chunk['chunk_title']}\n\n"
+                f"{chunk['content']}"
+            )
+
+        ids.append(chunk["chunk_id"])
+
         vectors.append(
             models.Document(
-                text=content,
+                text=embedding_text,
                 model=MODEL,
             )
         )
+
         payloads.append(
             {
-                "document_id": document_id,
-                "doc_name": doc_name,
-                "title": title,
-                "content": content,
+                "chunk_id": chunk["chunk_id"],
+                "document_id": chunk["document_id"],
+                "doc_name": chunk["doc_name"],
+                "document_title": chunk["document_title"],
+                "title": (
+                    chunk["chunk_title"]
+                    or chunk["document_title"]
+                ),
+                "content": chunk["content"],
+                "chunk_index": chunk["chunk_index"],
+                "token_count": chunk["token_count"],
+                "page_start": chunk["page_start"],
+                "page_end": chunk["page_end"],
+                "language": chunk["language"],
+                "document_version": chunk["document_version"],
             }
         )
 
@@ -84,26 +105,32 @@ def index_documents(collection_name, documents):
         wait=True,
     )
 
-    print(f"Indexed {len(documents)} documents into {collection_name}")
+    print(
+        f"Indexed {len(chunks)} chunks into {collection_name}"
+    )
 
 
-def validate_collection(collection_name, documents):
+def validate_collection(collection_name, chunks):
     indexed_count = client.count(
         collection_name=collection_name,
         exact=True,
     ).count
 
-    if indexed_count != len(documents):
+    if indexed_count != len(chunks):
         raise RuntimeError(
             f"Validation failed for {collection_name}: "
-            f"expected {len(documents)} points, found {indexed_count}"
+            f"expected {len(chunks)} points, "
+            f"found {indexed_count}"
         )
 
-    smoke_query = documents[0][2]
     smoke_result = client.query_points(
         collection_name=collection_name,
-        query=models.Document(text=smoke_query, model=MODEL),
+        query=models.Document(
+            text=chunks[0]["content"],
+            model=MODEL,
+        ),
         limit=1,
+        with_payload=True,
     )
 
     if not smoke_result.points:
@@ -147,11 +174,11 @@ def activate_collection(collection_name, previous_collection):
 
 
 def main():
-    documents = get_documents()
+    chunks = get_indexable_chunks()
 
-    if not documents:
+    if not chunks:
         raise RuntimeError(
-            "No PostgreSQL documents were found; "
+            "No PostgreSQL chunks were found; "
             "refusing to activate an empty index"
         )
 
@@ -159,14 +186,18 @@ def main():
     previous_collection = get_alias_target()
 
     print(f"Building new collection {new_collection}")
+
     if previous_collection is not None:
         print(f"Current alias target is {previous_collection}")
 
     try:
         create_collection(new_collection)
-        index_documents(new_collection, documents)
-        validate_collection(new_collection, documents)
-        activate_collection(new_collection, previous_collection)
+        index_chunks(new_collection, chunks)
+        validate_collection(new_collection, chunks)
+        activate_collection(
+            new_collection,
+            previous_collection,
+        )
     except Exception:
         print(
             f"Indexing failed; collection {new_collection} "

@@ -8,8 +8,15 @@ COPY pyproject.toml uv.lock ./
 
 RUN uv sync --frozen --no-dev --no-install-project
 
-COPY api.py rag_graph.py metrics.py ./
-COPY sql_rag/ ./sql_rag/
+COPY api.py metrics.py ./
+COPY ingestion/ ./ingestion/
+COPY representations/ ./representations/
+COPY stores/ ./stores/
+COPY retrieval/ ./retrieval/
+COPY routing/ ./routing/
+COPY generation/ ./generation/
+COPY evaluation/ ./evaluation/
+COPY workflows/ ./workflows/
 
 ENV PATH="/app/.venv/bin:$PATH"
 

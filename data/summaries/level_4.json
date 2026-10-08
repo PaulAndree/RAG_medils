@@ -1,0 +1,59 @@
+{
+  "level": 4,
+  "nodes": [
+    {
+      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L4_document",
+      "text": "**Document-Level Summary**  \n\n**Governance and Risk Management in Multi-Agent AI**  \n- Emergent risks (miscoordination, conflict, collusion) in multi-agent AI systems differ from single-agent settings, with risks escalating rapidly at machine speeds. Methods from power grids, traffic engineering, financial markets, and air traffic control are evaluated for risk mitigation. Governance mechanisms prioritize monitoring collective agent behavior (e.g., clustering, feedback loops) over individual agents, with \"Monitor\" as the only mature regulation (financial markets). Candidate observables are proposed for risk escalation assessment and threshold design.  \n\n**Legal, Policy, and Institutional Challenges**  \n- Legal uncertainties surround AI-generated audit records, with unclear court treatment and potential inadequacy of existing laws. Projects with AVERI aim to analyze legal frameworks and propose solutions inspired by safety-critical industries. Digital sovereignty interpretations vary by region, linking sovereignty to AI governance and access regimes.  \n\n**Risk Modelling and Project Outputs**  \n- Projects focus on quantifying AI-enabled political manipulation risks, integrating findings into CeSIA’s risk models for EU AI Office evaluations. Outputs include working papers, policy briefs, and pre-prints. Experimental adaptations of safety-critical industry risk models (e.g., aviation/nuclear) target AI-enabled cyber threats and political manipulation.  \n\n**Uncertainty and Limitations**  \n- High uncertainty in advanced AI development trajectories and governance gaps persist, despite prior success in managing risks in defense/finance. Current risk assessments rely on subjective judgments, with a need for standardized models. Early warning systems for AI cascades in critical sectors face challenges in defining roles, thresholds, and mitigation actions.  \n\n**Project Scope and Methodology**  \n- Projects aim to identify gaps between AI crisis response capabilities and current government capacities, using Delphi studies with subject matter experts (SMEs). Deliverables include a minimum viable product (MVP) with Delphi results, policy briefs, and automated capability rating tools. Cross-domain expertise in AI evaluation, legal/policy analysis, systems thinking, and geopolitical context is required.  \n\n**Team Composition and Expertise**  \n- A 4-person team requires skills in AI evaluation, safety thresholds, multi-agent systems, financial-market regulation, legal/policy analysis, and structured communication. Desirable expertise includes cybersecurity, incident analysis, and high-consequence sector experience. Projects involve collaboration between entities like FLI, AVERI, CeSIA, CAIF, and VerAItech, with leadership roles defined across organizations.  \n\n**International and Standards Context**  \n- Focus on digital sovereignty, strategic autonomy, and benefit-sharing in AI governance. Policy outputs target states, international institutions, researchers, and practitioners, with engagement in global AI governance frameworks.  \n\n**Limitations and Uncertainties**  \n- Ambiguity in sovereignty definitions, subjective risk assessments, and unquantified capability gaps persist. Scalability of automated rating methods and framework applicability remain uncertain. No universal thresholds or detection tools for AI risks are proposed.",
+      "level": 4,
+      "scope": "document",
+      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "catalog_id": "default_catalog",
+      "source_node_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L3_C0",
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L3_C1"
+      ],
+      "source_chunk_ids": [
+        "0205c651-7b9f-5769-9cab-92566b2e0ea3",
+        "13faf0ea-9bcf-5577-9bef-c360154461eb",
+        "1a770df1-f693-57ad-80d6-c2b85db2d612",
+        "1b54a372-554b-5502-9517-ed38735c5c3f",
+        "1b8857b5-a263-56ce-99c7-d2386cf59a06",
+        "238433a0-720f-54fe-82cd-94f6b2d6a2b4",
+        "2b9ce354-69cf-5b3c-a5d3-8baf06d3b9e2",
+        "2e6140a0-64bf-5bfb-8244-9665d7e034cb",
+        "35b8bc79-67d0-54aa-863d-721d6126fb16",
+        "36dda56d-b1c7-58d6-a244-fda4ac2113b5",
+        "39349f40-5741-5de6-a0f4-f13ffaaa039c",
+        "4e8dc1ed-4264-5f00-aa21-124ed470bc20",
+        "4e9bba75-1483-5c9c-9d25-29a46b0116f4",
+        "551f3baf-1230-5928-b797-548fee00f3f2",
+        "6ca85eef-0ecd-5197-a581-f0cdc5326076",
+        "6edac29f-427c-5c93-b4c7-27caec649894",
+        "75743dfc-ac3a-5867-bfa8-5fed79bbdd35",
+        "76200c18-2fd7-58e4-9be3-0478e101cabe",
+        "7858072a-d091-5f9c-8e6e-79452d8604a6",
+        "891726a4-4971-563a-a01a-1efa34d74295",
+        "8aa24561-5345-532b-9c22-4992fe62771e",
+        "8f495e7c-dfa9-5721-bd5f-c10bc965b15f",
+        "94662d1c-b07a-5f22-b14d-97c692936cc6",
+        "9623bbaa-22f9-542c-ba82-3bed95095b61",
+        "97d03bb5-b937-58bc-8b7e-8e65b29a6f04",
+        "988505c0-35b4-564a-a993-88ca9e4268a2",
+        "9ae187ab-13b0-5d08-ac65-d59187a99e66",
+        "9f2e2321-2a6a-5be2-b9c4-7a482ccd597a",
+        "a3d897fe-49de-5532-b94b-60fd0528d56c",
+        "ac4c1407-e00a-5bd1-a07a-56a080020964",
+        "b1df45ec-3460-5a8f-8ff8-d072e229dfb0",
+        "cc515454-2058-5d65-b978-dfeeb55dc46f",
+        "d5d2b1e5-ba16-56c0-a0ef-193319d6a7c8",
+        "daaa50cb-3693-51e7-bbe1-4ed7b95233a5",
+        "e7e86491-7bea-5729-b150-96333d7cf9b8",
+        "f7694889-0102-5428-97dc-70066fb3cf10",
+        "ff99ab42-97cb-57e4-b9fa-c696e44efd9a"
+      ],
+      "source_document_ids": [
+        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from prometheus_client import make_asgi_app
 
-from rag_graph import graph
+from workflows.rag_graph import graph
 
 app = FastAPI(title="RAG API")
 app.mount("/metrics", make_asgi_app())

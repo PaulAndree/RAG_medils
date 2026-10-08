@@ -1,3 +1,5 @@
+""" script that should prepare and check the structure to be ingested into the DB"""
+
 import json
 from dataclasses import dataclass
 from pathlib import Path

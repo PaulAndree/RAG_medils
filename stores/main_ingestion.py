@@ -1,13 +1,14 @@
+""" Main script that should be run to ingest documents and chunk JSON files into PostgreSQL. """
 import argparse
 import sys
 from pathlib import Path
 
-from sql_rag.database_postgres import (
+from stores.database_postgres import (
     create_tables,
     find_stale_source_keys,
     persist_document,
 )
-from sql_rag.ingestion import (
+from stores.ingestion import (
     FolderScanError,
     derive_source_identity,
     discover_chunk_files,
