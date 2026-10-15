@@ -1,0 +1,39 @@
+You normalize one document's extracted knowledge-graph vocabulary.
+
+Normalize entity names, entity types, and relation names consistently across
+the document. Do not extract new facts and do not use external knowledge.
+
+Entity rules:
+- Prefer concise, standard names supported by the supplied variants.
+- Map clear aliases, spelling variants, and acronym/full-name variants to one
+  canonical name only when the equivalence is unambiguous.
+- Do not merge different people, organizations, projects, methods, or concepts
+  merely because their names are similar.
+- Entity types must be reusable UPPER_SNAKE_CASE labels.
+
+Relation rules:
+- Map semantically equivalent variants to one concise UPPER_SNAKE_CASE name.
+- Preserve direction and meaning. Do not collapse distinct relations into a
+  vague label.
+- Prefer a supplied, already-clear relation name when possible.
+
+Return every supplied mapping_id exactly once. Do not add mapping IDs and do
+not omit any. Return only JSON with this exact structure:
+
+{
+  "entities": [
+    {
+      "mapping_id": "ENTITY_1",
+      "canonical_name": "Canonical name",
+      "canonical_type": "ENTITY_TYPE"
+    }
+  ],
+  "relations": [
+    {
+      "mapping_id": "RELATION_1",
+      "canonical_relation": "RELATION_TYPE"
+    }
+  ]
+}
+
+When an input array is empty, return the corresponding empty array.

@@ -8,6 +8,7 @@ dependencies = [
     "langchain-ollama>=1.0.0",
     "langchain-text-splitters>=1.1.3",
     "langgraph",
+    "neo4j>=6.4.0",
     "numpy>=2.0.0",
     "prometheus-client",
     "psycopg[binary]>=3.3.6",

@@ -2,131 +2,188 @@
   "level": 2,
   "nodes": [
     {
-      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C0",
-      "text": "**Source Node: 536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C12**  \n- **Cluster 1: Multi-Agent AI Risk Escalation and Governance Challenges**  \n  - Multi-agent AI safety thresholds differ from single-agent settings due to emergent risks (miscoordination, conflict, collusion) during agent interactions.  \n  - Risk amplification occurs rapidly at machine speeds, leading to systemic failures before human intervention.  \n  - Methods from power grids, traffic engineering, financial markets, and air traffic control are evaluated for multi-agent AI risk management.  \n\n- **Cluster 2: Governance Mechanisms and Observables**  \n  - CAIF/Brookings IASEAI memo outlines five governance actions (Evaluate, Identify, Monitor, Report, Incentivise), with \"Monitor\" as the only mature regulation (financial markets).  \n  - Stability is achieved by monitoring collective behavior (not individual agents), assessed against metrics that escalate with risk (e.g., behavioral clustering, divergences, feedback loops, behavioral drift).  \n  - Candidate observables are proposed for risk escalation assessment and threshold design.  \n\n- **Cluster 3: Threshold Design Principles and Project Outputs**  \n  - Focus on defining measurable quantities, trigger levels, responsible entities, and contextual variations by agent archetype.  \n  - Primary outputs: working paper/preprint for technical/policy audiences, short-form version for tech-policy venues.  \n\n**Source Node: 536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C14**  \n- **Cluster 1: Incentive Misalignment in AI Audits**  \n  - Third-party safety audits require deep access to frontier labs but face litigation risks from AI incidents, making AI-generated audit records potential evidence in product liability cases.  \n  - Human auditor communications may be protected, but AI-generated records are likely treated as ordinary business records, creating incentives for labs to restrict audit access.  \n  - This misalignment risks chilling auditors’ ability to document rigorous evaluations.  \n\n- **Cluster 2: Legal and Policy Challenges**  \n  - Courts’ treatment of machine-generated audit records is unclear, with existing law potentially inadequate.  \n  - Project with AVERI aims to analyze legal frameworks and propose solutions inspired by safety-critical industries.  \n  - Focus on protecting third-party auditors’ work product while ensuring audit integrity.  \n\n- **Cluster 3: Role of AI in Auditing and Litigation**  \n  - Auditors increasingly rely on AI tools to evaluate complex models.  \n  - AI-generated records could become critical evidence in litigation, complicating trust between labs and auditors.  \n  - Uncertainty about legal protections for audit records may hinder transparency and safety.",
+      "node_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L2_C0",
+      "text": "**Semantic-Cluster Summary**  \n\n1. **Experimental Setup and Datasets**  \n   - **Single-hop QA**: Uses SQuAD v1.1, Natural Questions, and TriviaQA (answers directly in documents).  \n   - **Multi-hop QA**: Uses MuSiQue, HotpotQA, and 2WikiMultiHopQA (requires sequential reasoning across documents).  \n   - **Unified Setting**: Combines single- and multi-hop datasets to simulate varying query complexity.  \n   - **Retrieval Corpus**: Wikipedia (Karpukhin et al., 2020) for single-hop; Trivedi et al. (2023) preprocessed corpus for multi-hop.  \n\n2. **Training Strategies and Performance**  \n   - **Efficiency**: Combining data with and without document reliance outperforms methods relying solely on inductive bias.  \n   - **Silver Data Limitations**: High classification accuracy with silver data (from correct predictions) does not ensure optimal QA performance due to missing complexity labels for incorrect queries.  \n   - **Complexity Labels**: Incorporating dataset bias (single-hop vs. multi-hop) improves classifier accuracy for multi-hop queries.  \n   - **Classifier Training**: T5-Large model trained on 400 annotated queries (from 6 datasets), using model-predicted outcomes and dataset splits; 100 iterations, AdamW optimizer (3e-5 learning rate).  \n\n3. **Methodological Considerations**  \n   - **Query Complexity**: Existing datasets do not explicitly indicate retrieval requirements.  \n   - **Generalization**: Silver data’s lack of complexity labels reduces generalization for complex queries.  \n   - **Uncertainty**: Automatic labeling strategies are presented as examples, with potential for alternative instantiations.  \n\n4. **Adaptive-RAG Framework**  \n   - **Dynamic Strategy Selection**: Uses a classifier (T5-Large) to predict query complexity and adapt between single-step, iterative, and non-retrieval methods.  \n   - **Efficiency-Accuracy Balance**: Avoids unnecessary computational overhead for simple queries while addressing complex multi-step queries.  \n   - **Classifier Inputs**: Relies on model-predicted outcomes and dataset biases (e.g., single-hop vs. multi-hop splits) without human labeling.  \n\n5. **Limitations and Conflicts**  \n   - **Inductive Bias**: Specifics of dataset splits and classifier training data sampling are not fully detailed.  \n   - **Performance Metrics**: No explicit mention of comparisons between models or performance metrics.  \n   - **Existing Methods**: Prior adaptive strategies (e.g., entity frequency-based, output-driven) are critiqued as either oversimplified or overly complex.  \n   - **Adaptive-RAG Novelty**: Positioned as a novel alternative to fixed-operation approaches (e.g., Qi et al. 2021) and dynamic model-based retrieval (Asai et al. 2024) but lacks direct comparison data.  \n\n**Key Entities/Relationships**  \n- **Classifier** → Predicts query complexity → Triggers strategy selection (single-step, iterative, non-retrieval).  \n- **Query Complexity** → Influences method choice (simple vs. complex).  \n- **Limitations** → Existing methods fail to balance simplicity and complexity handling; classifier training relies on automated data collection.",
       "level": 2,
       "scope": "document_cluster",
-      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "document_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2",
       "catalog_id": "default_catalog",
       "source_node_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C12",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C14"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C2",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C4",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C6",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C12"
       ],
       "source_chunk_ids": [
-        "75743dfc-ac3a-5867-bfa8-5fed79bbdd35",
-        "8f495e7c-dfa9-5721-bd5f-c10bc965b15f",
-        "988505c0-35b4-564a-a993-88ca9e4268a2",
-        "ac4c1407-e00a-5bd1-a07a-56a080020964"
+        "181d48a8-8385-5d27-b02a-acc9c90a0734",
+        "1d5d1b57-f0b8-5b3b-b251-85e99ea20487",
+        "4b812be2-0644-558b-a9f9-e90536cb2ee2",
+        "7b459102-e64d-54c4-9303-2cebe45641c7",
+        "9906ac90-19cf-5be1-a8a2-9cd956df4d5f",
+        "bad39760-1d0e-5a88-9dcb-17e1610d41c2",
+        "dbb72be0-019e-5456-a787-1e7ab2ec5878"
       ],
       "source_document_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2"
       ]
     },
     {
-      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C1",
-      "text": "**Semantic-Cluster Summary**  \n\n**Cluster 1: Digital Sovereignty and AI Access Regimes**  \n- **Key Issues**: Divergent state interpretations of \"digital sovereignty\" (e.g., reducing dependency on external AI stacks, domestic AI development) and unclear convergence/divergence by region or economic position.  \n- **Relationships**: Sovereignty and AI access are linked through competing interpretations (e.g., sovereignty as governance of AI, access as dependency or substitute).  \n- **Limitations**: Ambiguity in sovereignty definitions; AI development remains concentrated, leaving most states dependent on external terms.  \n\n**Cluster 2: Risk Modelling for AI-Enabled Political Manipulation**  \n- **Objective**: Quantify real-world harm from AI-enabled political manipulation (e.g., elections) via metrics (e.g., \"empowered voters\"), causal pathways, and risk comparisons.  \n- **Outputs**: Research pre-prints/policy reports; integration into CeSIA’s risk models for EU AI Office evaluations.  \n- **Uncertainty**: Subjectivity in translating evaluation results to real-world risk thresholds; reliance on benchmark results and attack pathway estimates.  \n\n**Cluster 3: Project Scope and Governance Challenges**  \n- **Entities**: EU General-Purpose AI Code of Practice (systemic risks, Commitments 2–4); CeSIA (risk model visualization).  \n- **Experimental Conditions**: Adaptation of safety-critical industry risk models (e.g., aviation/nuclear) to AI-enabled cyber threats and political manipulation.  \n- **Limitations**: Current risk assessments depend on subjective judgment; need for explicit, standardized models.  \n\n**Cluster 4: Uncertainty in AI Development Trajectories**  \n- **Key Issues**: High uncertainty in advanced AI’s future (e.g., divergent expert timelines, abrupt emergence of dangerous capabilities).  \n- **Governance Gaps**: Lack of cross-domain strategies for deep uncertainty in AI, despite prior success in other high-risk areas (e.g., defense, finance).  \n- **Project Aim**: Develop adaptable governance frameworks to address AI risks without relying on precise predictions.  \n\n**Cluster 5: Early Warning and Response in High-Consequence Settings**  \n- **Focus**: Governance responses to early warning signs of AI cascades in critical sectors (e.g., finance, healthcare).  \n- **Challenges**: Alerts may lack clarity on root causes, propagation extent, or mitigation actions; need to define roles/responsibilities for monitoring and intervention.  \n- **Methodology**: Reviews technical research and incident-response practices from adjacent domains (e.g., cybersecurity, industrial control systems).  \n- **Limitations**: Reliance on indirect evidence from agentic deployments; no universal thresholds or new detection tools proposed.  \n\n**Cluster 6: Cross-Cluster Limitations and Uncertainties**  \n- **Shared Limitations**: Ambiguity in sovereignty definitions; subjective risk assessments; lack of standardized models for AI governance.  \n- **Uncertainties**: Unpredictability of AI risks; unresolved challenges in translating evaluation results to real-world thresholds; no explicit limitations in source content, but emphasis on unresolved governance gaps.",
+      "node_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L2_C1",
+      "text": "**Cluster 1: Complexity Classification System**  \n- **Classifier Design**: Three complexity labels ($\\mathbf{\\hat{A}}'$, $\\mathbf{\\hat{B}}'$, $\\mathbf{\\hat{C}}'$) based on required LLM inputs ($\\mathsf{LLM}(\\pmb{q})$, $\\mathsf{LLM}(\\pmb{q}, \\pmb{d})$, $\\mathsf{LLM}(\\pmb{q}, \\pmb{d}, \\pmb{c})^2$). A smaller language model (Classifier) predicts query complexity $o = \\mathsf{Classifier}(\\pmb{q})$.  \n- **Dataset Construction**: Automatic labeling using retrieval-augmented LLM strategies; queries are assigned $\\mathbf{\\hat{A}}'$, $\\mathbf{\\hat{B}}'$, or $\\mathbf{\\hat{C}}'$ based on success of non-retrieval, single-step, or multi-step approaches. Unlabeled queries receive $\\mathbf{\\epsilon}^6\\mathbf{B}'$ or $\\mathbf{\\epsilon}^6\\mathbf{C}'$ due to dataset biases. Limitation: Some queries remain unlabeled if all strategies fail.  \n\n**Cluster 2: Adaptive Retrieval-Augmented LLM Framework**  \n- **Adaptive Strategies**: Pre-determine query complexity to select optimal methods (e.g., avoid non-retrieval for complex queries). Framework dynamically adjusts strategies without altering model architecture.  \n- **Categorization of Methods**:  \n  - *Simple*: No retrieval, single-step.  \n  - *Adaptive*: Adaptive-RAG (proposed), Self-RAG, Adaptive Retrieval (Mallen et al., 2023).  \n  - *Complex*: Multi-step methods (e.g., Trivedi et al., 2023) with iterative retriever-LLM interactions.  \n- **Goal**: Adaptive methods aim to balance effectiveness (outperforming simple) and efficiency (vs. complex).  \n\n**Cluster 3: Evaluation, Limitations, and Future Work**  \n- **Limitations**:  \n  - Classifier performance gap exists between current \"simplest instantiation\" and ideal benchmarks (Table 1 vs. Figure 3).  \n  - Risk of retrieving offensive/harmful content when handling offensive user inputs.  \n- **Future Work**:  \n  - Create annotated datasets with diverse query-complexity labels.  \n  - Refine labeling strategies to reduce errors.  \n  - Enhance classifier architecture for accuracy.  \n  - Develop methods to detect and manage offensive content in inputs and retrieved documents.  \n\n**Cluster 4: Ideal Scenario Benchmarking**  \n- **Adaptive-RAG w/ Oracle**: Evaluated using an oracle classifier (idealized complexity assessment) to benchmark performance in an ideal setting.  \n- **Non-Comparable Categories**: Simple, adaptive, and complex methods differ in design goals and trade-offs, making direct comparisons invalid.",
       "level": 2,
       "scope": "document_cluster",
-      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "document_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2",
       "catalog_id": "default_catalog",
       "source_node_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C5",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C9",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C13"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C7",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C10",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C11"
       ],
       "source_chunk_ids": [
-        "13faf0ea-9bcf-5577-9bef-c360154461eb",
-        "1a770df1-f693-57ad-80d6-c2b85db2d612",
-        "36dda56d-b1c7-58d6-a244-fda4ac2113b5",
-        "891726a4-4971-563a-a01a-1efa34d74295",
-        "94662d1c-b07a-5f22-b14d-97c692936cc6",
-        "9ae187ab-13b0-5d08-ac65-d59187a99e66",
-        "cc515454-2058-5d65-b978-dfeeb55dc46f"
+        "11e88703-abc8-571a-a97f-4caf9e37c473",
+        "13761f65-71e8-5078-a327-efe855ec2bc2",
+        "324e5b71-54d1-54a0-8f29-6cafb9d47bdb",
+        "699bc241-8d19-573d-abca-897919441482",
+        "6cda278a-e897-5dc3-ad48-ca09928da122",
+        "b2be607d-3ab6-5b91-b127-d5f7a0d13e0d",
+        "b2c0c98e-7fe1-5bbe-b1c9-da6e6f6ad1e7",
+        "ebe461ce-e8af-5537-b427-39e855d73e4d"
       ],
       "source_document_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2"
       ]
     },
     {
-      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C2",
-      "text": "**Semantic-Cluster Summary**  \n\n1. **Team Composition & Skill Requirements**  \n   - **Essential Skills (collectively covered by 4-person team):**  \n     - AI evaluation, safety thresholds, multi-agent systems, technical understanding of AI/ML agentic systems, financial-market regulation, AI governance, analytical/synthesis skills, structured communication, multidisciplinary teamwork.  \n     - Familiarity with AI policy debates, frontier AI risks, government structures, legal authorities, risk assessment, and uncertainty management.  \n   - **Desirable Skills (collectively covered):**  \n     - Post-deployment AI monitoring, cybersecurity, safety engineering, agent systems, assessing monitoring metrics, analyzing technical traces, incident analysis, high-consequence sectors (e.g., finance, healthcare).  \n   - **Note:** Individual applicants need not fulfill all criteria; complementary strengths are prioritized. No software engineering, statistics, or ML training required.  \n\n2. **AI Evaluation & Risk Assessment**  \n   - Essential: Experience with AI evaluation, auditing, testing, safety-critical domain evaluations (e.g., red-teaming), quantitative risk assessment (Bayesian networks, Monte Carlo methods, ABMs), and probabilistic modeling.  \n   - Desirable: Hands-on AI evaluation experience; familiarity with frontier AI safety frameworks (e.g., EU AI Act).  \n\n3. **Legal, Policy, & Systems Thinking**  \n   - Essential: Legal/policy analysis (statutes, regulations, court opinions); systems thinking (incentive design, causal loop modeling).  \n   - Desirable: Legal education/litigation experience; policy drafting; behavioral economics (principal-agent problems).  \n\n4. **Communication & Synthesis**  \n   - Essential: Clear, structured written communication for multidisciplinary audiences (research, policy, technical, legal).  \n   - Desirable: Translating technical/legal material into policy-relevant insights.  \n\n5. **Geopolitical & Conceptual Context**  \n   - Essential: Understanding of advanced AI’s geopolitical/economic context (supply chain, development concentration); conceptual/definitional work (typology building/testing).  \n\n6. **Primary Source & Strategic Analysis**  \n   - Essential: Working with primary sources (national strategies, multilateral communiqués); familiarity with political persuasion, disinformation, or influence operations (research, OSINT, trust & safety).  \n\n7. **Cross-Domain Expertise**  \n   - Desirable: Background in political science, social/cognitive psychology, communication studies, computational social science (agent-based modeling); risk management in safety-critical industries (aviation, nuclear, cybersecurity).  \n\n8. **Evaluation Protocols**  \n   - Reference to WHO Joint External Evaluation (JEE) and evidence-scoring protocols (no further details provided).  \n\n9. **Project & Application Requirements**  \n   - Projects require balanced, multi-disciplinary teams combining technical/non-technical expertise, actionable policy recommendations, and clear communication.  \n   - Application process: Applicants must list a first-choice project; only first-choice projects are assessed.  \n   - Outputs must be accessible, actionable, and tailored to policymakers/decision-makers.",
+      "node_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L2_C2",
+      "text": "**Semantic-Cluster Summary**  \n\n**Cluster 1: Non-Retrieval QA Models**  \n- **Definition**: Answers generated directly by LLMs from input queries: $\\bar{\\mathbf{a}} = \\mathsf{LLM}(\\mathbf{q})$.  \n- **Structure**: Input $\\mathbf{q}$ → Output $\\bar{\\mathbf{a}}$.  \n- **Limitations**: Struggles with complex queries requiring external knowledge or concurrent information beyond internal training data.  \n\n**Cluster 2: Retrieval-Augmented QA Approaches**  \n- **Problem**: Non-retrieval methods fail for queries requiring external knowledge.  \n- **Solution**: Retrieve external documents $\\mathbf{d} \\in \\mathcal{D}$ (e.g., Wikipedia) via $\\mathbf{d} = \\mathsf{Retriever}(\\mathbf{q}; \\mathcal{D})$, then augment LLM inputs: $\\bar{\\pmb{a}} = \\mathsf{LLM}(\\pmb{q}, \\pmb{d})$.  \n- **Purpose**: Address knowledge gaps in LLMs by integrating external information.  \n\n**Cluster 3: Open-Domain QA Frameworks**  \n- **Core Components**: *Retriever* (sources documents) and *Reader* (interprets documents) for answering queries.  \n- **LLM Integration**: Synergy between LLMs and retrievers improves reasoning and reduces hallucinations by leveraging external documents.  \n\n**Cluster 4: Multi-Hop QA Challenges**  \n- **Complexity**: Requires synthesizing information from multiple documents iteratively.  \n- **Approaches**:  \n  - *Decomposition-based*: Breaks multi-hop queries into single-hop sub-queries, solved via repeated LLM-retriever interactions.  \n  - *Interleaved Reasoning*: Combines Chain-of-Thought reasoning with document retrieval.  \n\n**Cluster 5: Retrieval-Augmented LLMs**  \n- **Single-Step Method**: Incorporates retrieved documents $\\mathbf{d}$ into LLM inputs: $\\bar{\\pmb{a}} = \\mathsf{LLM}(\\pmb{q}, \\pmb{d})$.  \n- **Limitations**: Struggles with multi-document synthesis for complex queries.  \n\n**Cluster 6: Multi-Step Retrieval-LLM Interaction**  \n- **Process**: Iterative retrieval and LLM reasoning, with each step $i$ retrieving $\\pmb{d}_i$ and incorporating prior context $\\pmb{c}_i$: $\\bar{\\pmb{a}}_i = \\mathsf{LLM}(\\pmb{q}, \\pmb{d}_i, \\pmb{c}_i)$.  \n- **Advantages**: Builds comprehensive context for complex, multi-hop queries.  \n- **Limitations**: High computational cost due to repeated retriever and LLM accesses.  \n\n**Cluster 7: Trade-offs and Uncertainties**  \n- **Uncertainty**: Multi-step methods improve complex query handling but face resource intensity challenges.  \n- **Conflicting Approaches**: Decomposition-based vs. interleaved reasoning methods for multi-hop QA.  \n\n**Cluster 8: LLMs and Retrieval-Augmented Approaches**  \n- **Entities**: LLMs, retrieval-augmented LLMs, knowledge bases.  \n- **Claims**: LLMs generate factually incorrect answers due to reliance on parametric memory, which cannot retain evolving world knowledge.  \n- **Methods**: Retrieval-augmented LLMs integrate non-parametric knowledge via external retrieval modules.  \n- **Findings**: Improve accuracy and currency of responses by accessing external knowledge bases.  \n- **Limitations**: Parametric memory limitations in LLMs; challenges in maintaining up-to-date knowledge.  \n\n**Cluster 9: Funding and Institutional Support**  \n- **Entities**: IITP, NRF, MSIT, Gwangju Metropolitan City.  \n- **Support**: Grant funding for research on credibility prediction, evidence collection, and AI industrial convergence projects.",
       "level": 2,
       "scope": "document_cluster",
-      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "document_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2",
       "catalog_id": "default_catalog",
       "source_node_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C2",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C3",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C10",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C15"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C0",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C1",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C5"
       ],
       "source_chunk_ids": [
-        "2b9ce354-69cf-5b3c-a5d3-8baf06d3b9e2",
-        "2e6140a0-64bf-5bfb-8244-9665d7e034cb",
-        "39349f40-5741-5de6-a0f4-f13ffaaa039c",
-        "4e8dc1ed-4264-5f00-aa21-124ed470bc20",
-        "551f3baf-1230-5928-b797-548fee00f3f2",
-        "6ca85eef-0ecd-5197-a581-f0cdc5326076",
-        "7858072a-d091-5f9c-8e6e-79452d8604a6",
-        "8aa24561-5345-532b-9c22-4992fe62771e",
-        "97d03bb5-b937-58bc-8b7e-8e65b29a6f04",
-        "daaa50cb-3693-51e7-bbe1-4ed7b95233a5"
+        "1ba0ebb7-43b7-567d-a1e9-d015c003203d",
+        "37d9a6ac-a94c-505d-bc03-e08a934fe5b2",
+        "7534b952-ae12-59b8-bc93-4a6fbce8972f",
+        "9a92b2bf-c6f5-56bd-82a5-656e663c95d0",
+        "bf9eb7fd-83ca-5d45-9664-587f99f3a259",
+        "cbcba4c1-4529-5eb0-9ce8-1e59ed4d7749",
+        "e5e4ea92-caa5-5bfc-b279-c11a922a04a8"
       ],
       "source_document_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2"
       ]
     },
     {
-      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C3",
-      "text": "**Cluster 1: Project Participants and Affiliations**  \n- José Villalobos (FLI), Sean McGregor (AVERI), Markov Grey (CeSIA), Marta Bieńkiewicz (CAIF), Heather Frase (VerAItech), Isaak Mengesha (Oxford/Apollo Research).  \n- FLI project under Arcadia Impact AI Governance Taskforce led by Josephine Schwab (Research Team Leader).  \n- FLI designated as \"Multilateral Governance Lead.\"  \n\n**Cluster 2: Organizational Structure & Leadership**  \n- CeSIA: Markov Grey affiliated; Technical Governance Research Team led by Yohan Mathew.  \n- AVERI: Co-founded by Sean McGregor (Lead Research Engineer); research team led by Michael Celone.  \n- VerAItech: Heather Frase (CEO); research team led by Omar Beno.  \n- CAIF project led by Michael Harré (focus: AI agent failure propagation detection).  \n- VerAItech project led by Omar Beno (focus: response to AI warnings in workflows).  \n\n**Cluster 3: Research Process & Taskforce Context**  \n- Arcadia Impact AI Governance Taskforce manages research project options for Autumn 2026 cohort.  \n- Research Team Leaders (RTLs) collaborate with expert partners to define project scopes pre-cohort.  \n- Contact: Ben R Smith (Taskforce Lead); direct contact with RTLs/expert partners discouraged.  \n\n**Cluster 4: Uncertainty/Incomplete Information**  \n- Project numbers (e.g., \"1, 2\") lack clarification.  \n- No explicit details provided about FLI, AVERI, CAIF, VerAItech beyond affiliations.  \n- No stated overlaps between projects (CAIF, VerAItech) and institutions (AVERI, VerAItech, Oxford/Apollo).  \n\n**Cluster 5: Academic & Research Roles**  \n- Isaak Mengesha: Postdoctoral Research Associate (Oxford Martin Programme, INET); affiliated with Apollo Research (incoming Governance Staff).  \n- Research Leadership: Charlie Collins oversees Isaak Mengesha’s team.",
+      "node_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L2_C3",
+      "text": "**Cluster 1: Evaluation Metrics & Performance**  \n- Adaptive models are evaluated using effectiveness metrics (F1, EM, Accuracy) and efficiency metrics (number of retrieval-and-generate steps, query time relative to one-step approaches).  \n- Adaptive-RAG outperforms other adaptive retrieval baselines in classification accuracy across complexity labels (\"No retrieval,\" \"One retrieval,\" \"Multiple retrievals\").  \n- Classifier accuracy improvements correlate with overall QA performance gains.  \n\n**Cluster 2: Efficiency & Resource Use**  \n- Efficiency gains are observed through reduced elapsed time for simple queries (Table 3) and alignment of relative time comparisons (Table 1).  \n- Classifier performance remains stable across varying model sizes (Table 6), enabling resource-efficient deployment with smaller models.  \n\n**Cluster 3: Adaptive-RAG Strategy & Effectiveness**  \n- Adaptive-RAG dynamically adjusts strategies (nonretrieval, single-step, multi-step) based on query complexity, improving accuracy and efficiency over simple or complex fixed-strategy approaches.  \n- Outperforms competitors in effectiveness (Table 1) and handles complex multi-hop queries better than simple adaptive strategies (Table 2).  \n- Iterative modules enhance handling of complex queries requiring aggregated information.  \n\n**Cluster 4: Classifier Training & Limitations**  \n- Classifier training uses automatically annotated query-complexity pairs and strategies like silver data generation and inductive bias.  \n- Confusion matrix reveals misclassification trends (e.g., \"C (Multi)\" to \"B (One)\" at 31%).  \n- Limitations include reliance on automatically annotated data (potential biases) and untested real-world applicability.  \n\n**Cluster 5: Case Studies & Practical Challenges**  \n- Adaptive-RAG avoids unnecessary retrieval for simple queries (e.g., \"Google\" knowledge) and retrieves external data for complex queries (e.g., \"son of John Cabot\").  \n- Simple adaptive strategies fail on multi-hop datasets requiring multi-document reasoning.  \n- Cost and scalability of LLM access remain critical challenges.  \n\n**Cluster 6: Contributions & Context**  \n- Adaptive-RAG addresses gaps in prior methods by tailoring retrieval strategies to query complexity.  \n- Demonstrated improvements in accuracy and efficiency on open-domain QA datasets (single-hop and multi-hop).  \n- Future directions include refining misclassification trends and testing real-world applicability.",
       "level": 2,
       "scope": "document_cluster",
-      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "document_id": "22dcf05f-fed5-5cce-8538-9e73cfa32cc2",
       "catalog_id": "default_catalog",
       "source_node_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C0",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C1",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C6"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C3",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C8",
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2_L1_C9"
       ],
       "source_chunk_ids": [
-        "0205c651-7b9f-5769-9cab-92566b2e0ea3",
-        "1b54a372-554b-5502-9517-ed38735c5c3f",
-        "238433a0-720f-54fe-82cd-94f6b2d6a2b4",
-        "35b8bc79-67d0-54aa-863d-721d6126fb16",
-        "76200c18-2fd7-58e4-9be3-0478e101cabe",
-        "a3d897fe-49de-5532-b94b-60fd0528d56c",
-        "b1df45ec-3460-5a8f-8ff8-d072e229dfb0",
-        "e7e86491-7bea-5729-b150-96333d7cf9b8",
-        "ff99ab42-97cb-57e4-b9fa-c696e44efd9a"
+        "12ed9b78-dcb3-519c-b1b7-a814dc6266b7",
+        "181989d8-5991-54e1-aae0-740800db5efb",
+        "24dbb786-a1c5-5d47-a54d-c118709bcb2c",
+        "294c7ed1-3d9f-5aa4-88b2-d0e6cdbc88c3",
+        "3a6f88c6-e0be-5883-bfb9-8724afd26a06",
+        "3d612f50-4652-57b4-911c-302e74179e53",
+        "6604c23b-e708-5903-b4c2-57f1ac56d2a2",
+        "8cfcd24d-ff5a-5f47-a62c-6fe8dfa9075a"
       ],
       "source_document_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+        "22dcf05f-fed5-5cce-8538-9e73cfa32cc2"
       ]
     },
     {
-      "node_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L2_C4",
-      "text": "**Semantic-Cluster Summary**  \n\n1. **Project Objectives and Focus**:  \n   - Identify gaps between \"capability target\" (required AI crisis response capabilities) and \"current capability\" (government-held capabilities).  \n   - Builds on prior AI Governance Taskforce work, using Delphi studies with SMEs to validate capability ratings.  \n   - Emphasizes harmonizing AI governance frameworks for states and international actors, with a focus on AI middle-powers.  \n\n2. **Methodology and Deliverables**:  \n   - Two-round Delphi study to validate and expand prior manual capability ratings (based on scenario/capability libraries).  \n   - Core deliverables: Minimum viable product (MVP) with Delphi results, policy briefs (short for UN/international fora, longer for researchers/practitioners).  \n   - Parallel work includes automating capability ratings, analyzing prior cohort data, and exploring post-MVP extensions (e.g., communicating capability gaps).  \n\n3. **Required Expertise and Skills**:  \n   - Government/policy experience, high-stakes planning frameworks, institutional/capability infrastructure knowledge.  \n   - Delphi study design, structured data analysis, LLM application for judgment tasks, and audit/assessment instrument design.  \n   - Technical expertise in safety-critical governance (e.g., algorithmic collusion, systemic-risk modeling) and international institutional design.  \n\n4. **Key Entities and Relationships**:  \n   - Entities: Advanced AI risks, government capabilities, SMEs, Delphi study, scenario/capability libraries, MVP, policy briefs.  \n   - Relationships: Delphi study validates prior ratings; automation complements manual methods; policy briefs distill framework findings.  \n\n5. **Limitations and Uncertainties**:  \n   - Unquantified capability gap magnitude and feasibility of closing it.  \n   - Scalability of automated rating methods uncertain.  \n   - Ambiguity in framework applicability, methodological validation, and scope of post-MVP work.  \n\n6. **International and Standards Context**:  \n   - Focus on digital sovereignty, strategic autonomy, and benefit-sharing in AI.  \n   - Engagement with international AI governance bodies and standards.  \n   - Policy outputs target states, international institutions, researchers, and practitioners.",
+      "node_id": "710a26cb-e760-5646-a513-4cc594b3a4c0_L2_C0",
+      "text": "**Semantic-Cluster Summary**  \n\n**Cluster 1: Pre-Retrieval Weight Allocation**  \n- **Methods**: Two approaches to allocate retriever weights based on query/document embeddings.  \n  - **KMeans clustering** on document embeddings of each retriever $\\mathcal{R}_i$ forms $K$ clusters $\\{C_1, ..., C_k\\}$ over corpus $\\mathcal{D}$.  \n  - **Pre-retrieval signal** $V_{\\text{pre}}$: Weighted sum of distances between query vector $\\vec{q}$ and cluster centroids $\\{\\vec{m}_1, ..., \\vec{m}_k\\}$, scaled by cluster sizes. Larger distances indicate poor alignment, leading to downweighting; smaller distances suggest upweighting.  \n  - Linked to the **cluster-hypothesis** (Jardine and van Rijsbergen, 1971), which ties document clustering to query relevance.  \n\n**Cluster 2: Post-Retrieval Weight Allocation**  \n- **Post-retrieval signal**: Uses **Moran coefficient** to measure relevance among top 20 retrieved documents $\\mathcal{D}_q$ and their alignment with the corpus.  \n  - **$V_{\\text{post}}(q, \\mathcal{R}_i, \\mathcal{D})$**: Norm of the average pre-retrieval signal $V_{\\text{pre}}(d_n, \\mathcal{R}_i, \\mathcal{D})$ across $\\mathcal{D}_q$.  \n  - Extends pre-retrieval distance metrics to document-level comparisons.  \n\n**Cluster 3: Performance Evaluation**  \n- **MoR variants** (retriever combinations) outperform individual retrievers and non-component LLM-based retrievers on **NDCG@5** and **NDCG@20** metrics across datasets (Table 3).  \n- **Macro-average performance** (Av.) highlights superior overall effectiveness of MoR methods.  \n\n**Cluster 4: Retrieval Task and Scoring**  \n- Retrievers $\\mathcal{R}_i$ assign relevance scores $s_i(q, d_j)$ (e.g., cosine similarity) to documents $d_j$, producing score vectors $\\mathbf{s}_i \\in \\mathbb{R}^{|\\mathcal{D}|}$.  \n- Scores are used for document ranking.  \n\n**Cluster 5: Datasets and Tasks**  \n- **Test bed datasets**:  \n  - **NFCorpus**: Medical queries with terminology-heavy documents.  \n  - **SciDocs**: Scientific retrieval with subtasks (citation prediction, paper recommendation).  \n  - **SciFact**: Expert claims vs. evidential abstracts.  \n  - **SciQ**: Science exam-style questions with domain-specific text.  \n- Tasks involve complex query-document relations (e.g., first-order logic conditions).  \n\n**Cluster 6: Weighted Combination of Retrievers**  \n- **Adjusted relevance scores** $\\tilde{\\mathbf{s}}(q, d_j)$: Weighted sum of individual retriever scores:  \n  $$ \\tilde{\\mathbf{s}}(q, d_j) = \\sum_{i=1}^N f(q, \\mathcal{R}_i, \\mathcal{D}) s_i(q, d_j) $$  \n- **Geometry-based scores** enable integration of diverse retrievers (including human sources) with appropriate embeddings.  \n\n**Cluster 7: Future Directions and Supervised Methods**  \n- **Post-presentation signals**: Proposed future work involving end-to-end metrics (e.g., question-answering exact match, user satisfaction) for RAG or agentic retrieval.  \n- **Supervised methods**: Potential use of neural networks to learn per-query/per-retriever weights (inputs: $q, R, D', D$) and adaptive coefficients. Current methods use universal coefficients.  \n\n**Relationships**  \n- Pre- and post-retrieval signals both leverage embedding spaces and distance metrics but differ in timing (pre/post retrieval) and scope (query vs. document-level analysis).  \n- Cluster-hypothesis underpins both methods, linking document clustering to query relevance.  \n\n**Limitations/Uncertainty**  \n- **Empirical setting**: $|\\mathcal{D}_q| = 20$ for post-retrieval signals is not justified.  \n- **Scalability**: No explicit discussion of computational costs for clustering methods.  \n- **Post-presentation signals**: Not yet implemented.  \n- **Supervised methods**: Speculative, dependent on training data and pre-computed weights.  \n- **Weight allocation function** $f$: Depends on query-specific factors; performance of combined retrievers may vary with dataset/task complexity.",
       "level": 2,
       "scope": "document_cluster",
-      "document_id": "536b93c0-78a9-5fb1-a4ee-444eb6012cd6",
+      "document_id": "710a26cb-e760-5646-a513-4cc594b3a4c0",
       "catalog_id": "default_catalog",
       "source_node_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C4",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C7",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C8",
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6_L1_C11"
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C1",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C2",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C3"
       ],
       "source_chunk_ids": [
-        "1b8857b5-a263-56ce-99c7-d2386cf59a06",
-        "4e9bba75-1483-5c9c-9d25-29a46b0116f4",
-        "6edac29f-427c-5c93-b4c7-27caec649894",
-        "9623bbaa-22f9-542c-ba82-3bed95095b61",
-        "9f2e2321-2a6a-5be2-b9c4-7a482ccd597a",
-        "d5d2b1e5-ba16-56c0-a0ef-193319d6a7c8",
-        "f7694889-0102-5428-97dc-70066fb3cf10"
+        "23b08937-d99e-5b0b-a62e-38e178d0d616",
+        "315adfd1-e057-588c-9dbe-2feb7a223388",
+        "4a3b610b-7728-5c6f-b3d3-0b5aa53aac25",
+        "b2a04ac8-d1d7-56f8-88cb-4d662430fab8",
+        "bb1adcde-f09a-5f14-8180-60035c81a010",
+        "d063c8e4-1cb2-5745-a7b5-e9789ccd5795"
       ],
       "source_document_ids": [
-        "536b93c0-78a9-5fb1-a4ee-444eb6012cd6"
+        "710a26cb-e760-5646-a513-4cc594b3a4c0"
+      ]
+    },
+    {
+      "node_id": "710a26cb-e760-5646-a513-4cc594b3a4c0_L2_C1",
+      "text": "**Semantic-Cluster Summary:**  \n\n1. **Proposed Method (MoR):**  \n   - **Architecture**: Mixture of Retrievers (MoR) combines multiple retrievers (e.g., BM25, DPR, SimCSE) using zero-shot trustworthiness weights for reranking, leveraging query-level comparative advantages.  \n   - **Key Techniques**: Deep fusion of multi-granularities, pre-retrieval signals ($V_{\\text{pre}}$), and post-retrieval performance prediction ($V_{\\text{post}}$) with $I_{\\text{Moran}}$ (information entropy).  \n   - **Weight Allocation**:  \n     - **MoR-pre**: Uses $V_{\\text{pre}}$ directly.  \n     - **MoR-post**: Combines $V_{\\text{pre}}$, $I_{\\text{Moran}}$, and $V_{\\text{post}}$ with shared coefficients $(a, b, c) = (0.1, 0.3, 0.6)$.  \n\n2. **Performance & Validation:**  \n   - **Improvements**: MoR achieves 10.8–12.2% relative NDCG@20 gains over component retrievers and SOTA methods (e.g., GritLM). Mixing top-2 retrievers yields comparable performance to full mixtures.  \n   - **Human Integration**: $V_{\\text{post}}$ assigns high weights to human experts in their domains, achieving +58.9% relative gain over simulated human responses.  \n   - **Efficiency**: Retriever rejection (95th percentile threshold on $V_{\\text{pre}}$) reduces retriever usage to ~20% per query without performance loss.  \n\n3. **Experimental Design & Ablations:**  \n   - **Ablation Studies**: Confirm superiority of MoR’s granularity and retriever-level merging strategies over ad-hoc aggregation (mean/max).  \n   - **Comparisons**: Outperforms Reciprocal Rank Fusion (RRF) and other alternatives (Appendix A.4).  \n\n4. **Limitations & Uncertainties:**  \n   - **Coefficient Variability**: Optimal $(a, b, c)$ may vary per query; query-specific weighting is proposed as future work.  \n   - **Human Reliability**: Simulated human responses are noisy; real-world reliability may differ.  \n   - **Metrics**: Specific statistical significance or detailed performance metrics are not quantified in the text.  \n\n5. **Implementation & Resources:**  \n   - Open-source code: https://github.com/Josh1108/MixtureRetrievers.  \n\n6. **Acknowledgments & Funding:**  \n   - Supported by ONR, NSF, OpenAI, Amazon AI, Gemma Academic Program.  \n   - Collaborations: CMU WInE Lab.  \n   - Authors: Jushaan Kalra, Xinran Zhao, To Eun Kim, Fengyu Cai, Fernando Diaz, Tongshuang Wu.  \n   - Affiliations: CMU, Technical University of Darmstadt.  \n\n**Entities/Relationships:**  \n- **Datasets/Experiments**: SciDocs, RAG tasks, Boteva et al. (2016), Cohan et al., Wadden et al. (2020), Welbl et al. (2017).  \n- **Tasks**: Scientific retrieval, knowledge-intensive domains (Medicine, Psychology, CS, Engineering).",
+      "level": 2,
+      "scope": "document_cluster",
+      "document_id": "710a26cb-e760-5646-a513-4cc594b3a4c0",
+      "catalog_id": "default_catalog",
+      "source_node_ids": [
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C4",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C7",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C8",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C10"
+      ],
+      "source_chunk_ids": [
+        "0daa6bcc-1440-5f6e-bcfd-781a56e7166f",
+        "156e4c49-e7e3-571a-89f3-bac52e0b55fb",
+        "354b45b8-afc0-5cdd-b13a-ad60d43a5813",
+        "7f04b4b1-1724-5ef3-99f1-c9d5c0bb071a",
+        "911cc821-9e34-5c41-a7a5-163fd0b8e797",
+        "9bd760d9-b425-530b-8ff6-6e3d780a431a",
+        "a294e0e0-8f04-5a33-a506-36898d069121",
+        "cae44bd6-e1bf-5ba0-aa14-8a1d083bc458",
+        "dce42fd4-18f6-5e7d-a4c3-a35752cdb581"
+      ],
+      "source_document_ids": [
+        "710a26cb-e760-5646-a513-4cc594b3a4c0"
+      ]
+    },
+    {
+      "node_id": "710a26cb-e760-5646-a513-4cc594b3a4c0_L2_C2",
+      "text": "**Cluster 1: Mixture-of-Retrievers (MoR) Framework and Performance**  \n- **Framework**: MoR dynamically combines heterogeneous retrievers (e.g., BM25, DPR, SimCSE) using pre- and post-retrieval signals (e.g., model familiarity, query performance prediction) to address domain/query-specific variability. Inspired by Mixture-of-Experts, it avoids manual retriever selection.  \n- **Performance**: MoR achieves +3.9% NDCG@20 improvement over 7B-parameter LLM retrievers (e.g., GritLM) and matches GritLM on SciFact. Mixing two retrievers (e.g., non-top-performing pairs) can match eight-retriever mixtures in efficiency tests.  \n- **Methodology**: Expands retrievers via granularity (e.g., sub-questions, propositions) and uses proposition decomposition (Chen et al., 2023b) to increase retriever count by 4× without adaptation.  \n\n**Cluster 2: Retriever Diversity and Comparative Advantages**  \n- **Retriever Strengths**: DPR outperforms TAS-B on 11.7% of SciFact queries; BM25 excels in medicine/biology, while DPR dominates encyclopedic tasks. Supervised retrievers (e.g., DPR) often outperform unsupervised ones (e.g., SimCSE).  \n- **Integration**: Zero-shot weighted integration of heterogeneous retrievers (e.g., BM25 + dense models) improves RAG performance by +10.8% over individual retrievers and +3.9% over 7B models. Incorporating specialized human sources boosts performance by 58.9% relative to simulated humans.  \n\n**Cluster 3: Efficiency and Subset Selection**  \n- **Computational Costs**: Dense retriever count drives costs linearly. Subset selection (e.g., mixing two retrievers) reduces costs without significant performance loss.  \n- **Signal Utilization**: Pre-retrieval signals (e.g., model familiarity) and post-retrieval signals (e.g., query performance prediction) guide dynamic retriever selection.  \n\n**Cluster 4: Limitations and Uncertainties**  \n- **Framework Limitations**: Route Oracle’s simplified setting (ignoring cross-retriever signals) contrasts with MoR’s practical framework. Optimal subset selection remains non-trivial (e.g., top retrievers like MPNet/BM25 do not always form best pairs).  \n- **Dependencies**: MoR relies on external tools (e.g., propositioner from Chen et al., 2023b). Generalization across tasks/domains requires further validation. Post-generation signals (e.g., accuracy) for weight assignment remain unexplored.  \n\n**Cluster 5: Evaluation Metrics and Experimental Setup**  \n- **Metrics**: NDCG@K for retrieval, EM@K for RAG evaluation. SciFact, SciQ, and NFCorpus used as benchmarks.  \n- **Models**: Compared retrievers include BM25 (sparse), DPR/SimCSE (dense), and 7B LLMs (e.g., GritLM). MoR’s 0.836B parameter count contrasts with large LLM benchmarks.  \n- **References**: Key models (BM25, DPR) and metrics (NDCG, EM) cited with authors/years; Appendix details model checkpoints and comparisons.",
+      "level": 2,
+      "scope": "document_cluster",
+      "document_id": "710a26cb-e760-5646-a513-4cc594b3a4c0",
+      "catalog_id": "default_catalog",
+      "source_node_ids": [
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C0",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C5",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C6",
+        "710a26cb-e760-5646-a513-4cc594b3a4c0_L1_C9"
+      ],
+      "source_chunk_ids": [
+        "04e00670-fc09-59f8-b733-f1da387fc6b9",
+        "24e84d78-d463-54e7-a504-8ce992bbeeaa",
+        "2b5482bb-0d6e-5a11-b162-f4d8a2c8de50",
+        "348e7175-a071-5de5-a1f2-b9412919d6fc",
+        "46605038-fa2f-54c6-bb80-46b10b19fe50",
+        "50283ca9-832f-568f-9e6d-b69f52c29b4b",
+        "852831a0-9d68-5097-a431-6da2bb7d3f31",
+        "97154ec3-0c6a-50f1-add9-25b551c28bde",
+        "b9f6d3fa-d210-5e0e-b5b1-f56b91700149",
+        "c70b7d41-490c-52b1-8afa-a332488ee86e",
+        "e28ba75f-b85b-511d-a6a2-774b45855985"
+      ],
+      "source_document_ids": [
+        "710a26cb-e760-5646-a513-4cc594b3a4c0"
       ]
     }
   ]

@@ -9,7 +9,7 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev --no-install-project
 
 COPY api.py metrics.py ./
-COPY ingestion/ ./ingestion/
+COPY indexing/ ./indexing/
 COPY representations/ ./representations/
 COPY stores/ ./stores/
 COPY retrieval/ ./retrieval/

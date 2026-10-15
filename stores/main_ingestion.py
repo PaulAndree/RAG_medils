@@ -1,147 +1,171 @@
-""" Main script that should be run to ingest documents and chunk JSON files into PostgreSQL. """
+"""Command-line entry point for PostgreSQL representation ingestion."""
+
 import argparse
+import os
 import sys
 from pathlib import Path
 
-from stores.database_postgres import (
-    create_tables,
-    find_stale_source_keys,
-    persist_document,
-)
+from metrics import ProcessMetricSample, push_process_metrics
+from stores.database_postgres import persist_dataset
 from stores.ingestion import (
     FolderScanError,
-    derive_source_identity,
-    discover_chunk_files,
-    prepare_document,
+    InputValidationError,
+    prepare_dataset,
+)
+
+
+DEFAULT_PUSHGATEWAY_URL = os.getenv(
+    "PUSHGATEWAY_URL",
+    "http://localhost:9091",
 )
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Ingest chunk JSON files into PostgreSQL."
+        description=(
+            "Validate and ingest document representations into PostgreSQL."
+        )
     )
-
     parser.add_argument(
-        "--chunks-dir",
+        "--data-dir",
         type=Path,
-        default=Path("data/pdf_parsed_output"),
-        help="Directory containing *_chunks.json files.",
+        default=Path("data"),
+        help="Root containing passages, arguments, entities, and summaries.",
     )
-
     parser.add_argument(
-        "--pdf-dir",
-        type=Path,
-        default=Path("data/pdf_docs"),
-        help="Directory containing matching PDF files.",
+        "--rebuild",
+        action="store_true",
+        help="Drop and recreate the six representation tables before loading.",
     )
-
+    parser.add_argument(
+        "--pushgateway-url",
+        default=DEFAULT_PUSHGATEWAY_URL,
+        help=f"Prometheus Pushgateway URL (default: {DEFAULT_PUSHGATEWAY_URL})",
+    )
+    parser.add_argument(
+        "--no-metrics",
+        action="store_true",
+        help="Disable Pushgateway metric publication.",
+    )
     return parser.parse_args()
 
+
 def run_ingestion(
-    chunks_root: Path,
-    pdf_root: Path,
+    data_root: Path,
+    *,
+    rebuild: bool = False,
+    pushgateway_url: str = DEFAULT_PUSHGATEWAY_URL,
+    metrics_enabled: bool = True,
 ) -> int:
     try:
-        json_files = discover_chunk_files(chunks_root)
-    except FolderScanError as exc:
-        print(f"[fatal] {exc}", file=sys.stderr)
+        dataset = prepare_dataset(data_root)
+    except (FolderScanError, InputValidationError) as exc:
+        print(f"[fatal] invalid input: {exc}", file=sys.stderr)
         return 1
+
+    for document in dataset.documents:
+        for warning in document.warnings:
+            print(f"[warning] {document.source_key}: {warning}")
 
     try:
-        create_tables()
-    except Exception as exc:
-        print(
-            f"[fatal] could not initialize PostgreSQL schema: {exc}",
-            file=sys.stderr,
+        result = persist_dataset(
+            dataset,
+            rebuild=rebuild,
         )
+    except Exception as exc:
+        print(f"[fatal] database ingestion failed: {exc}", file=sys.stderr)
         return 1
 
-    counts = {
-        "inserted": 0,
-        "skipped": 0,
-        "failed": 0,
-    }
-
-    discovered_source_keys: set[str] = set()
-
-    for json_path in json_files:
-        display_path = json_path.relative_to(
-            chunks_root.resolve()
+    for source_key in result.stale_source_keys:
+        print(
+            f"[stale] {source_key}: source passage was not found; "
+            "database rows were preserved"
         )
+
+    print("Ingestion complete")
+    print(f"  documents:       {result.documents}")
+    print(f"  passage chunks:  {result.chunks}")
+    print(f"  argument chunks: {result.argument_chunks}")
+    print(f"  arguments:       {result.arguments}")
+    print(f"  entity bundles:  {result.entities}")
+    print(f"  summaries:       {result.summaries}")
+    print(f"  stale documents: {len(result.stale_source_keys)}")
+
+    if metrics_enabled:
+        summary_document_ids = {
+            str(summary.document_id)
+            for summary in dataset.summaries
+            if summary.document_id is not None
+        }
+        for summary in dataset.summaries:
+            summary_document_ids.update(summary.source_document_ids)
 
         try:
-            source_key, _, _ = derive_source_identity(
-                json_path,
-                chunks_root,
+            push_process_metrics(
+                process="store",
+                samples=[
+                    ProcessMetricSample(
+                        representation="passages",
+                        document_count=len(dataset.documents),
+                        item_counts={"chunks": result.chunks},
+                        duration_seconds=result.durations["passages"],
+                    ),
+                    ProcessMetricSample(
+                        representation="arguments",
+                        document_count=sum(
+                            bool(document.argument_chunks)
+                            for document in dataset.documents
+                        ),
+                        item_counts={
+                            "argument_chunks": result.argument_chunks,
+                            "arguments": result.arguments,
+                        },
+                        duration_seconds=result.durations["arguments"],
+                    ),
+                    ProcessMetricSample(
+                        representation="summaries",
+                        document_count=len(summary_document_ids),
+                        item_counts={"summaries": result.summaries},
+                        duration_seconds=result.durations["summaries"],
+                    ),
+                    ProcessMetricSample(
+                        representation="graph",
+                        document_count=sum(
+                            bool(document.entity_bundles)
+                            for document in dataset.documents
+                        ),
+                        item_counts={
+                            "entity_bundles": result.entities,
+                            "entities": sum(
+                                len(bundle.entities)
+                                for document in dataset.documents
+                                for bundle in document.entity_bundles
+                            ),
+                            "relations": sum(
+                                len(bundle.relations)
+                                for document in dataset.documents
+                                for bundle in document.entity_bundles
+                            ),
+                        },
+                        duration_seconds=result.durations["graph"],
+                    ),
+                ],
+                pushgateway_url=pushgateway_url,
+                job="store_process",
             )
-            discovered_source_keys.add(source_key)
-
-            document = prepare_document(
-                json_path=json_path,
-                chunks_root=chunks_root,
-                pdf_root=pdf_root,
-            )
-
-            for warning in document.warnings:
-                print(
-                    f"[warning] {document.source_key}: {warning}"
-                )
-
-            result = persist_document(document)
-            counts[result.action] += 1
-
-            print(
-                f"[{result.action}] "
-                f"{result.source_key} "
-                f"version={result.version} "
-                f"chunks={result.chunk_count}"
-            )
-
         except Exception as exc:
-            counts["failed"] += 1
-            print(
-                f"[failed] {display_path}: {exc}",
-                file=sys.stderr,
-            )
-
-    #detects database documents whose source JSON file is no longer present.
-    try:
-        stale_source_keys = find_stale_source_keys(
-            discovered_source_keys
-        )
-    except Exception as exc:
-        print(
-            f"[fatal] could not check stale documents: {exc}",
-            file=sys.stderr,
-        )
-        return 1
-
-    for source_key in stale_source_keys:
-        print(
-            f"[stale] {source_key}: "
-            "source JSON was not found; database rows were preserved"
-        )
-
-    print()
-    print("Ingestion summary")
-    print(f"  discovered: {len(json_files)}")
-    print(f"  inserted:   {counts['inserted']}")
-    print(f"  skipped:    {counts['skipped']}")
-    print(f"  failed:     {counts['failed']}")
-    print(f"  stale:      {len(stale_source_keys)}")
-
-    if counts["failed"] > 0:
-        return 1
+            print(f"[ingestion] warning: could not publish metrics: {exc}")
 
     return 0
 
 
 def main() -> int:
     args = parse_args()
-
     return run_ingestion(
-        chunks_root=args.chunks_dir,
-        pdf_root=args.pdf_dir,
+        args.data_dir,
+        rebuild=args.rebuild,
+        pushgateway_url=args.pushgateway_url,
+        metrics_enabled=not args.no_metrics,
     )
 
 

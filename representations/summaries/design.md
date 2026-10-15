@@ -52,7 +52,7 @@ MIN_NODES_FOR_NEXT_LEVEL = 5
 if len(current_nodes) < MIN_NODES_FOR_NEXT_LEVEL:
     stop
 
-    Qdrant collection design:
+    Qdrant collection design after indexing:
 
     COLLECTION: passages
 ─────────────────────────
@@ -82,9 +82,9 @@ source_summary_ids
 """
 
 """
-Qdrant passages
+data/passages_chunk/**/*_chunks.json
       ↓
-get document chunks + vectors
+discover documents + embed chunks with the passage embedding model
       ↓
 RAPTOR soft clustering
 (global UMAP → GMM → local UMAP → GMM)
