@@ -1,0 +1,341 @@
+SILEX PILOT FINAL EVALUATION REPORT V1.0
+
+1. Executive summary
+
+The final SILEX pilot evaluation was conducted with ten participants from the Santa Marina City Council between 7 and 14 October 2026. Participants represented citizen services, urban planning, trade, environment, the general secretariat, and electronic administration.
+
+Every participant completed six procedure-search and review tasks followed by a questionnaire and short interview. Evaluation measured success, time, requests for help, clarity, ease of search, ES/EN consistency, and confidence in deadlines and legal bases.
+
+The overall success rate was 88%. Median task time was 2 minutes 18 seconds. Language switching preserved the query and entity in 100% of journeys. The API achieved p95 latency of 1.42 seconds during sessions. No exposure of restricted data was identified.
+
+2. Scope
+
+Tasks covered locating a procedure, identifying the competent unit, checking a channel, interpreting a deadline, comparing a legal version, and switching language. Authorized procedures and data without personal cases were used.
+
+The evaluation does not measure large-scale citizen use and does not replace a complete accessibility audit. Results apply to the environment, corpus, and versions recorded in the manifest.
+
+3. Method
+
+Tasks had verifiable answers and success criteria. Five participants began in Spanish and five in English. Order was alternated to reduce learning effects. Observers recorded actions and assistance but not the content of personal searches.
+
+Comments were classified by severity, frequency, and scope. A critical defect blocked the pilot; a major defect required priority correction; a minor defect could move to the improvement plan.
+
+Evaluation section 1
+
+Task 1 was to locate a minor building permit. The objective was to search by text and verify that the correct record appears among the first results. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 2
+
+Task 2 was to identify the competent unit. The objective was to open a record and locate the unit name and code. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 3
+
+Task 3 was to check available channels. The objective was to distinguish online, in-person, and telephone channels without confusing information and application. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 4
+
+Task 4 was to interpret a deadline. The objective was to distinguish working days, calendar days, according to the call, and non-applicable. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 5
+
+Task 5 was to compare legal bases. The objective was to identify the current version and its relation to a superseded rule. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 6
+
+Task 6 was to switch language. The objective was to preserve the query, filters, entity, and meaning. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 7
+
+Metric 1 is task success. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 8
+
+Metric 2 is time. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 9
+
+Metric 3 is actions. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 10
+
+Metric 4 is requests for help. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 11
+
+Metric 5 is clarity. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 12
+
+Metric 6 is ease of search. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 13
+
+Metric 7 is confidence. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 14
+
+Metric 8 is bilingual consistency. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 15
+
+Metric 9 is latency. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 16
+
+Metric 10 is technical errors. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 17
+
+Finding 1 indicates that title search performs well. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 18
+
+Finding 2 indicates that unit codes increase confidence. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 19
+
+Finding 3 indicates that call-dependent deadlines require more context. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 20
+
+Finding 4 indicates that historical legal bases may be confused with current ones. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 21
+
+Finding 5 indicates that language switching preserves context. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 22
+
+Finding 6 indicates that channel labels are understandable. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 23
+
+Finding 7 indicates that advanced filters are difficult to discover. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 24
+
+Finding 8 indicates that long records need better visual hierarchy. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 25
+
+Finding 9 indicates that error messages are clear. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 26
+
+Finding 10 indicates that latency is acceptable. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 27
+
+Technical analysis 1 covers service availability. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 28
+
+Technical analysis 2 covers p50 and p95 latency. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 29
+
+Technical analysis 3 covers error rate. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 30
+
+Technical analysis 4 covers response equivalence. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 31
+
+Technical analysis 5 covers pagination. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 32
+
+Technical analysis 6 covers cache. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 33
+
+Technical analysis 7 covers authentication. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 34
+
+Technical analysis 8 covers authorization. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 35
+
+Technical analysis 9 covers monitoring. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 36
+
+Technical analysis 10 covers rollback. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 37
+
+Recommendation 1 is to display current status more prominently. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 38
+
+Recommendation 2 is to explain call-dependent deadlines. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 39
+
+Recommendation 3 is to make advanced filters visible. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 40
+
+Recommendation 4 is to summarize long records. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 41
+
+Recommendation 5 is to retain the unit code next to the name. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 42
+
+Recommendation 6 is to add examples to training. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 43
+
+Recommendation 7 is to rerun tests after every load. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 44
+
+Recommendation 8 is to retain joint bilingual review. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 45
+
+Recommendation 9 is to publish limitations and exclusions. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 46
+
+Recommendation 10 is to include improvements in transfer. It is classified as immediate, before transfer, or future. It has an owner, date, affected artifact, and acceptance criterion. Recommendations do not retrospectively change metrics. An improvement closes when testing demonstrates the expected result without regressions. Decisions are documented in the version register.
+
+Evaluation section 47
+
+Limitation 1 is a small municipal sample. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 48
+
+Limitation 2 is a limited use period. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 49
+
+Limitation 3 is selected procedures. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 50
+
+Limitation 4 is absence of general citizens. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 51
+
+Limitation 5 is an incomplete accessibility audit. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 52
+
+Limitation 6 is dependence on the pre-production environment. The report explains its likely effect and avoids generalizing results to unevaluated contexts. The limitation remains in the final package and transfer documentation. Proposed extensions are future work and are not mixed with the closed evaluation. A new evaluation must record the corpus, environment, and participants.
+
+Evaluation section 53
+
+Task 1 was to locate a minor building permit. The objective was to search by text and verify that the correct record appears among the first results. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 54
+
+Task 2 was to identify the competent unit. The objective was to open a record and locate the unit name and code. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 55
+
+Task 3 was to check available channels. The objective was to distinguish online, in-person, and telephone channels without confusing information and application. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 56
+
+Task 4 was to interpret a deadline. The objective was to distinguish working days, calendar days, according to the call, and non-applicable. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 57
+
+Task 5 was to compare legal bases. The objective was to identify the current version and its relation to a superseded rule. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 58
+
+Task 6 was to switch language. The objective was to preserve the query, filters, entity, and meaning. Complete success, partial success, failure, time, action count, assistance, and comments were recorded. Review compared the answer with the source and distinguished a data, interface, wording, or training defect. Results were analyzed by language and profile. An ambiguous task was reviewed before attributing the problem to the system.
+
+Evaluation section 59
+
+Metric 1 is task success. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 60
+
+Metric 2 is time. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 61
+
+Metric 3 is actions. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 62
+
+Metric 4 is requests for help. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 63
+
+Metric 5 is clarity. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 64
+
+Metric 6 is ease of search. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 65
+
+Metric 7 is confidence. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 66
+
+Metric 8 is bilingual consistency. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 67
+
+Metric 9 is latency. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 68
+
+Metric 10 is technical errors. The unit, calculation, missing values, and exclusions are defined. Results contain the median or percentage, distribution, and group comparison. An aggregate figure is accompanied by examples and limitations. Observations are not presented as causal without evidence. Task and system versions are retained to repeat the analysis.
+
+Evaluation section 69
+
+Finding 1 indicates that title search performs well. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 70
+
+Finding 2 indicates that unit codes increase confidence. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 71
+
+Finding 3 indicates that call-dependent deadlines require more context. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 72
+
+Finding 4 indicates that historical legal bases may be confused with current ones. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 73
+
+Finding 5 indicates that language switching preserves context. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 74
+
+Finding 6 indicates that channel labels are understandable. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 75
+
+Finding 7 indicates that advanced filters are difficult to discover. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 76
+
+Finding 8 indicates that long records need better visual hierarchy. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 77
+
+Finding 9 indicates that error messages are clear. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 78
+
+Finding 10 indicates that latency is acceptable. The conclusion combines interaction data, questionnaires, and journey review. Affected participants, frequency, and severity are documented. Where the finding depends on one collection or procedure, its scope is limited. The proposed action has an owner, priority, and closure criterion. Changes are tested in both languages.
+
+Evaluation section 79
+
+Technical analysis 1 covers service availability. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.
+
+Evaluation section 80
+
+Technical analysis 2 covers p50 and p95 latency. Aggregated logs and controlled tests are used. Logs contain no credentials or personal data. Results are compared with plan targets and the deployed configuration. A failure not observed during sessions may remain a risk where test coverage is insufficient. Evidence is archived with the version, date, and owner.

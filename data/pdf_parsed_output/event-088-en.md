@@ -1,0 +1,1 @@
+Third NEXUS internal seminar, focused on practical privacy in data spaces, local execution of algorithms and traceability of aggregated results without transferring detailed data.

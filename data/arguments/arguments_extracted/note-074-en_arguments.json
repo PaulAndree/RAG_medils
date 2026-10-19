@@ -1,0 +1,36 @@
+[
+  {
+    "id": "note-074-en_chunk_1_arg_1",
+    "claim": "The first lesson is to confirm actual data granularity before fixing architecture and capacity.",
+    "evidence": [
+      "The difference between hourly and 15-minute data affected storage, connectors, privacy, and testing."
+    ]
+  },
+  {
+    "id": "note-074-en_chunk_1_arg_2",
+    "claim": "The second is to apply aggregation at the source whenever possible so that the most sensitive data does not leave the cooperative.",
+    "evidence": []
+  },
+  {
+    "id": "note-074-en_chunk_1_arg_3",
+    "claim": "Governance must be implemented as an operational process rather than only as a document.",
+    "evidence": [
+      "Forms, expiry dates, decision logs, and revocation were necessary to apply the policy."
+    ]
+  },
+  {
+    "id": "note-074-en_chunk_1_arg_4",
+    "claim": "Preserving time zones and provenance was also essential; an apparently minor transformation caused a one-hour shift.",
+    "evidence": []
+  },
+  {
+    "id": "note-074-en_chunk_1_arg_5",
+    "claim": "Revocation and recovery tests should be part of the normal schedule.",
+    "evidence": []
+  },
+  {
+    "id": "note-074-en_chunk_1_arg_6",
+    "claim": "To scale VERDANT, certificate rotation should be automated, alerts should be reviewed periodically, and published indicators should clearly distinguish missing data from data deliberately withheld for privacy.",
+    "evidence": []
+  }
+]

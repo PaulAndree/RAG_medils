@@ -1,0 +1,27 @@
+[
+  {
+    "id": "event-127-en_chunk_1_arg_1",
+    "claim": "Nine of ten participants correctly interpreted all four states. One person confused metadata-only with an image that had not yet loaded.",
+    "evidence": []
+  },
+  {
+    "id": "event-127-en_chunk_1_arg_2",
+    "claim": "92 percent distinguished confirmed from candidate. Errors were concentrated in color, not wording.",
+    "evidence": []
+  },
+  {
+    "id": "event-127-en_chunk_1_arg_3",
+    "claim": "Eighty-eight percent correctly interpreted circa dates, intervals and open bounds. Two people did not understand why an inferred date displayed an evidence source.",
+    "evidence": []
+  },
+  {
+    "id": "event-127-en_chunk_1_arg_4",
+    "claim": "Keyboard and screen-reader accessibility passed every critical task.",
+    "evidence": []
+  },
+  {
+    "id": "event-127-en_chunk_1_arg_5",
+    "claim": "The candidate version is accepted, subject to three minor adjustments: a metadata-only icon, candidate-link color and the basis-of-estimate label. It may then be frozen.",
+    "evidence": []
+  }
+]

@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-06-30T09:15:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Before the retreat, we need to reduce the 2027 proposals to a comparable set using common criteria.\n\nDate: 2026-06-30T09:17:00Z\nAuthor: Elena Martín Ríos\nMessage: Each project submitted three proposals, plus four cross-cutting lines. There are sixteen in total.\n\nDate: 2026-06-30T09:19:00Z\nAuthor: Javier Ortega Campos\nMessage: SILEX proposes municipal operations, expansion to another municipality and interoperability evaluation.\n\nDate: 2026-06-30T09:21:00Z\nAuthor: Lucía Navarro Gil\nMessage: LUMEN proposes a sustainable service, collection publication and assisted-curation tools.\n\nDate: 2026-06-30T09:24:00Z\nAuthor: Andrés Beltrán Vega\nMessage: VERDANT proposes expanding facilities and local analysis; ARIADNA proposes maintenance and abstention evaluation.\n\nDate: 2026-06-30T09:27:00Z\nAuthor: Nuria Castaño Rey\nMessage: The cross-cutting lines are automation, responsible infrastructure, data governance and training.\n\nDate: 2026-06-30T09:30:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Which criteria will we use before discussing preferences?\n\nDate: 2026-06-30T09:33:00Z\nAuthor: Elena Martín Ríos\nMessage: Scientific impact, external commitment, urgency, reuse, capacity, cost and maintenance risk.\n\nDate: 2026-06-30T09:36:00Z\nAuthor: Javier Ortega Campos\nMessage: External commitment should weigh heavily when a partner has signed dates and responsibilities.\n\nDate: 2026-06-30T09:39:00Z\nAuthor: Lucía Navarro Gil\nMessage: Collection publication has impact, but depends on rights and ongoing preservation.\n\nDate: 2026-06-30T09:42:00Z\nAuthor: Andrés Beltrán Vega\nMessage: VERDANT expansion should not be prioritized until six facilities are confirmed sustainable.\n\nDate: 2026-06-30T09:45:00Z\nAuthor: Nuria Castaño Rey\nMessage: We should also avoid selecting lines that simultaneously require more storage, GPUs and support without funding.\n\nDate: 2026-06-30T09:48:00Z\nAuthor: Clara Ibáñez Soto\nMessage: I propose scoring from one to five and applying a capacity test after ranking.\n\nDate: 2026-06-30T09:51:00Z\nAuthor: Elena Martín Ríos\nMessage: Proposals with existing obligations will not compete in the same way; they will be treated as minimum commitments.\n\nDate: 2026-06-30T09:54:00Z\nAuthor: Javier Ortega Campos\nMessage: How many new lines can we sustain in addition to commitments?\n\nDate: 2026-06-30T09:57:00Z\nAuthor: Nuria Castaño Rey\nMessage: Under the base scenario, two large new lines or four small ones, not both.\n\nDate: 2026-06-30T10:00:00Z\nAuthor: Lucía Navarro Gil\nMessage: Each proposal needs a minimum and an expanded version.\n\nDate: 2026-06-30T10:03:00Z\nAuthor: Andrés Beltrán Vega\nMessage: It also needs a stop condition when data, a partner or funding is not secured.\n\nDate: 2026-06-30T10:06:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We will prepare a comparison sheet with scores, cost, dependencies and budget scenario.",
+        "Date: 2026-06-30T10:10:00Z\nAuthor: Elena Martín Ríos\nMessage: Agreed: minimum commitments separated, seven criteria, a capacity test and a maximum of two large new lines under the base scenario."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        751,
+        50
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

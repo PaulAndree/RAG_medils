@@ -1,0 +1,16 @@
+[
+  {
+    "id": "event-169-en_chunk_1_arg_1",
+    "claim": "ARIADNA v2.2 is approved for internal release on 1 December 2026. v2.1 remains the official evaluation snapshot; v2.2 is a maintenance and user-experience version.",
+    "evidence": [
+      "v2.2 adds explained abstention, one-dimension clarifications and the new conflicting-current-evidence reason. We must decide whether it is ready for internal release.",
+      "On the reserved maintenance set, it achieves 85.1 percent correct abstention, 8.4 percent unnecessary abstention and 69.3 percent accuracy on answerable questions.",
+      "These figures do not come from the v2.1 test set and do not replace the official benchmark results: recall@10 of 79.5 percent, MRR of 0.638 and accuracy of 68.2 percent.",
+      "Guide 1.3 contains five reasons, evidence rules, human review and twenty bilingual examples. Final agreement on reasonCode is 0.92.",
+      "The v2.2 image is separated from v2.1 and experimental branches. The official test set remains encrypted and is not required to run abstention functions.",
+      "Documentation distinguishes stable release from maintenance, official results from supplementary analysis and public data from restricted sets.",
+      "Eighty-nine percent understood the abstention reason, 85 percent identified when human review was required and average trust was 4.4 out of 5.",
+      "Only minor wording and post-release follow-up actions. They do not affect the package."
+    ]
+  }
+]

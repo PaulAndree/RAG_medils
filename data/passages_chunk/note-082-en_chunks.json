@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The automated review covered 186 documents belonging to 72 version families. Nine incomplete links were found: five new versions contained `previous_version` while the earlier version lacked `next_version`, three documents had no validity period, and one relation incorrectly pointed from a Spanish document to the English version.\n\nAll supersession relations must be reciprocal and remain within the same language. Equivalence across languages is represented exclusively through `parallel_version`. A family may not contain cycles, and only one version may be marked current for a particular date. Historical documents without a known successor may lack `next_version`, but this must be stated explicitly in the manifest.\n\nSergio will correct the nine cases and rerun validation. Tomás will verify that retrieval filters use validity periods rather than only chain position. The final freeze requires zero broken links, zero cycles, and complete equivalence between the ES and EN families."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-082-en"
+  ],
+  "token_count": [
+    143
+  ]
+}

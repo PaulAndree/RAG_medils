@@ -1,0 +1,187 @@
+[
+  {
+    "id": "doc-030-en_chunk_1_arg_1",
+    "claim": "The overall success rate was 88%.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_1_arg_2",
+    "claim": "Median task time was 2 minutes 18 seconds.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_1_arg_3",
+    "claim": "Language switching preserved the query and entity in 100% of journeys.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_1_arg_4",
+    "claim": "The API achieved p95 latency of 1.42 seconds during sessions.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_1_arg_5",
+    "claim": "No exposure of restricted data was identified.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_3_arg_1",
+    "claim": "Finding 1 indicates that title search performs well.",
+    "evidence": [
+      "The conclusion combines interaction data, questionnaires, and journey review.",
+      "Affected participants, frequency, and severity are documented.",
+      "Where the finding depends on one collection or procedure, its scope is limited.",
+      "The proposed action has an owner, priority, and closure criterion.",
+      "Changes are tested in both languages."
+    ]
+  },
+  {
+    "id": "doc-030-en_chunk_3_arg_2",
+    "claim": "Finding 2 indicates that unit codes increase confidence.",
+    "evidence": [
+      "The conclusion combines interaction data, questionnaires, and journey review.",
+      "Affected participants, frequency, and severity are documented.",
+      "Where the finding depends on one collection or procedure, its scope is limited.",
+      "The proposed action has an owner, priority, and closure criterion.",
+      "Changes are tested in both languages."
+    ]
+  },
+  {
+    "id": "doc-030-en_chunk_3_arg_3",
+    "claim": "Finding 3 indicates that call-dependent deadlines require more context.",
+    "evidence": [
+      "The conclusion combines interaction data, questionnaires, and journey review.",
+      "Affected participants, frequency, and severity are documented.",
+      "Where the finding depends on one collection or procedure, its scope is limited.",
+      "The proposed action has an owner, priority, and closure criterion.",
+      "Changes are tested in both languages."
+    ]
+  },
+  {
+    "id": "doc-030-en_chunk_3_arg_4",
+    "claim": "Finding 4 indicates that historical legal bases may be confused with current ones.",
+    "evidence": [
+      "The conclusion combines interaction data, questionnaires, and journey review.",
+      "Affected participants, frequency, and severity are documented.",
+      "Where the finding depends on one collection or procedure, its scope is limited.",
+      "The proposed action has an owner, priority, and closure criterion.",
+      "Changes are tested in both languages."
+    ]
+  },
+  {
+    "id": "doc-030-en_chunk_3_arg_5",
+    "claim": "Finding 5 indicates that language switching preserves context.",
+    "evidence": [
+      "The conclusion combines interaction data, questionnaires, and journey review.",
+      "Affected participants, frequency, and severity are documented.",
+      "Where the finding depends on one collection or procedure, its scope is limited.",
+      "The proposed action has an owner, priority, and closure criterion.",
+      "Changes are tested in both languages."
+    ]
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_1",
+    "claim": "Finding 6 indicates that channel labels are understandable.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_2",
+    "claim": "Finding 7 indicates that advanced filters are difficult to discover.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_3",
+    "claim": "Finding 8 indicates that long records need better visual hierarchy.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_4",
+    "claim": "Finding 9 indicates that error messages are clear.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_5",
+    "claim": "Finding 10 indicates that latency is acceptable.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_6",
+    "claim": "Technical analysis 1 covers service availability.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_7",
+    "claim": "Technical analysis 2 covers p50 and p95 latency.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_8",
+    "claim": "Technical analysis 3 covers error rate.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_4_arg_9",
+    "claim": "Technical analysis 4 covers response equivalence.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_9_arg_1",
+    "claim": "Finding 1 indicates that title search performs well.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_9_arg_2",
+    "claim": "Finding 2 indicates that unit codes increase confidence.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_9_arg_3",
+    "claim": "Finding 3 indicates that call-dependent deadlines require more context.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_9_arg_4",
+    "claim": "Finding 4 indicates that historical legal bases may be confused with current ones.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_9_arg_5",
+    "claim": "Finding 5 indicates that language switching preserves context.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_1",
+    "claim": "Finding 6 indicates that channel labels are understandable.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_2",
+    "claim": "Finding 7 indicates that advanced filters are difficult to discover.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_3",
+    "claim": "Finding 8 indicates that long records need better visual hierarchy.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_4",
+    "claim": "Finding 9 indicates that error messages are clear.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_5",
+    "claim": "Finding 10 indicates that latency is acceptable.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_6",
+    "claim": "Technical analysis 1 covers service availability.",
+    "evidence": []
+  },
+  {
+    "id": "doc-030-en_chunk_10_arg_7",
+    "claim": "Technical analysis 2 covers p50 and p95 latency.",
+    "evidence": []
+  }
+]

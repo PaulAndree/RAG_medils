@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "First ARIADNA bilingual annotation workshop to resolve disagreements about unanswerable questions, temporal questions, equivalence across language versions and selection of minimally sufficient evidence.\n\nAndrés Beltrán: We annotated an initial batch of eighty questions. Agreement is good for direct questions but lower for temporal and unanswerable cases.\nPablo Herrero: The main disagreement occurs when an answer exists in an old version but not in the current document.\nLucía Navarro: The question must include or imply a date. If it asks about the current procedure, an answer based only on a superseded version must be considered incorrect.\nTomás Leal: What if the current English version has not yet been published, but the Spanish version has?\nSergio Vidal: We must answer according to the corpus and date for each language. The absence of a translation does not turn the Spanish version into English evidence.\nMireia Soler: I propose recording three states: answerable with current evidence, answerable only historically and unanswerable within the requested scope.\nPablo Herrero: There is also disagreement about how much evidence to mark. Some annotators select the entire document, while others select one sentence.\nLucía Navarro: Minimal evidence must include every part required to justify the answer, but irrelevant content should not be selected.\nAndrés Beltrán: We approve the three states and the minimally sufficient evidence rule. Parallel questions must preserve the same target fact, although available evidence may differ by language.\nTomás Leal: I will update the guide, and we will reannotate twenty disputed cases to measure improvement."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-057-en"
+  ],
+  "token_count": [
+    249
+  ]
+}

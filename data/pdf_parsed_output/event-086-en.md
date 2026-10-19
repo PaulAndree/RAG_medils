@@ -1,0 +1,1 @@
+Second doctoral and supervision forum to review quarterly milestones, adjust plans affected by the SILEX delay and ARIADNA reconstruction, and coordinate contributions to papers and deliverables.

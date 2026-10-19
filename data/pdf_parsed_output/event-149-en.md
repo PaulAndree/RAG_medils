@@ -1,0 +1,1 @@
+Third VERDANT temporal data-quality analysis to assess the autumn daylight-saving transition, validate UTC normalization and close pilot metrics for missing data, duplicates and temporal consistency.

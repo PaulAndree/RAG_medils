@@ -1,0 +1,1 @@
+Third VERDANT connector-security session to run a certificate-compromise drill, measure revocation and recovery times, and validate secure continuity of authorized transfers.

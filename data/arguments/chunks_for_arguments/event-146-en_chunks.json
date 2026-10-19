@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Second VERDANT pilot-closure session to close the summer expansion phase, consolidate lessons learned and transfer monitoring of six facilities to the autumn evaluation.\n\nAndrés Beltrán: This session closes the summer phase, not the entire pilot. Governance authorized continuation through 30 November.\nInés Ferrer: Between 10 August and 30 September, we processed 44,208 hourly records and five local runs. Scientific indicators meet the planned objectives.\nSergio Vidal: Ninety requests were recorded during the phase: 84 approved and six rejected. There were no granularity breaches or redistribution incidents.\nNuria Castaño: Availability was 99.9 percent. Two retention alerts and one synchronization error were corrected without loss of authorized data.\nCarmen Rey: The main operational cost is manual review of local results. For 2027, checks on group size and permitted ranges should be automated.\nHéctor Molina: Dynamic suppression and local processing have proved viable alternatives to detailed-data export. The prohibition on raw 15-minute series should remain.\nBruno Silva: The international partner confirms that hourly data is sufficient for the autumn evaluation.\nAndrés Beltrán: Approved lessons: monitoring from the beginning, UTC validation, automatic rotation and differentiation between suppression and failure.\nSergio Vidal: The autumn phase will use the same policy v1.0 and produce a final report comparing utility, risk and operational load.\nAndrés Beltrán: The summer phase closes successfully. The pilot continues through November under the current controls."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        351
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

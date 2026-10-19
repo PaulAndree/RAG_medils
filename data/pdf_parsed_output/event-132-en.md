@@ -1,0 +1,1 @@
+Third LUMEN demonstrator user evaluation to validate public candidate demo-1.0, check reproducibility and understanding of rights, and confirm that it may be used as publication-associated material.

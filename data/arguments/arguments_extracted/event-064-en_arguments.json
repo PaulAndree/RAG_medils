@@ -1,0 +1,21 @@
+[
+  {
+    "id": "event-064-en_chunk_1_arg_1",
+    "claim": "The figures may circulate internally as provisional corrected results.",
+    "evidence": [
+      "The hybrid system achieves recall@10 of 79.8 percent, MRR of 0.641 and answer accuracy of 68.5 percent. The figures are calculated over 220 Spanish and 220 English questions.",
+      "They are lower than the invalidated March figures, as expected after removing the leakage.",
+      "Every result links to the corpus version, configuration, container and execution record. There are no references to the contaminated file."
+    ]
+  },
+  {
+    "id": "event-064-en_chunk_1_arg_2",
+    "claim": "The report will include a separate table containing the invalidated figures, clearly marked as non-comparable.",
+    "evidence": []
+  },
+  {
+    "id": "event-064-en_chunk_1_arg_3",
+    "claim": "Conditional internal approval. Final approval will depend on the audit and the 6 June corpus review.",
+    "evidence": []
+  }
+]

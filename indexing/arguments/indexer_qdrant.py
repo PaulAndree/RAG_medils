@@ -5,6 +5,12 @@ from uuid import NAMESPACE_URL, uuid4, uuid5
 
 from qdrant_client import QdrantClient, models
 
+from indexing.embedding_api import (
+    DENSE_MODEL,
+    DENSE_VECTOR_SIZE,
+    SPARSE_MODEL,
+    embed_texts,
+)
 from metrics import ProcessMetricSample, push_process_metrics
 from stores.database_postgres import get_indexable_arguments
 
@@ -14,9 +20,7 @@ PUSHGATEWAY_URL = os.getenv("PUSHGATEWAY_URL", "http://localhost:9091")
 ACTIVE_ALIAS = "arguments_embeddings_live"
 COLLECTION_PREFIX = "arguments_embeddings"
 DENSE_VECTOR = "dense"
-SPARSE_VECTOR = "bm25"
-DENSE_MODEL = "BAAI/bge-small-en-v1.5"
-SPARSE_MODEL = "Qdrant/bm25"
+SPARSE_VECTOR = "sparse"
 
 client = QdrantClient(url=QDRANT_URL)
 POINT_NAMESPACE = uuid5(
@@ -40,26 +44,22 @@ def get_alias_target():
 
 
 def create_collection(collection_name):
-    vector_size = client.get_embedding_size(DENSE_MODEL)
-
     client.create_collection(
         collection_name=collection_name,
         vectors_config={
             DENSE_VECTOR: models.VectorParams(
-                size=vector_size,
+                size=DENSE_VECTOR_SIZE,
                 distance=models.Distance.COSINE,
             ),
         },
         sparse_vectors_config={
-            SPARSE_VECTOR: models.SparseVectorParams(
-                modifier=models.Modifier.IDF,
-            ),
+            SPARSE_VECTOR: models.SparseVectorParams(),
         },
     )
 
     print(
         f"Created collection {collection_name} "
-        f"with vector size {vector_size}"
+        f"with vector size {DENSE_VECTOR_SIZE}"
     )
 
 
@@ -74,22 +74,26 @@ def index_arguments(collection_name, arguments):
     ids = []
     vectors = []
     payloads = []
+    texts = [embedding_text(argument) for argument in arguments]
+    dense_vectors = embed_texts(texts, DENSE_MODEL)
+    sparse_vectors = embed_texts(texts, SPARSE_MODEL)
 
-    for argument in arguments:
+    for argument, dense_vector, sparse_vector in zip(
+        arguments,
+        dense_vectors,
+        sparse_vectors,
+        strict=True,
+    ):
         ids.append(str(uuid5(
             POINT_NAMESPACE,
             argument["argument_id"],
         )))
 
-        text = embedding_text(argument)
         vectors.append({
-            DENSE_VECTOR: models.Document(
-                text=text,
-                model=DENSE_MODEL,
-            ),
-            SPARSE_VECTOR: models.Document(
-                text=text,
-                model=SPARSE_MODEL,
+            DENSE_VECTOR: dense_vector,
+            SPARSE_VECTOR: models.SparseVector(
+                indices=sparse_vector["indices"],
+                values=sparse_vector["values"],
             ),
         })
 
@@ -137,21 +141,22 @@ def validate_collection(collection_name, arguments):
             f"found {indexed_count}"
         )
 
+    text = embedding_text(arguments[0])
+    dense_query = embed_texts([text], DENSE_MODEL, "query")[0]
+    sparse_query = embed_texts([text], SPARSE_MODEL, "query")[0]
+
     smoke_result = client.query_points(
         collection_name=collection_name,
         prefetch=[
             models.Prefetch(
-                query=models.Document(
-                    text=embedding_text(arguments[0]),
-                    model=DENSE_MODEL,
-                ),
+                query=dense_query,
                 using=DENSE_VECTOR,
                 limit=10,
             ),
             models.Prefetch(
-                query=models.Document(
-                    text=embedding_text(arguments[0]),
-                    model=SPARSE_MODEL,
+                query=models.SparseVector(
+                    indices=sparse_query["indices"],
+                    values=sparse_query["values"],
                 ),
                 using=SPARSE_VECTOR,
                 limit=10,

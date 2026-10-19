@@ -77,7 +77,7 @@ def _soft_clusters(
 def perform_clustering(
     embeddings: list[list[float]],
     dim: int = 10,
-    threshold: float = 0.1,
+    threshold: float = 0.2,
 ) -> list[list[int]]:
     """Run RAPTOR-style global UMAP/GMM then local UMAP/GMM clustering.
 

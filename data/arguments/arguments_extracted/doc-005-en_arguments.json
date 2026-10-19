@@ -1,0 +1,89 @@
+[
+  {
+    "id": "doc-005-en_chunk_4_arg_1",
+    "claim": "SILEX can proceed without using personal content from the municipal register.",
+    "evidence": [
+      "The core of the pilot is based on administrative metadata and interoperability rules."
+    ]
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_2",
+    "claim": "Legal uncertainty must appear as an explicit restriction rather than be hidden by a technical decision.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_3",
+    "claim": "Publication of the catalogue and final transfer require evidence of licence, provenance, validation, and access control.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_4",
+    "claim": "Formal confirmation from Santa Marina will be the determining document for any use of registration data beyond a limited internal test.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_5",
+    "claim": "Before a municipal dataset is loaded, the authorization record must precisely identify the source system, included fields, purpose, people with access, and destination environment.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_6",
+    "claim": "It must state whether authorization covers a copy, remote consultation, or synthetic data only.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_7",
+    "claim": "It must also set a review date and explain what will happen when the pilot ends.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_8",
+    "claim": "A generic reference to the project does not replace this information.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_9",
+    "claim": "The person responsible for loading will check that the received file matches the authorization record.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_10",
+    "claim": "If additional fields appear, loading will stop until their treatment is confirmed.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_11",
+    "claim": "The manifest will record the result of this check, the file checksum, and any filtering performed before storage.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_12",
+    "claim": "Pending datasets will remain separate from authorized datasets so that an automated task cannot include them in a publication.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_13",
+    "claim": "The pre-publication review must answer five questions: whether the dataset has a sufficient licence, whether it contains only necessary fields, whether versions and validity periods are correct, whether unnecessary personal data has been removed, and whether provenance explains every value.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_14",
+    "claim": "The answers must be documented by both a technical reviewer and a person responsible for licences or privacy.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_15",
+    "claim": "Where a record combines sources with different conditions, the most restrictive condition will apply to the combined product unless the parts can be separated verifiably.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_16",
+    "claim": "Licence errors are blocking even where the record has passed technical tests.",
+    "evidence": []
+  },
+  {
+    "id": "doc-005-en_chunk_4_arg_17",
+    "claim": "The final package will contain an exclusion list with reasons so that absence of a dataset is not interpreted as an ingestion failure.",
+    "evidence": []
+  }
+]

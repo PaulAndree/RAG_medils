@@ -1,0 +1,9 @@
+Storage saturation on Atlas-2 stopped six jobs and left four queued. Partial results from two reranking runs were lost because they wrote to a temporary directory without backup. Completed BM25 and embedding runs are not affected.
+
+Recovery priority:
+1. Rerun baselines on the corrected split.
+2. Compare chunking by category.
+3. Evaluate document-version filters.
+4. Run exploratory experiments with large rerankers.
+
+Nuria will free space by deleting reproducible caches and move historical indexes to the newly acquired storage. Tomás will modify scripts to save intermediate metrics every ten batches. No job may use the temporary directory as its final destination. The queue will reopen after at least 4 TB of free space and a valid backup of priority results have been verified.

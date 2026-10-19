@@ -36,7 +36,7 @@ def query(request: QueryRequest):
             "retrievals": request.retrievals,
             "documents": [],
             "summaries": [],
-            "graph_context": {"matches": [], "records": []},
+            "graph_context": {"results": []},
         })
     except Exception as exc:
         raise HTTPException(

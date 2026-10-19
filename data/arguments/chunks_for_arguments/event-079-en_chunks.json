@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "First NEXUS infrastructure review to assess Atlas-2 capacity, working storage, backups and isolation requirements for evaluation and project data.\n\nClara Ibáñez: The all-hands meeting identified storage expansion as a priority. Nuria, present the current status.\nNuria Castaño: Atlas-2 has 320 raw terabytes. The fast tier is at 81 percent, the archive tier at 63 percent and external backups consume 54 percent of the contracted quota.\nSergio Vidal: Part of the growth comes from duplicate corpora and containers without retention policies.\nAndrés Beltrán: ARIADNA needs test sets to be physically separated or protected through strong permissions. They must not remain in directories shared with experiments.\nElena Martín: SILEX and LUMEN also need to retain versions and evidence, but not everything requires fast storage.\nNuria Castaño: I propose three immediate measures: automated lifecycle management, an additional 80 terabytes of fast storage and an encrypted area for restricted data.\nSergio Vidal: Backups must be tested through restoration, not only through successful-job logs.\nClara Ibáñez: What are the estimated schedule and cost for the expansion?\nNuria Castaño: Procurement before 15 March and commissioning during April. The cost fits the infrastructure budget if we postpone two non-critical GPUs.\nElena Martín: Approved. We will retain one planned GPU for the second half of the year and prioritize storage, isolation and restoration.\nClara Ibáñez: I will record the budget change and quarterly recovery test."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        351
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

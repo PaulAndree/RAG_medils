@@ -1,0 +1,13 @@
+First ARIADNA v2.1 release-preparation session to close documentation, licences, data and model cards, incident history and reproducible materials without disclosing the closed test set.
+
+Andrés Beltrán: Final v2.1 metrics were approved on 25 July. We must now prepare an internal release and reproducible package without exposing the test set.
+Sergio Vidal: The package may include development, validation, schemas, annotation guide, evaluation code and aggregate results. The closed test set will remain encrypted.
+Tomás Leal: We will publish the 450-token hybrid configuration, dependency versions and scripts for execution over an authorized dataset.
+Lucía Navarro: The data card must document language-specific validity dates, historical and unanswerable questions and the limited reopening caused by the travel rules.
+Nuria Castaño: I will create a reproducible image separate from experimental v2.2 branches. Official results will point only to v2.1 runs.
+Clara Ibáñez: The incident report must explain the invalidated March figures, reconstruction and preventive controls without identifying individuals as personally responsible.
+Andrés Beltrán: Do we include the new abstention results?
+Tomás Leal: Only as validation and user-analysis findings. They are not official v2.1 test metrics.
+Lucía Navarro: Guide 1.2 may be published as methodological material, noting that it extends maintenance after the freeze.
+Sergio Vidal: We must also include an access policy for future external replications.
+Andrés Beltrán: Approved. Internal ARIADNA 2.1 will be released on 24 August with official metrics, correction history and reproducible materials, while keeping the test set closed.

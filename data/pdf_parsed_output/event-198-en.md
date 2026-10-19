@@ -1,0 +1,1 @@
+Second hiring-planning session to prioritize 2027 roles after pilots and closures, confirm available funding and determine which proposals may enter formal processing.

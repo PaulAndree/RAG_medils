@@ -1,0 +1,16 @@
+[
+  {
+    "id": "event-161-en_chunk_1_arg_1",
+    "claim": "The combined strategy reaches 82.6 percent correct abstention and 8.9 percent unnecessary rejection. It improves especially for out-of-validity and language-unavailable cases.",
+    "evidence": [
+      "The simple threshold achieves 71.4 percent correct abstention but rejects 14.6 percent of answerable questions. The classifier reaches 79.8 percent and reduces unnecessary rejection to 10.2 percent."
+    ]
+  },
+  {
+    "id": "event-161-en_chunk_1_arg_2",
+    "claim": "We select the combined strategy for adjudication and user testing.",
+    "evidence": [
+      "The combined strategy reaches 82.6 percent correct abstention and 8.9 percent unnecessary rejection. It improves especially for out-of-validity and language-unavailable cases."
+    ]
+  }
+]

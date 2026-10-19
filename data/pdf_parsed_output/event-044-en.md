@@ -1,0 +1,1 @@
+Second international connector test to verify signed access decisions, temporary facility codes, hourly-aggregation metadata and automatic rejection of requests for 15-minute data.

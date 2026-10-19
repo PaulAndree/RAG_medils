@@ -1,0 +1,11 @@
+[
+  {
+    "id": "event-195-en_chunk_1_arg_1",
+    "claim": "The licence manifest becomes mandatory evidence for every delivery and final archive.",
+    "evidence": [
+      "Second software-licence review to resolve pending components, verify autumn-version manifests and authorize or block planned deliverables.",
+      "Clara Ibáñez: Which deliveries are authorized?",
+      "Sergio Vidal: SILEX 1.0, LUMEN demo-1.0, ARIADNA v2.2 and VERDANT recipes are authorized. Internal images remain non-redistributable."
+    ]
+  }
+]

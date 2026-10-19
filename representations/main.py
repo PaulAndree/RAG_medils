@@ -21,7 +21,6 @@ DEFAULT_PUSHGATEWAY_URL = os.getenv(
     "http://localhost:9091",
 )
 GENERATED_PATHS = (
-    Path("pdf_parsed_output"),
     Path("passages_chunk"),
     Path("arguments/chunks_for_arguments"),
     Path("arguments/arguments_extracted"),

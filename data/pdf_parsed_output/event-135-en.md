@@ -1,0 +1,1 @@
+Fourth ingestion follow-up session to check the post-publication operational version, review rights changes, synchronization errors and maintenance criteria for new additions.

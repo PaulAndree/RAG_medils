@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-05-04T10:05:00Z\nAuthor: Andrés Beltrán Vega\nMessage: The pilot planned for July is no longer viable given reconstruction, auditing and the travel update.\n\nDate: 2026-05-04T10:07:00Z\nAuthor: Elena Martín Ríos\nMessage: We need a new date based on dependencies rather than merely adding weeks to the schedule.\n\nDate: 2026-05-04T10:09:00Z\nAuthor: Nuria Castaño Rey\nMessage: The stable environment will be ready after v2.1 is frozen, access controls are completed and a reproducible image is generated.\n\nDate: 2026-05-04T10:11:00Z\nAuthor: Tomás Leal Guerra\nMessage: Corrected evaluation may finish in July, but we need time to analyze errors and prepare pilot queries.\n\nDate: 2026-05-04T10:14:00Z\nAuthor: Lucía Navarro Gil\nMessage: The travel rules will have different effective dates in Spanish and English. We must validate both before exposing administrative questions.\n\nDate: 2026-05-04T10:17:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We should also avoid August because administration-unit availability is reduced.\n\nDate: 2026-05-04T10:20:00Z\nAuthor: Andrés Beltrán Vega\nMessage: I propose the second half of September.\n\nDate: 2026-05-04T10:23:00Z\nAuthor: Elena Martín Ríos\nMessage: Which week provides sufficient margin and does not conflict with teaching closures?\n\nDate: 2026-05-04T10:26:00Z\nAuthor: Nuria Castaño Rey\nMessage: The week beginning 21 September allows environment preparation, training and support during the first half of the month.\n\nDate: 2026-05-04T10:29:00Z\nAuthor: Tomás Leal Guerra\nMessage: I need the final configuration frozen at least two weeks beforehand.\n\nDate: 2026-05-04T10:32:00Z\nAuthor: Lucía Navarro Gil\nMessage: Pilot questions should close on 4 September with evidence and validity reviewed.\n\nDate: 2026-05-04T10:35:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Who will the users be, and how many sessions will there be?\n\nDate: 2026-05-04T10:38:00Z\nAuthor: Andrés Beltrán Vega\nMessage: We propose 18 research-administration staff across three sessions, with Spanish and English cases.\n\nDate: 2026-05-04T10:41:00Z\nAuthor: Elena Martín Ríos\nMessage: Communication must explain that July was an initial plan and that the change responds to quality controls.\n\nDate: 2026-05-04T10:44:00Z\nAuthor: Nuria Castaño Rey\nMessage: I will prepare a schedule covering freeze, training, technical rehearsal, pilot and incident period.\n\nDate: 2026-05-04T10:47:00Z\nAuthor: Tomás Leal Guerra\nMessage: The closed test set will not be used during the pilot; authorized cases and separate datasets will be used.\n\nDate: 2026-05-04T10:50:00Z\nAuthor: Lucía Navarro Gil\nMessage: I will include validity cases, unanswerable questions and reformulation alongside normal queries.\n\nDate: 2026-05-04T10:53:00Z\nAuthor: Clara Ibáñez Soto\nMessage: I need to update support costs and room availability before external confirmation.\n\nDate: 2026-05-04T10:56:00Z\nAuthor: Andrés Beltrán Vega\nMessage: The week beginning 21 September becomes the internal target, pending final validation in August.",
+        "Date: 2026-05-04T11:00:00Z\nAuthor: Elena Martín Ríos\nMessage: Agreed: we move the pilot from July to September, document dependencies and do not communicate confirmation until the environment is closed."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        757,
+        49
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

@@ -1,0 +1,1 @@
+Fourth SILEX deployment-preparation session to schedule minor update 1.2.1, review the rollback plan and confirm the change window without interrupting controlled operation.

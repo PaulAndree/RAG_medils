@@ -45,7 +45,7 @@ def retrieve(state: RAGState):
 
     documents = []
     summaries = []
-    graph_context = {"matches": [], "records": []}
+    graph_context = {"results": []}
 
     if "documents" in requested:
         passages = search_passages(state["question"], state["limit"])

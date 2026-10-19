@@ -1,0 +1,1 @@
+Third SILEX deployment-preparation session to confirm delivery of the stable environment, municipal training, support shifts and escalation procedure during the pilot week beginning 9 November.

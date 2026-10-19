@@ -1,0 +1,14 @@
+Sender: Andrés Beltrán Vega <andres.beltran@upsc.example>
+Recipient: Carmen Rey <carmen.rey@solcentro.example>, Bruno Almeida <bruno.almeida@itn.example>
+Title: Postponement of external connector testing
+
+Hello Carmen and Bruno,
+
+The confirmed change to fifteen-minute intervals alters the expected volume and increases the risk of inferring consumption habits. We are therefore postponing external connector testing until the privacy review is closed and the outstanding security controls have been verified.
+
+The current proposal is to retain original readings inside SolCentro and share hourly aggregated products, without exporting intervals to which fewer than three meters contribute. Before rescheduling testing, we must validate this rule, restrict the administration endpoint, verify removal of sensitive headers from traces, and perform a certificate-revocation test.
+
+We will send a new date when these conditions have been closed. In the meantime, we can continue using synthetic data and internal schema tests.
+
+Thank you,
+Andrés

@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The draft of guide v1.1 contains separate definitions for creator, author, and producer, together with eight examples reviewed by the team. The rule that inferred author when only a creation relationship existed has been removed. A warning has also been added for digitized material: the entity performing digitization may be the producer of the digital copy without being the author of the content.\n\nThe places section states that official proper names are retained in both languages and that historical variants must include their period and source. The dates section links to the agreed precision and approximation patterns.\n\nVersion 1.1 is still a working draft. Eva must review two photographic examples and one correspondence example. After approval, guide v1.1 will supersede v1.0, which will remain available as the previous version. Existing data must not be updated automatically until a migration test has been completed."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-016-en"
+  ],
+  "token_count": [
+    143
+  ]
+}

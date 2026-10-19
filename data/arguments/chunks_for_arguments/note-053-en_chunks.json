@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "The municipal pre-production environment will use a virtual machine with four CPUs, 16 GB of memory, and 250 GB of storage. Access will be through the VPN using named accounts. Shared accounts between the NEXUS team and municipal staff will not be permitted.\n\nThe initial load will include ontology v1.2, the validated catalogue, and 500 test procedures. Registration data will remain excluded until legal confirmation is received. During the first phase, the API will be available only within the municipal network. Technical logs will be retained for thirty days and will not contain complete request bodies.\n\nNuria will prepare a reproducible deployment package and a separate configuration file for secrets. Sergio will verify backups and monitoring. Luis Noguera will confirm network addresses and municipal accounts. The environment will be considered ready after health, bilingual-query, restoration, and access-control tests have passed."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        201
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

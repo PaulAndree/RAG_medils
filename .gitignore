@@ -2,7 +2,8 @@
 .venv/
 venv/
 env/
-data/
+data_DOC_EN/
+data_DOC_ES/
 
 # Python-generated files
 __pycache__/

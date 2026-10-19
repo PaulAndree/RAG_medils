@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Third international VERDANT connector test to verify a local-processing request, transfer of signed aggregated results, parameter auditing and rejection of any output that fails the minimum group-size rule."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-049-en"
+  ],
+  "token_count": [
+    28
+  ]
+}

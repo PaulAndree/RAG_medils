@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The TLS connection is established correctly, and the certificate presented by the partner matches the expected name. The failure occurs during OAuth token validation: the service returns `invalid_audience`. The local configuration requests a token for `verdant`, while the international endpoint expects the audience `verdant-pilot`.\n\nThere is no evidence of unauthorized access or credential exposure. The secret used in the test expires on 11 March and must be rotated even though it is not the primary cause. Nuria will update the audience in the integration environment and generate a new secret. Bruno will verify the equivalent configuration at Instituto Técnico do Norte.\n\nThe next test will include a catalogue request and an upload of ten synthetic records. Traces will be stored without tokens or sensitive headers. The problem should be classified as a configuration error, not a security incident."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-019-en"
+  ],
+  "token_count": [
+    138
+  ]
+}

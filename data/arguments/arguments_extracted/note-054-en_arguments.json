@@ -1,0 +1,32 @@
+[
+  {
+    "id": "note-054-en_chunk_1_arg_1",
+    "claim": "The unit filter uses internal codes that are not understandable and should also display the current name.",
+    "evidence": []
+  },
+  {
+    "id": "note-054-en_chunk_1_arg_2",
+    "claim": "Deadlines appear in a technical format and need a readable label.",
+    "evidence": []
+  },
+  {
+    "id": "note-054-en_chunk_1_arg_3",
+    "claim": "The interface does not distinguish clearly enough between missing information and data awaiting validation.",
+    "evidence": []
+  },
+  {
+    "id": "note-054-en_chunk_1_arg_4",
+    "claim": "Changing language returns users to the home screen instead of preserving the open procedure.",
+    "evidence": []
+  },
+  {
+    "id": "note-054-en_chunk_1_arg_5",
+    "claim": "Synonym search worked well for the Spanish terms for registration but failed for “terrace permit” versus “occupation of public space.”",
+    "evidence": []
+  },
+  {
+    "id": "note-054-en_chunk_1_arg_6",
+    "claim": "The comments do not affect data integrity, but two problems are considered pilot blockers: deadline display and loss of context between languages.",
+    "evidence": []
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Second ARIADNA corpus review to investigate the scope of the detected leakage, remove contaminated bilingual pairs, rebuild the partitions and establish access controls and a new freeze before rerunning experiments.\n\nAndrés Beltrán: The objective is to close the incident scope and approve a reconstruction procedure.\nSergio Vidal: The 42 identified questions correspond to 27 bilingual pairs and 15 monolingual items from early development. In addition, six test documents appear in a demonstration package accessible to the team.\nLucía Navarro: Even where questions are not duplicated, having seen those documents may influence query design and retrieval decisions.\nTomás Leal: I propose removing all documents from the package and their associated questions.\nSergio Vidal: Agreed. In total, we will remove 61 Spanish questions and 58 English questions. None may return to the corrected test set.\nPablo Herrero: How will we generate replacements?\nLucía Navarro: New questions will be created by annotators who did not participate in the experiments. Bilingual pairs will be assigned together, and no member of the modeling team will see their identifiers.\nNuria Castaño: I will create separate repositories. Development and validation will be accessible to the team; the corrected test set will be encrypted and accessible only to Sergio and the external reviewer.\nTomás Leal: We also need to restart the configuration history so that previous decisions are not reused without review.\nAndrés Beltrán: Correct. Baselines, chunking selection and generative evaluation will be rerun from the beginning. Previous results will remain archived as invalid.\nSergio Vidal: The new freeze is proposed for 30 April, with overlap auditing by text, identifier, document and bilingual pair.\nAndrés Beltrán: Approved. The corpus is reopened exclusively for reconstruction and will be frozen again on 30 April if it passes the audit."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-060-en"
+  ],
+  "token_count": [
+    289
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The latest SolCentro export still lacks five elements required to complete ingestion. Missing fields are a stable installation identifier, the time zone declared by the device, a reading-quality code, contracted nominal power, and a flag distinguishing a meter reset from physical replacement.\n\nThe current identifier changes when equipment is reinstalled, so it cannot serve as a historical key. The time zone can be inferred from the sample but must be delivered explicitly to prevent errors during daylight-saving transitions. The quality code is required to distinguish measured, estimated, and corrected values. Contracted power will allow outliers to be detected without applying one threshold to every installation.\n\nCarmen Rey will send a revised export by 25 March. Inés will prepare a table containing valid and null examples. Until the fields arrive, records may be loaded into the test environment but will not be used to calculate pilot indicators."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-022-en"
+  ],
+  "token_count": [
+    146
+  ]
+}

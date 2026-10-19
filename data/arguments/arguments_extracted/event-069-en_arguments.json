@@ -1,0 +1,21 @@
+[
+  {
+    "id": "event-069-en_chunk_1_arg_1",
+    "claim": "The following are approved as final ARIADNA v2.1 results: recall@10 79.5 percent, MRR 0.638 and accuracy 68.2 percent. The March figures remain invalidated and are not comparable.",
+    "evidence": [
+      "Recall@10 is 79.5 percent, MRR is 0.638 and answer accuracy is 68.2 percent. The difference from v2.0 is three tenths or less for every metric.",
+      "I reran the overlap audit and reviewed forty new questions. I found no contamination or improper access. The calculations are reproducible.",
+      "Dashboards are linked only to v2.1 runs. The invalidated March figures appear only in the incident appendix with a visible label.",
+      "Replication, audit and temporal updating are complete."
+    ]
+  },
+  {
+    "id": "event-069-en_chunk_1_arg_2",
+    "claim": "The leakage incident is closed, with preventive actions incorporated into the evaluation procedure.",
+    "evidence": [
+      "I reran the overlap audit and reviewed forty new questions. I found no contamination or improper access. The calculations are reproducible.",
+      "Dashboards are linked only to v2.1 runs. The invalidated March figures appear only in the incident appendix with a visible label.",
+      "The report must include a clear chronology: detection on 26 March, reconstruction in April, validation in June and regulatory updating in July."
+    ]
+  }
+]

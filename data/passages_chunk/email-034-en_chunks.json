@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Eva Calderón Gil <eva.calderon@archivoregional.example>\nRecipient: Lucía Navarro Gil <lucia.navarro@upsc.example>, Clara Ibáñez Soto <clara.ibanez@upsc.example>\nTitle: Approval of the LUMEN open subset\n\nHello,\n\nThe Regional Archive approves the proposed selection, subject to two corrections shown in the attached document. One photograph must be published as metadata only because its permission does not include a thumbnail. In addition, the attribution for one poster must mention both the original publishing entity and the person responsible for the digital reproduction.\n\nThe remaining records may be added to the open subset under the conditions stated in the manifest. Excluded objects must retain their exclusion reason so that the counts are verifiable.\n\nOnce Clara confirms the licences, you may generate the final package.\n\nBest regards,\nEva"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-034-en"
+  ],
+  "token_count": [
+    120
+  ]
+}

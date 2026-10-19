@@ -1,0 +1,16 @@
+[
+  {
+    "id": "note-028-en_chunk_1_arg_1",
+    "claim": "The 2023 policy must not be removed from the historical archive because it will support temporal questions, but it must be marked with its validity period and supersession relation.",
+    "evidence": [
+      "The 2023 policy appears in eighteen index chunks and is the top retrieved source for six questions."
+    ]
+  },
+  {
+    "id": "note-028-en_chunk_1_arg_2",
+    "claim": "Questions about the current procedure must use the 2026 version.",
+    "evidence": [
+      "The old version sets a reporting deadline of fifteen days, whereas the current policy establishes ten working days."
+    ]
+  }
+]

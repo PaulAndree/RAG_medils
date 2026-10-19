@@ -1,0 +1,1 @@
+Third retrieval evaluation to run a blind replication over ARIADNA v2.0, compare the results with the corrected May figures and analyze errors by language, document version and question type.

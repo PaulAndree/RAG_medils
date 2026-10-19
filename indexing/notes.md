@@ -1,0 +1,43 @@
+
+POSTGRES_HOST=127.0.0.1 \
+QDRANT_URL=http://127.0.0.1:6335 \
+NEO4J_URI=bolt://127.0.0.1:7687 \
+python -m indexing.main
+
+- we designed one collection per vectorized representation:
+  - passages
+  - arguments
+  - summaries
+- Triplets remain in Neo4j unless you also want vector search over them.
+- Because you currently have one corpus, you do not need catalog filtering.
+- In this project, each collection currently uses one dense vector space.
+
+ACTIVE_ALIAS = "arguments_embeddings_live"
+ACTIVE_ALIAS = "passages_embeddings_live"
+ACTIVE_ALIAS = "summaries_embeddings_live"
+
+
+
+for graph view indexing:
+
+MATCH documentPath =
+  (document:RagDocument)-[:HAS_CHUNK]->(chunk:RagChunk)
+MATCH mentionPath =
+  (chunk)-[:MENTIONS]->(entity:RagEntity)
+MATCH relationPath =
+  (entity)-[:RELATES_TO]-(other:RagEntity)
+RETURN documentPath, mentionPath, relationPath
+LIMIT 500;
+
+
+
+
+Qdrant Embedding requirement
+BM25 requires Qdrant’s IDF modifier:
+models.SparseVectorParams(
+    modifier=models.Modifier.IDF,
+)
+MILCO must not use that modifier. Therefore, if you switch the indexing pipeline from MILCO to BM25, change:
+SPARSE_MODEL = "bm25"
+SPARSE_VECTOR = "bm25"
+in both indexing and retrieval, restore Modifier.IDF, and fully rebuild the collections. FastEmbed explicitly requires Qdrant-side IDF for its BM25 vectors.

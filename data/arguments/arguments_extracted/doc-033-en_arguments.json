@@ -1,0 +1,9 @@
+[
+  {
+    "id": "doc-033-en_chunk_3_arg_1",
+    "claim": "Accessibility requirements include keyboard navigation, visible focus, form labels, alternative text, logical order, contrast, and field-associated messages.",
+    "evidence": [
+      "Technical evaluation does not replace testing with people."
+    ]
+  }
+]

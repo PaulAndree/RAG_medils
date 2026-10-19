@@ -1,0 +1,181 @@
+DELIVERABLE D3 — SILEX MAPPING AND VALIDATION REPORT
+
+This report documents the method used to transform the municipal catalogue into the SILEX ontology, the batch 3 validation results, agreed corrections, and criteria for accepting the candidate version. It retains both initial and post-correction results so the effect of every change can be verified.
+
+Batch 3 contains 412 records. The first run produced sixty-three violations across forty-one records: twenty-eight missing competent units, seventeen non-normalized dates, eleven duplicate identifiers, and seven statuses outside the vocabulary. Nine channel warnings were also identified as false positives.
+
+1. Sources and scope
+
+Sources are the revised Santa Marina catalogue, ontology specification v1.1, auxiliary unit and legal-basis tables, and status and channel vocabularies. Validation does not include individual cases or registration-data content. Personal examples used during development are synthetic.
+
+Mapping covers identifiers, titles, descriptions, units, legal bases, channels, deadlines, statuses, provenance, and version relations. Local presentation fields are excluded where they add no interoperable meaning. Every exclusion includes its reason and source system.
+
+2. Mapping method
+
+The process begins with an immutable copy of the export. Characters, identifiers, languages, and dates are then normalized while preserving every original value. A correspondence table links each source field to a SILEX property, transformation rule, and field assessment. Rules run through a versioned pipeline.
+
+Missing values are not completed automatically. Where a field does not apply to a procedure type, a non-applicable assessment is created. Where an authority must confirm a value, pending is used. Excluded values remain in the transformation report but are not published in the graph.
+
+3.R-01 — Unique identifier
+
+Every record must have an identifier not reused in the batch or previous loads.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-02 — Competent unit
+
+Processing procedures must link a unit through a stable code.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-03 — Legal basis
+
+A current rule must exist, or a field assessment must state pending or non-applicable.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-04 — Normalized date
+
+Dates must use ISO 8601 and retain the original value where a transformation occurs.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-05 — Channel
+
+Operational procedures require at least one channel; informational records may use an exception.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-06 — Language label
+
+Every label must declare es or en and must not contain both languages in one literal.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-07 — Deadline
+
+The technical duration and readable label must express the same temporal unit.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-08 — Status
+
+Statuses must belong to the approved vocabulary or have a documented local mapping.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-09 — Version
+
+A superseded source must link the next version and retain its validity period.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-10 — Provenance
+
+Every transformed value must be traceable to its source field and system.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-11 — Non-applicable value
+
+Non-applicable values must use FieldAssessment rather than an empty string.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+3.R-12 — Bilingual consistency
+
+ES and EN versions must share a base identifier and structural relations.
+
+The shape produces a violation where the requirement is mandatory and a warning where an allowed exception exists. The report contains the record identifier, field, observed value, rule, severity, and proposed correction. Results are not edited manually.
+
+4. Initial results
+
+Of the 412 records, 371 produced no violations. The remaining forty-one contained sixty-three issues because some records failed more than one rule. No error affected published data because loading remained stopped in the validation environment.
+
+The distribution shows that the main issue is not a technical transformation but the absence of unit codes in the export. Date errors arise from local formats, and duplicates from reused numbering in two systems. Statuses outside the vocabulary require a semantic decision rather than automatic replacement.
+
+4.F-01 — Missing competent unit
+
+Cases identified: 28. Alba will review the records and request stable codes where only a display name exists.
+
+Every case was assigned an owner and target date. The correction must preserve evidence of the previous value and run through the pipeline. Where a correction changes meaning, review by the municipal owner is required.
+
+4.F-02 — Date formats
+
+Cases identified: 17. Mireia will adjust the transformation and preserve the source literal.
+
+Every case was assigned an owner and target date. The correction must preserve evidence of the previous value and run through the pipeline. Where a correction changes meaning, review by the municipal owner is required.
+
+4.F-03 — Duplicate identifiers
+
+Cases identified: 11. A compound identifier and regression test will be applied.
+
+Every case was assigned an owner and target date. The correction must preserve evidence of the previous value and run through the pipeline. Where a correction changes meaning, review by the municipal owner is required.
+
+4.F-04 — Statuses outside vocabulary
+
+Cases identified: 7. Local mappings will be reviewed before the vocabulary is extended.
+
+Every case was assigned an owner and target date. The correction must preserve evidence of the previous value and run through the pipeline. Where a correction changes meaning, review by the municipal owner is required.
+
+4.F-05 — Channel warnings
+
+Cases identified: 9. The warnings are false positives for informational records, and the rule will be conditional on type.
+
+Every case was assigned an owner and target date. The correction must preserve evidence of the previous value and run through the pipeline. Where a correction changes meaning, review by the municipal owner is required.
+
+5. Duplicate-identifier incident
+
+Identifier SM-LIC-042 was used for both a terrace and a market stall because two municipal applications shared numbering. Loading stopped before resources were overwritten. The solution combines system, domain, and local number: SM-URBAN-TERRACE-042 and SM-MARKET-STALL-042.
+
+The regression test searches for repetition within the batch, across previous loads, and among different types. It also verifies that references to documents and units are updated with the new identifier. The old source code is retained as an alternative identifier with provenance.
+
+6. SHACL-shape adjustments
+
+The channel shape required at least one value for every record. This was incorrect for purely informational records. The new rule applies cardinality only to procedures that accept an application or provide an operational service. Informational records may declare the field non-applicable.
+
+The date rule is extended to accept a year, interval, or exact date but not free text without an assessment. Bilingual labels are checked by base identifier. The version shape prevents cycles and requires reciprocity between previous and next versions.
+
+7. Regression set
+
+The set contains twenty-four procedures not used during diagnosis: six permits, five certificates, four grants, four prior notifications, and five informational records. It checks the identifier, unit, legal basis, channel, deadline, status, and labels.
+
+It contains two non-applicable cases and three pending fields to prevent corrections from turning explicit states into gaps. The expected result is zero duplicates and zero labels without a language. A recurring failure blocks publication of ontology v1.2.
+
+8. Post-correction results
+
+The second run reduced critical violations to four records with legal bases awaiting municipal validation. These cases will not be published as complete and will retain the pending assessment. Duplicates, date formats, and unmapped statuses were corrected.
+
+The nine channel warnings disappeared after the rule became conditional. Comparison of reports confirms that no correction removed original information. ES/EN label coverage reached 100% in the batch, and completeness of publishable mandatory fields was 96.4%.
+
+9. Risks and schedule
+
+Validation depends on Santa Marina confirming the four pending legal bases. Schedule risk remains open: if confirmation arrives after August, the final load and pilot must be rescheduled. An alternative date will not be treated as approved until formal communication is received.
+
+The deliverable must clearly distinguish the plan date from a change proposal. Metrics, annexes, and examples will be reviewed in both the editable source and PDF. Required signatures are those of Javier Ortega Campos and Luis Noguera.
+
+10. Conclusions
+
+The approach transforms the catalogue without hiding uncertainty. Separating missing, non-applicable, excluded, and pending values was essential to avoid false errors and complete the model without inventing data. Compound identifiers remove collisions, and regression tests reduce the risk of recurrence.
+
+The candidate version may proceed to pre-production once municipal confirmations are incorporated, full validation is repeated, and the signed report is archived. Registration data remains outside the publishable scope until a sufficient formal licence exists.
+
+Annex A. Minimum evidence per record
+
+Every publishable record must include an identified source, extraction date, licence, owner, validation result, and relation to its previous version where applicable. Transformed values must retain the source field. Isolated manual corrections are not accepted.
+
+Annex B. Rerun procedure
+
+The rerun starts from a clean copy, installs the exact ontology and shape versions, loads the manifest, transforms the records, executes the rules, and generates two outputs: a readable report and a structured file. Checksums are compared before approval.
+
+Annex C. Manual-review matrix
+
+Manual review complements automated shapes and is applied to a stratified sample of procedures. The sample contains records from every family, source system, and field status. The reviewer compares the transformed value with the export, checks that the bilingual label preserves meaning, and verifies that every exception is justified. Where a discrepancy cannot be resolved using available documentation, the record returns to pending status and municipal confirmation is requested.
+
+The review uses a sheet containing the identifier, field, source value, transformed value, applied rule, outcome, and comment. A second reviewer examines every critical error and at least ten percent of accepted records. Disagreements are resolved in an adjudication session, and the decision is added to the rule catalogue. This practice prevents a local correction from remaining isolated and allows the criterion to be reused in later loads.
+
+Annex D. Deliverable traceability
+
+Every figure in the executive summary is linked to the run that produced it. The structured result file, shape version, batch manifest, and checksum are retained together. PDF tables are generated from those results and are not edited manually. Before signature, another person reproduces the main counts and compares a sample of identifiers with the readable report.
+
+The delivery file also contains municipal comments, decisions on false positives, the list of excluded fields, and evidence that registration data is not part of the publishable batch. If a correction is released, the new version will state which figures or conclusions changed and will keep the superseded version available. The report therefore serves as both technical evidence and a decision record.

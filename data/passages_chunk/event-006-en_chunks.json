@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Second SILEX requirements follow-up meeting to review the updated catalogue of municipal procedures, the sources received from Santa Marina and the fields still outstanding before the mappings can be stabilized.\n\nJavier Ortega: Let us begin with the updated catalogue. Alba, how many procedures now meet the minimum requirements?\nAlba Prieto: We have 58 complete procedures out of 62. The four outstanding procedures concern resident registration and require clarification of the deadline, responsible unit and legal basis.\nLuis Noguera: The registration unit has reviewed the records, but it has not yet authorized reuse of the complete dataset. We can provide an anonymized sample this week.\nSergio Vidal: The sample would be sufficient to validate the structure, but not to close the final mapping or test pilot coverage.\nClara Ibáñez: Does this affect deliverable D3 or only deployment?\nAlba Prieto: The deliverable can be closed if the limitation is recorded, although the mapping catalogue will remain incomplete until we receive the authorization and the four corrected records.\nJavier Ortega: Agreed. We will keep the issue as an open dependency. Luis will send the anonymized sample on 18 March and confirm the legal-review schedule before the 25th.\nLuis Noguera: Confirmed.\nJavier Ortega: Alba will update the catalogue with the status of each field, and Sergio will prepare a partial validation for the next session."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-006-en"
+  ],
+  "token_count": [
+    221
+  ]
+}

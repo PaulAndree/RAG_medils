@@ -1,0 +1,1 @@
+Third SILEX mapping-validation session to run the rules from the version 1.1 candidate, check all 62 procedures and document any error that would prevent confirmation of the pilot schedule.

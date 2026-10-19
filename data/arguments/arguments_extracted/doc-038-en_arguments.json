@@ -1,0 +1,32 @@
+[
+  {
+    "id": "doc-038-en_chunk_2_arg_1",
+    "claim": "Quality case 1 is a sequence missing because of communication failure.",
+    "evidence": []
+  },
+  {
+    "id": "doc-038-en_chunk_2_arg_2",
+    "claim": "A value is not automatically corrected merely because it appears unusual.",
+    "evidence": []
+  },
+  {
+    "id": "doc-038-en_chunk_2_arg_3",
+    "claim": "The decision may accept, correct, mark missing, exclude from aggregation, or request confirmation.",
+    "evidence": []
+  },
+  {
+    "id": "doc-038-en_chunk_2_arg_4",
+    "claim": "The result retains its owner, date, and explanation.",
+    "evidence": []
+  },
+  {
+    "id": "doc-038-en_chunk_2_arg_5",
+    "claim": "Where other records may be affected, a scope review is performed.",
+    "evidence": []
+  },
+  {
+    "id": "doc-038-en_chunk_2_arg_6",
+    "claim": "Quality case 2 is a negative reading caused by reversed direction.",
+    "evidence": []
+  }
+]

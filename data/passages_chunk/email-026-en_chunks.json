@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Javier Ortega Campos <javier.ortega@upsc.example>\nRecipient: Luis Noguera <luis.noguera@santamarina.example>\nTitle: API specification delivery\n\nHello Luis,\n\nI have attached the municipal API specification for the SILEX pilot. The document defines endpoints, authentication, response models, error codes, and examples in Spanish and English.\n\nWe especially need validation of procedure names, responsible-unit codes, and messages displayed to municipal staff. Technical error codes will remain stable in both languages.\n\nCould you send us your comments by 12 May? After that date, we will prepare the version for deployment in pre-production.\n\nBest regards,\nJavier"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-026-en"
+  ],
+  "token_count": [
+    89
+  ]
+}

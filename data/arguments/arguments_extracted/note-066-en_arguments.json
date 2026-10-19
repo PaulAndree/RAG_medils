@@ -1,0 +1,38 @@
+[
+  {
+    "id": "note-066-en_chunk_1_arg_1",
+    "claim": "Collaboration worked best when the technical team presented concrete examples rather than abstract definitions.",
+    "evidence": [
+      "Discussions of creator, author, and producer progressed only after reviewing real photographs, letters, and digitized copies."
+    ]
+  },
+  {
+    "id": "note-066-en_chunk_1_arg_2",
+    "claim": "In future iterations, every modeling decision should be accompanied by at least three archive cases.",
+    "evidence": []
+  },
+  {
+    "id": "note-066-en_chunk_1_arg_3",
+    "claim": "Rights must be treated as part of design rather than as a final review.",
+    "evidence": [
+      "Late image selection forced changes to the demonstrator script."
+    ]
+  },
+  {
+    "id": "note-066-en_chunk_1_arg_4",
+    "claim": "It was also important to preserve original archival wording alongside normalized values, especially for dates and document types.",
+    "evidence": []
+  },
+  {
+    "id": "note-066-en_chunk_1_arg_5",
+    "claim": "Short, frequent reviews were more effective than long workshops.",
+    "evidence": [
+      "A fortnightly session with a limited decision list and clear owners is recommended."
+    ]
+  },
+  {
+    "id": "note-066-en_chunk_1_arg_6",
+    "claim": "The archive should validate meaning and rights; NEXUS should be responsible for implementation, testing, and change traceability.",
+    "evidence": []
+  }
+]

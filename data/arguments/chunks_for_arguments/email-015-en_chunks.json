@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Clara Ibáñez Soto <clara.ibanez@upsc.example>\nRecipient: Andrés Beltrán Vega <andres.beltran@upsc.example>, Sergio Vidal Cruz <sergio.vidal@upsc.example>\nTitle: Notice of an outdated travel policy in the corpus\n\nHello Andrés and Sergio,\n\nWhile reviewing an answer about travel expense reporting, I found that the corpus is still retrieving the 2023 policy. That version was superseded on 1 March 2026. The previous deadline was fifteen days, whereas the current policy establishes ten working days.\n\nI have attached the current version. The earlier policy must not be deleted because it may be needed for historical questions, but its validity period and relation to the new version must be included. Questions about the current procedure must prioritize the 2026 document.\n\nPlease also review the procurement guide modified in February and the ethics form withdrawn in January, as they may have similar problems.\n\nBest regards,\nClara"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        230
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

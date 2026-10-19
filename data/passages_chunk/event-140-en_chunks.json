@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "First governance review in the new VERDANT cycle to assess monitoring, security and temporal quality and confirm the conditions for controlled expansion to six facilities planned for 10 August.\n\nAndrés Beltrán: Expansion to six facilities was approved in principle on 31 July. Today we verify whether monitoring, security and temporal quality allow execution on the 10th.\nSergio Vidal: The dashboard is active. Since 13 July, it recorded 27 requests: 25 approved and two rejected for incomplete fields. There were no attempts to export 15-minute data.\nNuria Castaño: The security review closed two minor findings: manual rotation of one secret and excessive permission in a test container. Both are corrected.\nInés Ferrer: Temporal analysis detected six intervals shifted by one hour because of an old time-zone configuration. They were corrected before any transfer, and UTC validations were added.\nCarmen Rey: SolCentro activated dynamic suppression and verified temporary codes for the two new facilities.\nHéctor Molina: Will the dashboard alert when effective contributors fall below the minimum?\nSergio Vidal: Yes. The test generated the alert and hid the interval without revealing the exact number of facilities.\nBruno Silva: The international partner is ready to receive the expanded hourly dataset and will observe the same signed decision and ninety-day retention.\nJavier Ortega: I recommend recording expansion as a scope amendment to the decision, rather than as an unrelated new authorization.\nAndrés Beltrán: Agreed. Expansion to six facilities from 10 August is approved, with a monitoring review on 14 September and no change to the prohibition on exporting raw 15-minute series."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-140-en"
+  ],
+  "token_count": [
+    257
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "A question will be considered multi-hop when its answer cannot be derived from one self-contained statement or passage. It must require combining at least two related facts, such as identifying the person responsible for a task and then retrieving that task's deadline.\n\nThe hops must be necessary rather than decorative. If one document directly contains the complete answer, the question will not be labeled multi-hop even when additional sources exist. Every hop must be supported by corpus identifiers or relations such as belongs_to, created_from, assigned_in, or previous_version.\n\nAnnotation will record evidence in the logical order of inference. Questions requiring external knowledge or a subjective conclusion will not be accepted. To avoid artificial difficulty, the usual number of hops will be two; three-hop cases will be reserved for the advanced category. Tomás and Pablo will prepare twenty examples for joint adjudication."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        204
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

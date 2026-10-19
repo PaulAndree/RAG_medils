@@ -1,0 +1,161 @@
+[
+  {
+    "id": "doc-004-en_chunk_2_arg_1",
+    "claim": "Of the 412 records, 371 produced no violations. The remaining forty-one contained sixty-three issues because some records failed more than one rule.",
+    "evidence": [
+      "Of the 412 records, 371 produced no violations. The remaining forty-one contained sixty-three issues because some records failed more than one rule."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_2_arg_2",
+    "claim": "No error affected published data because loading remained stopped in the validation environment.",
+    "evidence": [
+      "No error affected published data because loading remained stopped in the validation environment."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_2_arg_3",
+    "claim": "The distribution shows that the main issue is not a technical transformation but the absence of unit codes in the export.",
+    "evidence": [
+      "The distribution shows that the main issue is not a technical transformation but the absence of unit codes in the export."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_2_arg_4",
+    "claim": "Date errors arise from local formats, and duplicates from reused numbering in two systems.",
+    "evidence": [
+      "Date errors arise from local formats, and duplicates from reused numbering in two systems."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_2_arg_5",
+    "claim": "Statuses outside the vocabulary require a semantic decision rather than automatic replacement.",
+    "evidence": [
+      "Statuses outside the vocabulary require a semantic decision rather than automatic replacement."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_2_arg_6",
+    "claim": "Cases identified: 28. Alba will review the records and request stable codes where only a display name exists.",
+    "evidence": [
+      "Cases identified: 28. Alba will review the records and request stable codes where only a display name exists."
+    ]
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_1",
+    "claim": "The approach transforms the catalogue without hiding uncertainty.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_2",
+    "claim": "Separating missing, non-applicable, excluded, and pending values was essential to avoid false errors and complete the model without inventing data.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_3",
+    "claim": "Compound identifiers remove collisions, and regression tests reduce the risk of recurrence.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_4",
+    "claim": "The candidate version may proceed to pre-production once municipal confirmations are incorporated, full validation is repeated, and the signed report is archived.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_5",
+    "claim": "Registration data remains outside the publishable scope until a sufficient formal licence exists.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_6",
+    "claim": "Every publishable record must include an identified source, extraction date, licence, owner, validation result, and relation to its previous version where applicable.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_7",
+    "claim": "Transformed values must retain the source field.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_8",
+    "claim": "Isolated manual corrections are not accepted.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_9",
+    "claim": "The rerun starts from a clean copy, installs the exact ontology and shape versions, loads the manifest, transforms the records, executes the rules, and generates two outputs: a readable report and a structured file.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_10",
+    "claim": "Checksums are compared before approval.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_11",
+    "claim": "Manual review complements automated shapes and is applied to a stratified sample of procedures.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_12",
+    "claim": "The sample contains records from every family, source system, and field status.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_13",
+    "claim": "The reviewer compares the transformed value with the export, checks that the bilingual label preserves meaning, and verifies that every exception is justified.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_14",
+    "claim": "Where a discrepancy cannot be resolved using available documentation, the record returns to pending status and municipal confirmation is requested.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_15",
+    "claim": "The review uses a sheet containing the identifier, field, source value, transformed value, applied rule, outcome, and comment.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_16",
+    "claim": "A second reviewer examines every critical error and at least ten percent of accepted records.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_17",
+    "claim": "Disagreements are resolved in an adjudication session, and the decision is added to the rule catalogue.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_18",
+    "claim": "This practice prevents a local correction from remaining isolated and allows the criterion to be reused in later loads.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_19",
+    "claim": "Every figure in the executive summary is linked to the run that produced it.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_20",
+    "claim": "The structured result file, shape version, batch manifest, and checksum are retained together.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_21",
+    "claim": "PDF tables are generated from those results and are not edited manually.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_4_arg_22",
+    "claim": "Before signature, another person reproduces the main counts and compares a sample of identifiers with the readable report.",
+    "evidence": []
+  },
+  {
+    "id": "doc-004-en_chunk_5_arg_1",
+    "claim": "The report therefore serves as both technical evidence and a decision record.",
+    "evidence": [
+      "The delivery file also contains municipal comments, decisions on false positives, the list of excluded fields, and evidence that registration data is not part of the publishable batch."
+    ]
+  }
+]

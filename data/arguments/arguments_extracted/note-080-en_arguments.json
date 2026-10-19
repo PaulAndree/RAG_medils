@@ -1,0 +1,24 @@
+[
+  {
+    "id": "note-080-en_chunk_1_arg_1",
+    "claim": "Three issues are considered high priority: citations open the document but not the exact passage, answers do not clearly state when a policy has been superseded, and the “no answer found” message does not distinguish absence of evidence from a retrieval failure.",
+    "evidence": [
+      "The preliminary test with eight Research Office staff members produced thirty-seven comments."
+    ]
+  },
+  {
+    "id": "note-080-en_chunk_1_arg_2",
+    "claim": "Medium-priority items include topic filters, query history, answer export, and a more visible explanation of limitations.",
+    "evidence": []
+  },
+  {
+    "id": "note-080-en_chunk_1_arg_3",
+    "claim": "Several users requested shorter answers by default with an option to expand evidence.",
+    "evidence": []
+  },
+  {
+    "id": "note-080-en_chunk_1_arg_4",
+    "claim": "Language switching worked correctly and preserved the query.",
+    "evidence": []
+  }
+]

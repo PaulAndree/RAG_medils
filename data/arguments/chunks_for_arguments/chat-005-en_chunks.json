@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-01-24T11:00:00Z\nAuthor: Javier Ortega Campos\nMessage: We have a demonstration with Santa Marina next week. We need to close data, script, environment and responsibilities.\n\nDate: 2026-01-24T11:02:00Z\nAuthor: Luis Noguera Sáez\nMessage: Six citizen-service staff and two unit managers will attend.\n\nDate: 2026-01-24T11:04:00Z\nAuthor: Alba Prieto Mora\nMessage: I propose showing eight representative procedures rather than all 62.\n\nDate: 2026-01-24T11:06:00Z\nAuthor: Mireia Soler Pons\nMessage: Include one with a simple deadline, one with a suspended deadline, one requiring no documentation and one with two responsible units.\n\nDate: 2026-01-24T11:09:00Z\nAuthor: Nuria Castaño Rey\nMessage: The demonstration environment is separate from development, but I need to freeze data 48 hours beforehand.\n\nDate: 2026-01-24T11:12:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Will we use any municipal sample whose licence is still pending?\n\nDate: 2026-01-24T11:15:00Z\nAuthor: Javier Ortega Campos\nMessage: No. The demo must use public and synthetic data until authorization is complete.\n\nDate: 2026-01-24T11:18:00Z\nAuthor: Luis Noguera Sáez\nMessage: The municipality wants to see search by name, unit and required documentation.\n\nDate: 2026-01-24T11:21:00Z\nAuthor: Alba Prieto Mora\nMessage: They may also test common expressions, although the synonym catalogue is still limited.\n\nDate: 2026-01-24T11:24:00Z\nAuthor: Mireia Soler Pons\nMessage: We can explain that semantic search is under validation and record expressions that fail.\n\nDate: 2026-01-24T11:27:00Z\nAuthor: Nuria Castaño Rey\nMessage: I need to know whether there will be remote access. It changes the certificate configuration.\n\nDate: 2026-01-24T11:30:00Z\nAuthor: Luis Noguera Sáez\nMessage: The session will be in person, with a Teams connection only for two project members.\n\nDate: 2026-01-24T11:33:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The script must distinguish available functions from future objectives so that we do not create incorrect expectations.\n\nDate: 2026-01-24T11:36:00Z\nAuthor: Javier Ortega Campos\nMessage: Alba will lead the cases, Mireia will explain the model, Nuria will manage the environment and Luis will collect municipal feedback.\n\nDate: 2026-01-24T11:39:00Z\nAuthor: Alba Prieto Mora\nMessage: I will prepare cards with the objective, steps and expected result for each procedure.\n\nDate: 2026-01-24T11:42:00Z\nAuthor: Mireia Soler Pons\nMessage: I will add a slide on bilingual labels and why some remain under review.\n\nDate: 2026-01-24T11:45:00Z\nAuthor: Nuria Castaño Rey\nMessage: I will make an environment copy and run a restoration test the day before.\n\nDate: 2026-01-24T11:48:00Z\nAuthor: Luis Noguera Sáez\nMessage: I will send attendees a note stating that this is a technical demonstration, not the start of the pilot.\n\nDate: 2026-01-24T11:51:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Include a short satisfaction form and one question about improvement priorities.",
+        "Date: 2026-01-24T11:55:00Z\nAuthor: Javier Ortega Campos\nMessage: Closed: eight cases, public and synthetic data, a frozen environment and an explicit message that the pilot date remains provisional."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        755,
+        49
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

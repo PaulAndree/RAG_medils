@@ -1,0 +1,34 @@
+[
+  {
+    "id": "note-086-en_chunk_1_arg_1",
+    "claim": "In these cases, insufficient evidence will be treated as an exception rather than a match.",
+    "evidence": [
+      "Of the forty-three duplicate-profile pairs, eight cannot be merged automatically. Three involve people with the same name and overlapping affiliations, two contain an ORCID inconsistent with publication history, and three use old email addresses shared through departmental accounts."
+    ]
+  },
+  {
+    "id": "note-086-en_chunk_1_arg_2",
+    "claim": "A shared publication will not be used as the sole evidence because it may reflect an authorship error in the source.",
+    "evidence": []
+  },
+  {
+    "id": "note-086-en_chunk_1_arg_3",
+    "claim": "Elena and Sergio will review the eight cases using CVs, affiliations, and institutional repositories.",
+    "evidence": []
+  },
+  {
+    "id": "note-086-en_chunk_1_arg_4",
+    "claim": "Decisions will include evidence and date.",
+    "evidence": []
+  },
+  {
+    "id": "note-086-en_chunk_1_arg_5",
+    "claim": "Merged profiles will retain earlier identifiers through equivalence relations.",
+    "evidence": []
+  },
+  {
+    "id": "note-086-en_chunk_1_arg_6",
+    "claim": "Unresolved cases will be excluded from questions concerning personal identity.",
+    "evidence": []
+  }
+]

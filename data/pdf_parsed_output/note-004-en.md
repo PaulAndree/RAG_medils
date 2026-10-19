@@ -1,0 +1,5 @@
+Luis Noguera asked for in-person and online channels to be represented separately even when both lead to the same form. He also requested two values for the responsible unit: a stable internal code and a display name, because department names change more often than their codes.
+
+The expected resolution period should be stored both as a normalized duration and as a citizen-friendly label. The municipality proposes using ISO 8601 for the technical value and wording such as “three months” for presentation. Complete examples are needed for a noise complaint, a terrace permit, and a registration certificate.
+
+The reuse licence for the registration dataset remains unresolved. Luis will consult the legal office and send an answer by email. Until then, the catalogue must mark the dataset as restricted rather than open.

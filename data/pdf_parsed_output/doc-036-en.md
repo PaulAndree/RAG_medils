@@ -1,0 +1,87 @@
+VERDANT CONNECTOR API SPECIFICATION V1.0
+
+Purpose
+
+The VERDANT connector API supports discovery of energy products, requests for authorized aggregates, metadata queries, and policy-status checks. The interface is used among SolCentro, NEXUS, and Instituto Técnico do Norte within the federated data space.
+
+The API does not expose original fifteen-minute readings outside SolCentro. Consumers receive hourly or daily products where they satisfy policy, minimum group size, and purpose conditions. Technical ability to make a request is not authorization.
+
+Base and versions
+
+The base path is `/api/verdant/v1`. Incompatible changes require a new major version. Every response contains the API version, product version, policy version, generation date, and request identifier.
+
+Identity
+
+Authentication uses organization certificates and named service accounts. Technical identity is linked to a role and purpose. A valid certificate does not itself grant access to all products. Revoked certificates must be rejected before policy evaluation.
+
+Languages
+
+Codes, identifiers, and structured fields are language independent. The `lang` parameter accepts `es` and `en` for messages, labels, and descriptions. A response does not mix languages in one literal.
+
+Interface definition 1
+
+Endpoint 1: `GET /catalog`. Its purpose is to discover products visible to the declared identity and purpose. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 2
+
+Endpoint 2: `GET /products/{id}`. Its purpose is to retrieve schema, frequency, coverage, policy, and owner. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 3
+
+Endpoint 3: `POST /products/{id}/requests`. Its purpose is to request a product for a period and purpose. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 4
+
+Endpoint 4: `GET /requests/{id}`. Its purpose is to retrieve request status, result, expiry, and evidence. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 5
+
+Endpoint 5: `GET /policies/{id}`. Its purpose is to retrieve a visible policy without exposing sensitive internal rules. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 6
+
+Endpoint 6: `GET /schemas/{id}`. Its purpose is to retrieve the versioned product schema. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 7
+
+Endpoint 7: `GET /health`. Its purpose is to check authentication, policies, aggregation, and dependencies. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 8
+
+Endpoint 8: `POST /admin/revoke`. Its purpose is to revoke an exception or credential from the administration network. The specification defines required and optional parameters, formats, limits, states, and examples. The response uses a versioned schema and retains provenance. Parameters must not silently broaden purpose or granularity. Tests cover success, denied access, expired policy, invalid input, and temporary failure. Administrative operations are available only from authorized networks.
+
+Interface definition 9
+
+Code 1 is `VERDANT-400-INVALID-REQUEST` and represents invalid request. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 10
+
+Code 2 is `VERDANT-401-AUTHENTICATION` and represents authentication failed. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 11
+
+Code 3 is `VERDANT-403-POLICY-DENIED` and represents policy denied. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 12
+
+Code 4 is `VERDANT-404-NOT-VISIBLE` and represents product unavailable or not visible. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 13
+
+Code 5 is `VERDANT-409-POLICY-CONFLICT` and represents policy or purpose conflict. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 14
+
+Code 6 is `VERDANT-422-MINIMUM-GROUP` and represents minimum group not reached. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 15
+
+Code 7 is `VERDANT-423-PRODUCT-PENDING` and represents product generation pending. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 16
+
+Code 8 is `VERDANT-429-RATE-LIMIT` and represents temporary limit exceeded. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.
+
+Interface definition 17
+
+Code 9 is `VERDANT-500-INTERNAL` and represents internal failure without sensitive detail. The response contains the code, message, request identifier, and, where safe, the affected field. It does not include a token, complete certificate, internal path, stack trace, or energy body. The code remains the same in Spanish and English; only the visible message changes. Monitoring aggregates frequency and outcome without retaining unnecessary data.

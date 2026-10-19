@@ -1,0 +1,1 @@
+First LUMEN demonstrator-preparation session to select collections, define example queries, identify images with rights restrictions and specify the minimum search and exploration screens.

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "event-059-en_chunk_1_arg_1",
+    "claim": "The metrics therefore cannot be presented as an independent evaluation.",
+    "evidence": [
+      "I compared question identifiers with repository records. Forty-two test questions also appear in an examples file used to tune chunking.",
+      "They include the query, relevant document and expected passage. There is therefore direct evidence leakage.",
+      "Experiments from 12 through 18 March used that file to compare configurations. The generative models were not trained on it, but the retrieval system was tuned after observing those cases."
+    ]
+  },
+  {
+    "id": "event-059-en_chunk_1_arg_2",
+    "claim": "Recall, MRR and answer metrics calculated over that set are invalidated. The report will not be published.",
+    "evidence": [
+      "The session records the detection of contamination between development and evaluation, invalidates the affected metrics and defines the actions required before publishing a revised report.",
+      "The metrics therefore cannot be presented as an independent evaluation."
+    ]
+  },
+  {
+    "id": "event-059-en_chunk_1_arg_3",
+    "claim": "Actions: freeze experiments, preserve logs, open a corpus review, generate a new bilingual-pair test set and document the incident. None of the draft figures is approved.",
+    "evidence": [
+      "The session records the detection of contamination between development and evaluation, invalidates the affected metrics and defines the actions required before publishing a revised report.",
+      "Group leadership supports a complete correction. The revised report must clearly distinguish invalidated and corrected results."
+    ]
+  }
+]

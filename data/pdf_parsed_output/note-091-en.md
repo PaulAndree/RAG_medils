@@ -1,0 +1,5 @@
+The three most recent hires took between five and eleven working days to receive all required access. The main delays were sequential account creation, absence of one accountable owner, and incomplete permission requests.
+
+A single ticket should be opened ten days before the start date. It will cover email, Teams, Nextcloud, GitLab, the task manager, Atlas-2, physical equipment, training, and mentoring. Every system will have an owner and target date. Permissions will use role-based profiles rather than new lists for every hire.
+
+A joint check will take place on the first day, followed by a review with the mentor at the end of the first week. Rosa will own the ticket, and Nuria will own technical access. Onboarding will close only when policies have been accepted, training completed, and every required system tested.

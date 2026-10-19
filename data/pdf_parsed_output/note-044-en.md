@@ -1,0 +1,5 @@
+Six candidates have been proposed for the autumn seminar series. Topics include RAG evaluation, data-space governance, digital preservation, ontologies for public services, scientific-software documentation, and the ethics of generative models.
+
+The priority is to maintain a balance between external and internal speakers and alternate sessions in Spanish and English. An external English-language session on RAG evaluation is proposed for September. October could focus on digital preservation with a speaker from the Regional Archive. In November, Javier would coordinate an internal seminar on municipal interoperability. The December session should be brief because it overlaps with project closures.
+
+Lucía will contact the two international candidates to check availability. Rosa will provisionally reserve the room for the second Thursday of each month. The program will not be announced until the title, language, in-person or hybrid format, and recording permission have been confirmed.

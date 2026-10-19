@@ -9,6 +9,7 @@ from typing import Any
 from neo4j import GraphDatabase
 from qdrant_client import QdrantClient, models
 
+from indexing.embedding_api import DENSE_MODEL, SPARSE_MODEL, embed_texts
 from metrics import RETRIEVAL_DURATION
 
 
@@ -19,9 +20,7 @@ QDRANT_COLLECTION = os.getenv(
 )
 QDRANT_CHUNK_ID_FIELD = "source_chunk_id"
 DENSE_VECTOR = "dense"
-SPARSE_VECTOR = "bm25"
-DENSE_MODEL = "BAAI/bge-small-en-v1.5"
-SPARSE_MODEL = "Qdrant/bm25"
+SPARSE_VECTOR = "sparse"
 
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://neo4j:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
@@ -36,27 +35,19 @@ neo4j_driver = GraphDatabase.driver(
 
 
 DEFAULT_CYPHER_QUERY = """
-UNWIND $matches AS match
-WITH
-    match.chunk_id AS chunk_id,
-    match.rank AS rank,
-    match.score AS score,
-    match.point_ids AS point_ids
-
+UNWIND $chunk_ids AS chunk_id
 MATCH (chunk:RagChunk {id: chunk_id})
 MATCH (chunk)-[:MENTIONS]->(entity:RagEntity)
 MATCH (entity)-[relation:RELATES_TO]->(other:RagEntity)
 
 RETURN
-    rank,
-    score,
-    point_ids,
+    chunk_id AS source_chunk_id,
     chunk {.*} AS chunk,
     entity {.*} AS entity,
     relation {.*, type: type(relation)} AS relation,
     other {.*} AS connected_entity
 
-ORDER BY rank, entity.id, connected_entity.id
+ORDER BY source_chunk_id, entity.id, connected_entity.id
 """
 
 
@@ -73,7 +64,7 @@ def retrieve_graph(
 ) -> dict[str, list[dict[str, Any]]]:
     """Run vector search, map payload chunk IDs, and query Neo4j.
 
-    A custom Cypher query can use ``$matches`` and ``$chunk_ids``.
+    A custom Cypher query can use ``$results`` and ``$chunk_ids``.
     """
 
     if (query is None) == (embedding is None):
@@ -93,15 +84,20 @@ def retrieve_graph(
         if not query or not query.strip():
             raise ValueError("query must not be empty")
         candidate_limit = max(20, limit * 5)
+        dense_query = embed_texts([query], DENSE_MODEL, "query")[0]
+        sparse_query = embed_texts([query], SPARSE_MODEL, "query")[0]
         query_arguments = {
             "prefetch": [
                 models.Prefetch(
-                    query=models.Document(text=query, model=DENSE_MODEL),
+                    query=dense_query,
                     using=DENSE_VECTOR,
                     limit=candidate_limit,
                 ),
                 models.Prefetch(
-                    query=models.Document(text=query, model=SPARSE_MODEL),
+                    query=models.SparseVector(
+                        indices=sparse_query["indices"],
+                        values=sparse_query["values"],
+                    ),
                     using=SPARSE_VECTOR,
                     limit=candidate_limit,
                 ),
@@ -116,7 +112,7 @@ def retrieve_graph(
         with_payload=True,
     ).points
 
-    matches_by_chunk = {}
+    results = []
     for rank, point in enumerate(points, start=1):
         payload = point.payload or {}
         chunk_id = payload.get(QDRANT_CHUNK_ID_FIELD)
@@ -125,32 +121,80 @@ def retrieve_graph(
                 f"Qdrant point {point.id!s} has no payload "
                 f"{QDRANT_CHUNK_ID_FIELD}"
             )
-        chunk_id = str(chunk_id)
+        evidence = payload.get("evidence", [])
+        if evidence is None:
+            evidence = []
+        elif not isinstance(evidence, list):
+            evidence = [evidence]
         point_id = str(point.id)
-        if chunk_id not in matches_by_chunk:
-            matches_by_chunk[chunk_id] = {
+        results.append(
+            {
+                "result_id": point_id,
                 "rank": rank,
                 "score": point.score,
-                "point_id": point_id,
-                "point_ids": [point_id],
-                "chunk_id": chunk_id,
+                "argument_id": payload.get("argument_id", point_id),
+                "claim": payload.get("claim"),
+                "evidence": evidence,
+                "source_chunk_id": str(chunk_id),
+                "source_content": payload.get("source_content"),
+                "graph_expansion": {"entities": [], "relations": []},
             }
-        else:
-            matches_by_chunk[chunk_id]["point_ids"].append(point_id)
+        )
 
-    matches = list(matches_by_chunk.values())
-
-    if not matches:
-        return {"matches": [], "records": []}
+    if not results:
+        return {"results": []}
 
     parameters = dict(cypher_parameters or {})
-    parameters["matches"] = matches
-    parameters["chunk_ids"] = [match["chunk_id"] for match in matches]
+    parameters["results"] = results
+    parameters["chunk_ids"] = list(
+        dict.fromkeys(result["source_chunk_id"] for result in results)
+    )
 
     with driver.session(database=NEO4J_DATABASE) as session:
-        records = [
-            dict(record)
-            for record in session.run(cypher_query, parameters)
-        ]
+        records = [dict(record) for record in session.run(cypher_query, parameters)]
 
-    return {"matches": matches, "records": records}
+    records_by_chunk: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        chunk_id = record.get("source_chunk_id")
+        if chunk_id is None:
+            chunk = record.get("chunk")
+            if isinstance(chunk, dict):
+                chunk_id = chunk.get("id")
+        if chunk_id is not None:
+            records_by_chunk.setdefault(str(chunk_id), []).append(record)
+
+    for result in results:
+        entities: list[dict[str, Any]] = []
+        relations: list[dict[str, Any]] = []
+        entity_keys: set[str] = set()
+        relation_keys: set[str] = set()
+        for record in records_by_chunk.get(result["source_chunk_id"], []):
+            source = record.get("entity")
+            target = record.get("connected_entity")
+            for entity in (source, target):
+                if not isinstance(entity, dict):
+                    continue
+                key = str(entity.get("id") or sorted(entity.items()))
+                if key not in entity_keys:
+                    entity_keys.add(key)
+                    entities.append(entity)
+
+            relation = record.get("relation")
+            if not isinstance(relation, dict):
+                continue
+            expanded_relation = {
+                **relation,
+                "source": source if isinstance(source, dict) else None,
+                "target": target if isinstance(target, dict) else None,
+            }
+            key = str(relation.get("id") or sorted(relation.items()))
+            if key not in relation_keys:
+                relation_keys.add(key)
+                relations.append(expanded_relation)
+
+        result["graph_expansion"] = {
+            "entities": entities,
+            "relations": relations,
+        }
+
+    return {"results": results}

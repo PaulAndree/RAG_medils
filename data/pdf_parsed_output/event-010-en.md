@@ -1,0 +1,1 @@
+Extraordinary remote review of the second version of deliverable D3. The team must finalize the annexes, incorporate the April validation results, document the nine mappings that remain open and approve the text before submitting the revised version.

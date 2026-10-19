@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Third VERDANT privacy session to review the local-processing trial over 15-minute data, assess the resulting aggregated coefficients and establish minimum controls for future runs.\n\nAndrés Beltrán: The local execution finished yesterday. Inés, summarize the results.\nInés Ferrer: The container processed 15-minute data from twelve facilities and produced daily coefficients for three groups. It generated no individual series or persistent identifiers.\nCarmen Rey: SolCentro reviewed the code and blocked network access. The container was deleted after execution.\nSergio Vidal: The audit record includes the container image, parameters, data period, groups used and output hashes.\nHéctor Molina: I reviewed the coefficients. Two groups meet the minimum of five facilities; the third contains only four on three specific days.\nInés Ferrer: We can suppress those three results or merge the group with another.\nHéctor Molina: I prefer suppression. Merging would change the scientific interpretation.\nNuria Castaño: I can automate a rule preventing release of any result whose effective group size is below five.\nAndrés Beltrán: Does the trial justify approving this mechanism generally?\nHéctor Molina: Yes, with controls: reviewed code, blocked network, data remaining at the provider, groups of at least five, inspected output and deletion of the temporary environment.\nCarmen Rey: SolCentro accepts those conditions.\nAndrés Beltrán: Local processing is approved as a permitted mechanism. Export of raw 15-minute data remains prohibited."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-048-en"
+  ],
+  "token_count": [
+    220
+  ]
+}

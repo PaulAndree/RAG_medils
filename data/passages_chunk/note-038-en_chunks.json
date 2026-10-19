@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The migration created duplicate profiles when a person had different identifiers in the publications system and the project-management system. The process attempted to match by ORCID and, when unavailable, by institutional email. Profiles without ORCID and with changed email addresses were not merged.\n\nForty-three duplicate pairs were identified. Thirty-five can be resolved using normalized name, affiliation history, and publication matches. Eight require manual review because of namesakes or incomplete information. The problem was aggravated because the deduplication rule ran before historical identifiers were loaded.\n\nThe correction will create a separate identity table containing all known identifiers and their validity periods. Original profiles will not be deleted directly; a merge relation will be retained for auditing. Nuria will apply the correction, and Sergio will verify links to publications, projects, and datasets."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-038-en"
+  ],
+  "token_count": [
+    130
+  ]
+}

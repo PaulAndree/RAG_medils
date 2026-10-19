@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Clara Ibáñez Soto <clara.ibanez@upsc.example>\nRecipient: Elena Martín Ríos <elena.martin@upsc.example>, Lucía Navarro Gil <lucia.navarro@upsc.example>, Andrés Beltrán Vega <andres.beltran@upsc.example>\nTitle: Request for 2027 budget forecasts\n\nHello,\n\nWe are preparing the NEXUS budget for 2027. I have attached the template covering personnel, infrastructure, travel, external services, and training.\n\nEach research line must submit a justified forecast and a reduced alternative by 24 April. Confirmed, requested, and still-unidentified funding must be distinguished. Recurring commitments must not be assigned to calls whose duration is shorter than the expected expenditure.\n\nPreliminary priorities are the engineering contract, storage expansion, GPU support, and mandatory project meetings.\n\nThank you,\nClara"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        221
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

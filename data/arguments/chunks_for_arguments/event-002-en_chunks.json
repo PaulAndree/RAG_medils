@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Technical workshop to define the main classes and properties of the municipal-services ontology and review examples taken from the requirements catalogue.\n\nMireia Soler: I propose separating an administrative procedure from each of its specific calls or instances.\nAlba Prieto: That separation works for grants, but we need to check how it applies to licences, which do not always have a call.\nYara Ben Salem: We could use a general procedure class with specializations for continuous procedures and procedures subject to a call.\nJavier Ortega: It is important that the model does not depend solely on the current organization of Santa Marina City Council. It should be reusable by other municipalities.\nSergio Vidal: In the source data, the responsible unit is sometimes represented as free text and sometimes through an internal code.\nMireia Soler: We will therefore need a separate administrative-unit entity and a mapping catalogue for local codes.\nAlba Prieto: We must also represent whether administrative silence has a positive, negative or non-applicable outcome.\nJavier Ortega: Agreed. Mireia will prepare a first class diagram. Alba will add examples from the four priority areas, and Yara will review the Spanish and English labels."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        264
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

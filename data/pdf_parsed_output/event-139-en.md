@@ -1,0 +1,1 @@
+First VERDANT temporal data-quality analysis to review time zones, daylight-saving changes, clock drift, missing data and consistency among 15-minute readings, hourly aggregations and federated results.

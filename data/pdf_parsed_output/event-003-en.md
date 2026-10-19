@@ -1,0 +1,1 @@
+Review of the first mappings between municipal data and the SILEX ontology. The session should identify correspondence errors, uncovered fields and required validation rules.

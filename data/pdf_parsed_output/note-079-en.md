@@ -1,0 +1,5 @@
+The session resolved twelve disagreements. Four questions were classified as temporal because the answer depended on a version valid at a particular date. Three became multi-hop because they required a relation among an event, task, and owner. Two were marked unanswerable because no explicit end date existed. The remaining three were simplified because they contained two different questions in one formulation.
+
+In one case concerning extension of a visit, the correct answer must distinguish proposal from approval. A note justifies the extension, but a later email confirms the new date. In another case, a provisional pilot date cannot be treated as final without formal confirmation.
+
+Lucía will update the criteria using these examples. Every adjudication will preserve the original labels, final decision, and a short explanation. ES/EN pairs will always receive the same category and equivalent evidence.

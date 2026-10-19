@@ -1,0 +1,16 @@
+[
+  {
+    "id": "doc-041-en_chunk_5_arg_1",
+    "claim": "A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.",
+    "evidence": [
+      "A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions."
+    ]
+  },
+  {
+    "id": "doc-041-en_chunk_5_arg_2",
+    "claim": "Category 1, direct, is used where the main answer appears as an explicit assertion in one source.",
+    "evidence": [
+      "The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved."
+    ]
+  }
+]

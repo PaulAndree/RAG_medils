@@ -1,0 +1,35 @@
+[
+  {
+    "id": "note-058-en_chunk_1_arg_1",
+    "claim": "The main lesson from SILEX is that mappings should not begin before stable identifiers, field states, and exception rules have been agreed.",
+    "evidence": [
+      "A significant part of the delay resulted from treating missing, non-applicable, and pending values in the same way."
+    ]
+  },
+  {
+    "id": "note-058-en_chunk_1_arg_2",
+    "claim": "The second lesson is to validate translations as part of the model rather than at the end.",
+    "evidence": [
+      "Inconsistent labels in version 1.1 affected documentation, queries, and tests."
+    ]
+  },
+  {
+    "id": "note-058-en_chunk_1_arg_3",
+    "claim": "The third is to resolve data licences and responsibilities during the requirements phase.",
+    "evidence": [
+      "Uncertainty concerning registration data limited the pilot's scope and required alternative paths."
+    ]
+  },
+  {
+    "id": "note-058-en_chunk_1_arg_4",
+    "claim": "Retaining earlier versions and provisional decisions was also useful.",
+    "evidence": [
+      "It makes it possible to explain how the pilot date changed and why the ontology was revised."
+    ]
+  },
+  {
+    "id": "note-058-en_chunk_1_arg_5",
+    "claim": "Future projects should create a registry of facts, versions, and dependencies from the beginning, together with a representative regression set.",
+    "evidence": []
+  }
+]

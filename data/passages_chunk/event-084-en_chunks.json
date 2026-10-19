@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Second infrastructure review to check storage procurement, strengthen ARIADNA isolation after the evaluation incident, and validate initial restoration tests and lifecycle policies.\n\nClara Ibáñez: The additional 80 terabytes have been awarded and will be installed on 18 April. Let us first review the ARIADNA incident.\nAndrés Beltrán: On 26 March, we detected test questions in a file used to tune chunking. Experiments are frozen, and we need additional technical isolation.\nNuria Castaño: I created separate repositories and an encrypted area. The corrected test set will be accessible only to the custodian and external reviewer. The modeling team will not be able to list files or metadata.\nSergio Vidal: We must also prevent accidental copies through tool exports or local caches.\nNuria Castaño: Direct downloads will be blocked, access will be logged, and evaluation jobs will run through a service account without an interactive console.\nElena Martín: Have the incident records been preserved?\nSergio Vidal: Yes. The forensic copy, hashes and access history are in write-once storage.\nJavier Ortega: SILEX and LUMEN need project isolation, but not the same restriction level. Can we apply different templates?\nNuria Castaño: Yes. There will be public, internal, restricted and closed-evaluation levels.\nClara Ibáñez: What was the result of the quarterly restoration test?\nNuria Castaño: We restored 2.4 terabytes in an isolated environment. Integrity was complete, although the elapsed time exceeded the target by forty minutes.\nElena Martín: The measures are approved. Adjust the recovery target and repeat the test after installing the expansion."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-084-en"
+  ],
+  "token_count": [
+    249
+  ]
+}

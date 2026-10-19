@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "The latest hybrid baseline run reaches recall@10 of 0.94, compared with 0.78 in the previous run. The improvement is not explained by any sufficiently large change in the index or model. During a sample review, Tomás found test questions that are nearly identical to questions used while tuning parameters.\n\nThe likely cause is that the split was performed by question identifier rather than semantic intent. Spanish and English variants and minor paraphrases may have been assigned to different partitions. The team also found questions sharing the same answer and evidence passage with only small wording changes.\n\nThe results must not be used in presentations or treated as valid until the review is complete. Pablo will extract duplicate candidates using semantic similarity, and Tomás will perform a manual check. Run files will be preserved for analysis but labeled as affected by possible evaluation leakage."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        188
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Second VERDANT pilot review to assess the first transfer of real hourly data and evaluate a scientific request requiring analysis of 15-minute data without authorizing raw export.\n\nAndrés Beltrán: The hourly transfer completed this morning. Nuria, were there any incidents?\nNuria Castaño: None were critical. The signed policy was verified, temporary codes were applied, and two intervals were suppressed because they represented fewer than three active facilities.\nBruno Silva: We received 2,136 hourly records. Integrity and quality metadata are correct.\nSergio Vidal: The provenance record includes origin, aggregation, suppression and transfer. Automatic deletion is scheduled for 5 August.\nInés Ferrer: I want to submit an additional request. The flexibility model needs 15-minute windows, but it can run inside SolCentro and return daily coefficients by group.\nCarmen Rey: We can host the container if the code makes no external calls and we review the results before release.\nHéctor Molina: Daily coefficients must group at least five facilities and exclude any individual series or value.\nAndrés Beltrán: Will 15-minute data need to be exported at any point?\nInés Ferrer: No. Only the container goes in; aggregated coefficients and error metrics come out.\nAndrés Beltrán: The request therefore follows the local-processing route. It does not change the prohibition on exporting raw 15-minute series. Inés will deliver the code on 12 May, and Héctor will review the proposed output."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        343
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

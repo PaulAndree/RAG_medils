@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Clara Ibáñez Soto <clara.ibanez@upsc.example>\nRecipient: Nuria Castaño Rey <nuria.castano@upsc.example>, Rosa Mena Ortiz <rosa.mena@upsc.example>, Elena Martín Ríos <elena.martin@upsc.example>\nTitle: Closure of the permission audit\n\nHello,\n\nThe permission audit is now closed. The eleven permissions that were no longer required have been revoked, owners have been assigned to both service accounts, and the five differences across Nextcloud, GitLab, Atlas-2, and the task manager have been corrected.\n\nNuria verified the revocations, and Rosa confirmed the status of students and partners. No external access to restricted data was identified. The master register now reflects the current role profiles.\n\nI have attached the final report. The next review will take place in December or earlier if there is a new hire, departure, or significant role change.\n\nBest regards,\nClara"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        231
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

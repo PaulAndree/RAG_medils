@@ -1,0 +1,1 @@
+Second SILEX regression session to validate API 1.0 candidate and ontology 1.2 in pre-production, repeat municipal cases and confirm that no critical errors remain before the second evaluation.

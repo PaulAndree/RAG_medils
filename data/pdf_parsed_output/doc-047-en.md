@@ -1,0 +1,73 @@
+ATLAS-2 STORAGE EXPANSION PROCUREMENT DECISION V1.0
+
+Purpose
+
+This document records the comparison and purchasing decision for expansion of Atlas-2 storage. The need results from growth in ARIADNA corpora, LUMEN images, VERDANT products, and project working copies.
+
+Requirements
+
+The solution must provide at least 120 TB of usable capacity, tolerance of two disk failures, compatibility with the current system, monitoring, a five-year warranty, and delivery before 31 August 2026. The purchase includes disks, enclosures, controller, installation, and testing.
+
+Offers
+
+Three comparable offers were received. Offer A has the lowest price but only a three-year warranty. Offer B meets every requirement and includes installation and a recovery test. Offer C provides greater capacity but exceeds the available budget and has an incompatible delivery date.
+
+Decision
+
+Offer B is selected for EUR 38,450, taxes included. The decision is not based on price alone: it includes warranty, compatibility, support, delivery, and restoration evidence. The expense is allocated to LabOps and the ARIADNA and LUMEN infrastructure budgets.
+
+Conditions
+
+Acceptance requires an inventory, component checksums, SMART testing, a simulated failure, restoration of a sample, and an update to the Atlas-2 manual. Final payment is released after compliant receipt.
+
+Additional condition 1
+
+Comparison used a matrix covering usable capacity, performance, redundancy, warranty, support, delivery, installation, and total cost. Offers failing a mandatory requirement were marked non-compliant before scoring.
+
+Additional condition 2
+
+Receipt separates physical delivery, installation, testing, and acceptance. A signed delivery note does not demonstrate that the solution meets required capacity or fault tolerance. The test remains as case evidence.
+
+Additional condition 3
+
+Any model or component change requires prior approval. A substitute must maintain or improve capacity, warranty, and compatibility without increasing the accepted price.
+
+Additional condition 4
+
+Comparison used a matrix covering usable capacity, performance, redundancy, warranty, support, delivery, installation, and total cost. Offers failing a mandatory requirement were marked non-compliant before scoring.
+
+Additional condition 5
+
+Receipt separates physical delivery, installation, testing, and acceptance. A signed delivery note does not demonstrate that the solution meets required capacity or fault tolerance. The test remains as case evidence.
+
+Additional condition 6
+
+Any model or component change requires prior approval. A substitute must maintain or improve capacity, warranty, and compatibility without increasing the accepted price.
+
+Additional condition 7
+
+Comparison used a matrix covering usable capacity, performance, redundancy, warranty, support, delivery, installation, and total cost. Offers failing a mandatory requirement were marked non-compliant before scoring.
+
+Additional condition 8
+
+Receipt separates physical delivery, installation, testing, and acceptance. A signed delivery note does not demonstrate that the solution meets required capacity or fault tolerance. The test remains as case evidence.
+
+Additional condition 9
+
+Any model or component change requires prior approval. A substitute must maintain or improve capacity, warranty, and compatibility without increasing the accepted price.
+
+Additional condition 10
+
+Comparison used a matrix covering usable capacity, performance, redundancy, warranty, support, delivery, installation, and total cost. Offers failing a mandatory requirement were marked non-compliant before scoring.
+
+Additional condition 11
+
+Receipt separates physical delivery, installation, testing, and acceptance. A signed delivery note does not demonstrate that the solution meets required capacity or fault tolerance. The test remains as case evidence.
+
+Additional condition 12
+
+Any model or component change requires prior approval. A substitute must maintain or improve capacity, warranty, and compatibility without increasing the accepted price.
+
+Additional condition 13
+
+Comparison used a matrix covering usable capacity, performance, redundancy, warranty, support, delivery, installation, and total cost. Offers failing a mandatory requirement were marked non-compliant before scoring.

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "event-014-en_chunk_1_arg_1",
+    "claim": "The pilot is confirmed for the week beginning 9 November 2026. The week beginning 21 September will remain recorded only as the original date, discarded because of the mapping and licensing delay.",
+    "evidence": [
+      "Third SILEX steering committee meeting to review validation results and confirm the final municipal pilot date. The week beginning 9 November 2026 is approved as the new date, replacing the discarded original September date.",
+      "All 62 procedures have been validated. Mandatory-field coverage is 98.4 percent, and no critical errors remain. There are five minor warnings related to descriptive text.",
+      "The suspended-deadline and temporal-name rules work as agreed. The version 1.1 candidate can be approved.",
+      "The acceptance criteria agreed with the municipality are met at this stage.",
+      "Santa Marina confirms staff and room availability during the week beginning 9 November. We need to receive the stable environment by 26 October.",
+      "We can therefore convert the provisional date into the final date."
+    ]
+  }
+]

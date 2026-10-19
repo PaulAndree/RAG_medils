@@ -1,0 +1,5 @@
+The new engineer's onboarding will be organized over four weeks. The first will cover accounts, infrastructure, policies, and repository review. The second will focus on running an existing pipeline and reproducing a result. The third will include a small improvement task with code review. The fourth will end with a proposal of priorities for the following three months.
+
+Nuria will be the technical mentor, and Clara will be responsible for administration. Andrés will introduce ARIADNA, Sergio the data flows, and Rosa the internal procedures. Short meetings will be scheduled twice a week during the first month, with a review at the end of each phase.
+
+Completion criteria are full access, passed training, documented reproduction of one pipeline, a first integrated contribution, and an agreed work plan. Mentoring must not depend on one person during leave; Javier will act as the technical backup.

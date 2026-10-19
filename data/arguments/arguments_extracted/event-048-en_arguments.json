@@ -1,0 +1,13 @@
+[
+  {
+    "id": "event-048-en_chunk_1_arg_1",
+    "claim": "Local processing is approved as a permitted mechanism. Export of raw 15-minute data remains prohibited.",
+    "evidence": [
+      "The container processed 15-minute data from twelve facilities and produced daily coefficients for three groups. It generated no individual series or persistent identifiers.",
+      "SolCentro reviewed the code and blocked network access. The container was deleted after execution.",
+      "The audit record includes the container image, parameters, data period, groups used and output hashes.",
+      "Héctor Molina: Yes, with controls: reviewed code, blocked network, data remaining at the provider, groups of at least five, inspected output and deletion of the temporary environment.",
+      "SolCentro accepts those conditions."
+    ]
+  }
+]

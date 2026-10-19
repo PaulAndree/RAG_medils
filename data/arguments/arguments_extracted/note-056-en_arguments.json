@@ -1,0 +1,17 @@
+[
+  {
+    "id": "note-056-en_chunk_1_arg_1",
+    "claim": "The target is at least 95% completeness for mandatory fields and zero duplicate identifiers.",
+    "evidence": []
+  },
+  {
+    "id": "note-056-en_chunk_1_arg_2",
+    "claim": "The response-time target is below two seconds at the 95th percentile.",
+    "evidence": []
+  },
+  {
+    "id": "note-056-en_chunk_1_arg_3",
+    "claim": "ES/EN equivalence must reach at least 98%.",
+    "evidence": []
+  }
+]

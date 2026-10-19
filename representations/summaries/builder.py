@@ -10,7 +10,7 @@ from time import perf_counter
 from typing import Any
 from uuid import NAMESPACE_URL, UUID, uuid5
 
-from fastembed import TextEmbedding
+import requests
 from langchain_ollama import ChatOllama
 
 from representations.common import StageResult
@@ -39,12 +39,26 @@ DOCUMENT_VERSION = int(os.getenv("DOCUMENT_VERSION", "1"))
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 GENERATION_MODEL = os.getenv("OLLAMA_GENERATION_MODEL", "qwen3:14b")
+OLLAMA_NUM_CTX = int(os.getenv("OLLAMA_NUM_CTX", "16384"))
+OLLAMA_NUM_PREDICT = int(os.getenv("OLLAMA_NUM_PREDICT", "2024"))
+SUMMARY_INPUT_TOKEN_LIMIT = int(
+    os.getenv("SUMMARY_INPUT_TOKEN_LIMIT", "13500")
+)
 
-# Use the exact FastEmbed model used by the passage indexer so passage,
-# summary, and future query vectors share one embedding space.
+if SUMMARY_INPUT_TOKEN_LIMIT + OLLAMA_NUM_PREDICT > OLLAMA_NUM_CTX:
+    raise ValueError(
+        "SUMMARY_INPUT_TOKEN_LIMIT + OLLAMA_NUM_PREDICT must not exceed "
+        "OLLAMA_NUM_CTX"
+    )
+
+#external embedding service for RAPTOR summaries
+EMBEDDING_URL = os.getenv(
+    "EMBEDDING_URL",
+    "http://127.0.0.1:8089/embed",
+)
 EMBEDDING_MODEL = os.getenv(
     "EMBEDDING_MODEL",
-    "BAAI/bge-small-en-v1.5",
+    "bge-m3",
 )
 
 MIN_NODES_FOR_NEXT_LEVEL = 10
@@ -69,18 +83,44 @@ def _llm() -> ChatOllama:
         model=GENERATION_MODEL,
         base_url=OLLAMA_BASE_URL,
         temperature=0.1,
+        num_ctx=OLLAMA_NUM_CTX,
+        num_predict=OLLAMA_NUM_PREDICT,
     )
 
 
-@lru_cache(maxsize=1)
-def _embedding_model() -> TextEmbedding:
-    return TextEmbedding(model_name=EMBEDDING_MODEL)
+def _embed_texts(texts: list[str]) -> list[list[float]]:
+    if not texts:
+        return []
+
+    response = requests.post(
+        EMBEDDING_URL,
+        json={
+            "texts": texts,
+            "model": EMBEDDING_MODEL,
+            "input_type": "passage",
+            "normalize": True,
+        },
+        timeout=(10, 600),
+    )
+    response.raise_for_status()
+    result = response.json()
+    embeddings = result.get("embeddings")
+
+    if result.get("kind") != "dense" or not isinstance(embeddings, list):
+        raise RuntimeError("Embedding API did not return dense embeddings")
+    if len(embeddings) != len(texts):
+        raise RuntimeError(
+            f"Embedding API returned {len(embeddings)} vectors for "
+            f"{len(texts)} texts"
+        )
+
+    return embeddings
 
 SYSTEM_PROMPT = """You summarize scientific information for a hierarchical
 retrieval system. Preserve major claims, methods, findings, important entities,
 relationships, experimental conditions, limitations, and uncertainty. The
-summary should be direct and clear.
-
+summary should be short, direct and clear.
+Write the summary in the same language as the source content.
 Use only information in the provided source content. Do not add external facts,
 assumptions, explanations, or conclusions. If sources conflict or are uncertain,
 preserve that conflict or uncertainty. Return only the summary."""
@@ -191,10 +231,7 @@ def load_documents(
                 f"{title}\n\n{content}" if title else content
             )
 
-        embeddings = [
-            embedding.tolist()
-            for embedding in _embedding_model().embed(embedding_inputs)
-        ]
+        embeddings = _embed_texts(embedding_inputs)
         if len(embeddings) != len(normalized_chunks):
             raise RuntimeError(
                 f"Embedding model returned {len(embeddings)} vectors for "
@@ -248,23 +285,103 @@ def load_document_nodes(document: dict[str, Any]) -> list[dict[str, Any]]:
 # Summary creation and provenance
 # -----------------------------------------------------------------------------
 
-def summarize(nodes: list[dict[str, Any]], summary_type: str) -> str:
+def _summary_prompt(
+    nodes: list[dict[str, Any]],
+    summary_type: str,
+) -> str:
     context = "\n\n".join(
         f"[source node: {node['node_id']}]\n{node['text']}" for node in nodes
     )
+    return (
+        f"Create a {summary_type} summary from the scientific "
+        f"content below. Write the summary in the same language as the source content. \n\nCONTENT:\n{context}"
+    )
+
+
+def _estimate_tokens(text: str) -> int:
+    """Conservatively estimate mixed Spanish-English token usage."""
+
+    return max(1, (len(text.encode("utf-8")) + 2) // 3)
+
+
+def _prompt_token_count(
+    nodes: list[dict[str, Any]],
+    summary_type: str,
+) -> int:
+    return _estimate_tokens(
+        f"{SYSTEM_PROMPT}\n{_summary_prompt(nodes, summary_type)}"
+    )
+
+
+def _batch_nodes(
+    nodes: list[dict[str, Any]],
+    summary_type: str,
+) -> list[list[dict[str, Any]]]:
+    batches: list[list[dict[str, Any]]] = []
+    current: list[dict[str, Any]] = []
+    for node in nodes:
+        if _prompt_token_count([node], summary_type) > SUMMARY_INPUT_TOKEN_LIMIT:
+            raise ValueError(
+                f"RAPTOR node {node['node_id']} exceeds the summary input "
+                "limit; reduce the upstream passage chunk size"
+            )
+        candidate = [*current, node]
+        if (
+            current
+            and _prompt_token_count(candidate, summary_type)
+            > SUMMARY_INPUT_TOKEN_LIMIT
+        ):
+            batches.append(current)
+            current = [node]
+        else:
+            current = candidate
+    if current:
+        batches.append(current)
+    return batches
+
+
+def _invoke_summary(
+    nodes: list[dict[str, Any]],
+    summary_type: str,
+) -> str:
     response = _llm().invoke(
         [
             ("system", SYSTEM_PROMPT),
-            (
-                "human",
-                f"Create a {summary_type} summary from the scientific "
-                f"content below.\n\nCONTENT:\n{context}",
-            ),
+            ("human", _summary_prompt(nodes, summary_type)),
         ]
     )
     if not isinstance(response.content, str):
         raise TypeError("The summarization model returned non-text content")
     return response.content.strip()
+
+
+def summarize(
+    nodes: list[dict[str, Any]],
+    summary_type: str,
+    *,
+    _depth: int = 0,
+) -> str:
+    if not nodes:
+        raise ValueError("Cannot summarize an empty list of nodes")
+    if _depth > 10:
+        raise RuntimeError("Summary batching did not converge after 10 levels")
+    if _prompt_token_count(nodes, summary_type) <= SUMMARY_INPUT_TOKEN_LIMIT:
+        return _invoke_summary(nodes, summary_type)
+
+    partial_type = f"partial {summary_type}"
+    batches = _batch_nodes(nodes, partial_type)
+    print(
+        f"RAPTOR {summary_type}: batching {len(nodes)} nodes into "
+        f"{len(batches)} prompts"
+    )
+    partial_nodes = [
+        {
+            "node_id": f"{summary_type}_batch_{index}",
+            "text": _invoke_summary(batch, partial_type),
+        }
+        for index, batch in enumerate(batches, start=1)
+    ]
+    return summarize(partial_nodes, summary_type, _depth=_depth + 1)
 
 
 def _combined_values(nodes: list[dict[str, Any]], key: str) -> list[str]:
@@ -284,7 +401,7 @@ def create_summary_node(
         raise ValueError("Cannot summarize an empty list of nodes")
 
     text = summarize(nodes, summary_type)
-    embedding = next(_embedding_model().embed([text])).tolist()
+    embedding = _embed_texts([text])[0]
 
     expected_dimension = len(nodes[0]["embedding"])
     if len(embedding) != expected_dimension:
@@ -477,9 +594,7 @@ def _restore_embedding(node: dict[str, Any]) -> dict[str, Any]:
     """Restore the internal embedding omitted from persisted summary JSON."""
 
     restored = dict(node)
-    restored["embedding"] = next(
-        _embedding_model().embed([node["text"]])
-    ).tolist()
+    restored["embedding"] = _embed_texts([node["text"]])[0]
     return restored
 
 

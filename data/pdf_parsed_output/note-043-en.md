@@ -1,0 +1,5 @@
+The new staff member already has institutional email and Microsoft Teams access, but four items remain pending: a GitLab account, a project folder in Nextcloud, limited Atlas-2 access, and registration in the task manager. Mandatory data-protection training is booked for 27 May.
+
+Initial Atlas-2 access must permit jobs in the development queue but not environment administration or access to directories belonging to other projects. The GitLab account will be added to the ARIADNA and LabOps repositories with developer permissions. Access to administrative documentation will be limited to the required folders.
+
+Rosa will process the accounts, and Nuria will validate Atlas-2 access. Andrés will act as mentor during the first month. Onboarding will not be considered complete until the person has changed temporary passwords, accepted the usage policies, and successfully tested access to each system.

@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Third SILEX requirements follow-up meeting to review legal authorization for the resident-registration dataset, close the four incomplete procedures and update dependencies in the mapping catalogue.\n\nJavier Ortega: The objective is to determine whether we can close the requirements that blocked the original pilot date.\nLuis Noguera: The legal office has authorized reuse of the resident-registration dataset for the pilot, provided that we use the anonymized export and do not publish individual records.\nSergio Vidal: That condition is compatible with the planned environment. We will retain only temporary technical identifiers and aggregated metrics.\nAlba Prieto: We have also received the four corrected procedures. They now include the responsible unit, deadline, legal basis and required documentation.\nMireia Soler: Two modeling decisions remain: how to represent suspension of deadlines and how to link a municipal unit whose name changes during the year.\nJavier Ortega: Those decisions will be resolved at the next workshop. Are any functional requirements still open?\nAlba Prieto: We only need to confirm the pilot acceptance criteria: at least 95 percent coverage, no critical errors and API response below two seconds for the agreed queries.\nLuis Noguera: The municipality accepts those three criteria.\nJavier Ortega: Excellent. Alba will close the requirements catalogue, Sergio will add the anonymization condition, and Mireia will prepare the two outstanding decisions for the 27 May workshop."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-011-en"
+  ],
+  "token_count": [
+    221
+  ]
+}

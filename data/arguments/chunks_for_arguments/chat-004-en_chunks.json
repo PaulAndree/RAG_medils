@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-01-20T08:55:00Z\nAuthor: Javier Ortega Campos\nMessage: Last night's SHACL run produced 137 violations. We need to separate real errors from false positives.\n\nDate: 2026-01-20T08:57:00Z\nAuthor: Sergio Vidal Cruz\nMessage: Eighty-nine are concentrated in cardinality rules for deadlines and documentation.\n\nDate: 2026-01-20T08:59:00Z\nAuthor: Alba Prieto Mora\nMessage: Some procedures have no deadline because they depend on an external decision. The absence is documented and is not an error.\n\nDate: 2026-01-20T09:01:00Z\nAuthor: Mireia Soler Pons\nMessage: The current rule requires exactly one deadline. It should allow zero when a non-applicable justification exists.\n\nDate: 2026-01-20T09:04:00Z\nAuthor: Nuria Castaño Rey\nMessage: Does that turn a requirement into an exception that is too broad?\n\nDate: 2026-01-20T09:07:00Z\nAuthor: Mireia Soler Pons\nMessage: We can require the exception to have a controlled code, provenance note and validating unit.\n\nDate: 2026-01-20T09:10:00Z\nAuthor: Sergio Vidal Cruz\nMessage: There are another 22 warnings because documentation appears as an empty list rather than a missing value.\n\nDate: 2026-01-20T09:13:00Z\nAuthor: Alba Prieto Mora\nMessage: That is a transformation problem. An empty list does not explain whether documentation is not required or data is missing.\n\nDate: 2026-01-20T09:16:00Z\nAuthor: Javier Ortega Campos\nMessage: Then we do not relax that rule; we correct the transformation.\n\nDate: 2026-01-20T09:19:00Z\nAuthor: Nuria Castaño Rey\nMessage: I also see twelve date-format errors. The source uses day/month/year as text.\n\nDate: 2026-01-20T09:22:00Z\nAuthor: Sergio Vidal Cruz\nMessage: I can normalize them to ISO and retain the original literal in provenance.\n\nDate: 2026-01-20T09:25:00Z\nAuthor: Mireia Soler Pons\nMessage: Fourteen cases of multiple responsible units remain. Some procedures have an instructing unit and a deciding unit.\n\nDate: 2026-01-20T09:28:00Z\nAuthor: Alba Prieto Mora\nMessage: The shape should distinguish roles rather than limiting the total to one.\n\nDate: 2026-01-20T09:31:00Z\nAuthor: Javier Ortega Campos\nMessage: How many genuine violations do we expect after these adjustments?\n\nDate: 2026-01-20T09:34:00Z\nAuthor: Sergio Vidal Cruz\nMessage: Approximately thirty-four: empty lists, invalid dates and units without roles.\n\nDate: 2026-01-20T09:37:00Z\nAuthor: Nuria Castaño Rey\nMessage: I propose running two profiles: strict for delivery and diagnostic for development.\n\nDate: 2026-01-20T09:40:00Z\nAuthor: Mireia Soler Pons\nMessage: Agreed, provided both profiles share rule identifiers and version information.\n\nDate: 2026-01-20T09:43:00Z\nAuthor: Alba Prieto Mora\nMessage: I will prepare examples of a valid exception and genuinely missing data to avoid different interpretations.\n\nDate: 2026-01-20T09:46:00Z\nAuthor: Javier Ortega Campos\nMessage: The deadline rule will be adjusted with a controlled exception; empty documentation remains an error, and units will use roles.",
+        "Date: 2026-01-20T09:50:00Z\nAuthor: Sergio Vidal Cruz\nMessage: I will run validation again this afternoon and publish details by rule, procedure and severity."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        770,
+        38
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

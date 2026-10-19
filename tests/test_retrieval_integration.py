@@ -23,7 +23,13 @@ class FakeQdrant:
 
 
 class SemanticSearchTests(unittest.TestCase):
-    def test_passage_and_summary_search_use_their_own_aliases(self):
+    @patch("retrieval.semantic_search.embed_texts")
+    def test_passage_and_summary_search_use_their_own_aliases(self, embed_texts):
+        embed_texts.side_effect = (
+            lambda _texts, model, _input_type: [[0.1, 0.2]]
+            if model == "bge-m3"
+            else [{"indices": [1], "values": [0.5]}]
+        )
         qdrant = FakeQdrant()
 
         search_passages("question", 3, qdrant_client=qdrant)
@@ -41,11 +47,12 @@ class SemanticSearchTests(unittest.TestCase):
             self.assertIsInstance(call["query"], models.FusionQuery)
             self.assertEqual(
                 [prefetch.using for prefetch in call["prefetch"]],
-                ["dense", "bm25"],
+                ["dense", "sparse"],
             )
-            self.assertEqual(
-                [prefetch.query.model for prefetch in call["prefetch"]],
-                ["BAAI/bge-small-en-v1.5", "Qdrant/bm25"],
+            self.assertEqual(call["prefetch"][0].query, [0.1, 0.2])
+            self.assertIsInstance(
+                call["prefetch"][1].query,
+                models.SparseVector,
             )
             self.assertTrue(
                 all(
@@ -78,8 +85,20 @@ class RetrievalWorkflowTests(unittest.TestCase):
             point("summary-1", 0.8, node_id="summary-node", summary_text="Summary")
         ]
         retrieve_graph.return_value = {
-            "matches": [{"chunk_id": "chunk-1"}],
-            "records": [{"entity": {"name": "Alice"}}],
+            "results": [
+                {
+                    "result_id": "point-1",
+                    "rank": 1,
+                    "claim": "Alice works with NEXUS.",
+                    "evidence": ["Alice is a NEXUS researcher."],
+                    "source_chunk_id": "chunk-1",
+                    "source_content": "Text",
+                    "graph_expansion": {
+                        "entities": [{"name": "Alice"}],
+                        "relations": [],
+                    },
+                }
+            ]
         }
 
         result = retrieve(
@@ -95,7 +114,7 @@ class RetrievalWorkflowTests(unittest.TestCase):
         self.assertEqual(result["summaries"][0]["node_id"], "summary-node")
         self.assertEqual(result["summaries"][0]["id"], "summary-node")
         self.assertEqual(
-            result["graph_context"]["records"][0]["entity"]["name"],
+            result["graph_context"]["results"][0]["graph_expansion"]["entities"][0]["name"],
             "Alice",
         )
 
@@ -125,7 +144,7 @@ class RetrievalWorkflowTests(unittest.TestCase):
         retrieve_graph.assert_not_called()
         self.assertEqual(result["documents"], [])
         self.assertEqual(result["summaries"][0]["id"], "summary-node")
-        self.assertEqual(result["graph_context"], {"matches": [], "records": []})
+        self.assertEqual(result["graph_context"], {"results": []})
 
 
 class ApiIntegrationTests(unittest.TestCase):
@@ -134,7 +153,7 @@ class ApiIntegrationTests(unittest.TestCase):
         invoke.return_value = {
             "documents": [{"chunk_id": "chunk-1"}],
             "summaries": [{"node_id": "summary-1"}],
-            "graph_context": {"matches": [], "records": []},
+            "graph_context": {"results": []},
         }
 
         result = query(QueryRequest(question="question", limit=2))
@@ -152,7 +171,7 @@ class ApiIntegrationTests(unittest.TestCase):
         invoke.return_value = {
             "documents": [],
             "summaries": [{"node_id": "summary-1"}],
-            "graph_context": {"matches": [], "records": []},
+            "graph_context": {"results": []},
         }
 
         query(

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "event-072-en_chunk_1_arg_1",
+    "claim": "We approve the hidden reference date, temporal acronym catalogue, human approval of reformulations and question versioning. The guide moves to version 1.2.",
+    "evidence": [
+      "The robustness analysis showed that we need more precise rules for relative dates and acronyms.",
+      "Annotation must store an explicit reference date even when it is not shown in the visible text.",
+      "We must also distinguish official acronyms from abbreviations created by users. 'HR' may be expanded safely, but 'committee' does not identify a specific unit.",
+      "Administration uses different acronyms for the same unit across documents. We should retain a catalogue with validity periods.",
+      "For maintenance, I propose that a question not be overwritten when a rule changes. A new version will be created, while the previous version retains its validity interval.",
+      "Bilingual versions must be updated as a pair when the fact changes, even if their publication dates remain different."
+    ]
+  }
+]

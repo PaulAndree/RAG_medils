@@ -1,0 +1,5 @@
+The evaluation will contain six tasks. The first two will measure basic search: locating a photograph by person and retrieving letters associated with a place. The next tasks will evaluate relationships and time: distinguishing author from creator, finding objects within an approximate date range, and following a historical place-name variant. The final task will ask users to repeat a search after switching language.
+
+Every task will have a verifiable answer and an indicative maximum time, although this will not be shown to participants. Success, time, number of actions, errors, requests for help, and comments will be recorded. Half of the participants will start in Spanish and half in English to reduce order effects.
+
+Objects with pending rights will not be used. Mateo will prepare the data, and Pablo will configure interaction capture. A task will be reviewed if fewer than 20% of participants can complete it, because that may indicate a wording problem rather than an interface problem.

@@ -1,0 +1,1 @@
+First ARIADNA retrieval evaluation to compare BM25 and dense retrieval, test different chunk sizes and agree on recall, ranking and bilingual-coverage metrics over the development partition.

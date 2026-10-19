@@ -1,0 +1,5 @@
+Four candidates were interviewed for the research engineering position. The assessment weights Python and deployment experience, data management, testing practices, communication, and knowledge of academic infrastructure.
+
+Candidate A is strongest in MLOps and GPU administration but has little experience with semantic data. Candidate B combines API development, RDF, and automated testing and provided a strong technical response. Candidate C has extensive data-engineering experience, although their available start date is later than required. Candidate D communicated well but did not complete the diagnostic part of the exercise.
+
+The provisional recommendation is to offer the position to candidate B, with candidate A as the second option. Nuria will check two professional references, and Clara will verify salary expectations and the start date. No offer will be sent until scores have been consolidated and the committee's decision has been documented.

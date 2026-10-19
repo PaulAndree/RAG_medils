@@ -1,0 +1,10 @@
+First coordination meeting for Yara Ben Salem's visit to review ontology-alignment work, expected results before June and the possibility of extending the visit if the terminology review requires additional work.
+
+Lucía Navarro: The visit was planned through 30 June. We want to review whether the schedule is still sufficient.
+Yara Ben Salem: Alignment of people and places is progressing as planned, but the distinction among creator, author and records creator requires more examples and may affect the mapping rules.
+Mireia Soler: We also need Yara to participate in validating the demonstrator's bilingual labels.
+Diego Ramos: If the terminology review ends in April, we can close the technical evaluation in June. If it is delayed, we will lose continuity.
+Clara Ibáñez: A small budget reserve is available to extend the visit through September, but we must justify it and request the amendment before 15 May.
+Lucía Navarro: We will not decide yet. We will retain 30 June as the current end date and review the need for an extension in early May.
+Yara Ben Salem: Agreed. Before that review, I will deliver the alignment report and a list of outstanding terminology issues.
+Clara Ibáñez: I will record the possible extension as an option, not as an approved decision.

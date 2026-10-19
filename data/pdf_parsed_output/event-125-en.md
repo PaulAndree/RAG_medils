@@ -1,0 +1,1 @@
+Second ingestion follow-up session to review processing of the 480-object batch, measure metadata and rights errors, and determine which records are ready for the demonstrator.

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "event-150-en_chunk_1_arg_1",
+    "claim": "Final conclusions are approved: aggregated hourly data and local processing are the authorized routes; export of raw 15-minute data remains prohibited.",
+    "evidence": [
+      "SolCentro considers hourly data and local processing viable. It does not accept raw 15-minute export in the next phase.",
+      "The privacy assessment supports policy v1.0. For 2027, I recommend further automation of output controls, but not relaxing group-size minimums or purpose review."
+    ]
+  }
+]

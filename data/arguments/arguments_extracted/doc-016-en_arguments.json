@@ -1,0 +1,72 @@
+[
+  {
+    "id": "doc-016-en_chunk_1_arg_1",
+    "claim": "The benchmark studies whether a system retrieves relevant evidence, selects the correct temporal version, integrates distributed information, and produces an answer supported by verifiable citations.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_2",
+    "claim": "Every bilingual pair represents the same semantic content while using natural wording in each language.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_3",
+    "claim": "Conceptual identifiers, relations, and inclusion decisions must be equivalent across both versions.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_4",
+    "claim": "The benchmark distinguishes direct, temporal, multi-hop, version-comparison, and unanswerable questions.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_5",
+    "claim": "An unanswerable question must genuinely lack sufficient evidence; a retrieval failure does not turn an answerable question into an unanswerable one.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_6",
+    "claim": "The first official version contains 2,302 semantic questions and 4,604 language records.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_7",
+    "claim": "Every semantic question has one Spanish and one English version.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_8",
+    "claim": "The benchmark does not require one exact wording, but every important claim must be covered by evidence.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_9",
+    "claim": "Every question records its intent, difficulty, answer, required facts, sources, citations, and reference date.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_10",
+    "claim": "The annotator must justify why the category is appropriate and state discarded alternatives.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_11",
+    "claim": "ES/EN pairs share category, evidence, and decision even where wording is naturally adapted.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_1_arg_12",
+    "claim": "Review checks that the question does not depend on external knowledge or an interpretation unsupported by the corpus.",
+    "evidence": []
+  },
+  {
+    "id": "doc-016-en_chunk_4_arg_1",
+    "claim": "Risk 1 is leakage across partitions.",
+    "evidence": [
+      "Probability, impact, control, owner, and evidence are recorded.",
+      "Mitigation includes automated checks, manual review, and regression tests.",
+      "If the risk materializes, publication of the affected result stops and experiments requiring repetition are identified.",
+      "The risk closes only where the correction is reproducible and the report clearly distinguishes valid and archived results."
+    ]
+  }
+]

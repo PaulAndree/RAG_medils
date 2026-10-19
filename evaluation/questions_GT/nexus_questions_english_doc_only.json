@@ -1,0 +1,556 @@
+{
+  "dataset": "NEXUS IR/RAG questions",
+  "language": "en",
+  "language_name": "English",
+  "question_count": 21,
+  "selection_rule": "relevant_doc_ids is non-empty and every ID starts with doc-",
+  "questions": [
+    {
+      "id": "question-factual-single-001-en",
+      "pair_id": "question-factual-single-001",
+      "language": "en",
+      "question": "How many semantic questions are included in the first official version of the ARIADNA benchmark?",
+      "retrieval_type": "single",
+      "reasoning_type": "factual",
+      "relevant_doc_ids": [
+        "doc-016-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-016-en",
+          "text": "The first official version contains 2,302 semantic questions and 4,604 language records."
+        }
+      ],
+      "answer": "The first official version contains 2,302 semantic questions.",
+      "parallel_question_id": "question-factual-single-001-es"
+    },
+    {
+      "id": "question-factual-single-006-en",
+      "pair_id": "question-factual-single-006",
+      "language": "en",
+      "question": "Which offer was selected to expand Atlas-2's storage capacity?",
+      "retrieval_type": "single",
+      "reasoning_type": "factual",
+      "relevant_doc_ids": [
+        "doc-047-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-047-en",
+          "text": "Offer B is selected for EUR 38,450, taxes included."
+        }
+      ],
+      "answer": "Offer B was selected.",
+      "parallel_question_id": "question-factual-single-006-es"
+    },
+    {
+      "id": "question-inferential-verificative-single-001-en",
+      "pair_id": "question-inferential-verificative-single-001",
+      "language": "en",
+      "question": "Is the claim that “spring 1947” should be normalized as an exact day and used as such in LUMEN filters supported?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "contradicted",
+      "relevant_doc_ids": [
+        "doc-007-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-007-en",
+          "text": "Every date contains `originalText`, `earliest`, `latest`, `precision`, and `interpretationSource`. An exact date uses the same value for earliest and latest. “1947” represents the complete year. “Spring 1947” retains the literal and uses a seasonal interval; it is not displayed as one day. “c. 1930” uses approximate precision. “Before 1952” has an upper bound and open beginning."
+        },
+        {
+          "doc_id": "doc-007-en",
+          "text": "Every interpretation records its rule, version, and reviewer. A change creates a new version and does not overwrite the literal. Pending cases remain outside exact filters until resolved."
+        }
+      ],
+      "answer": "Contradicted. “Spring 1947” must retain its literal wording and be represented as a seasonal interval, not as an exact day. Pending cases must also remain outside exact filters until they are resolved.",
+      "parallel_question_id": "question-inferential-verificative-single-001-es"
+    },
+    {
+      "id": "question-inferential-verificative-single-002-en",
+      "pair_id": "question-inferential-verificative-single-002",
+      "language": "en",
+      "question": "Is the claim that VERDANT centralizes original energy readings at NEXUS and that technical ability to query a product is equivalent to authorization supported?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "contradicted",
+      "relevant_doc_ids": [
+        "doc-012-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-012-en",
+          "text": "VERDANT studies interoperable exchange of energy products among SolCentro, Instituto Técnico do Norte, and NEXUS. The architecture is federated: original readings remain within the infrastructure of the partner generating them, while authorized consumers receive catalogues and derived products under explicit rules."
+        },
+        {
+          "doc_id": "doc-012-en",
+          "text": "The design seeks interoperability, minimization, traceability, and revocation. Technical ability to query data is not authorization. Every product declares its purpose, owner, policy, version, provenance, and availability period."
+        },
+        {
+          "doc_id": "doc-012-en",
+          "text": "The source retains authority over data. Federation exchanges descriptions and results and does not require centralized copies. Products may be withdrawn or superseded without losing history. Least privilege applies to accounts, networks, operations, and fields. Every transformation is reproducible, and logs contain no secrets or complete bodies."
+        }
+      ],
+      "answer": "Contradicted. Original readings remain within the infrastructure of the partner that generated them, and federation exchanges descriptions and derived results without requiring centralized copies. Technical ability to submit a query does not grant authorization.",
+      "parallel_question_id": "question-inferential-verificative-single-002-es"
+    },
+    {
+      "id": "question-inferential-verificative-single-007-en",
+      "pair_id": "question-inferential-verificative-single-007",
+      "language": "en",
+      "question": "Is there sufficient evidence to conclude that the C512 chunking configuration outperforms C256 in ARIADNA retrieval quality?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "insufficient_evidence",
+      "relevant_doc_ids": [
+        "doc-017-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-017-en",
+          "text": "This register defines reproducible configurations used to chunk and index the ARIADNA corpus. It does not contain final results; it identifies parameters that must accompany every experiment."
+        },
+        {
+          "doc_id": "doc-017-en",
+          "text": "Configuration C256 uses chunks of up to 256 tokens with an overlap of forty-eight. Configuration C512 uses up to 512 tokens with an overlap of ninety-six. Both retain the source identifier, language, position, version, and validity date."
+        },
+        {
+          "doc_id": "doc-017-en",
+          "text": "Configuration C256 uses chunks of up to 256 tokens with an overlap of forty-eight. Configuration C512 uses up to 512 tokens with an overlap of ninety-six. Both retain the source identifier, language, position, version, and validity date."
+        },
+        {
+          "doc_id": "doc-017-en",
+          "text": "Chunks that are too short may lose context and increase the number of required results. Long chunks may mix separate facts and make exact citation difficult. Comparison uses the same questions, indexes built from a clean copy, and three seeds where randomness exists."
+        }
+      ],
+      "answer": "Insufficient evidence. The register defines the chunk sizes and overlaps for C256 and C512 and specifies how a reproducible comparison should be run, but it explicitly states that it contains no final results. It therefore cannot establish which configuration provides better retrieval.",
+      "parallel_question_id": "question-inferential-verificative-single-007-es"
+    },
+    {
+      "id": "question-integration-synthesis-multiple-001-en",
+      "pair_id": "question-integration-synthesis-multiple-001",
+      "language": "en",
+      "question": "Synthesize how the SILEX municipal pilot was prepared, deployed, and evaluated, including the schedule change, deployment conditions, main results, and evaluation limitations.",
+      "retrieval_type": "multiple",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-026-en",
+        "doc-029-en",
+        "doc-030-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-026-en",
+          "text": "The pilot originally planned for September is delayed by three dependencies: confirmation of pending fields in the municipal export, configuration of the pre-production network, and final review of API messages. The new operating window is set from 5 to 16 October 2026. The date is treated as approved following joint confirmation by NEXUS and the Santa Marina City Council."
+        },
+        {
+          "doc_id": "doc-026-en",
+          "text": "SILEX demonstrates that a heterogeneous municipal catalogue can be transformed into an interoperable, bilingual, and verifiable semantic representation. The pilot covers the catalogue, ontology, mappings, API, deployment, training, evaluation with municipal staff, transfer, and closure."
+        },
+        {
+          "doc_id": "doc-029-en",
+          "text": "SILEX was deployed in the Santa Marina City Council pre-production environment after network configuration, named accounts, secrets, and API contract tests were completed. This report documents infrastructure, versions, steps, incidents, results, and rollback."
+        },
+        {
+          "doc_id": "doc-029-en",
+          "text": "The first planned window was postponed because authorized network addresses and two municipal accounts were missing. The executed window took place on 21 and 22 September 2026. The environment became available for training and internal tests before the pilot began in October."
+        },
+        {
+          "doc_id": "doc-029-en",
+          "text": "The candidate load contains authorized procedures, vocabularies, units, legal bases, and version relations. The municipal register and other restricted datasets remain outside. The load retains a manifest, source, licence, and counts."
+        },
+        {
+          "doc_id": "doc-030-en",
+          "text": "The overall success rate was 88%. Median task time was 2 minutes 18 seconds. Language switching preserved the query and entity in 100% of journeys. The API achieved p95 latency of 1.42 seconds during sessions. No exposure of restricted data was identified."
+        },
+        {
+          "doc_id": "doc-030-en",
+          "text": "The evaluation does not measure large-scale citizen use and does not replace a complete accessibility audit. Results apply to the environment, corpus, and versions recorded in the manifest."
+        }
+      ],
+      "answer": "The revised plan moved the pilot from September to 5–16 October 2026 because of pending municipal fields, pre-production network configuration, and final API-message review. A pre-production deployment was completed on 21–22 September after network setup, named accounts, secret handling, and API contract tests; the candidate load contained only authorized procedures and excluded the municipal register and other restricted datasets. Evaluation achieved an 88% success rate, a median task time of 2 minutes 18 seconds, complete context preservation during language switching, and p95 latency of 1.42 seconds, with no restricted-data exposure. The findings apply only to the manifested environment and versions and do not cover large-scale citizen use or a complete accessibility audit.",
+      "parallel_question_id": "question-integration-synthesis-multiple-001-es"
+    },
+    {
+      "id": "question-integration-synthesis-multiple-003-en",
+      "pair_id": "question-integration-synthesis-multiple-003",
+      "language": "en",
+      "question": "Synthesize VERDANT's technical operation, security controls, results, and actual pilot scope.",
+      "retrieval_type": "multiple",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-036-en",
+        "doc-037-en",
+        "doc-040-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-036-en",
+          "text": "The API does not expose original fifteen-minute readings outside SolCentro. Consumers receive hourly or daily products where they satisfy policy, minimum group size, and purpose conditions. Technical ability to make a request is not authorization."
+        },
+        {
+          "doc_id": "doc-036-en",
+          "text": "Authentication uses organization certificates and named service accounts. Technical identity is linked to a role and purpose. A valid certificate does not itself grant access to all products. Revoked certificates must be rejected before policy evaluation."
+        },
+        {
+          "doc_id": "doc-036-en",
+          "text": "The base path is `/api/verdant/v1`. Incompatible changes require a new major version. Every response contains the API version, product version, policy version, generation date, and request identifier."
+        },
+        {
+          "doc_id": "doc-037-en",
+          "text": "The conclusion is favorable with controls closed. The administration endpoint is limited to authorized networks, revoked certificates are rejected, logs remove sensitive headers, and products are not generated where the group contains fewer than three meters."
+        },
+        {
+          "doc_id": "doc-037-en",
+          "text": "No critical or high findings remain open. Two medium findings are temporarily accepted: manual rotation of one support credential and incomplete automation of an exception-expiry check. Both have an owner and date."
+        },
+        {
+          "doc_id": "doc-040-en",
+          "text": "The pilot processed data from sixty-two installations over eighty-nine days. Hourly products were generated where four valid intervals and at least three meters were available. Consumers received metadata, coverage, quality, and provenance together with the aggregate value."
+        },
+        {
+          "doc_id": "doc-040-en",
+          "text": "All critical authentication, authorization, revocation, network, logging, and minimum-group tests passed. No exposure of individual readings, names, addresses, contracts, or secrets was identified. Product-request p95 latency was 1.68 seconds in the pre-production environment."
+        },
+        {
+          "doc_id": "doc-040-en",
+          "text": "Evaluation does not cover billing, automated installation control, or citizen use. Results apply to the versions, organizations, and period recorded in the manifest."
+        }
+      ],
+      "answer": "VERDANT retained fifteen-minute readings within SolCentro and delivered only hourly or daily products when policy, purpose, and a minimum group of three meters were satisfied. The versioned API linked organizational certificates and named service accounts to roles and purposes, rejected revoked certificates, and recorded API, product, and policy versions. Security review closed all critical controls by restricting administration to authorized networks, removing sensitive headers from logs, and blocking products for undersized groups; only two medium findings remained temporarily accepted with owners and dates. The pilot processed sixty-two installations over eighty-nine days, passed all critical tests, exposed no individual data or secrets, and achieved p95 latency of 1.68 seconds. Its scope excluded billing, automated control, and citizen use and applied only to the manifested versions, organizations, and period.",
+      "parallel_question_id": "question-integration-synthesis-multiple-003-es"
+    },
+    {
+      "id": "question-integration-synthesis-single-001-en",
+      "pair_id": "question-integration-synthesis-single-001",
+      "language": "en",
+      "question": "Synthesize how the LUMEN user evaluation was organized, its main results, and the study's limitations.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-035-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-035-en",
+          "text": "The LUMEN demonstrator evaluation involved twelve participants: six archive professionals, four researchers, and two postgraduate students. Sessions took place from 8 to 19 June 2026 in Spanish and English."
+        },
+        {
+          "doc_id": "doc-035-en",
+          "text": "Every participant completed seven tasks concerning search, approximate dates, historical people, place names, relations, language switching, and rights. Participants then completed a questionnaire and took part in a short interview."
+        },
+        {
+          "doc_id": "doc-035-en",
+          "text": "The overall success rate was 84%. Median task time was 2 minutes 46 seconds. Language switching preserved the query and entity in 97% of journeys. Understanding of approximate dates reached 88%, while interpretation of creator, author, and producer roles reached 72%."
+        },
+        {
+          "doc_id": "doc-035-en",
+          "text": "Evaluation uses the candidate demonstrator, second ingestion, and authorized objects. It does not include editing, bulk download, or search across every Regional Archive collection. Results apply to the versions recorded in the manifest."
+        }
+      ],
+      "answer": "The evaluation involved twelve people—six archive professionals, four researchers, and two postgraduate students—between 8 and 19 June 2026, with sessions in Spanish and English. Each participant completed seven tasks covering search, approximate dates, people, place names, relations, language switching, and rights, followed by a questionnaire and interview. Overall success was 84%, with a median task time of 2 minutes 46 seconds; language switching preserved the query and entity in 97% of journeys, approximate-date understanding reached 88%, and understanding of creator, author, and producer roles reached 72%. The study was limited to the candidate demonstrator, second ingestion, and authorized objects and did not cover editing, bulk downloads, or every Regional Archive collection.",
+      "parallel_question_id": "question-integration-synthesis-single-001-es"
+    },
+    {
+      "id": "question-integration-synthesis-single-002-en",
+      "pair_id": "question-integration-synthesis-single-002",
+      "language": "en",
+      "question": "Summarize the composition of the VERDANT dataset, the overall quality results, the issues found, and the method used to validate and correct them.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-038-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-038-en",
+          "text": "The main dataset contains sixty-two installations, sixty-four devices, and eighty-nine observation days. The difference between installations and devices results from two physical replacements. The system expected ninety-six fifteen-minute intervals per complete day and device, with documented adjustments for clock changes."
+        },
+        {
+          "doc_id": "doc-038-en",
+          "text": "Measured readings cover 97.8% of expected intervals. Estimated readings account for 1.4%, corrected readings 0.3%, and records marked missing 0.5%. There are no null values without a quality code."
+        },
+        {
+          "doc_id": "doc-038-en",
+          "text": "The review identified thirty-one gap sequences, fourteen negative readings, nine unit changes, seven reused device identifiers, and four hourly products calculated with incomplete coverage. Every case was reviewed before final delivery."
+        },
+        {
+          "doc_id": "doc-038-en",
+          "text": "Quality is not summarized by one percentage. Every dimension has a rule, severity, exception, and evidence. An estimated value may be valid where declared. A measured reading may be incorrect where its unit or interval is inconsistent."
+        },
+        {
+          "doc_id": "doc-038-en",
+          "text": "The pipeline compared manifests, profiled fields, validated schemas, checked continuity, calculated aggregates, and reviewed a sample. Corrections ran through versioned rules and retained the original value."
+        }
+      ],
+      "answer": "The dataset contained sixty-two installations, sixty-four devices, and eighty-nine observation days, with ninety-six fifteen-minute intervals expected per complete day and device. Measured readings covered 97.8% of intervals, estimated readings 1.4%, corrected readings 0.3%, and missing records 0.5%, with no uncoded nulls. The review found thirty-one gap sequences, fourteen negative readings, nine unit changes, seven reused device identifiers, and four hourly products with incomplete coverage. Validation combined manifest comparison, field profiling, schema validation, continuity checks, aggregate calculation, and sample review. Each dimension used rules, severity, exceptions, and evidence, and corrections were applied through versioned rules while preserving original values.",
+      "parallel_question_id": "question-integration-synthesis-single-002-es"
+    },
+    {
+      "id": "question-integration-synthesis-single-003-en",
+      "pair_id": "question-integration-synthesis-single-003",
+      "language": "en",
+      "question": "Synthesize how ARIADNA complex-case adjudication worked, how the twelve resolved cases were distributed, and which information had to be retained for traceability.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-042-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-042-en",
+          "text": "Two people review the case before the session. Adjudication consults the complete source rather than snippets alone. The person proposing the question may explain the intent but does not decide alone. The decision applies to the ES/EN pair."
+        },
+        {
+          "doc_id": "doc-042-en",
+          "text": "Twelve cases were resolved. Four questions became temporal because the answer depended on a version valid on a specific date. Three became multi-hop because they required a relation among an event, task, and owner. Two became unanswerable because no explicit final date existed. Three were split or simplified because they contained two separate questions."
+        },
+        {
+          "doc_id": "doc-042-en",
+          "text": "Every decision has an identifier, date, participants, initial category, final category, explanation, sources, and update owner. Reopened cases retain history."
+        }
+      ],
+      "answer": "Two people reviewed each case before the session, and adjudication used the complete source rather than snippets alone. The question author could explain the intent but could not decide independently, and the outcome applied to the Spanish-English pair. Of the twelve cases, four became temporal, three became multi-hop, two became unanswerable, and three were split or simplified. Traceability required the identifier, date, participants, initial and final categories, explanation, sources, update owner, and the complete history of any reopened case.",
+      "parallel_question_id": "question-integration-synthesis-single-003-es"
+    },
+    {
+      "id": "question-procedural-causal-single-001-en",
+      "pair_id": "question-procedural-causal-single-001",
+      "language": "en",
+      "question": "What must a new NEXUS starter complete before accessing real data, and when may account creation be considered complete?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-024-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-024-en",
+          "text": "Before accessing real data, the person completes data protection, security, acceptable use, and project procedures. The mentor explains repositories, communication, incidents, and filing."
+        },
+        {
+          "doc_id": "doc-024-en",
+          "text": "The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access."
+        }
+      ],
+      "answer": "Before accessing real data, the person must complete data-protection, security, acceptable-use, and project-procedure training. Account creation is complete only when the person can sign in and the permissions match the request; the initial secret must also be delivered securely and changed at first access.",
+      "parallel_question_id": "question-procedural-causal-single-001-es"
+    },
+    {
+      "id": "question-procedural-causal-single-002-en",
+      "pair_id": "question-procedural-causal-single-002",
+      "language": "en",
+      "question": "What must the team do if a failure occurs during Atlas-2 maintenance, and which checks must be completed before declaring the service operational?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-025-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-025-en",
+          "text": "Maintenance step 1 is to prepare the window and notify. The record identifies the time, person, command or tool, result, and evidence. Where a failure appears, the team decides whether to continue, isolate the component, or roll back. The service is not declared operational until authentication, storage, CPU and GPU submission, monitoring, and restoration are complete. Notices state the real status rather than an optimistic estimate."
+        }
+      ],
+      "answer": "If a failure occurs, the team must decide whether to continue, isolate the component, or roll back. Atlas-2 cannot be declared operational until authentication, storage, CPU and GPU job submission, monitoring, and restoration have all been verified.",
+      "parallel_question_id": "question-procedural-causal-single-002-es"
+    },
+    {
+      "id": "question-procedural-causal-single-003-en",
+      "pair_id": "question-procedural-causal-single-003",
+      "language": "en",
+      "question": "How must the LUMEN public package be generated, and which actions are required when an object that was already available is withdrawn?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-032-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-032-en",
+          "text": "The public package is generated from a positive list of approved objects. It does not begin with every file and exclude later. An automated check compares the list, manifest, and resulting files."
+        },
+        {
+          "doc_id": "doc-032-en",
+          "text": "Withdrawals have an identifier, reason, date, and owner. The object stops being displayed, while its record may retain metadata where authorized. Caches and thumbnails are deleted, and deletion is verified."
+        }
+      ],
+      "answer": "The public package must be built only from a positive list of approved objects and automatically checked against the manifest and resulting files. When an object is withdrawn, its identifier, reason, date, and owner must be recorded; display must stop, only authorized metadata may remain, and caches and thumbnails must be deleted with the deletion verified.",
+      "parallel_question_id": "question-procedural-causal-single-003-es"
+    },
+    {
+      "id": "question-procedural-causal-single-004-en",
+      "pair_id": "question-procedural-causal-single-004",
+      "language": "en",
+      "question": "How may a participant leave the ARIADNA evaluation, and which changes require an amendment to the ethics submission?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-045-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-045-en",
+          "text": "The information sheet explains the purpose, activities, duration, risks, benefits, voluntariness, withdrawal, data, retention, and contact details. A person may stop the session or withdraw their data before analysis closes without giving a reason."
+        },
+        {
+          "doc_id": "doc-045-en",
+          "text": "Ethics approval conditions the study on not recording complete text from free queries. Sessions use prepared tasks or interaction metrics. Any change to participants, purpose, or collected data requires an amendment."
+        }
+      ],
+      "answer": "A participant may stop the session or withdraw their data before the analysis closes without providing a reason. Any change to the participants, study purpose, or collected data requires an amendment to the ethics submission.",
+      "parallel_question_id": "question-procedural-causal-single-004-es"
+    },
+    {
+      "id": "question-quantitative-comparative-multiple-004-en",
+      "pair_id": "question-quantitative-comparative-multiple-004",
+      "language": "en",
+      "question": "When ARIADNA's leakage-affected result was replaced by the corrected evaluation, by how much did hybrid recall@10 fall, and what quantitative advantage and latency cost did it retain over BM25?",
+      "retrieval_type": "multiple",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-019-en",
+        "doc-018-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-019-en",
+          "text": "The original run reported recall@10 of 0.94 for the hybrid baseline. No model or index change justified such a large improvement over earlier results. Review found translations, paraphrases, and questions sharing an answer in different partitions."
+        },
+        {
+          "doc_id": "doc-018-en",
+          "text": "BM25 achieves recall@10 of 0.69, MRR of 0.52, and median latency of 74 ms. Hybrid retrieval achieves recall@10 of 0.80, MRR of 0.63, and median latency of 182 ms. Improvement is concentrated in semantic, multi-hop, and temporal questions. BM25 retains an advantage for exact identifiers and highly specific strings."
+        }
+      ],
+      "answer": "Hybrid recall@10 fell by 0.14, from 0.94 to 0.80, a relative reduction of approximately 14.9%. In the corrected evaluation, hybrid retrieval exceeded BM25 by 0.11 in both recall@10 and MRR. Its median latency was 108 ms higher, 182 versus 74 ms, or approximately 2.46 times BM25's latency.",
+      "parallel_question_id": "question-quantitative-comparative-multiple-004-es"
+    },
+    {
+      "id": "question-quantitative-comparative-single-001-en",
+      "pair_id": "question-quantitative-comparative-single-001",
+      "language": "en",
+      "question": "What was the percentage-point difference between bilingual label coverage and completeness of publishable mandatory fields in the SILEX batch?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-004-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-004-en",
+          "text": "The nine channel warnings disappeared after the rule became conditional. Comparison of reports confirms that no correction removed original information. ES/EN label coverage reached 100% in the batch, and completeness of publishable mandatory fields was 96.4%."
+        }
+      ],
+      "answer": "The difference was 3.6 percentage points: 100% minus 96.4%.",
+      "parallel_question_id": "question-quantitative-comparative-single-001-es"
+    },
+    {
+      "id": "question-quantitative-comparative-single-002-en",
+      "pair_id": "question-quantitative-comparative-single-002",
+      "language": "en",
+      "question": "Among overall precision, coverage of resolvable cases, and automatic precision for historical-person linking, which metric was highest and by how much did it exceed the other two?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-009-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-009-en",
+          "text": "Overall precision is 0.94 and coverage over resolvable cases is 0.78. Automatic precision reaches 0.98. Twenty-nine percent enter review, and twenty-one percent remain unlinked. Lowering the threshold increases coverage but doubles false merges, so it is rejected."
+        }
+      ],
+      "answer": "Automatic precision was highest at 0.98. It exceeded overall precision by 0.04 and coverage of resolvable cases by 0.20.",
+      "parallel_question_id": "question-quantitative-comparative-single-002-es"
+    },
+    {
+      "id": "question-quantitative-comparative-single-003-en",
+      "pair_id": "question-quantitative-comparative-single-003",
+      "language": "en",
+      "question": "By how much did the hybrid system improve over BM25 in recall@10 and MRR in ARIADNA's corrected evaluation?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-020-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-020-en",
+          "text": "BM25 achieves recall@10 of 0.69 and MRR of 0.52. The hybrid system achieves recall@10 of 0.80 and MRR of 0.63. The earlier value of 0.94 is identified as affected by leakage and is not an official result."
+        }
+      ],
+      "answer": "The hybrid system improved recall@10 by 0.11, from 0.69 to 0.80, and MRR by 0.11, from 0.52 to 0.63.",
+      "parallel_question_id": "question-quantitative-comparative-single-003-es"
+    },
+    {
+      "id": "question-temporal-evolutive-single-003-en",
+      "pair_id": "question-temporal-evolutive-single-003",
+      "language": "en",
+      "question": "How did the quality status of LUMEN's second ingestion evolve from initial validation to the state after corrections?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-034-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-034-en",
+          "text": "Initial validation identified forty-seven non-normalized dates, twenty-nine ambiguous senders, eighteen place names without a sufficient candidate, twelve files with checksums differing from the manifest, and nine pending rights values. The twelve files were replaced with verified copies before processing continued."
+        },
+        {
+          "doc_id": "doc-034-en",
+          "text": "After correction, zero critical errors remained. Twenty-four person mentions remain unlinked, eleven places remain open, and nine objects remain outside the demonstrator because rights are pending."
+        }
+      ],
+      "answer": "Initial validation found forty-seven non-normalized dates, twenty-nine ambiguous senders, eighteen place names without a sufficient candidate, twelve checksum mismatches, and nine pending rights values. After correction, no critical errors remained, although twenty-four person mentions, eleven places, and nine rights-restricted objects were still unresolved.",
+      "parallel_question_id": "question-temporal-evolutive-single-003-es"
+    },
+    {
+      "id": "question-temporal-evolutive-single-004-en",
+      "pair_id": "question-temporal-evolutive-single-004",
+      "language": "en",
+      "question": "How did the status of ORION's results and export change when the migration defects were discovered?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-022-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-022-en",
+          "text": "The migration also lost 126 old internal identifiers, thirty-eight affiliation end dates, seventeen software URLs, and several bilingual dataset descriptions. The export to ARIADNA stopped before these defects propagated into the corpus."
+        },
+        {
+          "doc_id": "doc-022-en",
+          "text": "The original source was not lost, and incorrect profiles were not published outside the internal environment. However, the migrated database was unsuitable for questions about identity, affiliation history, or relations among projects and publications. Results generated during the affected window were marked provisional."
+        }
+      ],
+      "answer": "The export to ARIADNA was stopped before the defects reached the corpus. The migrated database was treated as unsuitable for identity, affiliation-history, and relationship questions, and results produced during the affected window were marked provisional; no incorrect profiles were published outside the internal environment.",
+      "parallel_question_id": "question-temporal-evolutive-single-004-es"
+    },
+    {
+      "id": "question-temporal-evolutive-single-006-en",
+      "pair_id": "question-temporal-evolutive-single-006",
+      "language": "en",
+      "question": "How did Atlas-2's capacity and operational status change during the September 2026 maintenance window?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-048-en"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-048-en",
+          "text": "Usable capacity increased from 84 TB to 196 TB. Twelve disks, two enclosures, and an additional controller were installed. The configuration tolerates two disk failures in every group. Read, write, simulated-failure, and restoration tests completed successfully."
+        },
+        {
+          "doc_id": "doc-048-en",
+          "text": "Service became available again on 13 September at 18:10. Two research jobs resumed from checkpoints, and one was rerun. No project information was lost."
+        }
+      ],
+      "answer": "Usable capacity increased from 84 TB to 196 TB. Service returned on 13 September at 18:10; two research jobs resumed from checkpoints, one was rerun, and no project information was lost.",
+      "parallel_question_id": "question-temporal-evolutive-single-006-es"
+    }
+  ]
+}

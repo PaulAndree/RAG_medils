@@ -1,0 +1,5 @@
+The annual retreat should produce concrete decisions rather than consist only of activity presentations. A one-day program with three blocks is proposed: review of results and problems from the previous year, prioritization of research lines for 2027, and operational agreements on infrastructure, documentation, and supervision.
+
+Each project will prepare one page covering achievements, risks, and required resources. Prioritization will use five criteria: scientific relevance, team capacity, data availability, funding opportunities, and expected impact. Proposals that are not selected will remain recorded for future calls.
+
+The campus training centre could host the retreat, allowing group work without travel. Elena will moderate the strategy session, and Clara will lead planning. The expected result is a list of three priorities, preliminary owners, and actions for the following quarter. Time should also be reserved for an informal group activity.

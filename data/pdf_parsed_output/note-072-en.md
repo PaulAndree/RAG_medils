@@ -1,0 +1,5 @@
+Seven incidents were recorded during the field week. Two were connectivity interruptions lasting less than thirty minutes, one involved an expired certificate in a secondary environment, two affected timestamps, and two were false alerts caused by valid negative readings.
+
+Connectivity interruptions were resolved by retrying delivery from the local queue, with no data loss. The certificate was replaced and added to the expiry register. Timestamps were corrected after detecting removal of the UTC offset. Negative-value alerts were adjusted to consider energy direction and reading quality.
+
+No incident resulted in unauthorized access. Mean resolution time was two hours and ten minutes. Nuria will update recovery procedures, and Sergio will add a daily certificate check. Incidents and actions will be summarized in the final pilot report.

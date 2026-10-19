@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Comparison of the original export with the migrated database shows losses in four fields. The migration omitted 126 old internal identifiers, 38 affiliation end dates, 17 software URLs, and 9 bilingual dataset descriptions. Main titles, authors, projects, and publication dates are complete.\n\nOld identifiers can be recovered from the archived copy and must be added to the identity table. Affiliation dates require combining two exports because one contains the start date and the other the final status. Software URLs can be restored from GitLab. No complete copy exists for the nine bilingual descriptions; six survive in Spanish and seven in English.\n\nMissing translations must not be invented. Incomplete records will be marked accordingly and may be excluded from questions requiring exact bilingual equivalence. Sergio will prepare a recovery report recording the source of every restored field."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        201
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

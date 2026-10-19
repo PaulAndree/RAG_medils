@@ -2,6 +2,7 @@ import os
 
 from qdrant_client import QdrantClient, models
 
+from indexing.embedding_api import DENSE_MODEL, SPARSE_MODEL, embed_texts
 from metrics import RETRIEVAL_DURATION
 
 
@@ -16,9 +17,7 @@ SUMMARIES_COLLECTION = os.getenv(
 )
 
 DENSE_VECTOR = "dense"
-SPARSE_VECTOR = "bm25"
-DENSE_MODEL = "BAAI/bge-small-en-v1.5"
-SPARSE_MODEL = "Qdrant/bm25"
+SPARSE_VECTOR = "sparse"
 
 client = QdrantClient(url=QDRANT_URL)
 
@@ -30,17 +29,22 @@ def search_documents(
     qdrant_client=client,
 ):
     candidate_limit = max(20, limit * 5)
+    dense_query = embed_texts([question], DENSE_MODEL, "query")[0]
+    sparse_query = embed_texts([question], SPARSE_MODEL, "query")[0]
 
     result = qdrant_client.query_points(
         collection_name=collection,
         prefetch=[
             models.Prefetch(
-                query=models.Document(text=question, model=DENSE_MODEL),
+                query=dense_query,
                 using=DENSE_VECTOR,
                 limit=candidate_limit,
             ),
             models.Prefetch(
-                query=models.Document(text=question, model=SPARSE_MODEL),
+                query=models.SparseVector(
+                    indices=sparse_query["indices"],
+                    values=sparse_query["values"],
+                ),
                 using=SPARSE_VECTOR,
                 limit=candidate_limit,
             ),

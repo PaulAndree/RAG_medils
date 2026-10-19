@@ -1,0 +1,5 @@
+Collaboration worked best when the technical team presented concrete examples rather than abstract definitions. Discussions of creator, author, and producer progressed only after reviewing real photographs, letters, and digitized copies. In future iterations, every modeling decision should be accompanied by at least three archive cases.
+
+Rights must be treated as part of design rather than as a final review. Late image selection forced changes to the demonstrator script. It was also important to preserve original archival wording alongside normalized values, especially for dates and document types.
+
+Short, frequent reviews were more effective than long workshops. A fortnightly session with a limited decision list and clear owners is recommended. The archive should validate meaning and rights; NEXUS should be responsible for implementation, testing, and change traceability.

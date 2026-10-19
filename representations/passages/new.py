@@ -1,3 +1,4 @@
+""" SCRIPT para probar testear el chunking de documentos PDF y generar los chunks en un archivo JSON"""
 import json
 import os
 

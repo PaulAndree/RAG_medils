@@ -1,0 +1,1 @@
+Fourth VERDANT connector-security session to confirm revocation of transfer credentials, archive secrets and certificates, and verify that the audit environment cannot reactivate flows without new authorization.

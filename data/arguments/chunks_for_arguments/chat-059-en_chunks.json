@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-05-07T09:25:00Z\nAuthor: Lucía Navarro Gil\nMessage: We must replace eight unauthorized objects before freezing the demonstrator selection.\n\nDate: 2026-05-07T09:27:00Z\nAuthor: Eva Calderón Gil\nMessage: Five are photographs, two are posters and one is an audiovisual excerpt.\n\nDate: 2026-05-07T09:29:00Z\nAuthor: Mateo Ruiz Serra\nMessage: We need alternatives with similar themes and periods so the guided path is not biased.\n\nDate: 2026-05-07T09:31:00Z\nAuthor: Nuria Castaño Rey\nMessage: Replacements should retain the same functional states: image, uncertain date and entity links.\n\nDate: 2026-05-07T09:34:00Z\nAuthor: Yara Ben Salem\nMessage: We should also retain linguistic diversity and archival-role diversity.\n\nDate: 2026-05-07T09:37:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We will only use objects with public-domain status or active, documented educational permission.\n\nDate: 2026-05-07T09:40:00Z\nAuthor: Eva Calderón Gil\nMessage: I prepared twelve candidates: seven public-domain objects and five with permission through December 2027.\n\nDate: 2026-05-07T09:43:00Z\nAuthor: Lucía Navarro Gil\nMessage: Which best replace the urban photographs?\n\nDate: 2026-05-07T09:46:00Z\nAuthor: Mateo Ruiz Serra\nMessage: Three images from the same period and municipality, with more complete metadata than the originals.\n\nDate: 2026-05-07T09:49:00Z\nAuthor: Yara Ben Salem\nMessage: One has a different records creator and lets us explain the distinction from author more clearly.\n\nDate: 2026-05-07T09:52:00Z\nAuthor: Nuria Castaño Rey\nMessage: May the thumbnails be cached?\n\nDate: 2026-05-07T09:55:00Z\nAuthor: Eva Calderón Gil\nMessage: Public-domain ones may be cached. Educational ones only within the demonstrator and until their permission expiry.\n\nDate: 2026-05-07T09:58:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The expiry date must trigger automatic withdrawal.\n\nDate: 2026-05-07T10:01:00Z\nAuthor: Mateo Ruiz Serra\nMessage: For the posters, I propose two metadata-only objects with rich descriptions, but that would change the visual experience.\n\nDate: 2026-05-07T10:04:00Z\nAuthor: Lucía Navarro Gil\nMessage: I prefer alternatives with authorized reproductions to maintain balance in the guided path.\n\nDate: 2026-05-07T10:07:00Z\nAuthor: Eva Calderón Gil\nMessage: There are two public-domain posters that meet that criterion.\n\nDate: 2026-05-07T10:10:00Z\nAuthor: Yara Ben Salem\nMessage: For the audiovisual excerpt, we can use an authorized still image and explain that the original resource remains restricted.\n\nDate: 2026-05-07T10:13:00Z\nAuthor: Nuria Castaño Rey\nMessage: I will update identifiers, cache, rights and display tests without reusing restricted files.\n\nDate: 2026-05-07T10:16:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The register must retain which object was replaced, why and in which version.",
+        "Date: 2026-05-07T10:20:00Z\nAuthor: Lucía Navarro Gil\nMessage: Agreed: eight documented replacements, seven public-domain objects and one with active educational permission, preserving diversity and functions."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        755,
+        53
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

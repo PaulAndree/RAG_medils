@@ -1,0 +1,23 @@
+[
+  {
+    "id": "note-029-en_chunk_1_arg_1",
+    "claim": "The 256-token chunks achieve better recall for questions seeking a specific date, role, or condition.",
+    "evidence": [
+      "Chunks of 256 and 512 tokens were compared with 15% overlap."
+    ]
+  },
+  {
+    "id": "note-029-en_chunk_1_arg_2",
+    "claim": "The 512-token chunks perform better on multi-hop questions that need to combine a general rule with an exception located in the same section.",
+    "evidence": [
+      "Chunks of 256 and 512 tokens were compared with 15% overlap."
+    ]
+  },
+  {
+    "id": "note-029-en_chunk_1_arg_3",
+    "claim": "The main baseline will retain 256 tokens because it maximizes coverage.",
+    "evidence": [
+      "Hybrid-system results on the development set are recall@10 of 0.81 with 256 and 0.79 with 512; MRR is 0.63 and 0.65 respectively."
+    ]
+  }
+]

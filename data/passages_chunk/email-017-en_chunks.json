@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Sergio Vidal Cruz <sergio.vidal@upsc.example>\nRecipient: Elena Martín Ríos <elena.martin@upsc.example>, Nuria Castaño Rey <nuria.castano@upsc.example>\nTitle: Issues identified in the ORION migration\n\nHello Elena and Nuria,\n\nComparison of the original ORION export with the migrated database has identified forty-three potentially duplicate profile pairs. The main cause is that the publications and project systems used different identifiers and the linking process ran before the complete identifier history had been loaded.\n\nThe migration is also missing 126 old internal identifiers, thirty-eight affiliation end dates, seventeen software URLs, and several bilingual dataset descriptions. I have attached the report containing the affected records and recovery proposal.\n\nI recommend pausing the export to ARIADNA until an identity table has been built and links to publications, projects, and datasets have been checked.\n\nBest regards,\nSergio"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-017-en"
+  ],
+  "token_count": [
+    128
+  ]
+}

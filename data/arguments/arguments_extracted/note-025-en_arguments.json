@@ -1,0 +1,11 @@
+[
+  {
+    "id": "note-025-en_chunk_1_arg_1",
+    "claim": "The likely cause is that the split was performed by question identifier rather than semantic intent.",
+    "evidence": [
+      "During a sample review, Tomás found test questions that are nearly identical to questions used while tuning parameters.",
+      "Spanish and English variants and minor paraphrases may have been assigned to different partitions.",
+      "The team also found questions sharing the same answer and evidence passage with only small wording changes."
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+Connector certificates will have a maximum validity of ninety days. Renewal will begin twenty days before expiry, and the new certificate will be installed in parallel during a seven-day window. The system must temporarily accept both the old and new certificates to prevent interruption.
+
+The private key will be generated in the partner environment and will not be transferred. Only the signing request and public certificate will be shared. Revocation will be tested at least once per quarter. If compromise is suspected, the certificate must be revoked immediately rather than waiting for the scheduled rotation.
+
+Nuria will maintain the expiry register, and Bruno will confirm installation at the international partner. Notifications will be sent twenty, ten, and three days before expiry. The test will be considered successful when a session using the new certificate works and a session using the revoked certificate is rejected.

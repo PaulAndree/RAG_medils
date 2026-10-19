@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Five minimum patterns are proposed for archival dates: exact date, known year, range, date before or after a boundary, and approximate date. Each must preserve the original source wording in addition to a normalized representation that supports queries.\n\nExamples:\n- “14 May 1932”: exact date.\n- “1936”: an interval from 1 January to 31 December 1936, with year-level precision.\n- “1930–1934”: closed range.\n- “before 1925”: open upper boundary.\n- “c. 1948”: estimated interval from 1947 to 1949, marked as approximate.\n\nAn approximate date must not be converted into an exact date during ingestion. The width used for “circa” must be configurable by collection and recorded in provenance. Mateo will prepare examples involving letters, photographs, and posters to validate that the model covers the Regional Archive's cases."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        210
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

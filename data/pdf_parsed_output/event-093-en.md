@@ -1,0 +1,1 @@
+Fourth NEXUS internal seminar, focused on temporal validity, versioning of documents and questions, and benchmark maintenance when rules change on different dates across languages.

@@ -12,6 +12,10 @@ services:
       QDRANT_URL: http://qdrant:6333
       QDRANT_COLLECTION: documents_embeddings_live
       POSTGRES_HOST: postgres
+      EMBEDDING_URL: http://vectorizer:8089/embed
+    networks:
+      - default
+      - n8n-net
     ports:
       - "127.0.0.1:8002:8000"
     restart: unless-stopped
@@ -160,3 +164,7 @@ volumes:
   grafana_data:
   qdrant_data:
   neo4j_data:
+  
+networks:
+  n8n-net:
+    external: true

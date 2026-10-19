@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Comparison between SolCentro data and the federated catalogue shows a one-hour shift in 384 records from 29 March. The source system provides local time with a UTC offset, but an intermediate transformation removed the offset and then interpreted the timestamp as UTC.\n\nNo observations were lost, although affected intervals are assigned to the wrong hour. During the autumn transition, there is also a risk of duplicating the repeated hour. The solution is to retain the original timestamp, convert it to UTC for exchange, and store the received time zone and offset separately.\n\nSergio will correct the transformation and run tests for both seasonal transitions. Inés will recalculate aggregates for the affected day. Corrected records will retain a relation to the previous version so the change remains auditable. Timestamps without a time zone will not be used in the connector interface."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-069-en"
+  ],
+  "token_count": [
+    140
+  ]
+}

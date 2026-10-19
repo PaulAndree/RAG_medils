@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Fifth NEXUS all-hands meeting to coordinate the autumn pilots, review September and October deliverables and prepare closure and handover for Yara's extended visit.\n\nElena Martín: We enter the quarter with three pilots and several closures. We need to confirm owners and dependencies.\nJavier Ortega: SILEX pre-production is planned for 21 September, and the stable environment is due on 26 October. The municipal pilot remains confirmed for the week beginning 9 November.\nLucía Navarro: LUMEN will complete demonstrator validation and bilingual documentation by 23 September. Yara will reserve the final week for handover.\nYara Ben Salem: I will deliver the legacy-record rules, final alignment report and a training session for the team.\nAndrés Beltrán: VERDANT expanded the pilot to six facilities. The first monthly dynamic-suppression review will take place on 14 September.\nInés Ferrer: The scientific indicators are ready; we still need to assess behavior with real missing data from August.\nSergio Vidal: ARIADNA v2.1 is frozen and its final metrics are approved. v2.2 work will remain in development and will not modify published results.\nNuria Castaño: Infrastructure has sufficient capacity, but we need to reserve windows for the SILEX replica and VERDANT evaluation.\nClara Ibáñez: For management, Yara's closure, SILEX delivery and autumn reports have compatible dates if internal reviews do not move.\nElena Martín: The schedule is approved. Any change affecting a confirmed date must be escalated within two working days."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-097-en"
+  ],
+  "token_count": [
+    232
+  ]
+}

@@ -1,0 +1,11 @@
+Second SILEX modeling workshop to review rules for conditional deadlines, administrative silence and responsible units, and to check the consistency of the ontology's Spanish and English labels.
+
+Mireia Soler: The current version represents a deadline as a number of days, but several procedures calculate the deadline from a specific condition.
+Alba Prieto: For licences, for example, the period begins when the documentation is complete, not necessarily on the submission date.
+Yara Ben Salem: I suggest separating the duration from the event that starts the calculation. This will allow us to represent working days, calendar days and suspension conditions.
+Javier Ortega: That seems correct. We must also review the bilingual labels before freezing version 1.1.
+Yara Ben Salem: I have found three inconsistencies. The class 'unidad tramitadora' appears as processing office in some cases and handling unit in others. In addition, administrative silence has been translated in two different ways in the imported Spanish examples.
+Mireia Soler: We will use responsible administrative unit as the preferred English label for the responsible unit. For silencio administrativo, we will use administrative silence and distinguish positive, negative and not applicable.
+Alba Prieto: Should we include a rule preventing positive and negative administrative silence from being assigned simultaneously?
+Mireia Soler: Yes. We will add that constraint and another requiring the initial event whenever a deadline is conditional.
+Javier Ortega: Yara will prepare the complete list of inconsistent labels. Mireia will add the rules, and Alba will validate the municipal examples by 3 April.

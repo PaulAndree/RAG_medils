@@ -1,0 +1,1 @@
+Third international VERDANT connector test to verify a local-processing request, transfer of signed aggregated results, parameter auditing and rejection of any output that fails the minimum group-size rule.

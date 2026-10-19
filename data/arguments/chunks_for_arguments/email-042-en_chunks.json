@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Héctor Molina Frías <hector.molina@upsc.example>\nRecipient: Andrés Beltrán Vega <andres.beltran@upsc.example>\nTitle: Approval of the ARIADNA evaluation consent materials\n\nHello Andrés,\n\nThe protocol and consent materials are approved. The revised version adequately explains the purpose, voluntary participation, use of codes, and retention period.\n\nApproval is conditional on not recording the complete text of free-form queries. The study must use the prepared tasks or retain interaction metrics only. Any change to participants, purpose, or collected data will require an amendment to the ethics case.\n\nRecruitment may begin once Pablo confirms that the logging system applies these restrictions.\n\nBest regards,\nHéctor"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        180
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

@@ -1,0 +1,1 @@
+First internal review of deliverable D3 concerning the mapping catalogue and semantic validation. The team must check the document structure, procedure coverage, technical annexes and validation evidence before the planned submission on 20 March 2026.

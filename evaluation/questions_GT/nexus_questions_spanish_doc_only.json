@@ -1,0 +1,556 @@
+{
+  "dataset": "NEXUS IR/RAG questions",
+  "language": "es",
+  "language_name": "Spanish",
+  "question_count": 21,
+  "selection_rule": "relevant_doc_ids is non-empty and every ID starts with doc-",
+  "questions": [
+    {
+      "id": "question-factual-single-001-es",
+      "pair_id": "question-factual-single-001",
+      "language": "es",
+      "question": "¿Cuántas preguntas semánticas contiene la primera versión oficial del benchmark ARIADNA?",
+      "retrieval_type": "single",
+      "reasoning_type": "factual",
+      "relevant_doc_ids": [
+        "doc-016-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-016-es",
+          "text": "La primera versión oficial contiene 2.302 preguntas semánticas y 4.604 registros lingüísticos."
+        }
+      ],
+      "answer": "La primera versión oficial contiene 2.302 preguntas semánticas.",
+      "parallel_question_id": "question-factual-single-001-en"
+    },
+    {
+      "id": "question-factual-single-006-es",
+      "pair_id": "question-factual-single-006",
+      "language": "es",
+      "question": "¿Qué oferta fue seleccionada para ampliar el almacenamiento de Atlas-2?",
+      "retrieval_type": "single",
+      "reasoning_type": "factual",
+      "relevant_doc_ids": [
+        "doc-047-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-047-es",
+          "text": "Se selecciona la oferta B por 38.450 EUR, impuestos incluidos."
+        }
+      ],
+      "answer": "Se seleccionó la oferta B.",
+      "parallel_question_id": "question-factual-single-006-en"
+    },
+    {
+      "id": "question-inferential-verificative-single-001-es",
+      "pair_id": "question-inferential-verificative-single-001",
+      "language": "es",
+      "question": "¿Está respaldada la afirmación de que «primavera de 1947» debe normalizarse como un día exacto y puede utilizarse como tal en los filtros de LUMEN?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "contradicha",
+      "relevant_doc_ids": [
+        "doc-007-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-007-es",
+          "text": "Cada fecha incluye `originalText`, `earliest`, `latest`, `precision` e `interpretationSource`. Una fecha exacta usa el mismo valor en earliest y latest. “1947” representa el año completo. “Primavera de 1947” conserva el literal y utiliza un intervalo estacional; no se muestra como un día. “ca. 1930” utiliza precisión approximate. “Antes de 1952” tiene límite superior y comienzo abierto."
+        },
+        {
+          "doc_id": "doc-007-es",
+          "text": "Cada interpretación registra la regla, la versión y la persona revisora. Una modificación crea una nueva versión y no sobrescribe el literal. Los casos pendientes quedan fuera de filtros exactos hasta su resolución."
+        }
+      ],
+      "answer": "Contradicha. «Primavera de 1947» debe conservarse como texto literal y representarse mediante un intervalo estacional, no como un día exacto. Además, los casos pendientes no pueden participar en filtros exactos hasta que se resuelvan.",
+      "parallel_question_id": "question-inferential-verificative-single-001-en"
+    },
+    {
+      "id": "question-inferential-verificative-single-002-es",
+      "pair_id": "question-inferential-verificative-single-002",
+      "language": "es",
+      "question": "¿Está respaldada la afirmación de que VERDANT centraliza en NEXUS las lecturas energéticas originales y que la capacidad técnica de consultar un producto equivale a autorización?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "contradicha",
+      "relevant_doc_ids": [
+        "doc-012-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-012-es",
+          "text": "VERDANT estudia el intercambio interoperable de productos energéticos entre SolCentro, el Instituto Técnico do Norte y NEXUS. La arquitectura es federada: las lecturas originales permanecen en la infraestructura del socio que las genera y los consumidores autorizados reciben catálogos y productos derivados bajo reglas explícitas."
+        },
+        {
+          "doc_id": "doc-012-es",
+          "text": "El diseño persigue interoperabilidad, minimización, trazabilidad y revocación. La capacidad técnica de consultar un dato no es autorización. Cada producto declara finalidad, propietario, política, versión, procedencia y periodo de disponibilidad."
+        },
+        {
+          "doc_id": "doc-012-es",
+          "text": "La fuente conserva autoridad sobre los datos. La federación intercambia descripciones y resultados, no obliga a centralizar copias. Los productos pueden retirarse o sustituirse sin perder historial. El mínimo privilegio se aplica a cuentas, redes, operaciones y campos. Toda transformación es reproducible y las trazas no contienen secretos ni cuerpos completos."
+        }
+      ],
+      "answer": "Contradicha. Las lecturas originales permanecen en la infraestructura del socio que las genera y la federación intercambia descripciones y productos derivados, sin exigir copias centralizadas. Además, poder realizar técnicamente una consulta no concede autorización.",
+      "parallel_question_id": "question-inferential-verificative-single-002-en"
+    },
+    {
+      "id": "question-inferential-verificative-single-007-es",
+      "pair_id": "question-inferential-verificative-single-007",
+      "language": "es",
+      "question": "¿Existe evidencia suficiente para concluir que la configuración de fragmentación C512 supera a C256 en calidad de recuperación para ARIADNA?",
+      "retrieval_type": "single",
+      "reasoning_type": "inferential_verificative",
+      "verification_result": "evidencia_insuficiente",
+      "relevant_doc_ids": [
+        "doc-017-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-017-es",
+          "text": "Este registro define las configuraciones reproducibles utilizadas para fragmentar e indexar el corpus ARIADNA. No contiene resultados finales; identifica los parámetros que deben acompañar a cada experimento."
+        },
+        {
+          "doc_id": "doc-017-es",
+          "text": "La configuración C256 utiliza fragmentos de hasta 256 tokens con solapamiento de 48. La configuración C512 utiliza hasta 512 tokens con solapamiento de 96. Ambas conservan identificador de fuente, idioma, posición, versión y fecha de vigencia."
+        },
+        {
+          "doc_id": "doc-017-es",
+          "text": "La configuración C256 utiliza fragmentos de hasta 256 tokens con solapamiento de 48. La configuración C512 utiliza hasta 512 tokens con solapamiento de 96. Ambas conservan identificador de fuente, idioma, posición, versión y fecha de vigencia."
+        },
+        {
+          "doc_id": "doc-017-es",
+          "text": "Los fragmentos demasiado cortos pueden perder contexto y aumentar el número de resultados necesarios. Los fragmentos largos pueden mezclar hechos distintos y dificultar la cita exacta. La comparación utiliza las mismas preguntas, índices construidos desde una copia limpia y tres semillas cuando existe aleatoriedad."
+        }
+      ],
+      "answer": "Evidencia insuficiente. El registro define los tamaños y solapamientos de C256 y C512 y establece cómo debe realizarse una comparación reproducible, pero declara expresamente que no contiene resultados finales. Por tanto, no permite determinar cuál ofrece mejor recuperación.",
+      "parallel_question_id": "question-inferential-verificative-single-007-en"
+    },
+    {
+      "id": "question-integration-synthesis-multiple-001-es",
+      "pair_id": "question-integration-synthesis-multiple-001",
+      "language": "es",
+      "question": "Sintetiza cómo se preparó, desplegó y evaluó el piloto municipal SILEX, incluyendo el cambio de calendario, las condiciones de despliegue, los resultados principales y las limitaciones de la evaluación.",
+      "retrieval_type": "multiple",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-026-es",
+        "doc-029-es",
+        "doc-030-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-026-es",
+          "text": "El piloto previsto inicialmente para septiembre se retrasa por tres dependencias: confirmación de campos pendientes en la exportación municipal, configuración de la red de preproducción y revisión final de los mensajes de la API. La nueva ventana operativa se fija entre el 5 y el 16 de octubre de 2026. La fecha se considera aprobada después de la confirmación conjunta de NEXUS y el Ayuntamiento de Santa Marina."
+        },
+        {
+          "doc_id": "doc-026-es",
+          "text": "SILEX demuestra que un catálogo municipal heterogéneo puede transformarse en una representación semántica interoperable, bilingüe y verificable. El piloto cubre catálogo, ontología, mapeos, API, despliegue, formación, evaluación con personal municipal, transferencia y cierre."
+        },
+        {
+          "doc_id": "doc-029-es",
+          "text": "El despliegue de SILEX se realizó en el entorno de preproducción del Ayuntamiento de Santa Marina después de completar la configuración de red, las cuentas nominativas, los secretos y las pruebas de contrato de la API. El informe documenta infraestructura, versiones, pasos, incidencias, resultados y reversión."
+        },
+        {
+          "doc_id": "doc-029-es",
+          "text": "La primera ventana prevista se pospuso porque faltaban direcciones de red autorizadas y dos cuentas municipales. La ventana ejecutada tuvo lugar el 21 y 22 de septiembre de 2026. El entorno quedó disponible para formación y pruebas internas antes del inicio del piloto en octubre."
+        },
+        {
+          "doc_id": "doc-029-es",
+          "text": "La carga candidata contiene procedimientos autorizados, vocabularios, unidades, bases jurídicas y relaciones de versión. El padrón y otros conjuntos restringidos permanecen fuera. La carga conserva manifiesto, fuente, licencia y recuentos."
+        },
+        {
+          "doc_id": "doc-030-es",
+          "text": "La tasa global de éxito fue del 88 %. La mediana de tiempo por tarea fue de 2 minutos y 18 segundos. El cambio de idioma conservó consulta y entidad en el 100 % de los recorridos. La API alcanzó una latencia p95 de 1,42 segundos durante las sesiones. No se detectó exposición de datos restringidos."
+        },
+        {
+          "doc_id": "doc-030-es",
+          "text": "La evaluación no mide uso ciudadano a gran escala ni sustituye una auditoría de accesibilidad completa. Los resultados se aplican al entorno, corpus y versiones registrados en el manifiesto."
+        }
+      ],
+      "answer": "El plan revisado retrasó el piloto de septiembre a la ventana del 5 al 16 de octubre de 2026 por campos municipales pendientes, configuración de la red de preproducción y revisión de mensajes de la API. Antes del piloto se ejecutó un despliegue de preproducción los días 21 y 22 de septiembre, después de completar red, cuentas nominativas, secretos y pruebas de contrato; la carga incluyó solo procedimientos autorizados y dejó fuera el padrón y otros conjuntos restringidos. La evaluación obtuvo un 88 % de éxito, una mediana de 2 minutos y 18 segundos por tarea, conservación completa del contexto al cambiar de idioma y una latencia p95 de 1,42 segundos, sin exposición de datos restringidos. Sus conclusiones se limitan al entorno y versiones del manifiesto y no cubren uso ciudadano a gran escala ni una auditoría completa de accesibilidad.",
+      "parallel_question_id": "question-integration-synthesis-multiple-001-en"
+    },
+    {
+      "id": "question-integration-synthesis-multiple-003-es",
+      "pair_id": "question-integration-synthesis-multiple-003",
+      "language": "es",
+      "question": "Sintetiza el funcionamiento técnico, los controles de seguridad, los resultados y el alcance real del piloto VERDANT.",
+      "retrieval_type": "multiple",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-036-es",
+        "doc-037-es",
+        "doc-040-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-036-es",
+          "text": "La API no expone lecturas originales de quince minutos fuera de SolCentro. Los consumidores reciben productos horarios o diarios cuando cumplen la política, el tamaño mínimo de grupo y las condiciones de finalidad. La capacidad técnica de realizar una solicitud no equivale a autorización."
+        },
+        {
+          "doc_id": "doc-036-es",
+          "text": "La autenticación utiliza certificados de organización y cuentas de servicio nominativas. La identidad técnica se vincula con un rol y una finalidad. Un certificado válido no concede por sí solo acceso a todos los productos. Los certificados revocados deben rechazarse antes de evaluar la política."
+        },
+        {
+          "doc_id": "doc-036-es",
+          "text": "La ruta base es `/api/verdant/v1`. Los cambios incompatibles requieren una nueva versión mayor. Cada respuesta incluye versión de API, versión del producto, versión de política, fecha de generación e identificador de solicitud."
+        },
+        {
+          "doc_id": "doc-037-es",
+          "text": "La conclusión es favorable con controles cerrados. El endpoint administrativo quedó limitado a redes autorizadas, los certificados revocados se rechazan, las trazas eliminan cabeceras sensibles y los productos no se generan cuando el grupo contiene menos de tres contadores."
+        },
+        {
+          "doc_id": "doc-037-es",
+          "text": "No quedan hallazgos críticos o altos abiertos. Dos hallazgos medios se aceptan temporalmente: rotación manual de una credencial de soporte y ausencia de automatización completa en la comprobación de caducidad de una excepción. Ambos tienen fecha y responsable."
+        },
+        {
+          "doc_id": "doc-040-es",
+          "text": "El piloto procesó datos de 62 instalaciones durante 89 días. Se generaron productos horarios cuando existían cuatro intervalos válidos y al menos tres contadores. Los consumidores recibieron metadatos, cobertura, calidad y procedencia junto al valor agregado."
+        },
+        {
+          "doc_id": "doc-040-es",
+          "text": "Todas las pruebas críticas de autenticación, autorización, revocación, red, trazas y grupo mínimo se superaron. No se detectó exposición de lecturas individuales, nombres, direcciones, contratos o secretos. La latencia p95 de solicitud de producto fue de 1,68 segundos en el entorno de preproducción."
+        },
+        {
+          "doc_id": "doc-040-es",
+          "text": "La evaluación no cubre facturación, control automático de instalaciones ni uso ciudadano. Los resultados se aplican a las versiones, organizaciones y periodo registrados en el manifiesto."
+        }
+      ],
+      "answer": "VERDANT mantuvo las lecturas de quince minutos dentro de SolCentro y solo entregó productos horarios o diarios cuando se cumplían política, finalidad y un grupo mínimo de tres contadores. La API versionada vinculaba certificados y cuentas nominativas con un rol y una finalidad, rechazaba certificados revocados y registraba versiones de API, producto y política. La revisión cerró los controles críticos: restringió la administración a redes autorizadas, eliminó cabeceras sensibles de las trazas y bloqueó productos con grupos insuficientes; solo quedaron dos hallazgos medios con responsable y fecha. El piloto procesó 62 instalaciones durante 89 días, superó todas las pruebas críticas, no expuso datos individuales ni secretos y logró una latencia p95 de 1,68 segundos. El alcance no incluía facturación, control automático ni uso ciudadano y solo era válido para las versiones, organizaciones y periodo del manifiesto.",
+      "parallel_question_id": "question-integration-synthesis-multiple-003-en"
+    },
+    {
+      "id": "question-integration-synthesis-single-001-es",
+      "pair_id": "question-integration-synthesis-single-001",
+      "language": "es",
+      "question": "Sintetiza cómo se organizó la evaluación de usuarios de LUMEN, cuáles fueron sus principales resultados y qué límites tuvo el estudio.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-035-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-035-es",
+          "text": "La evaluación del demostrador LUMEN se realizó con doce participantes: seis profesionales de archivo, cuatro personas investigadoras y dos estudiantes de posgrado. Las sesiones tuvieron lugar entre el 8 y el 19 de junio de 2026 en español e inglés."
+        },
+        {
+          "doc_id": "doc-035-es",
+          "text": "Cada participante completó siete tareas relacionadas con búsqueda, fechas aproximadas, personas históricas, topónimos, relaciones, cambio de idioma y derechos. Después respondió un cuestionario y participó en una entrevista breve."
+        },
+        {
+          "doc_id": "doc-035-es",
+          "text": "La tasa global de éxito fue del 84 %. La mediana de tiempo por tarea fue de 2 minutos y 46 segundos. El cambio de idioma conservó consulta y entidad en el 97 % de los recorridos. La comprensión de fechas aproximadas alcanzó el 88 %, mientras que la interpretación de roles creator, author y producer obtuvo un 72 %."
+        },
+        {
+          "doc_id": "doc-035-es",
+          "text": "La evaluación utiliza el demostrador candidato, la segunda ingestión y objetos autorizados. No incluye edición, descarga masiva ni búsqueda sobre todas las colecciones del Archivo Regional. Los resultados se aplican a las versiones registradas en el manifiesto."
+        }
+      ],
+      "answer": "La evaluación reunió a doce personas —seis profesionales de archivo, cuatro investigadoras y dos estudiantes de posgrado— entre el 8 y el 19 de junio de 2026, con sesiones en español e inglés. Cada participante realizó siete tareas sobre búsqueda, fechas aproximadas, personas, topónimos, relaciones, cambio de idioma y derechos, seguidas de un cuestionario y una entrevista. El éxito global fue del 84 %, con una mediana de 2 minutos y 46 segundos por tarea; el cambio de idioma conservó la consulta y la entidad en el 97 % de los recorridos, la comprensión de fechas aproximadas llegó al 88 % y la de los roles creator, author y producer al 72 %. El estudio se limitó al demostrador candidato, la segunda ingestión y objetos autorizados, y no evaluó edición, descarga masiva ni todas las colecciones del Archivo Regional.",
+      "parallel_question_id": "question-integration-synthesis-single-001-en"
+    },
+    {
+      "id": "question-integration-synthesis-single-002-es",
+      "pair_id": "question-integration-synthesis-single-002",
+      "language": "es",
+      "question": "Resume la composición del conjunto de datos de VERDANT, los resultados generales de calidad, las incidencias detectadas y el método utilizado para validarlas y corregirlas.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-038-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-038-es",
+          "text": "El conjunto principal contiene 62 instalaciones, 64 dispositivos y 89 días de observación. La diferencia entre instalaciones y dispositivos se debe a dos sustituciones físicas. El sistema esperaba 96 intervalos de quince minutos por día completo y dispositivo, con ajustes documentados en los cambios de horario."
+        },
+        {
+          "doc_id": "doc-038-es",
+          "text": "El 97,8 % de los intervalos esperados contiene una lectura medida. El 1,4 % está estimado, el 0,3 % corregido y el 0,5 % marcado como ausente. No existen valores nulos sin código de calidad."
+        },
+        {
+          "doc_id": "doc-038-es",
+          "text": "Se detectaron 31 secuencias con huecos, 14 lecturas negativas, 9 cambios de unidad, 7 identificadores de dispositivo reutilizados y 4 productos horarios calculados con cobertura incompleta. Todos los casos fueron revisados antes de la entrega final."
+        },
+        {
+          "doc_id": "doc-038-es",
+          "text": "La calidad no se resume en un porcentaje. Cada dimensión tiene regla, severidad, excepción y evidencia. Un valor estimado puede ser válido si está declarado. Una lectura medida puede ser incorrecta si su unidad o intervalo no coincide."
+        },
+        {
+          "doc_id": "doc-038-es",
+          "text": "La canalización comparó manifiestos, perfiló campos, validó esquemas, comprobó continuidad, calculó agregados y revisó una muestra. Las correcciones se ejecutaron mediante reglas versionadas y conservaron el valor original."
+        }
+      ],
+      "answer": "El conjunto incluía 62 instalaciones, 64 dispositivos y 89 días de observación, con 96 intervalos de quince minutos esperados por día completo y dispositivo. El 97,8 % de los intervalos contenía lecturas medidas, el 1,4 % estimadas, el 0,3 % corregidas y el 0,5 % ausentes, sin valores nulos carentes de código de calidad. Se detectaron 31 secuencias con huecos, 14 lecturas negativas, 9 cambios de unidad, 7 identificadores reutilizados y 4 productos horarios con cobertura incompleta. La validación combinó manifiestos, perfilado de campos, esquemas, continuidad, agregados y revisión manual. Cada dimensión se evaluó con reglas, severidad, excepciones y evidencia, y las correcciones se aplicaron con reglas versionadas conservando el valor original.",
+      "parallel_question_id": "question-integration-synthesis-single-002-en"
+    },
+    {
+      "id": "question-integration-synthesis-single-003-es",
+      "pair_id": "question-integration-synthesis-single-003",
+      "language": "es",
+      "question": "Sintetiza cómo funcionaba la adjudicación de casos complejos de ARIADNA, cómo se distribuyeron los doce casos resueltos y qué información debía conservarse para garantizar la trazabilidad.",
+      "retrieval_type": "single",
+      "reasoning_type": "integration_synthesis",
+      "relevant_doc_ids": [
+        "doc-042-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-042-es",
+          "text": "Dos personas revisan el caso antes de la sesión. La adjudicación consulta la fuente completa y no solo los fragmentos. La persona que propuso la pregunta puede explicar su intención, pero no decide en solitario. La decisión se aplica a los pares ES/EN."
+        },
+        {
+          "doc_id": "doc-042-es",
+          "text": "Doce casos fueron resueltos. Cuatro preguntas pasaron a temporal porque la respuesta dependía de una versión vigente en una fecha concreta. Tres pasaron a multi-hop al requerir una relación entre evento, tarea y responsable. Dos se marcaron como no contestables por falta de fecha final explícita. Tres se dividieron o simplificaron porque incluían dos preguntas distintas."
+        },
+        {
+          "doc_id": "doc-042-es",
+          "text": "Cada decisión tiene identificador, fecha, participantes, categoría inicial, categoría final, explicación, fuentes y responsable de actualización. Los casos reabiertos conservan el historial."
+        }
+      ],
+      "answer": "Cada caso era revisado por dos personas antes de la sesión y se consultaba la fuente completa, no solo los fragmentos. La persona autora podía explicar la intención, pero no decidir por sí sola, y el resultado se aplicaba al par español-inglés. De los doce casos, cuatro se reclasificaron como temporales, tres como multi-hop, dos como no contestables y tres se dividieron o simplificaron. Para la trazabilidad se conservaban el identificador, la fecha, las personas participantes, las categorías inicial y final, la explicación, las fuentes, la persona responsable de actualizar y, si el caso se reabría, todo su historial.",
+      "parallel_question_id": "question-integration-synthesis-single-003-en"
+    },
+    {
+      "id": "question-procedural-causal-single-001-es",
+      "pair_id": "question-procedural-causal-single-001",
+      "language": "es",
+      "question": "¿Qué debe completar una nueva incorporación de NEXUS antes de acceder a datos reales y cuándo puede considerarse terminada la creación de una cuenta?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-024-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-024-es",
+          "text": "Antes de acceder a datos reales, la persona completa protección de datos, seguridad, uso aceptable y procedimientos del proyecto. El mentor explica repositorios, comunicación, incidencias y archivo."
+        },
+        {
+          "doc_id": "doc-024-es",
+          "text": "La lista de control separa solicitado, aprobado, creado, probado y confirmado. Una cuenta no se marca como completa hasta que la persona puede iniciar sesión y el permiso coincide con la solicitud. Los secretos iniciales se entregan por un canal seguro y se cambian en el primer acceso."
+        }
+      ],
+      "answer": "Antes de acceder a datos reales, la persona debe completar formación sobre protección de datos, seguridad, uso aceptable y procedimientos del proyecto. La cuenta solo se considera terminada cuando puede iniciar sesión y los permisos coinciden con lo solicitado; además, el secreto inicial debe entregarse por un canal seguro y cambiarse en el primer acceso.",
+      "parallel_question_id": "question-procedural-causal-single-001-en"
+    },
+    {
+      "id": "question-procedural-causal-single-002-es",
+      "pair_id": "question-procedural-causal-single-002",
+      "language": "es",
+      "question": "¿Qué debe hacer el equipo si aparece un fallo durante el mantenimiento de Atlas-2 y qué comprobaciones deben completarse antes de declarar operativo el servicio?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-025-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-025-es",
+          "text": "El paso de mantenimiento 1 consiste en preparar la ventana y avisar. El registro identifica hora, persona, comando o herramienta, resultado y evidencia. Si aparece un fallo, se evalúa si continuar, aislar el componente o ejecutar la reversión. El servicio no se declara operativo hasta completar autenticación, almacenamiento, envío de trabajos CPU y GPU, monitorización y restauración. Los avisos informan el estado real y no una estimación optimista."
+        }
+      ],
+      "answer": "Si aparece un fallo, el equipo debe decidir si continúa, aísla el componente o revierte el cambio. Atlas-2 no puede declararse operativo hasta comprobar autenticación, almacenamiento, envío de trabajos CPU y GPU, monitorización y restauración.",
+      "parallel_question_id": "question-procedural-causal-single-002-en"
+    },
+    {
+      "id": "question-procedural-causal-single-003-es",
+      "pair_id": "question-procedural-causal-single-003",
+      "language": "es",
+      "question": "¿Cómo debe generarse el paquete público de LUMEN y qué acciones deben realizarse cuando se retira un objeto que ya estaba disponible?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-032-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-032-es",
+          "text": "El paquete público se genera desde una lista positiva de objetos autorizados. No se parte de todos los archivos para excluir después. Una comprobación automática compara la lista, el manifiesto y los archivos resultantes."
+        },
+        {
+          "doc_id": "doc-032-es",
+          "text": "Las retiradas tienen identificador, motivo, fecha y responsable. El objeto deja de mostrarse, pero la ficha puede conservar metadatos cuando estén autorizados. Las cachés y miniaturas se eliminan y se verifica la eliminación."
+        }
+      ],
+      "answer": "El paquete público debe construirse únicamente a partir de una lista positiva de objetos autorizados y verificarse automáticamente contra el manifiesto y los archivos resultantes. Si se retira un objeto, hay que registrar identificador, motivo, fecha y responsable, dejar de mostrarlo, conservar solo los metadatos autorizados y eliminar y verificar la eliminación de cachés y miniaturas.",
+      "parallel_question_id": "question-procedural-causal-single-003-en"
+    },
+    {
+      "id": "question-procedural-causal-single-004-es",
+      "pair_id": "question-procedural-causal-single-004",
+      "language": "es",
+      "question": "¿Cómo puede una persona participante abandonar la evaluación de ARIADNA y qué cambios obligan a modificar el expediente ético?",
+      "retrieval_type": "single",
+      "reasoning_type": "procedural_causal",
+      "relevant_doc_ids": [
+        "doc-045-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-045-es",
+          "text": "La hoja de información explica finalidad, actividades, duración, riesgos, beneficios, voluntariedad, retirada, datos, conservación y contacto. La persona puede interrumpir la sesión o retirar sus datos antes del cierre del análisis sin justificar la decisión."
+        },
+        {
+          "doc_id": "doc-045-es",
+          "text": "La aprobación ética condiciona el estudio a no registrar el texto completo de consultas libres. Las sesiones utilizan tareas preparadas o métricas de interacción. Cualquier cambio en participantes, finalidad o datos requiere una modificación del expediente."
+        }
+      ],
+      "answer": "La persona puede interrumpir la sesión o retirar sus datos antes de que se cierre el análisis, sin dar ninguna justificación. Cualquier cambio en los participantes, la finalidad del estudio o los datos recogidos requiere modificar el expediente ético.",
+      "parallel_question_id": "question-procedural-causal-single-004-en"
+    },
+    {
+      "id": "question-quantitative-comparative-multiple-004-es",
+      "pair_id": "question-quantitative-comparative-multiple-004",
+      "language": "es",
+      "question": "Al sustituir el resultado afectado por fuga de ARIADNA por la evaluación corregida, ¿cuánto descendió el recall@10 híbrido y qué ventaja cuantitativa y coste de latencia mantuvo frente a BM25?",
+      "retrieval_type": "multiple",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-019-es",
+        "doc-018-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-019-es",
+          "text": "La ejecución original informó un recall@10 de 0,94 para el baseline híbrido. No existía un cambio de modelo o índice que justificara una mejora tan grande frente a resultados anteriores. La revisión encontró traducciones, paráfrasis y preguntas con la misma respuesta en particiones distintas."
+        },
+        {
+          "doc_id": "doc-018-es",
+          "text": "BM25 obtiene recall@10 de 0,69, MRR de 0,52 y latencia mediana de 74 ms. El híbrido obtiene recall@10 de 0,80, MRR de 0,63 y latencia mediana de 182 ms. La mejora se concentra en preguntas semánticas, multisalto y temporales. BM25 mantiene ventaja en identificadores exactos y cadenas muy específicas."
+        }
+      ],
+      "answer": "El recall@10 híbrido descendió 0,14, de 0,94 a 0,80, una reducción relativa aproximada del 14,9 %. En la evaluación corregida, el híbrido superó a BM25 en 0,11 tanto en recall@10 como en MRR. Su latencia mediana fue 108 ms mayor, 182 frente a 74 ms, aproximadamente 2,46 veces la latencia de BM25.",
+      "parallel_question_id": "question-quantitative-comparative-multiple-004-en"
+    },
+    {
+      "id": "question-quantitative-comparative-single-001-es",
+      "pair_id": "question-quantitative-comparative-single-001",
+      "language": "es",
+      "question": "¿Cuál fue la diferencia, en puntos porcentuales, entre la cobertura bilingüe de etiquetas y la completitud de los campos obligatorios publicables en el lote SILEX?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-004-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-004-es",
+          "text": "Los nueve avisos de canal desaparecieron al condicionar la regla. La comparación entre informes confirma que ninguna corrección eliminó información original. La cobertura de etiquetas ES/EN alcanzó el 100 % en el lote y la completitud de campos obligatorios publicables fue del 96,4 %."
+        }
+      ],
+      "answer": "La diferencia fue de 3,6 puntos porcentuales: 100 % menos 96,4 %.",
+      "parallel_question_id": "question-quantitative-comparative-single-001-en"
+    },
+    {
+      "id": "question-quantitative-comparative-single-002-es",
+      "pair_id": "question-quantitative-comparative-single-002",
+      "language": "es",
+      "question": "Entre la precisión global, la cobertura de los casos resolubles y la precisión automática del enlace de personas históricas, ¿qué métrica fue la más alta y en cuánto superó a las otras dos?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-009-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-009-es",
+          "text": "La precisión global es 0,94 y la cobertura sobre casos resolubles 0,78. La precisión automática alcanza 0,98. El 29 % pasa a revisión y el 21 % permanece sin enlace. Reducir el umbral aumenta cobertura, pero duplica las fusiones falsas, por lo que se descarta."
+        }
+      ],
+      "answer": "La precisión automática fue la más alta, con 0,98. Superó a la precisión global en 0,04 y a la cobertura de casos resolubles en 0,20.",
+      "parallel_question_id": "question-quantitative-comparative-single-002-en"
+    },
+    {
+      "id": "question-quantitative-comparative-single-003-es",
+      "pair_id": "question-quantitative-comparative-single-003",
+      "language": "es",
+      "question": "¿Cuánto mejoró el sistema híbrido respecto a BM25 en recall@10 y en MRR en la evaluación corregida de ARIADNA?",
+      "retrieval_type": "single",
+      "reasoning_type": "quantitative_comparative",
+      "relevant_doc_ids": [
+        "doc-020-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-020-es",
+          "text": "BM25 obtiene recall@10 de 0,69 y MRR de 0,52. El sistema híbrido obtiene recall@10 de 0,80 y MRR de 0,63. El valor anterior de 0,94 se identifica como afectado por fuga y no se considera resultado oficial."
+        }
+      ],
+      "answer": "El sistema híbrido mejoró 0,11 en recall@10, al pasar de 0,69 a 0,80, y también 0,11 en MRR, al pasar de 0,52 a 0,63.",
+      "parallel_question_id": "question-quantitative-comparative-single-003-en"
+    },
+    {
+      "id": "question-temporal-evolutive-single-003-es",
+      "pair_id": "question-temporal-evolutive-single-003",
+      "language": "es",
+      "question": "¿Cómo evolucionó el estado de calidad de la segunda ingestión de LUMEN desde la validación inicial hasta después de aplicar las correcciones?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-034-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-034-es",
+          "text": "La validación inicial detectó 47 fechas no normalizadas, 29 remitentes ambiguos, 18 topónimos sin candidato suficiente, 12 archivos con suma distinta del manifiesto y 9 valores de derechos pendientes. Los doce archivos se sustituyeron por copias verificadas antes de continuar."
+        },
+        {
+          "doc_id": "doc-034-es",
+          "text": "Después de la corrección quedaron cero errores críticos. Veinticuatro menciones de persona permanecen sin enlazar, once lugares permanecen abiertos y nueve objetos quedan fuera del demostrador por derechos pendientes."
+        }
+      ],
+      "answer": "La validación inicial detectó 47 fechas no normalizadas, 29 remitentes ambiguos, 18 topónimos sin candidato suficiente, 12 archivos con sumas incorrectas y 9 valores de derechos pendientes. Tras las correcciones quedaron cero errores críticos, aunque siguieron abiertas 24 menciones de persona, 11 lugares y 9 objetos excluidos por derechos pendientes.",
+      "parallel_question_id": "question-temporal-evolutive-single-003-en"
+    },
+    {
+      "id": "question-temporal-evolutive-single-004-es",
+      "pair_id": "question-temporal-evolutive-single-004",
+      "language": "es",
+      "question": "¿Cómo cambió el estado de los resultados y de la exportación de ORION cuando se detectaron los defectos de la migración?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-022-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-022-es",
+          "text": "La migración también perdió 126 identificadores internos antiguos, 38 fechas de fin de afiliación, 17 URL de software y varias descripciones bilingües de datasets. La exportación para ARIADNA se detuvo antes de que estos defectos se propagaran al corpus."
+        },
+        {
+          "doc_id": "doc-022-es",
+          "text": "No se perdió la fuente original y no se publicaron perfiles incorrectos fuera del entorno interno. Sin embargo, la base migrada no era adecuada para preguntas sobre identidad, historial de afiliación o relaciones entre proyectos y publicaciones. Los resultados generados durante la ventana afectada se marcaron como provisionales."
+        }
+      ],
+      "answer": "La exportación a ARIADNA se detuvo antes de que los defectos llegaran al corpus. La base migrada pasó a considerarse inadecuada para consultas de identidad, afiliación y relaciones, y los resultados producidos durante la ventana afectada se marcaron como provisionales; no se publicaron perfiles incorrectos fuera del entorno interno.",
+      "parallel_question_id": "question-temporal-evolutive-single-004-en"
+    },
+    {
+      "id": "question-temporal-evolutive-single-006-es",
+      "pair_id": "question-temporal-evolutive-single-006",
+      "language": "es",
+      "question": "¿Cómo cambiaron la capacidad y el estado operativo de Atlas-2 durante la ventana de mantenimiento de septiembre de 2026?",
+      "retrieval_type": "single",
+      "reasoning_type": "temporal_evolutive",
+      "relevant_doc_ids": [
+        "doc-048-es"
+      ],
+      "evidence": [
+        {
+          "doc_id": "doc-048-es",
+          "text": "La capacidad útil pasó de 84 TB a 196 TB. Se instalaron doce discos, dos bandejas y una controladora adicional. La configuración permite tolerar dos fallos de disco en cada grupo. Las pruebas de lectura, escritura, fallo simulado y restauración se completaron correctamente."
+        },
+        {
+          "doc_id": "doc-048-es",
+          "text": "El servicio volvió a estar disponible el 13 de septiembre a las 18:10. Dos trabajos de investigación fueron reanudados desde puntos de control y uno se volvió a ejecutar. No se perdió información de proyecto."
+        }
+      ],
+      "answer": "La capacidad útil aumentó de 84 TB a 196 TB. El servicio volvió a estar disponible el 13 de septiembre a las 18:10; dos trabajos se reanudaron desde puntos de control, uno se volvió a ejecutar y no se perdió información de proyecto.",
+      "parallel_question_id": "question-temporal-evolutive-single-006-en"
+    }
+  ]
+}

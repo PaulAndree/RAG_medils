@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Third review of deliverable D3 to incorporate the final validation results and the pilot-date chronology: the original week beginning 21 September, the provisional week beginning 9 November and final confirmation of the latter on 19 June.\n\nJavier Ortega: The objective is to approve the final version of D3 and ensure that the pilot chronology is unambiguous.\nClara Ibáñez: I have added a planning-changes section. It states that September was the original date, November was provisionally proposed on 21 April and was confirmed on 19 June.\nAlba Prieto: The requirements annex now includes all 62 procedures and the approved acceptance criteria.\nSergio Vidal: The validation annex shows 98.4 percent coverage, zero critical errors and five minor warnings.\nMireia Soler: The ontology description has also been updated to reflect the suspended-deadline and temporal-name rules.\nJavier Ortega: Does any reference still present November as provisional?\nClara Ibáñez: Only one table in the executive summary. I will change it to confirmed date and add a note about the 26 October milestone.\nJavier Ortega: With that correction, the deliverable is approved.\nMireia Soler: Agreed.\nJavier Ortega: Clara will submit the final version on 3 July and archive the previous version as superseded."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        286
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

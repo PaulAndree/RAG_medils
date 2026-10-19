@@ -1,0 +1,12 @@
+[
+  {
+    "id": "event-163-en_chunk_1_arg_1",
+    "claim": "Format B is selected with a brief main message, expandable evidence and a one-dimension clarification. It will be tested in the v2.2 release candidate.",
+    "evidence": [
+      "Eighty-six percent of participants correctly identified why the system abstained with format B, compared with 58 percent for format A.",
+      "Average trust was 4.3 out of 5 with format B and 3.5 with A. However, B messages took longer to read.",
+      "Eighty-one percent of clarifications were considered useful. The poorest cases added two details at once, such as date and unit.",
+      "Participants detected the error more readily when evidence was shown. That reduces false confidence, although it does not eliminate false abstention."
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+The meeting completed the first prioritization of procedures for the SILEX pilot: minor building permits, registration certificates, and municipal grant applications. The catalogue contains 128 records. The responsible-unit code is missing from 37 records, and the applicable legal basis is absent from 19. These gaps prevent the mappings from being completed without making assumptions.
+
+Alba will review the catalogue and mark mandatory fields by 21 January. Sergio will ask the Santa Marina City Council for a new export containing unit identifiers. Javier will schedule a partner review for 27 January. Formal confirmation of the registration dataset's reuse licence is also still pending; the dataset will not be added to the pilot until written evidence is received.
+
+The next catalogue version must clearly distinguish missing data, non-applicable data, and data awaiting validation by the municipality.

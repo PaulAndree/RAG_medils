@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "The pilot processed 8.7 million readings from 126 meters. Average completeness was 99.2%, and 96.8% of intervals reached the catalogue within five minutes. Hourly products met the minimum rule of three meters in 98.6% of cases; remaining intervals were not exported.\n\nConnector availability was 99.4%. Catalogue latency at the 95th percentile fell to 1.31 seconds after index optimization. Seven incidents were recorded, none involving data exposure. Partner queries mainly used hourly aggregates; daily products represented 18% of authorized downloads.\n\nThe final report must distinguish technical and privacy indicators. The absence of products blocked by the minimum-count rule will not be presented as a failure. Inés will validate counts, and Héctor will review the interpretation of privacy indicators before approval."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-073-en"
+  ],
+  "token_count": [
+    119
+  ]
+}

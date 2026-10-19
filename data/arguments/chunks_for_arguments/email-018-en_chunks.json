@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Elena Martín Ríos <elena.martin@upsc.example>\nRecipient: Sergio Vidal Cruz <sergio.vidal@upsc.example>, Nuria Castaño Rey <nuria.castano@upsc.example>\nTitle: Approval of the ORION profile-correction plan\n\nHello,\n\nI approve the proposal to create a separate identity table and retain source identifiers through equivalence relations. Profiles must not be deleted directly: every merge must include evidence, date, and reviewer.\n\nThe thirty-five pairs with sufficient matches may be processed automatically and then undergo link checking. The eight cases involving namesakes or incomplete information require manual review and will remain outside identity-related questions until resolved.\n\nThe export to ARIADNA may resume once links to publications, projects, and datasets have passed testing and the provenance of recovered fields has been documented.\n\nThank you,\nElena"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        217
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

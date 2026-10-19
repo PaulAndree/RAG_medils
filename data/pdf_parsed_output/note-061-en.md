@@ -1,0 +1,5 @@
+The demonstrator must provide filters for collection, object type, person, place, date range, image availability, and conditions of use. Filters will operate over the same entities in Spanish and English; switching language must not reset the query or change the result set.
+
+The main navigation flow will start from a result list and allow users to open a record, follow links to people or places, and return while preserving filters and scroll position. Historical variants of a place name will appear on the entity page rather than as duplicate results. Approximate dates will display both the original wording and an understandable representation of the interval.
+
+To avoid overloaded screens, the initial view will show only collection, type, date, and rights information. Advanced filters will remain in a collapsible panel. Diego will implement navigation, and Mateo will prepare ten test journeys. Acceptance requires every journey to return the same entities in the ES and EN interfaces.

@@ -1,0 +1,5 @@
+Speaker permission must state whether the session may be recorded, who may access it, for how long, and whether excerpts may be reused. Accepting an invitation does not automatically grant permission to record or publish.
+
+Three options are proposed: no recording; recording for internal access during six months; or open publication under an agreed licence. Audience questions will not be included in an open publication without explicit consent. For hybrid sessions, a notice will be displayed at the beginning, and recording will be paused during contributions from people who do not agree to appear.
+
+Rosa will retain the signed form with the seminar materials. If no permission exists before the event, the session will take place without recording. Internal files will be stored in Nextcloud and deleted when the authorized period ends unless a renewal is documented.

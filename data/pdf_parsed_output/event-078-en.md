@@ -1,0 +1,1 @@
+First NEXUS internal seminar of 2026, focused on multilingual ontology-alignment methods and their implications for SILEX, LUMEN and bilingual evaluation datasets.

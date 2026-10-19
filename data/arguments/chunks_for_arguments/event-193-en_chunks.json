@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Second onboarding-improvement session to review initial results from the single form, assess access times and apply the closure checklist to the end of Yara's visit.\n\nClara Ibáñez: Since June, we have used the four onboarding profiles for nine new arrivals and two internal changes.\nPablo Herrero: Average basic-access time fell from nine days to 1.8 working days. Specific access was completed in an average of 4.2 days.\nNuria Castaño: Three requests exceeded five days because restricted-data approval was missing. The form now blocks submission unless an owner is identified.\nSergio Vidal: No closed-evaluation access was granted by default. Two requests were rejected because they lacked justification and an expiry date.\nAlba Prieto: The doctoral path works, but it should explicitly include review of the data-management plan after the first month.\nMateo Ruiz: The glossary reduced tool-related questions. I propose adding examples of where to store drafts, frozen data and published material.\nInés Ferrer: Privacy training was completed before any access to VERDANT containers.\nYara Ben Salem: My closure checklist includes material delivery, handover, revocation of temporary accounts, insurance and return travel. The handover session is on 24 September, and administrative closure on the 30th.\nClara Ibáñez: What remains for offboarding?\nNuria Castaño: Automating notices seven days in advance and confirming that local personal data is deleted or transferred to an owner.\nPablo Herrero: I will add those two checks and signed closure evidence.\nClara Ibáñez: Onboarding v1.1 is approved. We retain the two- and five-day targets and make offboarding evidence mandatory."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        389
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

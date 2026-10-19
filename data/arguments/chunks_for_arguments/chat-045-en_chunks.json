@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-07-03T09:15:00Z\nAuthor: Clara Ibáñez Soto\nMessage: July has overlaps among deliverables, demonstrations, interviews and holidays. We need to resolve them today.\n\nDate: 2026-07-03T09:17:00Z\nAuthor: Javier Ortega Campos\nMessage: SILEX has acceptance cases, API review and pre-production preparation.\n\nDate: 2026-07-03T09:19:00Z\nAuthor: Lucía Navarro Gil\nMessage: LUMEN has demonstrator evaluation, guide closure and Yara's extension.\n\nDate: 2026-07-03T09:21:00Z\nAuthor: Andrés Beltrán Vega\nMessage: ARIADNA must freeze v2.1 and complete corrected evaluation; VERDANT is reviewing expansion to six facilities.\n\nDate: 2026-07-03T09:24:00Z\nAuthor: Nuria Castaño Rey\nMessage: There are also interviews on the 13th and 14th and two minor maintenance windows.\n\nDate: 2026-07-03T09:27:00Z\nAuthor: Elena Martín Ríos\nMessage: Which people have the most conflicts?\n\nDate: 2026-07-03T09:30:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Nuria, Sergio, Andrés and Lucía appear in three or more milestones during the same fortnight.\n\nDate: 2026-07-03T09:33:00Z\nAuthor: Javier Ortega Campos\nMessage: We can move one internal SILEX review to 6 August without affecting the municipal schedule.\n\nDate: 2026-07-03T09:36:00Z\nAuthor: Lucía Navarro Gil\nMessage: The LUMEN evaluation on 14 July cannot move because external users are participating.\n\nDate: 2026-07-03T09:39:00Z\nAuthor: Andrés Beltrán Vega\nMessage: The ARIADNA freeze on 17 July must remain because of the limited reopening.\n\nDate: 2026-07-03T09:42:00Z\nAuthor: Nuria Castaño Rey\nMessage: I can delegate technical interview support to Sergio and attend only the final decision.\n\nDate: 2026-07-03T09:45:00Z\nAuthor: Elena Martín Ríos\nMessage: Which holidays are already approved?\n\nDate: 2026-07-03T09:48:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Four people have approved holidays between the 20th and 31st, and we should not revoke them because of poor planning.\n\nDate: 2026-07-03T09:51:00Z\nAuthor: Javier Ortega Campos\nMessage: SILEX can prepare documentation before the 20th and leave one person on call for incidents.\n\nDate: 2026-07-03T09:54:00Z\nAuthor: Lucía Navarro Gil\nMessage: Yara will be available until the end of September, so part of the handover can move to August.\n\nDate: 2026-07-03T09:57:00Z\nAuthor: Andrés Beltrán Vega\nMessage: VERDANT can move the capacity review from the 22nd to the 27th without scientific impact.\n\nDate: 2026-07-03T10:00:00Z\nAuthor: Nuria Castaño Rey\nMessage: The maintenance window on the 18th remains; the one on the 25th will move to August.\n\nDate: 2026-07-03T10:03:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We need one consolidated calendar with primary owners and substitutes.\n\nDate: 2026-07-03T10:06:00Z\nAuthor: Elena Martín Ríos\nMessage: And a rule: no confirmed milestone will depend on a single person during holidays.",
+        "Date: 2026-07-03T10:10:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Agreed: we move three non-critical activities, retain external milestones, respect holidays and assign substitutes by 8 July."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        749,
+        53
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

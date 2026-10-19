@@ -1,0 +1,301 @@
+NEXUS ADMINISTRATIVE OPERATIONS HANDBOOK V2.0
+
+1. Purpose
+
+This handbook brings together common NEXUS operating procedures for travel, minor purchases, budgeting, recruitment, visitors, training, inventory, rooms, administrative filing, and project closure. Its purpose is to reduce informal decisions and ensure that every case retains owners, dates, and evidence.
+
+The handbook does not replace institutional policies of Sierra Centro Public University. Where a difference exists, the current university rule prevails. Annexes and forms are reviewed periodically and retain a relation to their earlier version.
+
+2. Responsibilities
+
+Clara Ibáñez Soto coordinates LabOps and budget monitoring. Rosa Mena Ortiz maintains cases, travel, onboarding, and filing. Nuria Castaño Rey manages infrastructure and technical inventory. Project leads validate scientific purpose and cost allocation.
+
+Every procedure distinguishes the requester, reviewer, approver, and executor. One person must not approve their own expense where institutional rules require separation. Decisions and exceptions are recorded in writing.
+
+3. Principles
+
+Operations follow necessity, proportionality, traceability, separation of duties, least access, and limited retention. An email or chat may initiate an action, but the case must contain the required form, approval, and evidence.
+
+Operating procedure 1
+
+Procedure 1, travel, covers request, authorization, booking, advances, expense reporting, and closure. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 2
+
+Procedure 2, minor purchases, covers need, comparison, approval, order, receipt, and invoice. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 3
+
+Procedure 3, budgeting, covers forecast, funding, commitment, execution, and review. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 4
+
+Procedure 4, recruitment, covers profile, call, assessment, references, offer, and onboarding. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 5
+
+Procedure 5, visitors, covers invitation, dates, space, access, confidentiality, and expiry. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 6
+
+Procedure 6, training, covers requirements, call, attendance, evidence, and renewal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 7
+
+Procedure 7, inventory, covers identifier, assignment, status, encryption, warranty, and disposal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 8
+
+Procedure 8, rooms, covers booking, priority, capacity, equipment, and cancellation. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 9
+
+Procedure 9, filing, covers classification, name, version, access, retention, and deletion. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 10
+
+Procedure 10, project closure, covers inventory, licences, reports, acceptance, invoices, and transfer. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 11
+
+Cross-cutting control 1 governs version control. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 12
+
+Cross-cutting control 2 governs file naming. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 13
+
+Cross-cutting control 3 governs signatures and approvals. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 14
+
+Cross-cutting control 4 governs case access. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 15
+
+Cross-cutting control 5 governs personal data. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 16
+
+Cross-cutting control 6 governs internal deadlines. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 17
+
+Cross-cutting control 7 governs exceptions. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 18
+
+Cross-cutting control 8 governs audit. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 19
+
+Cross-cutting control 9 governs continuity during absences. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 20
+
+Cross-cutting control 10 governs final archive. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 21
+
+Operational scenario 1 is invoice received without a purchase order number. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 22
+
+Operational scenario 2 is travel expense report submitted late. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 23
+
+Operational scenario 3 is visitor requiring additional access. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 24
+
+Operational scenario 4 is laptop without an assigned person. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 25
+
+Operational scenario 5 is room booked for two activities. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 26
+
+Operational scenario 6 is mandatory training outstanding. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 27
+
+Operational scenario 7 is closed project with an open invoice. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 28
+
+Operational scenario 8 is person leaving the group with active access. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 29
+
+Procedure 1, travel, covers request, authorization, booking, advances, expense reporting, and closure. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 30
+
+Procedure 2, minor purchases, covers need, comparison, approval, order, receipt, and invoice. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 31
+
+Procedure 3, budgeting, covers forecast, funding, commitment, execution, and review. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 32
+
+Procedure 4, recruitment, covers profile, call, assessment, references, offer, and onboarding. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 33
+
+Procedure 5, visitors, covers invitation, dates, space, access, confidentiality, and expiry. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 34
+
+Procedure 6, training, covers requirements, call, attendance, evidence, and renewal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 35
+
+Procedure 7, inventory, covers identifier, assignment, status, encryption, warranty, and disposal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 36
+
+Procedure 8, rooms, covers booking, priority, capacity, equipment, and cancellation. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 37
+
+Procedure 9, filing, covers classification, name, version, access, retention, and deletion. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 38
+
+Procedure 10, project closure, covers inventory, licences, reports, acceptance, invoices, and transfer. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 39
+
+Cross-cutting control 1 governs version control. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 40
+
+Cross-cutting control 2 governs file naming. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 41
+
+Cross-cutting control 3 governs signatures and approvals. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 42
+
+Cross-cutting control 4 governs case access. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 43
+
+Cross-cutting control 5 governs personal data. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 44
+
+Cross-cutting control 6 governs internal deadlines. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 45
+
+Cross-cutting control 7 governs exceptions. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 46
+
+Cross-cutting control 8 governs audit. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 47
+
+Cross-cutting control 9 governs continuity during absences. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 48
+
+Cross-cutting control 10 governs final archive. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 49
+
+Operational scenario 1 is invoice received without a purchase order number. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 50
+
+Operational scenario 2 is travel expense report submitted late. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 51
+
+Operational scenario 3 is visitor requiring additional access. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 52
+
+Operational scenario 4 is laptop without an assigned person. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 53
+
+Operational scenario 5 is room booked for two activities. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 54
+
+Operational scenario 6 is mandatory training outstanding. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 55
+
+Operational scenario 7 is closed project with an open invoice. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 56
+
+Operational scenario 8 is person leaving the group with active access. The owner does not hide the issue or force closure. The status is recorded, information requested, and escalation route applied. The case retains relevant communications while avoiding duplication of personal data. Resolution identifies cause, action, date, and preventive control. Where other cases may be affected, a scope review is performed.
+
+Operating procedure 57
+
+Procedure 1, travel, covers request, authorization, booking, advances, expense reporting, and closure. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 58
+
+Procedure 2, minor purchases, covers need, comparison, approval, order, receipt, and invoice. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 59
+
+Procedure 3, budgeting, covers forecast, funding, commitment, execution, and review. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 60
+
+Procedure 4, recruitment, covers profile, call, assessment, references, offer, and onboarding. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 61
+
+Procedure 5, visitors, covers invitation, dates, space, access, confidentiality, and expiry. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 62
+
+Procedure 6, training, covers requirements, call, attendance, evidence, and renewal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 63
+
+Procedure 7, inventory, covers identifier, assignment, status, encryption, warranty, and disposal. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 64
+
+Procedure 8, rooms, covers booking, priority, capacity, equipment, and cancellation. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 65
+
+Procedure 9, filing, covers classification, name, version, access, retention, and deletion. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 66
+
+Procedure 10, project closure, covers inventory, licences, reports, acceptance, invoices, and transfer. Every case has an identifier, purpose, project, owner, dates, status, and documents. Statuses are draft, awaiting information, under review, approved, rejected, and closed. Non-applicable fields are explicitly marked. Conditional approval states what is missing and when it expires. Closure includes a check that no actions, advances, or access remain open.
+
+Operating procedure 67
+
+Cross-cutting control 1 governs version control. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 68
+
+Cross-cutting control 2 governs file naming. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 69
+
+Cross-cutting control 3 governs signatures and approvals. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 70
+
+Cross-cutting control 4 governs case access. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.
+
+Operating procedure 71
+
+Cross-cutting control 5 governs personal data. It has a rule, owner, frequency, and evidence. Review checks a sample of open and closed cases. Differences across systems are corrected in the master register. Where a rule changes, the template is updated and the earlier version retained. An exception does not automatically create a precedent and must state its reason, scope, and expiry.

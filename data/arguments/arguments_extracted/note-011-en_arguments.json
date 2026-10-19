@@ -1,0 +1,17 @@
+[
+  {
+    "id": "note-011-en_chunk_1_arg_1",
+    "claim": "The recommended automatic-acceptance threshold is 0.78.",
+    "evidence": []
+  },
+  {
+    "id": "note-011-en_chunk_1_arg_2",
+    "claim": "Candidates between 0.60 and 0.78 would undergo human review, while those below 0.60 would remain unlinked unless there is an additional match on date, profession, or location.",
+    "evidence": []
+  },
+  {
+    "id": "note-011-en_chunk_1_arg_3",
+    "claim": "This policy reduces incorrect links, although it will increase the review workload.",
+    "evidence": []
+  }
+]

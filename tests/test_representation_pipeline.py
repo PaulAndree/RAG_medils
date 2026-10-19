@@ -21,6 +21,9 @@ class PipelineTests(unittest.TestCase):
         pdf_dir = self.data_root / "pdf_docs"
         pdf_dir.mkdir()
         (pdf_dir / "paper.pdf").write_bytes(b"pdf")
+        markdown_dir = self.data_root / "pdf_parsed_output"
+        markdown_dir.mkdir()
+        (markdown_dir / "paper.md").write_text("Text", encoding="utf-8")
         (self.data_root / "keep.txt").write_text("keep", encoding="utf-8")
         for relative_path in GENERATED_PATHS:
             directory = self.data_root / relative_path
@@ -67,6 +70,9 @@ class PipelineTests(unittest.TestCase):
             "graph",
         ])
         self.assertTrue((self.data_root / "pdf_docs" / "paper.pdf").exists())
+        self.assertTrue(
+            (self.data_root / "pdf_parsed_output" / "paper.md").exists()
+        )
         self.assertEqual(
             (self.data_root / "keep.txt").read_text(encoding="utf-8"),
             "keep",
@@ -210,23 +216,23 @@ class BuilderTests(unittest.TestCase):
     def test_passage_builder_writes_valid_outputs(self, post):
         from representations.passages.builder import run
 
-        pdf_dir = self.data_root / "pdf_docs"
-        pdf_dir.mkdir()
-        (pdf_dir / "paper.pdf").write_bytes(b"pdf")
-        post.side_effect = [
-            FakeResponse({"content_parsed": "# Title\n\nText"}),
-            FakeResponse({
-                "chunk_list": ["Text"],
-                "chunk_size": 1,
-                "chunk_title": ["Title"],
-                "token_count": [1],
-            }),
-        ]
+        markdown_dir = self.data_root / "pdf_parsed_output"
+        markdown_dir.mkdir()
+        (markdown_dir / "paper.md").write_text(
+            "# Title\n\nText",
+            encoding="utf-8",
+        )
+        post.return_value = FakeResponse({
+            "chunk_list": ["Text"],
+            "chunk_size": 1,
+            "chunk_title": ["Title"],
+            "token_count": [1],
+        })
 
         result = run(self.data_root)
 
         self.assertEqual(result.counts, {"documents": 1, "chunks": 1})
-        self.assertTrue((self.data_root / "pdf_parsed_output/paper.md").exists())
+        self.assertEqual(post.call_count, 1)
         output = json.loads(
             (self.data_root / "passages_chunk/paper_chunks.json").read_text(
                 encoding="utf-8"
@@ -235,16 +241,38 @@ class BuilderTests(unittest.TestCase):
         self.assertEqual(output["chunk_list"], ["Text"])
 
     @patch("representations.passages.builder.requests.post")
+    def test_passage_builder_keeps_short_document_as_one_chunk(self, post):
+        from representations.passages.builder import run
+
+        markdown_dir = self.data_root / "pdf_parsed_output"
+        markdown_dir.mkdir()
+        content = "A short chat message"
+        (markdown_dir / "chat-example.md").write_text(
+            content,
+            encoding="utf-8",
+        )
+
+        result = run(self.data_root)
+
+        post.assert_not_called()
+        self.assertEqual(result.counts, {"documents": 1, "chunks": 1})
+        output = json.loads(
+            (
+                self.data_root
+                / "passages_chunk/chat-example_chunks.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertEqual(output["chunk_list"], [content])
+        self.assertEqual(output["chunk_title"], ["chat-example"])
+
+    @patch("representations.passages.builder.requests.post")
     def test_passage_builder_reuses_existing_outputs(self, post):
         from representations.passages.builder import run
 
-        pdf_dir = self.data_root / "pdf_docs"
         markdown_dir = self.data_root / "pdf_parsed_output"
         chunks_dir = self.data_root / "passages_chunk"
-        pdf_dir.mkdir()
         markdown_dir.mkdir()
         chunks_dir.mkdir()
-        (pdf_dir / "paper.pdf").write_bytes(b"pdf")
         (markdown_dir / "paper.md").write_text("Text", encoding="utf-8")
         (chunks_dir / "paper_chunks.json").write_text(
             json.dumps({"chunk_list": ["Text"]}),

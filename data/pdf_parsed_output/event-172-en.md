@@ -1,0 +1,1 @@
+Fourth ARIADNA annotation-adjudication session to resolve remaining clarification and conflicting-evidence cases, approve the 2.2.1 maintenance set and close the 2026 annotation cycle without modifying v2.1 or v2.2.

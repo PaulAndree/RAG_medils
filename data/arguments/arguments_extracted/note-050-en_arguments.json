@@ -1,0 +1,19 @@
+[
+  {
+    "id": "note-050-en_chunk_1_arg_1",
+    "claim": "Corrections must first be made in the master registry and then propagated to the JSON files.",
+    "evidence": [
+      "The registry review identified eighteen issues."
+    ]
+  },
+  {
+    "id": "note-050-en_chunk_1_arg_2",
+    "claim": "Only one language must never be edited manually.",
+    "evidence": []
+  },
+  {
+    "id": "note-050-en_chunk_1_arg_3",
+    "claim": "Closure requires zero orphaned pairs and zero version cycles.",
+    "evidence": []
+  }
+]

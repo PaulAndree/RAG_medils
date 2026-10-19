@@ -1,0 +1,5 @@
+The annual report contains discrepancies in four indicators. The publications repository records thirty-one publications, while the research lines report thirty-four. Two papers are duplicated as accepted and published versions, and one chapter has no confirmed NEXUS affiliation. The provisional correct number is thirty-one.
+
+For projects, one sheet counts ORION as active throughout 2026 even though it ended in December 2025. It must appear as a closed project with postmortem activity, not an active project. There is also a difference between six and seven supervised theses because one co-supervision was counted twice. Two internal seminar sessions are missing.
+
+Lucía will review publications, Elena projects, and Rosa activities. Clara will not close the figures until evidence is received. Every indicator will include its source and extraction date so later corrections cannot change the report without traceability.

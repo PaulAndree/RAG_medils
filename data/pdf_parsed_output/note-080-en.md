@@ -1,0 +1,5 @@
+The preliminary test with eight Research Office staff members produced thirty-seven comments. Three issues are considered high priority: citations open the document but not the exact passage, answers do not clearly state when a policy has been superseded, and the “no answer found” message does not distinguish absence of evidence from a retrieval failure.
+
+Medium-priority items include topic filters, query history, answer export, and a more visible explanation of limitations. Several users requested shorter answers by default with an option to expand evidence. Language switching worked correctly and preserved the query.
+
+Nuria will correct passage links and add version status to the source view. Pablo will revise messages and the user guide. History and export functions will be evaluated after the pilot because they are not blockers. The test will be repeated before September training.

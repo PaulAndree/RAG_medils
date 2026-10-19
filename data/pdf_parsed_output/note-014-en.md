@@ -1,0 +1,5 @@
+Yara's visit is currently scheduled to end on 30 June 2026. An extension through 30 September is proposed so she can complete the alignment between the archival ontology and the external vocabularies used by LUMEN.
+
+There are 420 bilingual class and property pairs left to review. Of these, 80 contain conflicts requiring expert analysis, mainly because of distinctions among creator, author, and producer and the representation of uncertain dates. The extension would allow the mapping table to be completed, conflicts to be validated with the Regional Archive, and the alignment procedure to be transferred to the rest of the team.
+
+The LUMEN mobility balance can cover three additional months, subject to Clara's confirmation. Lucía would remain the supervisor, and Mireia would join the technical sessions. The extension has not yet been approved; it requires an updated invitation and formal budget confirmation.

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "note-020-en_chunk_1_arg_1",
+    "claim": "Negative values must therefore not all be replaced with zero.",
+    "evidence": [
+      "The sample of 18,240 readings contains 74 negative values. The initial review indicates that 61 represent valid energy export to the grid, 9 coincide with sensor resets, and 4 still have no explanation."
+    ]
+  },
+  {
+    "id": "note-020-en_chunk_1_arg_2",
+    "claim": "The model should separate direction and magnitude when the source supports this.",
+    "evidence": []
+  },
+  {
+    "id": "note-020-en_chunk_1_arg_3",
+    "claim": "For older data without a direction field, the sign will be retained together with a flag indicating that interpretation is pending.",
+    "evidence": []
+  },
+  {
+    "id": "note-020-en_chunk_1_arg_4",
+    "claim": "Twelve power values above 25 kW were also detected; ten correspond to shared facilities, and two require confirmation from SolCentro.",
+    "evidence": []
+  },
+  {
+    "id": "note-020-en_chunk_1_arg_5",
+    "claim": "The four unexplained negative values and the two unconfirmed outliers will be excluded from pilot aggregates until the review is complete.",
+    "evidence": []
+  }
+]

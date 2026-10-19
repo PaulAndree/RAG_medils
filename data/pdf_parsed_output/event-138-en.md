@@ -1,0 +1,1 @@
+First VERDANT connector-security session to review certificates, secrets, egress control, container isolation and response to unauthorized requests or transfers.

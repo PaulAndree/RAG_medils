@@ -1,0 +1,5 @@
+Sixty pairs with similarity above 0.92 were reviewed. Twenty-two are valid parallel translations and must remain together in the same partition. Seventeen are paraphrases of one intent, nine share an answer and evidence despite changing the subject, and twelve are similar but require different sources.
+
+Example of a true duplicate: “Until what date may the trip be reported?” and “What is the last day for submitting travel expenses?” Both use the same deadline and paragraph. Example that is not a duplicate: “Who approves a travel exception?” and “Who processes a travel request?” They share vocabulary but require different roles.
+
+The proposal is to group by intent, normalized answer, and primary evidence. Every member of a group, including its ES/EN versions, must be assigned to one partition. Lucía and Tomás will adjudicate uncertain cases. Removal must not disproportionately reduce temporal or administrative questions.

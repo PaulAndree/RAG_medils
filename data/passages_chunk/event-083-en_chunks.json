@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Second NEXUS internal seminar, focused on reproducible retrieval and RAG evaluation, separation of development and test data, and contamination risks through examples, caches and configuration selection."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-083-en"
+  ],
+  "token_count": [
+    26
+  ]
+}

@@ -1,0 +1,5 @@
+ORION shows that integrating sources before defining an identity strategy leads to costly corrections. ARIADNA must assign canonical identifiers to people, projects, documents, and versions before indexes are generated. Source identifiers will be retained as equivalences rather than primary keys.
+
+The second lesson is to separate technical dates from validity. A record's modification date does not necessarily indicate when a fact was in force. Policies and affiliations must include explicit validity periods. The third lesson is to preserve provenance for every field, especially when several exports are combined.
+
+Independent bilingual validation is also required. The existence of a title in two languages does not guarantee that both express the same fact. Finally, historical errors may be used as distractors only when they are clearly marked and canonical evidence exists to resolve the conflict. These rules will be added to the ARIADNA corpus manifest and automated ingestion checks.

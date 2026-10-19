@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Clara Ibáñez Soto <clara.ibanez@upsc.example>\nRecipient: Elena Martín Ríos <elena.martin@upsc.example>\nTitle: Hiring proposal for the engineering position\n\nHello Elena,\n\nThe committee has consolidated the scores for the four candidates for the engineering position. Candidate B has the strongest overall assessment because of their combination of API development, RDF, automated testing, and technical communication. Candidate A is the second option because of their experience in MLOps and GPU administration.\n\nI propose authorizing an offer to candidate B, subject to reference checks and a start date no later than 1 July. I have attached the assessment matrix and interview summary.\n\nSubject to your approval, Rosa will prepare the offer and Nuria will confirm the technical references.\n\nBest regards,\nClara"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-025-en"
+  ],
+  "token_count": [
+    117
+  ]
+}

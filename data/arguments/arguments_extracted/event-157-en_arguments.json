@@ -1,0 +1,17 @@
+[
+  {
+    "id": "event-157-en_chunk_1_arg_1",
+    "claim": "The rules and 0.91 adjudication metric are approved. Guide 1.2 will include fifteen bilingual examples. These cases will support maintenance and analysis, not reopen the official v2.1 metrics.",
+    "evidence": [
+      "First ARIADNA annotation-adjudication session to resolve disagreements involving unanswerability reasons, minimal evidence and reformulations and consolidate the rules in guide 1.2.",
+      "Andrés Beltrán: We have 31 disagreements among the 74 reviewed questions. We must resolve them without retroactively changing the final v2.1 metrics.",
+      "Lucía Navarro: Twelve disagreements distinguish no-evidence from underspecified-scope. The rule should be: when a specific clarification makes the question answerable from the existing corpus, the reason is insufficient scope.",
+      "Pablo Herrero: Eight cases contrast out-of-validity with language-unavailable.",
+      "Mireia Soler: If the document exists in the requested language but was not current on the date, it is out-of-validity. If that language version did not yet exist, it is language-unavailable.",
+      "Tomás Leal: In six cases, retrieval finds a superseded version. Evidence must be marked historical, but cannot justify a current answer.",
+      "Sergio Vidal: The five remaining disagreements concern reformulation. I propose requiring it to preserve intent and add only the minimum necessary information, such as date, unit or expense type.",
+      "Lucía Navarro: Agreed. It must not introduce information that changes the original question.",
+      "Pablo Herrero: Agreement on reasonCode rises from 0.78 to 0.91 in the reviewed sample."
+    ]
+  }
+]

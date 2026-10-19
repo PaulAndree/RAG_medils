@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Lucía Navarro Gil <lucia.navarro@upsc.example>\nRecipient: Eva Calderón Gil <eva.calderon@archivoregional.example>\nTitle: Question about creator, author, and producer\n\nHello Eva,\n\nWhile reviewing the terminology guide, we found that version 1.0 uses creator, author, and producer too interchangeably. This is causing incorrect links, particularly for photographs and digitized copies.\n\nI have attached a proposal distinguishing archival creation context, intellectual responsibility for content, and production of a physical or digital manifestation. We would like to validate the definitions against Regional Archive examples before adding them to version 1.1.\n\nCould you review the eight examples and identify any case in which the assigned function is incorrect?\n\nThank you,\nLucía"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-005-en"
+  ],
+  "token_count": [
+    105
+  ]
+}

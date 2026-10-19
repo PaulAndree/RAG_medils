@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Second ARIADNA user evaluation to compare brief and explanatory abstention messages, measure understanding and trust and select the clarification format for the v2.2 candidate.\n\nAndrés Beltrán: Twenty research-administration staff are participating. Each will see answerable responses, correct abstentions and controlled errors.\nNuria Castaño: We compare two formats. Format A only states that no reliable answer is available. Format B explains the reason, cites consulted evidence and proposes a clarification where appropriate.\nRosa Mena: For travel questions, format B clearly distinguishes the validity date and language of the rules.\nPablo Herrero: Eighty-six percent of participants correctly identified why the system abstained with format B, compared with 58 percent for format A.\nTomás Leal: Average trust was 4.3 out of 5 with format B and 3.5 with A. However, B messages took longer to read.\nClara Ibáñez: Were the clarifications useful, or did they appear generic?\nPablo Herrero: Eighty-one percent of clarifications were considered useful. The poorest cases added two details at once, such as date and unit.\nNuria Castaño: We can limit each clarification to one dimension and show additional details under an expandable section.\nAndrés Beltrán: What happened when the system abstained incorrectly?\nTomás Leal: Participants detected the error more readily when evidence was shown. That reduces false confidence, although it does not eliminate false abstention.\nRosa Mena: For language-unavailable, we should indicate that information may exist in another language without presenting it as an answer in the requested language.\nAndrés Beltrán: Format B is selected with a brief main message, expandable evidence and a one-dimension clarification. It will be tested in the v2.2 release candidate."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-163-en"
+  ],
+  "token_count": [
+    266
+  ]
+}

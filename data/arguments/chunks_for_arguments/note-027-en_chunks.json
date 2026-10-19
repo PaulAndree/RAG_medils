@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "The rebuilt split contains 1,840 training questions, 230 development questions, and 232 test questions. Intent groups were kept entirely within one partition, and parallel ES/EN versions received the same assignment. Seventy-four redundant questions were removed, and eleven question-to-evidence relations were corrected.\n\nWith the new split, BM25 reaches recall@10 of 0.69 and the hybrid system 0.80. The previous hybrid value of 0.94 cannot be reproduced without the duplicates. This difference confirms that the original run was inflated. Latency and cost remain almost unchanged.\n\nTomás will repeat the run with three seeds to check stability. Report v1.1 must replace the previous metrics and explain the reason for the correction. Affected results will be retained only as evidence of the incident and will not be used to compare systems."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        191
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

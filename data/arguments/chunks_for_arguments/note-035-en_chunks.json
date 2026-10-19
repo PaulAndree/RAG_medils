@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Version 1.1 must correct three elements from the previous report. First, the official count is 2,302 semantic questions and 4,604 per-language records, not 2,350 questions. Second, the hybrid baseline's recall@10 on the corrected split is 0.80; the value of 0.94 was affected by duplicates. Third, the pilot is scheduled for 15 September rather than July.\n\nThe methodology must explain that ES/EN versions of one question are always assigned to the same partition. The limitations section must describe the detected leakage and distinguish valid results from those retained only for auditing. The corpus freeze date will also be updated to 31 May.\n\nClara will review figures and dates. Tomás will verify tables and annexes using a script. Version v1.0 will remain archived as the previous version but must not be cited as the source of current results."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        191
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

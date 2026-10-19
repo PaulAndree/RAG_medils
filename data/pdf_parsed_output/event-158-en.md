@@ -1,0 +1,1 @@
+First ARIADNA user evaluation focused on abstention responses, explanation of unanswerability reasons and clarification proposals for ambiguous or temporally invalid questions.

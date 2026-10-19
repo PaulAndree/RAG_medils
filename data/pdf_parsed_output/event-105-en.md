@@ -1,0 +1,1 @@
+First SILEX closure session to prepare the technical and administrative file, inventory deliverables and data, and define preservation actions. It is not the final closure, which depends on the November pilot.

@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Thirteen fields remain without a direct mapping after the latest review. Six are local presentation fields, such as category color or form position, and should not be added to the semantic model. Four describe internal processing states that can be mapped to administrative history. Three contain free-text instructions specific to one office.\n\nExceptions must be recorded explicitly. A discarded local field will include its reason and source system. Internal states will be retained as provenance values even when the public model uses a normalized category. Office instructions will be added as notes only when they are current and visible to citizens.\n\nAlba will update the catalogue with the columns `mappingStatus`, `exclusionReason`, and `reviewedBy`. Javier will review the three free-text fields with Luis Noguera. No field will be left simply blank; it must be marked as mapped, non-applicable, excluded, or pending."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "note-055-en"
+  ],
+  "token_count": [
+    140
+  ]
+}

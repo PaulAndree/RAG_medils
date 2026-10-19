@@ -1,0 +1,97 @@
+NEXUS ONBOARDING AND ACCESS MANAGEMENT PROCEDURE V1.0
+
+Purpose
+
+This procedure governs onboarding of staff, students, and visitors to the NEXUS group. It defines minimum information, accounts, permissions, initial training, review, and access removal. The general principle is to grant only what is required for the role and relevant period.
+
+Request
+
+The responsible person completes the form with the name, relationship, project, start date, end date, mentor, systems, and required level. Shared accounts are not requested. Access to restricted data requires separate justification and approval.
+
+Accounts
+
+Onboarding may include institutional email, GitLab, Nextcloud, the task manager, network access, Atlas-2, and project applications. Every account has a person owner. Service accounts require a technical owner and review date.
+
+Permissions
+
+Basic roles are reader, contributor, developer, and administrator. Administrator is not granted for convenience. Permissions in one project do not allow access to another project's directories. Exceptions contain a reason, scope, and expiry.
+
+Training
+
+Before accessing real data, the person completes data protection, security, acceptable use, and project procedures. The mentor explains repositories, communication, incidents, and filing.
+
+Review and departure
+
+Access is reviewed after thirty days and then every six months. A departure, role change, or end of visit triggers removal. The responsible person verifies accounts, groups, credentials, devices, files, and open tasks.
+
+Control 1
+
+The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access.
+
+Control 2
+
+During the first week, the mentor reviews the ability to locate documentation, run test tasks, and report an incident. Onboarding does not automatically include real data. Synthetic examples are used until training and approval are complete.
+
+Control 3
+
+Departure includes revoking sessions, removing groups, recovering devices, transferring work files, and reassigning tasks. Accounts are not reused. The register retains the date, executor, and removal evidence.
+
+Control 4
+
+Visitors use permissions with an expiry date. An extension requires new confirmation. Temporary access does not become permanent because it expired without review.
+
+Control 5
+
+The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access.
+
+Control 6
+
+During the first week, the mentor reviews the ability to locate documentation, run test tasks, and report an incident. Onboarding does not automatically include real data. Synthetic examples are used until training and approval are complete.
+
+Control 7
+
+Departure includes revoking sessions, removing groups, recovering devices, transferring work files, and reassigning tasks. Accounts are not reused. The register retains the date, executor, and removal evidence.
+
+Control 8
+
+Visitors use permissions with an expiry date. An extension requires new confirmation. Temporary access does not become permanent because it expired without review.
+
+Control 9
+
+The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access.
+
+Control 10
+
+During the first week, the mentor reviews the ability to locate documentation, run test tasks, and report an incident. Onboarding does not automatically include real data. Synthetic examples are used until training and approval are complete.
+
+Control 11
+
+Departure includes revoking sessions, removing groups, recovering devices, transferring work files, and reassigning tasks. Accounts are not reused. The register retains the date, executor, and removal evidence.
+
+Control 12
+
+Visitors use permissions with an expiry date. An extension requires new confirmation. Temporary access does not become permanent because it expired without review.
+
+Control 13
+
+The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access.
+
+Control 14
+
+During the first week, the mentor reviews the ability to locate documentation, run test tasks, and report an incident. Onboarding does not automatically include real data. Synthetic examples are used until training and approval are complete.
+
+Control 15
+
+Departure includes revoking sessions, removing groups, recovering devices, transferring work files, and reassigning tasks. Accounts are not reused. The register retains the date, executor, and removal evidence.
+
+Control 16
+
+Visitors use permissions with an expiry date. An extension requires new confirmation. Temporary access does not become permanent because it expired without review.
+
+Control 17
+
+The checklist separates requested, approved, created, tested, and confirmed. An account is not marked complete until the person can sign in and the permission matches the request. Initial secrets are delivered through a secure channel and changed at first access.
+
+Control 18
+
+During the first week, the mentor reviews the ability to locate documentation, run test tasks, and report an incident. Onboarding does not automatically include real data. Synthetic examples are used until training and approval are complete.

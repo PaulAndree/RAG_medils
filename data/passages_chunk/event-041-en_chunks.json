@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "First VERDANT pilot review to assess synthetic-data tests, connector status, privacy risks and the schedule required to begin trials with aggregated hourly data.\n\nAndrés Beltrán: Let us begin with technical status. Nuria, are both connectors already exchanging the catalogue and synthetic datasets?\nNuria Castaño: Yes. Certificate authentication works, and synthetic transfer completes in under forty seconds. Automated certificate renewal is still pending.\nBruno Silva: It also works in our environment. We found a difference in time-zone codes, but it does not block testing.\nSergio Vidal: The catalogue correctly describes resolution, coverage and licence. We still need to add the signed access policy and transformation history.\nInés Ferrer: For the scientific pilot, we need aggregated hourly data from three facilities and, later, local queries over 15-minute data.\nCarmen Rey: SolCentro can prepare hourly data, but it will not authorize any 15-minute detail until the privacy review is complete.\nAndrés Beltrán: What is the first realistic date for a controlled hourly transfer?\nNuria Castaño: If we close architecture and policy during March, we can run an internal test in the week beginning 20 April.\nBruno Silva: And an international test during May.\nAndrés Beltrán: Agreed. The schedule will have three phases: synthetic in March, controlled hourly data in April and federated data in May, subject to privacy and access approval."
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "event-041-en"
+  ],
+  "token_count": [
+    218
+  ]
+}

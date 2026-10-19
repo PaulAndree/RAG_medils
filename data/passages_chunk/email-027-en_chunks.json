@@ -1,0 +1,12 @@
+{
+  "chunk_list": [
+    "Sender: Nuria Castaño Rey <nuria.castano@upsc.example>\nRecipient: Luis Noguera <luis.noguera@santamarina.example>\nTitle: Pilot environment credentials\n\nHello Luis,\n\nTo configure the pre-production environment, we need the authorized network addresses and the list of named accounts for municipal staff participating in testing. Shared accounts will not be used.\n\nAccess will be through the VPN, and the API will initially be restricted to the municipal network. Secrets will be exchanged through the agreed secure channel and are not included in this email.\n\nI have attached the account template. Could you return it by 18 May so that we can retain the deployment window?\n\nThank you,\nNuria"
+  ],
+  "chunk_size": 1,
+  "chunk_title": [
+    "email-027-en"
+  ],
+  "token_count": [
+    101
+  ]
+}

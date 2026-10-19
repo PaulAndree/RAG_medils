@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-06-21T10:10:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The first consolidation contains discrepancies in publications, projects and people. We need to validate definitions and sources.\n\nDate: 2026-06-21T10:12:00Z\nAuthor: Rosa Mena Ortiz\nMessage: The dashboard shows 18 publications, while projects report 22 objects.\n\nDate: 2026-06-21T10:14:00Z\nAuthor: Lucía Navarro Gil\nMessage: LUMEN counted Spanish and English versions as separate publications in two cases.\n\nDate: 2026-06-21T10:16:00Z\nAuthor: Javier Ortega Campos\nMessage: SILEX included two internal technical reports that do not meet the publication definition.\n\nDate: 2026-06-21T10:19:00Z\nAuthor: Elena Martín Ríos\nMessage: Then the reconciled total would be 18 contributions with 20 associated document objects.\n\nDate: 2026-06-21T10:22:00Z\nAuthor: Andrés Beltrán Vega\nMessage: ARIADNA has an accepted but unpublished paper. Under which status is it counted?\n\nDate: 2026-06-21T10:25:00Z\nAuthor: Clara Ibáñez Soto\nMessage: It belongs under accepted, not published, and both statuses should appear separately.\n\nDate: 2026-06-21T10:28:00Z\nAuthor: Rosa Mena Ortiz\nMessage: There is also a project discrepancy: the finance system records four active projects, while the scientific report lists five.\n\nDate: 2026-06-21T10:31:00Z\nAuthor: Elena Martín Ríos\nMessage: The fifth is ORION, which is closed but retains preservation and reuse activities.\n\nDate: 2026-06-21T10:34:00Z\nAuthor: Javier Ortega Campos\nMessage: We should count active project, closed project and post-project activity as separate categories.\n\nDate: 2026-06-21T10:37:00Z\nAuthor: Lucía Navarro Gil\nMessage: For people, one visiting researcher was counted as both a core member and an external collaborator.\n\nDate: 2026-06-21T10:40:00Z\nAuthor: Andrés Beltrán Vega\nMessage: The rule should assign one primary category at the cutoff date and allow secondary roles without double-counting people.\n\nDate: 2026-06-21T10:43:00Z\nAuthor: Rosa Mena Ortiz\nMessage: The cutoff date for this snapshot is 31 July, even though validation is occurring earlier.\n\nDate: 2026-06-21T10:46:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We need authoritative sources for every indicator.\n\nDate: 2026-06-21T10:49:00Z\nAuthor: Elena Martín Ríos\nMessage: Publications: institutional repository; projects: project register; people: Human Resources and visits; budget: finance system.\n\nDate: 2026-06-21T10:52:00Z\nAuthor: Javier Ortega Campos\nMessage: Projects will add evidence only when the primary source has not yet updated the status.\n\nDate: 2026-06-21T10:55:00Z\nAuthor: Lucía Navarro Gil\nMessage: Every correction should retain the previous value, reason and validating person.\n\nDate: 2026-06-21T10:58:00Z\nAuthor: Andrés Beltrán Vega\nMessage: Incidents and ethics reviews will be counted by case rather than by meeting or message.\n\nDate: 2026-06-21T11:01:00Z\nAuthor: Rosa Mena Ortiz\nMessage: I will publish a reconciliation table and lock the dashboard until the six pending validations arrive.",
+        "Date: 2026-06-21T11:05:00Z\nAuthor: Clara Ibáñez Soto\nMessage: Agreed: 18 contributions, separate statuses, differentiated project categories, no duplicate people and an authoritative source for every indicator."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        772,
+        54
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

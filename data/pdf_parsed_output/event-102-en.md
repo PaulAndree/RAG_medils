@@ -1,0 +1,1 @@
+First SILEX deployment-preparation session to define pre-production and pilot environments, assign owners, review certificates and backups, and preserve the 21 September and 26 October milestones.

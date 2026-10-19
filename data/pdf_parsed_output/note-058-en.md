@@ -1,0 +1,5 @@
+The main lesson from SILEX is that mappings should not begin before stable identifiers, field states, and exception rules have been agreed. A significant part of the delay resulted from treating missing, non-applicable, and pending values in the same way.
+
+The second lesson is to validate translations as part of the model rather than at the end. Inconsistent labels in version 1.1 affected documentation, queries, and tests. The third is to resolve data licences and responsibilities during the requirements phase. Uncertainty concerning registration data limited the pilot's scope and required alternative paths.
+
+Retaining earlier versions and provisional decisions was also useful. It makes it possible to explain how the pilot date changed and why the ontology was revised. Future projects should create a registry of facts, versions, and dependencies from the beginning, together with a representative regression set.

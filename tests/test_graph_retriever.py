@@ -1,5 +1,6 @@
 import unittest
 from types import SimpleNamespace
+from unittest.mock import patch
 
 from qdrant_client import models
 
@@ -28,7 +29,23 @@ class FakeSession:
 
     def run(self, query, parameters):
         self.call = (query, parameters)
-        return [{"entity": "Alice"}]
+        return [
+            {
+                "source_chunk_id": "chunk-1",
+                "chunk": {"id": "chunk-1", "content": "Source content"},
+                "entity": {"id": "entity-1", "name": "Alice", "type": "PERSON"},
+                "relation": {
+                    "id": "relation-1",
+                    "relation": "WORKS_WITH",
+                    "evidence": "Alice works with NEXUS.",
+                },
+                "connected_entity": {
+                    "id": "entity-2",
+                    "name": "NEXUS",
+                    "type": "ORGANIZATION",
+                },
+            }
+        ]
 
 
 class FakeDriver:
@@ -42,10 +59,24 @@ class FakeDriver:
 
 class GraphRetrieverTests(unittest.TestCase):
     def setUp(self):
+        embedding_patcher = patch("retrieval.graph_retriever.embed_texts")
+        self.embed_texts = embedding_patcher.start()
+        self.addCleanup(embedding_patcher.stop)
+        self.embed_texts.side_effect = (
+            lambda _texts, model, _input_type: [[0.1, 0.2]]
+            if model == "bge-m3"
+            else [{"indices": [1], "values": [0.5]}]
+        )
         self.point = SimpleNamespace(
             id="point-1",
             score=0.91,
-            payload={"source_chunk_id": "chunk-1"},
+            payload={
+                "argument_id": "argument-1",
+                "claim": "Alice works with NEXUS.",
+                "evidence": ["Alice is part of the NEXUS project."],
+                "source_chunk_id": "chunk-1",
+                "source_content": "Source content",
+            },
         )
         self.qdrant = FakeQdrant([self.point])
         self.driver = FakeDriver()
@@ -60,14 +91,30 @@ class GraphRetrieverTests(unittest.TestCase):
         self.assertIsInstance(self.qdrant.call["query"], models.FusionQuery)
         self.assertEqual(
             [prefetch.using for prefetch in self.qdrant.call["prefetch"]],
-            ["dense", "bm25"],
+            ["dense", "sparse"],
+        )
+        self.assertEqual(self.qdrant.call["prefetch"][0].query, [0.1, 0.2])
+        self.assertIsInstance(
+            self.qdrant.call["prefetch"][1].query,
+            models.SparseVector,
+        )
+        graph_result = result["results"][0]
+        self.assertEqual(graph_result["result_id"], "point-1")
+        self.assertEqual(graph_result["argument_id"], "argument-1")
+        self.assertEqual(graph_result["claim"], "Alice works with NEXUS.")
+        self.assertEqual(
+            graph_result["evidence"],
+            ["Alice is part of the NEXUS project."],
+        )
+        self.assertEqual(graph_result["source_chunk_id"], "chunk-1")
+        self.assertEqual(
+            graph_result["graph_expansion"]["entities"][0]["name"],
+            "Alice",
         )
         self.assertEqual(
-            [prefetch.query.model for prefetch in self.qdrant.call["prefetch"]],
-            ["BAAI/bge-small-en-v1.5", "Qdrant/bm25"],
+            graph_result["graph_expansion"]["relations"][0]["target"]["name"],
+            "NEXUS",
         )
-        self.assertEqual(result["matches"][0]["chunk_id"], "chunk-1")
-        self.assertEqual(result["records"], [{"entity": "Alice"}])
 
     def test_accepts_existing_embedding_and_custom_cypher(self):
         result = retrieve_graph(
@@ -85,9 +132,10 @@ class GraphRetrieverTests(unittest.TestCase):
         self.assertEqual(query, "RETURN $chunk_ids AS ids")
         self.assertEqual(parameters["chunk_ids"], ["chunk-1"])
         self.assertTrue(parameters["extra"])
-        self.assertEqual(result["matches"][0]["point_id"], "point-1")
+        self.assertEqual(result["results"][0]["result_id"], "point-1")
+        self.assertEqual(parameters["results"][0]["claim"], "Alice works with NEXUS.")
 
-    def test_deduplicates_arguments_from_the_same_chunk(self):
+    def test_preserves_argument_ranks_when_points_share_a_chunk(self):
         self.qdrant.points = [
             self.point,
             SimpleNamespace(
@@ -109,15 +157,28 @@ class GraphRetrieverTests(unittest.TestCase):
         )
 
         self.assertEqual(
-            [match["chunk_id"] for match in result["matches"]],
-            ["chunk-1", "chunk-2"],
+            [item["result_id"] for item in result["results"]],
+            ["point-1", "point-2", "point-3"],
         )
-        self.assertEqual(
-            result["matches"][0]["point_ids"],
-            ["point-1", "point-2"],
-        )
+        self.assertEqual([item["rank"] for item in result["results"]], [1, 2, 3])
         _query, parameters = self.driver.session_instance.call
         self.assertEqual(parameters["chunk_ids"], ["chunk-1", "chunk-2"])
+
+    def test_keeps_claim_and_evidence_when_graph_expansion_is_empty(self):
+        self.driver.session_instance.run = lambda _query, _parameters: []
+
+        result = retrieve_graph(
+            query="question",
+            qdrant_client=self.qdrant,
+            driver=self.driver,
+        )
+
+        graph_result = result["results"][0]
+        self.assertEqual(graph_result["claim"], "Alice works with NEXUS.")
+        self.assertEqual(
+            graph_result["graph_expansion"],
+            {"entities": [], "relations": []},
+        )
 
     def test_requires_exactly_one_query_input(self):
         with self.assertRaisesRegex(ValueError, "exactly one"):

@@ -1,0 +1,1 @@
+First NEXUS seminar-committee meeting to close the second-half programme, balance internal and external sessions and assign owners for content, communication and materials.

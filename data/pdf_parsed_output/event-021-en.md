@@ -1,0 +1,12 @@
+First evaluation of the LUMEN entity-linking module, focusing on historical person names, spelling variants, namesakes and incomplete references found in the Regional Archive collections.
+
+Lucía Navarro: We evaluated 240 person mentions from three collections. Diego, what is the overall result?
+Diego Ramos: Precision is 84 percent, but it falls to 68 percent for initials and common surnames. The most serious errors are links to namesakes from a different period.
+Mateo Ruiz: The photographic fonds contain many names without an occupation or date. Very little context is available.
+Eva Calderón: In those cases, the archive would rather leave the identity unresolved than assign the wrong person.
+Diego Ramos: We can raise the automatic threshold from 0.72 to 0.82 and send intermediate cases for human review.
+Lucía Navarro: What would the effect on coverage be?
+Diego Ramos: Automatic coverage would fall from 76 to 61 percent, but we would eliminate approximately two thirds of false positives.
+Mireia Soler: We can also use uncertain dates and place relationships as additional evidence, provided that they do not become absolute constraints.
+Mateo Ruiz: I will prepare a set of cases involving namesakes, initials and nicknames for the next evaluation.
+Lucía Navarro: Agreed. We will test 0.82 as the conservative threshold, and cases between 0.65 and 0.82 will go to review.

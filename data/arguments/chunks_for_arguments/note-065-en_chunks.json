@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "The open subset will contain only records whose licence permits redistribution of metadata and, when applicable, the digital object. Records with open metadata but a restricted image may be published without the file or thumbnail, provided that the conditions of use are explicit.\n\nEvery item must contain a persistent identifier, collection, title, type, date with precision, agents and roles, place, rights, provenance, and extraction date. ES/EN labels must have passed equivalence review. Personal fields that are not necessary will be removed before publication.\n\nA manifest will provide counts, licences, fields, versions, and excluded items. Eva will approve the object list, and Sergio will run an automated rights check. Any record with an empty, contradictory, or pending licence will remain outside the package even when it is available in the internal demonstrator."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        190
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

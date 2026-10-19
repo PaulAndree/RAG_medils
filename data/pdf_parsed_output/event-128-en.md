@@ -1,0 +1,1 @@
+Second publication-preparation session to freeze the demonstrator version, close tables and supplementary material, and document which data, reproductions and metrics may be shared publicly.

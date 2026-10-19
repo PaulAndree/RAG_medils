@@ -1,0 +1,5 @@
+Atlas-2 currently uses 71% of its usable storage. If ARIADNA and VERDANT continue at the current rate, usage will reach 85% in November 2026 and 92% in February 2027. Reproducible indexes and checkpoints account for approximately 38% of occupied space.
+
+Adding 48 TB would delay the 85% threshold until late 2027. In addition to purchasing capacity, a lifecycle policy is proposed: final results and source data will be retained; reproducible caches and indexes may be deleted after six months; exploratory checkpoints must include an expiry date.
+
+Peak GPU demand is expected to exceed capacity for eight weeks per year. Reserved windows, limits on interactive jobs, and temporary rental during peaks are recommended. Nuria will prepare a quarterly usage report. No new large collection will begin without estimates for storage, backup, and retention period.

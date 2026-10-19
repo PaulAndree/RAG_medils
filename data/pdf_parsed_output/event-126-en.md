@@ -1,0 +1,1 @@
+Second LUMEN demonstrator-design session to apply the first evaluation findings, improve accessibility, simplify terminology explanations and prepare the candidate version for a second user test.

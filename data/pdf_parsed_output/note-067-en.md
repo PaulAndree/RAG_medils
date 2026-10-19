@@ -1,0 +1,5 @@
+Three alert levels are proposed. An informational alert will be generated when one 15-minute interval is missing and the next arrives correctly. A medium alert will appear after four consecutive missing intervals, a timestamp deviation above five minutes, or more than 2% estimated readings within one hour. A critical alert will be triggered by more than one hour without data, repeated authentication errors, or loss of more than 20% of active meters.
+
+Outliers alone will not produce a critical alert because they may represent valid export or shared facilities. They will be combined with reading quality, contracted power, and temporal continuity. Every alert will include the installation, period, triggered rule, and a link to affected observations.
+
+Inés will validate thresholds against four weeks of historical data. Nuria will configure notifications in the technical channel. After two weeks of pilot operation, thresholds will be reviewed to reduce false positives without hiding real interruptions.

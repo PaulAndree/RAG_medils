@@ -1,0 +1,5 @@
+The second ingestion processed 2,080 records: 1,180 items of municipal correspondence and 900 authorized photographs. A total of 1,962 loaded successfully. The remaining 118 consist of 46 encoding errors, 31 uninterpretable dates, 22 references to nonexistent people, 12 duplicate identifiers, and 7 missing digital files.
+
+The encoding errors come from an export in Windows-1252 that was declared as UTF-8. Dates include expressions such as “spring 1947,” which must not be forced into an exact date. References to nonexistent people will remain as unlinked mentions until review. Duplicate identifiers block loading of the affected records.
+
+Sergio will correct character conversion, and Mateo will classify the dates. Diego will review person references, and Eva will search for the seven missing files. Reingestion will run only for failed records. The report must distinguish automatically correctable errors from cases requiring an archival decision.

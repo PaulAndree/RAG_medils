@@ -1,0 +1,1 @@
+First follow-up session for LUMEN's second ingestion to review the 480 candidate objects, apply rights states, check metadata, uncertain dates and entity links, and establish batch acceptance criteria.

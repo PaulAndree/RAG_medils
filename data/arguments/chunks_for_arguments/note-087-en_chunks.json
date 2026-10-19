@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "ORION repositories will be distributed across three locations. Code and reproducible scripts will remain in GitLab in archived read-only mode. Reports, minutes, and contractual documentation will be retained in Nextcloud within the institutional closure folder. Data exports and database copies will be moved to Atlas-2 archival storage.\n\nEach location will include a manifest containing owner, closure date, version, checksum, and retention policy. Data with restricted personal fields will remain in a separate directory accessible only to Elena, Sergio, and Clara. The clean export reusable by ARIADNA will be stored as an independent package.\n\nNuria will verify copies and restore one sample file from each location. The original working environment will not be deleted until restoration is complete. Links in final documents must point to archival locations rather than temporary folders."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        192
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

@@ -1,0 +1,201 @@
+[
+  {
+    "id": "doc-020-en_chunk_1_arg_1",
+    "claim": "The official benchmark count is 2,302 semantic questions and 4,604 ES/EN records.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_2",
+    "claim": "The pilot is planned for 15 September 2026.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_3",
+    "claim": "Reconstruction produced 1,840 training semantic questions, 230 development questions, and 232 test questions.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_4",
+    "claim": "Validation identifies zero orphaned pairs and zero divided groups.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_5",
+    "claim": "BM25 achieves recall@10 of 0.69 and MRR of 0.52.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_6",
+    "claim": "The hybrid system achieves recall@10 of 0.80 and MRR of 0.63.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_7",
+    "claim": "Hybrid retrieval improves semantic, multi-hop, and temporal questions in particular.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_8",
+    "claim": "BM25 remains competitive for exact identifiers and low-ambiguity strings.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_1_arg_9",
+    "claim": "The main configuration uses 256-token chunks.",
+    "evidence": []
+  },
+  {
+    "id": "doc-020-en_chunk_3_arg_1",
+    "claim": "Finding 1 indicates that hybrid retrieval improves semantic retrieval.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_3_arg_2",
+    "claim": "Finding 2 indicates that BM25 locates exact identifiers better.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_3_arg_3",
+    "claim": "Finding 3 indicates that version filters reduce outdated answers.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_3_arg_4",
+    "claim": "Finding 4 indicates that multi-hop cases require more than one source.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_3_arg_5",
+    "claim": "Finding 5 indicates that neighboring citations may be incomplete.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_1",
+    "claim": "Finding 6 indicates that unanswerable questions must distinguish absence from failure.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_2",
+    "claim": "Finding 7 indicates that translations maintain similar results.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_3",
+    "claim": "Finding 8 indicates that hybrid latency remains within the pilot target.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_4",
+    "claim": "Limitation 1 is a corpus centered on NEXUS.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_5",
+    "claim": "Limitation 2 is a limited number of external users.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_6",
+    "claim": "Limitation 3 is document changes after the freeze date.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_7",
+    "claim": "Limitation 4 is dependence on particular multilingual models.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_8",
+    "claim": "Limitation 5 is difficulty adjudicating some temporal cases.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_4_arg_9",
+    "claim": "Limitation 6 is incomplete coverage of administrative domains.",
+    "evidence": [
+      "The report explains its likely effect and avoids presenting the benchmark as a universal measure."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_1",
+    "claim": "Finding 1 indicates that hybrid retrieval improves semantic retrieval.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_2",
+    "claim": "Finding 2 indicates that BM25 locates exact identifiers better.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_3",
+    "claim": "Finding 3 indicates that version filters reduce outdated answers.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_4",
+    "claim": "Finding 4 indicates that multi-hop cases require more than one source.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_5",
+    "claim": "Finding 5 indicates that neighboring citations may be incomplete.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_6",
+    "claim": "Finding 6 indicates that unanswerable questions must distinguish absence from failure.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_7",
+    "claim": "Finding 7 indicates that translations maintain similar results.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  },
+  {
+    "id": "doc-020-en_chunk_7_arg_8",
+    "claim": "Finding 8 indicates that hybrid latency remains within the pilot target.",
+    "evidence": [
+      "The conclusion is supported by metrics and example review."
+    ]
+  }
+]

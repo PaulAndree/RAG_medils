@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "During July and August, ARIADNA needs to run reranking, generation evaluation, and error analysis. Two GPUs will be reserved for reproducible benchmark jobs from Monday to Thursday between 18:00 and 08:00. A third GPU will remain available for short interactive jobs and other projects.\n\nReranking jobs will initially have a twelve-hour limit and must save intermediate results every ten batches. Generation runs will be grouped by configuration to avoid repeatedly loading the same model. Exploratory experiments with models larger than 30 GB will require Nuria's approval and may not block the priority queue.\n\nTomás will publish the run schedule and memory estimates. Nuria will configure quotas and notifications. Jobs without an experiment identifier, recorded configuration, or persistent output path will be cancelled. Usage will be reviewed weekly so unused capacity can be reassigned."
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        192
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}

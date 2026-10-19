@@ -1,0 +1,245 @@
+ARIADNA QUESTION ANNOTATION GUIDE V1.1
+
+1. Purpose
+
+This guide defines how bilingual questions in the ARIADNA benchmark are created, classified, reviewed, and adjudicated. Version 1.1 incorporates revised criteria for temporal questions, multi-hop questions, version comparisons, and unanswerable cases following the reopening of the corpus.
+
+Every semantic question has one Spanish and one English version. Both share the intent, category, difficulty, reference answer, required facts, sources, citations, relevant date, and adjudication decision. Wording must be natural in each language and must not be a mechanical translation revealing answer terms.
+
+2. Principles
+
+Questions must be answerable using the corpus alone. External knowledge, speculative inference, and subjective preference are not permitted. Difficulty must arise from locating, relating, and understanding evidence rather than deliberately confusing wording.
+
+A question remains grouped with its translations, paraphrases, and variants sharing an answer or essential evidence. This grouping prevents leakage across training, development, and test. Split assignment occurs after semantic groups are formed.
+
+Superseded sources remain available for historical questions. A question about the current state uses the version valid at the freeze date. File creation or modification dates do not replace the validity period where the two differ.
+
+3. Annotation structure
+
+The record contains an identifier, languages, question, intent, category, difficulty, reference date, answer, atomic facts, primary sources, alternative sources, citations, required relations, status, and comments. Every field has a defined vocabulary or format.
+
+The reference answer does not impose one exact wording. It defines the facts a valid answer must contain and the conditions preventing an answer. Citations must cover every required fact and use the appropriate version.
+
+Annotation criterion 1
+
+Category 1, direct, is used where the main answer appears as an explicit assertion in one source. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 2
+
+Category 2, temporal, is used where the answer depends on a date, validity period, sequence, or status change. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 3
+
+Category 3, multi-hop, is used where the answer requires combining at least two necessary facts. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 4
+
+Category 4, version comparison, is used where the question requests identification of a difference across versions. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 5
+
+Category 5, unanswerable, is used where the corpus contains insufficient evidence for a reliable answer. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 6
+
+Temporal rule 1, current state, establishes that annotation uses the version current at the freeze date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 7
+
+Temporal rule 2, historical state, establishes that annotation uses the source valid on the explicitly requested date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 8
+
+Temporal rule 3, change, establishes that annotation requires at least two states and the date or event of replacement. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 9
+
+Temporal rule 4, future proposal, establishes that annotation is not treated as current until approval exists. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 10
+
+Temporal rule 5, ambiguous date, establishes that annotation is marked for review or as unanswerable. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 11
+
+Temporal rule 6, time unit, establishes that annotation retains working days, calendar days, months, or an exact date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 12
+
+Multi-hop rule 1, owner and deadline, requires the annotation to first identify the task and then its owner or date. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 13
+
+Multi-hop rule 2, proposal and approval, requires the annotation to distinguish who proposes a change and which source confirms it. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 14
+
+Multi-hop rule 3, project and deliverable, requires the annotation to relate the initiative to the requested artifact or result. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 15
+
+Multi-hop rule 4, event and decision, requires the annotation to link a meeting or milestone to the recorded decision. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 16
+
+Multi-hop rule 5, version and requirement, requires the annotation to locate the appropriate version and then extract the requirement. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 17
+
+Multi-hop rule 6, three hops, requires the annotation to reserve it for advanced difficulty and justify every relation. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 18
+
+Unanswerable case 1 is missing fact. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 19
+
+Unanswerable case 2 is unresolvable reference date. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 20
+
+Unanswerable case 3 is contradictory sources without a resolution rule. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 21
+
+Unanswerable case 4 is question that is too ambiguous. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 22
+
+Unanswerable case 5 is speculative inference only. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 23
+
+Unanswerable case 6 is required version not yet incorporated. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 24
+
+Review control 1 covers naturalness. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 25
+
+Review control 2 covers bilingual equivalence. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 26
+
+Review control 3 covers fact coverage. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 27
+
+Review control 4 covers citation validity. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 28
+
+Review control 5 covers difficulty. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 29
+
+Review control 6 covers semantic duplication. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 30
+
+Review control 7 covers validity. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 31
+
+Review control 8 covers unanswerability. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 32
+
+Review control 9 covers relations. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 33
+
+Review control 10 covers adjudication status. A person other than the question author examines the record and complete source. Disagreements are recorded with the initial label, proposal, and final decision. Semantic changes are applied to both language versions. A question becomes approved only where no critical field remains pending and its citations can be located in the original artifacts.
+
+Annotation criterion 34
+
+Category 1, direct, is used where the main answer appears as an explicit assertion in one source. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 35
+
+Category 2, temporal, is used where the answer depends on a date, validity period, sequence, or status change. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 36
+
+Category 3, multi-hop, is used where the answer requires combining at least two necessary facts. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 37
+
+Category 4, version comparison, is used where the question requests identification of a difference across versions. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 38
+
+Category 5, unanswerable, is used where the corpus contains insufficient evidence for a reliable answer. The annotator must justify the category and discard close alternatives. A question is not classified by the number of documents retrieved by a system but by the evidence required in the corpus. ES/EN pairs always receive the same category and equivalent sources. Uncertain cases enter adjudication and do not enter the official split until resolved.
+
+Annotation criterion 39
+
+Temporal rule 1, current state, establishes that annotation uses the version current at the freeze date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 40
+
+Temporal rule 2, historical state, establishes that annotation uses the source valid on the explicitly requested date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 41
+
+Temporal rule 3, change, establishes that annotation requires at least two states and the date or event of replacement. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 42
+
+Temporal rule 4, future proposal, establishes that annotation is not treated as current until approval exists. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 43
+
+Temporal rule 5, ambiguous date, establishes that annotation is marked for review or as unanswerable. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 44
+
+Temporal rule 6, time unit, establishes that annotation retains working days, calendar days, months, or an exact date. The record stores the relevant time and the source proving validity. Where a rule announces a change not yet effective, the answer distinguishes the current state from the future modification. An email or document date is used only where it truly represents the event time. Previous_version and next_version relations are verified before approval.
+
+Annotation criterion 45
+
+Multi-hop rule 1, owner and deadline, requires the annotation to first identify the task and then its owner or date. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 46
+
+Multi-hop rule 2, proposal and approval, requires the annotation to distinguish who proposes a change and which source confirms it. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 47
+
+Multi-hop rule 3, project and deliverable, requires the annotation to relate the initiative to the requested artifact or result. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 48
+
+Multi-hop rule 4, event and decision, requires the annotation to link a meeting or milestone to the recorded decision. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 49
+
+Multi-hop rule 5, version and requirement, requires the annotation to locate the appropriate version and then extract the requirement. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 50
+
+Multi-hop rule 6, three hops, requires the annotation to reserve it for advanced difficulty and justify every relation. Hops must be necessary and appear in the logical order of the answer. Where one source directly contains every fact, the question is not multi-hop even if related sources exist. Every hop links to a corpus identifier or relation. Connections based only on general knowledge or thematic similarity are not permitted.
+
+Annotation criterion 51
+
+Unanswerable case 1 is missing fact. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 52
+
+Unanswerable case 2 is unresolvable reference date. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 53
+
+Unanswerable case 3 is contradictory sources without a resolution rule. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 54
+
+Unanswerable case 4 is question that is too ambiguous. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 55
+
+Unanswerable case 5 is speculative inference only. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.
+
+Annotation criterion 56
+
+Unanswerable case 6 is required version not yet incorporated. Before assigning this category, related documents, notes, emails, and versions are reviewed. An insufficient retrieved chunk does not demonstrate absence from the corpus. The expected response briefly states that evidence is insufficient and does not invent an estimate. Cases that become answerable after a pending ingestion remain outside the official set until completion.

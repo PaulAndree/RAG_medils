@@ -1,0 +1,17 @@
+{
+    "chunk_list": [
+        "Date: 2026-02-25T09:30:00Z\nAuthor: Lucía Navarro Gil\nMessage: We need to decide which images may be shown in the demonstration and whether pending permissions require postponement.\n\nDate: 2026-02-25T09:32:00Z\nAuthor: Eva Calderón Gil\nMessage: The current selection contains 36 images. Twenty-five are public domain, and eleven have incomplete documentation.\n\nDate: 2026-02-25T09:34:00Z\nAuthor: Mateo Ruiz Serra\nMessage: The eleven incomplete images are important for showing collection diversity, but they are not essential to the main functions.\n\nDate: 2026-02-25T09:36:00Z\nAuthor: Clara Ibáñez Soto\nMessage: We should not display reproductions without a clear documentary basis, even if the session is internal.\n\nDate: 2026-02-25T09:39:00Z\nAuthor: Nuria Castaño Rey\nMessage: I can configure the demonstrator to display the record and metadata without loading the image.\n\nDate: 2026-02-25T09:42:00Z\nAuthor: Lucía Navarro Gil\nMessage: How many could be resolved before the planned date?\n\nDate: 2026-02-25T09:45:00Z\nAuthor: Eva Calderón Gil\nMessage: The archive expects to confirm three this week. The other eight require external authorization.\n\nDate: 2026-02-25T09:48:00Z\nAuthor: Mateo Ruiz Serra\nMessage: Then we can prepare 28 images and leave eight as metadata-only.\n\nDate: 2026-02-25T09:51:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The interface must explain why no reproduction is available without suggesting a technical failure.\n\nDate: 2026-02-25T09:54:00Z\nAuthor: Nuria Castaño Rey\nMessage: I will add the message Reproduction unavailable because of conditions of use.\n\nDate: 2026-02-25T09:57:00Z\nAuthor: Lucía Navarro Gil\nMessage: Can the demonstration proceed with that limitation?\n\nDate: 2026-02-25T10:00:00Z\nAuthor: Eva Calderón Gil\nMessage: Yes, provided the script does not promise complete visual access and distinguishes public domain, active permission and metadata-only.\n\nDate: 2026-02-25T10:03:00Z\nAuthor: Mateo Ruiz Serra\nMessage: We can turn it into a useful part of the demonstrator by showing how rights are managed.\n\nDate: 2026-02-25T10:06:00Z\nAuthor: Clara Ibáñez Soto\nMessage: That requires every image to have a source, rights holder, permission type and review date.\n\nDate: 2026-02-25T10:09:00Z\nAuthor: Nuria Castaño Rey\nMessage: I will also block thumbnail caching for metadata-only objects.\n\nDate: 2026-02-25T10:12:00Z\nAuthor: Lucía Navarro Gil\nMessage: Do we need additional approval for the twenty-five public-domain images?\n\nDate: 2026-02-25T10:15:00Z\nAuthor: Eva Calderón Gil\nMessage: Only attribution and source need checking. They do not require new permission.\n\nDate: 2026-02-25T10:18:00Z\nAuthor: Mateo Ruiz Serra\nMessage: I will update the script with one case for each rights state.\n\nDate: 2026-02-25T10:21:00Z\nAuthor: Clara Ibáñez Soto\nMessage: The date will not be postponed, but the selection is conditional on a closed rights register 48 hours beforehand.",
+        "Date: 2026-02-25T10:25:00Z\nAuthor: Lucía Navarro Gil\nMessage: Agreed: the demo proceeds, we use authorized images and show metadata without reproduction for the eight pending cases."
+    ],
+    "chunk_title": [
+        " ",
+        " "
+    ],
+    "token_count": [
+        753,
+        48
+    ],
+    "chunk_size": 2,
+    "chunk_language": "en",
+    "output_path": ""
+}

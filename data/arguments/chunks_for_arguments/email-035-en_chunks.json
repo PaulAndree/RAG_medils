@@ -1,0 +1,14 @@
+{
+    "chunk_list": [
+        "Sender: Carmen Rey <carmen.rey@solcentro.example>\nRecipient: Andrés Beltrán Vega <andres.beltran@upsc.example>, Inés Ferrer Lozano <ines.ferrer@upsc.example>\nTitle: Delivery of the revised SolCentro export\n\nHello,\n\nThe revised SolCentro export is now available. It contains the stable installation identifier, declared time zone, quality code, contracted power, and a flag distinguishing a meter reset from physical replacement.\n\nWe have also retained the device identifier for traceability, but it must not be used as the historical key. Quality values distinguish measured, estimated, and corrected readings. I have attached an updated dictionary and a sample containing valid null values.\n\nPlease confirm that the schema is sufficient before the full load begins.\n\nBest regards,\nCarmen"
+    ],
+    "chunk_title": [
+        " "
+    ],
+    "token_count": [
+        198
+    ],
+    "chunk_size": 1,
+    "chunk_language": "en",
+    "output_path": ""
+}
