@@ -1,1 +1,0 @@
-Third uncertain-date review to approve the final interval and approximation model, validate its behavior in search and display, and establish provenance rules for inferred dates.

@@ -1,5 +1,0 @@
-The mapping corrections must be checked with a regression set independent of the records used during diagnosis. Twenty-four procedures were selected: six permits, five certificates, four grants, four prior notifications, and five informational procedures.
-
-Tests will verify unique identifier, competent unit, legal basis, delivery channel, deadline, status, and ES/EN labels. The set will also contain two cases with non-applicable data and three fields awaiting validation, ensuring that they are not converted into unexplained missing values.
-
-The expected result is zero duplicate identifiers and zero labels without a language. Channel rules may produce warnings, but not errors, for informational procedures. Alba will maintain the test data, and Mireia will run validation after every change. Any case that fails again will block publication of ontology v1.2.

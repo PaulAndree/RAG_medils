@@ -1,5 +1,0 @@
-Version 1.2 must correct the bilingual labels identified in version 1.1. In particular, “servicio público” will be translated as “public service,” not “public procedure”; “unidad competente” will be “competent unit”; and “canal de prestación” will be “service delivery channel.” Class identifiers will be preserved so existing mappings are not broken.
-
-The general status of a procedure will also be separated from the status of a specific application. Cardinality constraints will be added for identifiers, responsible unit, and legal basis, together with a documented exception for purely informational procedures. Examples will include a permit, a grant, and a certificate.
-
-Version 1.1 must be retained and linked as the previous version. Mireia will prepare the technical change, and Javier will review the definitions. Publication of version 1.2 will depend on batch 3 passing validation without critical errors.

@@ -1,1 +1,0 @@
-Third SILEX regression session to run the final test suite over the stable environment, verify municipal data copies and confirm that the system is ready for the pilot.

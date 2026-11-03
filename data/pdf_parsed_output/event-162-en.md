@@ -1,1 +1,0 @@
-Second ARIADNA annotation-adjudication session to review false abstentions, answers issued without current evidence and the quality of clarifications proposed by the v2.2 candidate.

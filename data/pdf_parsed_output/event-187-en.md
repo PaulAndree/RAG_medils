@@ -1,1 +1,0 @@
-First NEXUS teaching-coordination session to organize autumn courses, doctoral supervision and seminars while avoiding conflicts with confirmed project pilots and deliverables.

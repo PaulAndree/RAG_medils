@@ -1,1 +1,0 @@
-First ARIADNA retrieval comparison to measure BM25, dense and hybrid retrieval over answerable and unanswerable questions and select abstention signals without accessing the closed test set.

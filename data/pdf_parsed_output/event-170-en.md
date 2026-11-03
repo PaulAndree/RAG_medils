@@ -1,1 +1,0 @@
-Fourth unanswerable-question review to analyze initial post-v2.2 feedback, classify minor adjustments and approve a maintenance roadmap without reopening v2.1 or modifying official results.

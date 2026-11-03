@@ -1,1 +1,0 @@
-First LUMEN publication-preparation session to define the scientific contribution, assign sections, select reproducible results and clearly separate terminology decisions, linking evaluation and user testing.

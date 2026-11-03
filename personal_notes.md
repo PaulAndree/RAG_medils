@@ -12,22 +12,16 @@
 
       build de indexer images: (apply changes)
 
-      docker compose build \
-        passage-indexer \
-        argument-indexer \
-        summary-indexer
+      docker compose build summary-indexer
 
-      Run the validated each representation indexer:
-      docker compose --profile jobs run --rm passage-indexer
-      docker compose --profile jobs run --rm argument-indexer
+      Run the unified RAPTOR summary indexer:
       docker compose --profile jobs run --rm summary-indexer
-      docker compose --profile jobs run --rm graph-indexer
 
 
 Start the API:
 docker compose build api
 docker compose up -d api
-curl http://127.0.0.1:8002/health/live
+curl http://127.0.0.1:8009/health/live
 
 
 
@@ -38,9 +32,7 @@ docker compose exec -T postgres psql \
   -U raguser \
   -d ragdb \
   -c "
-    SELECT 'passages' AS representation, count(*) FROM chunks
-    UNION ALL
-    SELECT 'arguments', count(*) FROM arguments
+    SELECT 'documents' AS representation, count(*) FROM documents
     UNION ALL
     SELECT 'summaries', count(*) FROM summaries;
   "
@@ -54,7 +46,7 @@ docker compose exec postgres psql -U raguser -d ragdb \
 
 -------------------------------------------------------------------------------------------
 ARCHITECTURE:
-Passages and summaries uses:  FastEmbed → BAAI/bge-small-en-v1.5
+Summaries use the configured dense and sparse embedding models.
 
 - PostgreSQL on host port 5432
 - Qdrant on host ports 6335 and 6336
@@ -64,20 +56,31 @@ Passages and summaries uses:  FastEmbed → BAAI/bge-small-en-v1.5
 
 - CSSH Tunnel to access from local!!
 
-ssh -N -L 6335:127.0.0.1:6335 -L 8004:127.0.0.1:8002 -L 9090:127.0.0.1:9090 -L 3003:127.0.0.1:3003 -L 7474:127.0.0.1:7474 -L 7687:127.0.0.1:7687 peyzaguirre@wiig.dia.fi.upm.es
+Qdrant 6337, API Retrieval 8005, Promotheus 9092, Chatbot UI 3005
 
-ssh -L 7474:127.0.0.1:7474 -L 7687:127.0.0.1:7687 peyzaguirre@wiig.dia.fi.upm.es
+ssh -N -L 6337:127.0.0.1:6337 -L 8005:127.0.0.1:8005 -L 9092:127.0.0.1:9092 -L 3005:127.0.0.1:3005 peyzaguirre@wiig.dia.fi.upm.es
+
 
 Then open:
-API documentation: http://localhost:8002/docs
-Prometheus: http://localhost:9090
-Grafana: http://localhost:3003
-Qdrant: http://localhost:6335/dashboard
+API documentation: http://localhost:8004/docs
+Qdrant: http://localhost:6337/dashboard
+Grafana: http://127.0.0.1:3004
+PostgreSQL: 127.0.0.1:5433
+Prometheus: http://127.0.0.1:9092
+Pushgateway: http://127.0.0.1:9093
 
-http://localhost:7474/browser/
-Username: neo4j
-Password: ragpassword
 
+For a fresh restart delete the table on POSTGRESQL
+DROP public.summaries CASCADE
+
+API :
+
+docker compose up -d --build api-medils
+docker compose logs -f api-medils
+
+You must also restart the Next.js frontend so it loads the new runtime code:
+cd /home/peyzaguirre/notebooks/chat_ui/rag-chatbot
+npm run dev
 
 
 {
@@ -85,11 +88,4 @@ Password: ragpassword
   "limit": 5,
   "retrievals": ["summaries", "graph"]
 }
-
-Allowed values:
-- "documents"
-- "summaries"
-- "graph"
-If retrievals is omitted, all three run by default. Unselected result fields remain present but empty.
-
 

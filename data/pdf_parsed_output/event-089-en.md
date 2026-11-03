@@ -1,1 +1,0 @@
-Third infrastructure review to verify the Atlas-2 expansion, review secure VERDANT container execution, check backups and restoration, and update capacity forecasts for the second half of the year.

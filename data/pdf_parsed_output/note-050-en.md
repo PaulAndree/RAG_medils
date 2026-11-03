@@ -1,5 +1,0 @@
-The registry review identified eighteen issues. Seven bilingual pairs use different base identifiers, five new versions do not link to the previous version, three files have a target filename that does not match their `id`, and three entries mark already superseded documents as current.
-
-The most important problem affects the LUMEN terminology guide: version 1.1 is registered, but version 1.0 lacks the `next_version` relation. In ARIADNA, report v1.0 still appears as the current document in one tracking sheet. An English event without the corresponding `parallel_version` reference was also found.
-
-Corrections must first be made in the master registry and then propagated to the JSON files. Only one language must never be edited manually. Clara will prepare an issue table, Sergio will validate identifiers automatically, and Lucía will review equivalence for the affected pairs. Closure requires zero orphaned pairs and zero version cycles.

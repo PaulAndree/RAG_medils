@@ -1,1 +1,0 @@
-Third publication-preparation session to close the LUMEN manuscript, link demo-1.0 and the frozen dataset, verify licences for supplementary material and approve the submission package.

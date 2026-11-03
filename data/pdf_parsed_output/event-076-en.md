@@ -1,1 +1,0 @@
-Fifth retrieval evaluation to compare normalization and acronym-expansion candidates over development and stress material and select which components will advance toward a formal ARIADNA v2.2 evaluation.

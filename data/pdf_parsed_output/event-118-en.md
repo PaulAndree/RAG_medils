@@ -1,1 +1,0 @@
-Fourth SILEX regression session to validate update 1.2.1, confirm that synonyms and PDF export do not alter approved functions and close the first maintenance cycle.

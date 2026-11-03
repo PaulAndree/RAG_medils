@@ -1,1 +1,0 @@
-Fourth doctoral and supervision forum to review autumn deliverables, prepare final handover from Yara's visit and ensure that doctoral contributions are linked to approved versions and decisions.

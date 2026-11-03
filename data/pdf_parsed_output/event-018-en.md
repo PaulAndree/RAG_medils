@@ -1,1 +1,0 @@
-Fourth SILEX mapping-validation session to run regression tests for ontology version 1.2, verify the bilingual labels and authorize its inclusion in the pre-production environment for the November pilot.

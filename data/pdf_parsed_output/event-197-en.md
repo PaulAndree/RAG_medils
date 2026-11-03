@@ -1,1 +1,0 @@
-Second teaching-coordination session to adjust assessment and supervision during the SILEX pilot and final-quarter closures and approve a preliminary teaching and seminar schedule for 2027.

@@ -1,5 +1,0 @@
-The audit reviewed forty-two accounts across Nextcloud, GitLab, Atlas-2, and the task manager. Eleven permissions were no longer required: four student accounts linked to completed projects, three administrator permissions retained after a role change, two expired partner accounts, and two service accounts without a recorded owner.
-
-Five cross-system differences were also found: people with access to the code repository but not the corresponding documentation, or the reverse. No external access to restricted data was found. Accounts inactive for more than 180 days were reviewed individually before removal was proposed.
-
-Nuria will revoke unnecessary permissions and assign owners to service accounts. Rosa will confirm the contractual status of students and partners. Clara will update the master register. The audit will close when revocations have been verified and role profiles match across all systems.

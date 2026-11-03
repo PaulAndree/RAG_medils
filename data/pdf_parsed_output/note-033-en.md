@@ -1,5 +1,0 @@
-The internal pilot is planned to begin on 15 September. The date depends on five conditions: a current frozen corpus, a validated evaluation split, a deployed bilingual interface, completed user training, and a closed privacy review.
-
-The corpus freeze has moved to 31 May because of the outdated travel rules. The interface must be available in pre-production on 17 August to allow accessibility testing. Training will take place during the first week of September with two groups of ten people. Marta Velasco will confirm the participant list by 24 August.
-
-The pilot must not begin if answer citations do not link reliably to the correct source. Nuria will prepare monitoring and an incident channel. Pablo will draft the user guide. If any critical condition is delayed by more than one week, the committee will review the date rather than reducing validation work.

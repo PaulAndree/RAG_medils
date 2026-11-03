@@ -1,1 +1,0 @@
-First dedicated infrastructure-capacity review to forecast Atlas-2 storage, CPU, memory and operational windows during the intensive SILEX, VERDANT and ARIADNA cycles.

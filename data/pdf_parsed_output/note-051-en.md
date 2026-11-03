@@ -1,5 +1,0 @@
-The API must use standard HTTP status codes and a common error body. Five initial functional errors are proposed: procedure not found, invalid parameter, incorrect date format, unauthorized access, and temporarily unavailable service.
-
-The body will contain `code`, `message`, `details`, `requestId`, and `timestamp`. The `code` field will be stable and independent of language. `message` will be returned in Spanish or English according to the language header, while `details` may include the affected field name. Internal server information and stack traces must not be exposed.
-
-For example, an invalid date will return HTTP 400 with code `SILEX_INVALID_DATE`. A missing procedure will return 404 with `SILEX_PROCEDURE_NOT_FOUND`. Authentication errors will use 401 and authorization errors 403. Nuria will add the examples to the specification and create tests for both languages.

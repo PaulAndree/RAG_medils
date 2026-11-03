@@ -1,1 +1,0 @@
-Second VERDANT architecture review to incorporate signed access decisions, transformation provenance, certificate renewal and separate representation of synthetic, hourly and 15-minute data.

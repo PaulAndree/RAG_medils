@@ -1,1 +1,0 @@
-Fourth VERDANT architecture review to assess connector capacity, automate certificate renewal, improve rejection messages and prepare the controlled addition of new facilities to the federated catalogue.

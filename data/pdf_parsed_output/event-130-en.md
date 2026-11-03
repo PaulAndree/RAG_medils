@@ -1,1 +1,0 @@
-Third ingestion follow-up session to approve the final 480-object batch, verify rights, dates and links, and freeze the data version used by the demonstrator and publication.

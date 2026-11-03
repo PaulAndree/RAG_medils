@@ -1,1 +1,0 @@
-Second NEXUS internal seminar, focused on reproducible retrieval and RAG evaluation, separation of development and test data, and contamination risks through examples, caches and configuration selection.

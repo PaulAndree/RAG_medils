@@ -1,1 +1,0 @@
-First user evaluation of the new LUMEN demonstrator with Regional Archive staff to test search, interpretation of dates, archival roles, entity links and rights states.

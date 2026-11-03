@@ -1,5 +1,0 @@
-Two options were compared for representing the status of a procedure. The first uses a closed list of values inside the ontology. The second models statuses as SKOS concepts, allowing municipal equivalents to be added without changing the core schema. The second option appears more suitable for the pilot.
-
-The proposed minimum vocabulary includes: draft, submitted, under review, correction requested, resolved, and archived. “Withdrawn” and “cancelled” must not be merged: the former results from an action by the applicant, while the latter follows an administrative or technical decision. The status of a procedure must also remain distinct from the status of a specific application.
-
-Queries must be able to retrieve both the current status and the change history. The representation of appeals and reopened cases remains unresolved. Before the model is finalized, Alba will prepare three complete examples based on real Santa Marina procedures.

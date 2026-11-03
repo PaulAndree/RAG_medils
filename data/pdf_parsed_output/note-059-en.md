@@ -1,5 +1,0 @@
-The Regional Archive has cleared twelve objects for the public demonstrator: six photographs, three letters, two posters, and one inventory record. Eight may be shown with a full image, while four may be displayed only as a thumbnail with metadata. Permission covers academic demonstrations and internal access but not open publication of the original file.
-
-Each object must display its identifier, collection, rights holder, and conditions of use. Images must not be downloadable through the interface. Letters will use partial transcriptions to avoid personal information appearing in margins. One poster requires specific attribution to the photographer responsible for the digital reproduction.
-
-Eva will send the signed list, and Mateo will update the script. The three objects still awaiting permission will remain excluded. The application must continue to work if an authorized object is later withdrawn, using an object of the same type or a metadata-only record.

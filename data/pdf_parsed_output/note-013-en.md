@@ -1,5 +1,0 @@
-Official place names must not be translated automatically. “Santa Marina,” “Monteverde,” and “Ribera Alta” will remain preferred labels in both Spanish and English when they refer to specific administrative entities. A translation may appear in an explanatory description, but it must not replace the proper name.
-
-Historical variants will be preserved as alternative labels with their period of use and source. For example, “Villa de Santa Marina” will be a historical variant of “Santa Marina,” not a new entity, unless the document describes a different jurisdiction. Abbreviations and spelling errors must be recorded separately from authorized variants.
-
-For disambiguation, each place should include its type, parent administrative entity, and coordinates when available. Eva will provide the archive gazetteer; Yara will review ES/EN label consistency before the next ingestion.

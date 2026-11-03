@@ -1,5 +1,0 @@
-On the corrected split, BM25 achieves recall@10 of 0.69, MRR of 0.52, and median latency of 74 ms. The hybrid system reaches recall@10 of 0.80, MRR of 0.63, and latency of 182 ms. The hybrid system improves most on paraphrases and bilingual queries, while BM25 remains competitive for exact names, codes, and titles.
-
-By category, the hybrid improvement is sixteen points for semantic questions, twelve for multi-hop questions, and five for temporal questions. For queries containing exact identifiers, BM25 slightly outperforms the hybrid system. BM25 should remain the basic baseline, with hybrid fusion used as the main baseline.
-
-Metrics will be calculated with three seeds for approximate components. Tomás will add variation intervals and indexing cost. Results affected by the old split will not be mixed into this table. Every comparison must state the 256-token chunking configuration and corpus freeze date.

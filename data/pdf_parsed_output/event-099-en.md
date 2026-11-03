@@ -1,1 +1,0 @@
-Fifth infrastructure review to check SILEX pre-production, ensure preservation of LUMEN and ARIADNA, review capacity after the expanded VERDANT pilot and close the final-quarter technical plan.

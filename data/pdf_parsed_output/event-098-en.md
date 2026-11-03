@@ -1,1 +1,0 @@
-Fifth NEXUS internal seminar, focused on the outcomes of Yara's visit: bilingual ontology alignment, terminology decisions, rules for legacy records and handover recommendations.

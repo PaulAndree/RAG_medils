@@ -1,6 +1,5 @@
 
-python evaluation/retrieval_metrics.py --questions /home/peyzaguirre/learning_1/evaluation/questions_GT/nexus_questions_spanish_doc_only.json
-
+python retrieval_metrics_all.py --questions /home/peyzaguirre/learning/RAG_medils/evaluation/questions_GT_all/nexus_questions_spanish_GT.json --judge-provider openai --model gpt-4.1-mini
 
 
 

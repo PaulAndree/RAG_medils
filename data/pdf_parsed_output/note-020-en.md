@@ -1,5 +1,0 @@
-The sample of 18,240 readings contains 74 negative values. The initial review indicates that 61 represent valid energy export to the grid, 9 coincide with sensor resets, and 4 still have no explanation. Negative values must therefore not all be replaced with zero.
-
-The model should separate direction and magnitude when the source supports this. For older data without a direction field, the sign will be retained together with a flag indicating that interpretation is pending. Twelve power values above 25 kW were also detected; ten correspond to shared facilities, and two require confirmation from SolCentro.
-
-Inés will prepare separate rules for valid export, reset events, and anomalous values. Sergio will add continuity checks before and after each reset. The four unexplained negative values and the two unconfirmed outliers will be excluded from pilot aggregates until the review is complete.

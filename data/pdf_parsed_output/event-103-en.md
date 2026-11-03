@@ -1,1 +1,0 @@
-First regression session in the new SILEX cycle to verify that ontology 1.2 and API improvements do not alter the 62 procedures, bilingual labels or pilot acceptance criteria.

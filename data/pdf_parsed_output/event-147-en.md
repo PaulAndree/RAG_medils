@@ -1,1 +1,0 @@
-Third VERDANT monitoring review to assess the start of the autumn phase, review retention, auditing and suppression, and prepare the evidence required for final evaluation.

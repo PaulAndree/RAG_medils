@@ -1,5 +1,0 @@
-The corpus inventory contains four travel-related sources. Two are current, one is a form without normative content, and one is the 2023 policy, which was superseded on 1 March 2026. The old version sets a reporting deadline of fifteen days, whereas the current policy establishes ten working days.
-
-The 2023 policy appears in eighteen index chunks and is the top retrieved source for six questions. It must not be removed from the historical archive because it will support temporal questions, but it must be marked with its validity period and supersession relation. Questions about the current procedure must use the 2026 version.
-
-A procurement guide modified in February and an ethics form withdrawn in January were also identified. Clara will verify their replacements. Sergio will reopen ingestion, update version relations, and rebuild the indexes. The new corpus freeze will occur after these three document families have been validated.

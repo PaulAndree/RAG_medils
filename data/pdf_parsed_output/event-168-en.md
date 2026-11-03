@@ -1,1 +1,0 @@
-Third ARIADNA user evaluation to validate v2.2-rc2, test presentation of conflicting sources and human review and decide whether the abstention interface may advance to internal release.

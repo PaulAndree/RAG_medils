@@ -1,1 +1,0 @@
-Second ARIADNA release-preparation session to assemble v2.2-rc1, separate official v2.1 results from maintenance analysis and document abstention, clarifications and evidence controls.

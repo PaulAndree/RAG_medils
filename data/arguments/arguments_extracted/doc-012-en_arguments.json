@@ -1,9 +1,0 @@
-[
-  {
-    "id": "doc-012-en_chunk_6_arg_1",
-    "claim": "Risk 1 is exposure of overly granular intervals.",
-    "evidence": [
-      "Probability, impact, owner, control, date, and evidence are documented. Mitigation is verified through a specific test. If it materializes, the product or connector is disabled, secure records are retained, and organizations are informed. It closes only after the test is repeated successfully."
-    ]
-  }
-]

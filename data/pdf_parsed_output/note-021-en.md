@@ -1,5 +1,0 @@
-An initial matrix with four roles is proposed for the VERDANT pilot. The requester describes the purpose, required dataset, duration, and expected outputs. The dataset owner verifies that the request is compatible with the conditions of use. The access committee approves, rejects, or imposes restrictions. The administrator applies the decision technically but cannot approve their own request.
-
-Requests for aggregated data used in pilot operations may follow a simplified procedure. Access to 15-minute readings, meter identifiers, or combinations that could reveal consumption habits will require full review and additional justification. Every exception must include an expiry date and a person responsible for follow-up.
-
-It remains undecided whether the committee requires unanimity or a simple majority. Andrés proposes a majority of two of its three members, provided that the privacy representative participates. Sergio will prepare the request form and a decision log. No access should remain active after its declared purpose has ended.

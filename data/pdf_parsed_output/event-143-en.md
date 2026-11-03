@@ -1,1 +1,0 @@
-Second VERDANT connector-security session to verify automatic secret rotation, review authentication logs, test certificate revocation and close security actions from the initial phase.

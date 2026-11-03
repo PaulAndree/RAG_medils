@@ -1,1 +1,0 @@
-Second SILEX closure session to approve the provisional closure file, verify preservation and responsibilities, and record that final closure remains pending the November municipal pilot and subsequent actions.

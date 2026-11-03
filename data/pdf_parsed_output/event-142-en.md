@@ -1,1 +1,0 @@
-Second VERDANT monitoring review to assess the first two weeks with six facilities, check alerts, dynamic suppression, deletion and synchronization, and adjust thresholds before the monthly review.

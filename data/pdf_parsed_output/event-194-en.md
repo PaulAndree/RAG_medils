@@ -1,1 +1,0 @@
-Second seminar-committee meeting to evaluate second-half sessions, close reusable materials and propose themes and speakers for the 2027 programme.

@@ -1,5 +1,0 @@
-Pilot evaluation will combine data, technical, and user indicators. Data measures will include the percentage of procedures with a stable identifier, competent unit, legal basis, channel, and deadline. The target is at least 95% completeness for mandatory fields and zero duplicate identifiers.
-
-Technical indicators will cover API availability, response time, loading errors, and the percentage of bilingual queries returning the same result set. The response-time target is below two seconds at the 95th percentile. ES/EN equivalence must reach at least 98%.
-
-Users will perform six tasks and rate clarity, search ease, and usefulness. Open comments will also be collected. Critical problems are those that prevent a procedure from being found, display an incorrect deadline, or produce different results by language. Alba will prepare the data, and Luis will coordinate municipal participants.

@@ -1,1 +1,0 @@
-Second ORION legacy-data reuse session to review the first derivative-copy requests, approve conditions of use and close the post-project preservation and reuse cycle.

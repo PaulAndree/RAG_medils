@@ -1,1 +1,0 @@
-First ARIADNA internal pilot review to define user profiles, minimum interface functions, the testing schedule and how to display sources, document versions and answer limitations.

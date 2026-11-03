@@ -1,5 +1,0 @@
-Five administrative elements remain before SILEX can be closed: formal acceptance of the final report, the definitive expenditure statement, a software and data inventory, a licence-compliance declaration, and a record transferring the pilot to the municipality.
-
-Clara must receive outstanding invoices by 20 November. Nuria will prepare the list of repositories, versions, and licences. Sergio will document delivered datasets and those that remain restricted. Javier will ask Luis Noguera to sign the transfer record after evaluation is complete.
-
-Scientific and financial closure have different dates. The final report may be approved in December, but expenditure must be registered before the accounting cutoff. Registration data will not be included among transferred assets if the licence remains unconfirmed. All evidence will be stored in the closure folder using controlled names and versions.

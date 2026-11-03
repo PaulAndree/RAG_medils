@@ -4,6 +4,15 @@ venv/
 env/
 data_DOC_EN/
 data_DOC_ES/
+data/
+data_all_EN/
+representations.log
+evaluation/
+tests/*
+!tests/test_stores_raptor.py
+!tests/test_ingest_api.py
+!tests/test_ingest_processing.py
+!tests/test_ingest_integration.py
 
 # Python-generated files
 __pycache__/

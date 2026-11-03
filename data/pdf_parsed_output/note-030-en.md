@@ -1,5 +1,0 @@
-A temporal question must state the relevant time explicitly or allow it to be inferred unambiguously. “What is the current deadline?” is answered using the version in force at the benchmark cutoff date. “What was the deadline in February 2026?” requires the source valid during that month. “How did the deadline change?” requires at least two versions and the supersession date.
-
-The answer must preserve the exact temporal unit: calendar days, working days, months, or a specific date. If a source announces a future change that is not yet in force, it must not be treated as the current rule. File creation or modification dates do not replace a validity period when the two differ.
-
-A question will be marked unanswerable if its reference date cannot be resolved from the corpus. Evidence will include the requested fact and, when necessary, the relationship between versions. Lucía will add positive and negative examples to guide v1.1.

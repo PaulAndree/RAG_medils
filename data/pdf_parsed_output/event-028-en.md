@@ -1,1 +1,0 @@
-Second coordination meeting for Yara's visit to assess the work remaining after the terminology review and decide whether to request an extension from 30 June through 30 September 2026.

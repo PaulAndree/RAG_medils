@@ -1,5 +1,0 @@
-Four risks remain open before connecting SolCentro's environment to Instituto Técnico do Norte. The highest-priority issue is manual secret rotation, which could leave credentials valid longer than intended. The team must also restrict the administration endpoint by network address, verify that traces remove sensitive headers, and test certificate revocation during an active session.
-
-None of these risks has caused a known exposure. However, external testing must not begin while the administration endpoint is reachable from unauthorized networks. Removing tokens from logs is mandatory because traces will be shared between teams during diagnosis.
-
-Nuria will implement network restrictions and trace sanitization. Bruno will prepare the revocation test. Sergio will document the rotation process and assign owners. A new testing date will be set only after all four controls have been verified and the security report states that no critical blockers remain.

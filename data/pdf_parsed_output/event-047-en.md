@@ -1,1 +1,0 @@
-Third VERDANT architecture review to incorporate local container execution, output review, audit records and technical separation between hourly-data transfer and analysis over 15-minute data that remains at the source.

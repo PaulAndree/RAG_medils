@@ -1,5 +1,0 @@
-Three activities are concentrated in the second half of July: final review of the SILEX ontology, the LUMEN demonstration, and closure of ARIADNA report v1.1. Elena will be away from 18 to 26 July, Lucía from 21 to 24 July, and Nuria from 25 July to 7 August.
-
-The LUMEN demonstration planned for 23 July cannot remain on that date because Lucía is the technical lead and Elena must approve the script. Moving it to 16 July is proposed. The SILEX review on the 20th can proceed with Javier and Mireia. ARIADNA closure should move forward to the 17th so Nuria can complete infrastructure verification before her leave.
-
-Rosa will update calendars and confirm external-partner availability. Documents requiring approval from a person who will be absent must circulate at least four working days in advance. No production deployments will be scheduled during the week of 27 July.

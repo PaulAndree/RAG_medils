@@ -1,5 +1,0 @@
-One hundred and twenty answers with citation problems were analyzed. In forty-six cases, the citation supports part of the answer but not the stated exception. Thirty-one cite an earlier document version, twenty-four contain the correct evidence in an unlinked neighboring chunk, and nineteen combine two facts while providing only one citation.
-
-Multi-hop answers must provide evidence for every required fact. When a rule and its exception come from the same document, two passages may be cited. Temporal questions must cite the version valid for the requested date rather than merely the most similar document.
-
-A post-generation check is proposed to decompose the answer into claims and verify citation coverage. Tomás will prepare the evaluation set, and Pablo will review the presentation of multiple sources. An answer with correct content but incomplete evidence will not be considered fully faithful.

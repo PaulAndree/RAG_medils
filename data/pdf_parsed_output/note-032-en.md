@@ -1,5 +1,0 @@
-The working sheets showed three different figures: 2,350, 2,324, and 2,302 questions. The first included drafts and duplicates identified after the initial freeze. The second excluded drafts but still contained twenty-two items without validated evidence. The correct count after rebuilding the split is 2,302 valid questions.
-
-Official distribution: 1,840 training, 230 development, and 232 test questions. Each bilingual question is counted as one semantic item with two language versions; the corpus therefore contains 4,604 question records across the ES/EN files. Reports must clearly state whether they count semantic questions or per-language records.
-
-Report v1.0 uses 2,350 and must be corrected. Clara will update the tracking table, and Tomás will add an automated count check. The figure of 2,302 is approved for report v1.1 unless later validation removes items because of evidence errors.

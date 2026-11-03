@@ -1,1 +1,0 @@
-Fourth VERDANT temporal data-quality analysis to close pilot metrics, document transformations and exceptions, and preserve a reproducible version of aggregated data and authorized results.

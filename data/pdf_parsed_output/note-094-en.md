@@ -1,5 +1,0 @@
-There are four active ethics cases. The VERDANT amendment for 15-minute data is approved on condition that aggregation occurs before export. ARIADNA user evaluation is waiting for the final information and consent text. LUMEN must confirm how transcripts containing personal names will be handled. A doctoral study on internal conversations has not yet submitted a minimization plan.
-
-The only immediate blocker affects ARIADNA: participant recruitment cannot begin without consent approval. LUMEN may continue with test data but may not publish real transcripts. The doctoral study may not access chats until the plan is complete.
-
-Héctor will review ARIADNA on 12 May and send comments on LUMEN. Clara will maintain a register containing status, conditions, owner, and next-action date. A conditional approval will not be marked closed until compliance with its conditions has been demonstrated.

@@ -1,1 +1,0 @@
-Fourth VERDANT monitoring review to check the transition to audit mode, verify initial revocations and deletions, and confirm that no new transfers occur after closure.

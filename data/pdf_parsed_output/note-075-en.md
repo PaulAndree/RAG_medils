@@ -1,5 +1,0 @@
-Eighty questions labeled unanswerable were reviewed. Forty-nine genuinely lack evidence in the corpus, fourteen can be answered after the current version of a source is ingested, and seventeen were misclassified because the answer appeared in a related note or email.
-
-A question will be unanswerable when the requested fact is absent, its temporal reference cannot be resolved, or the source supports only speculative inference. An insufficient initially retrieved passage is not enough. Annotation must check related documents and versions before making the decision.
-
-The fourteen recoverable cases will remain outside the set until the new ingestion is complete. The seventeen classification errors will be corrected and undergo a second review. Pablo will add examples of genuine absence, contradictory evidence, and excessive ambiguity to the guide. The expected answer for an unanswerable case will be explicit and will not invent an estimate.

@@ -1,5 +1,0 @@
-The current set contains 42% direct factual questions, 21% temporal, 18% multi-hop, 11% document-version comparisons, and 8% unanswerable questions. Difficulty distribution is 39% easy, 44% medium, and 17% advanced.
-
-Procurement and travel questions are overrepresented, while ethics, hiring, and data management have limited coverage. There are also fewer advanced cases in English than in Spanish because some paraphrases were not translated after deduplication.
-
-The proposal is to add sixty semantic questions: twenty on ethics and data protection, fifteen on hiring, fifteen on data management, and ten on infrastructure. At least half should be temporal or multi-hop. New questions will be created as ES/EN pairs and assigned to a partition only after deduplication and evidence review.

@@ -1,1 +1,0 @@
-Fourth demonstrator-design session to close the 2026 cycle, separate the published snapshot from the operational version and approve a maintenance and improvement roadmap for 2027.

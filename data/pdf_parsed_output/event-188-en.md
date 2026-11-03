@@ -1,1 +1,0 @@
-First hiring-planning session to identify NEXUS technical and scientific role needs, separate urgent replacements from 2027 growth and link each proposal to confirmed funding.

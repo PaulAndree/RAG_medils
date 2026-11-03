@@ -1,5 +1,0 @@
-Six completed trips have incomplete documentation. Two are missing boarding passes, one accommodation invoice does not contain the traveler's name, two advances have not yet been settled, and one trip includes a duplicated allowance.
-
-Rosa will contact each person and set an internal deadline of 5 June. When no boarding pass exists, an airline certificate or equivalent evidence may be accepted under the current policy. The accommodation invoice must be corrected; a payment receipt does not replace an invoice. Duplicate allowances will be removed before settlement is submitted.
-
-Cases will remain open until accounting validates the documents. Clara will update the travel balance only after reimbursements and final expenses have been recorded. A new advance will not be approved for a person who has an overdue unsettled advance without justification.

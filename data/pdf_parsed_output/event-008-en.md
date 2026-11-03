@@ -1,1 +1,0 @@
-Second SILEX mapping-validation session to check the new municipal export, measure rule coverage and determine whether the catalogue can be stabilized before 30 April.

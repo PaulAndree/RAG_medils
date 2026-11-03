@@ -1,1 +1,0 @@
-Second unanswerable-question review to incorporate user findings, adjust explanations and clarifications, and define a maintenance set for ARIADNA v2.2 without modifying the v2.1 snapshot.

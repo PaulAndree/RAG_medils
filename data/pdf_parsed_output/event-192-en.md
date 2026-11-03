@@ -1,1 +1,0 @@
-Second infrastructure-capacity review to assign final-quarter windows and reserves, assess concurrent workloads and prepare project preservation and closure.

@@ -1,1 +1,0 @@
-Fourth administrative and budget review to update summer expenditure, confirm Yara's extension, fund the autumn pilots and prepare final-quarter deliverables, travel and procurement.

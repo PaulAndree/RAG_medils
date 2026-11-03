@@ -1,9 +1,0 @@
-[
-  {
-    "id": "note-027-en_chunk_1_arg_1",
-    "claim": "This difference confirms that the original run was inflated.",
-    "evidence": [
-      "With the new split, BM25 reaches recall@10 of 0.69 and the hybrid system 0.80. The previous hybrid value of 0.94 cannot be reproduced without the duplicates."
-    ]
-  }
-]

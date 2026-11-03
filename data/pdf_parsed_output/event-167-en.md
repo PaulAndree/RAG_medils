@@ -1,1 +1,0 @@
-Third ARIADNA annotation-adjudication session to resolve cases with conflicting current sources, approve the fifth abstention reason and close the examples and rules in guide 1.3.

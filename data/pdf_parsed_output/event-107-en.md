@@ -1,1 +1,0 @@
-Second SILEX deployment-preparation session to close the pre-production checklist, confirm municipal training and support, review recovery and agree criteria for promotion to the stable environment.
