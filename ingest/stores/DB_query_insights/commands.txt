@@ -1,0 +1,96 @@
+docker compose exec -T postgres \
+  psql -v ON_ERROR_STOP=1 -U raguser -d ragdb \
+  < stores/DB_query_insights/inspect.sql 
+
+
+
+docker compose exec postgres psql -U raguser -d ragdb
+
+List tables:
+\dt
+
+Describe a table:
+\d documents
+\d chunks
+
+List indexes:
+\di
+
+
+SELECT *
+FROM chunks
+WHERE document_id = '536b93c0-78a9-5fb1-a4ee-444eb6012cd6';
+
+
+4. Inspect documents
+Show every document:
+SELECT
+    id,
+    source_key,
+    name,
+    version,
+    language,
+    index_status
+FROM documents;
+Filter by source key:
+SELECT *
+FROM documents
+WHERE source_key = 'example';
+
+
+5. Inspect passage chunks
+Show the first ten chunks without printing their full content:
+SELECT
+    id,
+    document_id,
+    chunk_index,
+    title,
+    token_count,
+    page_start,
+    page_end
+FROM chunks
+ORDER BY document_id, chunk_index
+LIMIT 10;
+
+6. Inspect argument chunks and arguments
+Show arguments that have evidence:
+SELECT
+    id,
+    claim,
+    jsonb_array_length(evidence) AS evidence_count
+FROM arguments
+WHERE jsonb_array_length(evidence) > 0;
+
+7. Inspect entities and relations
+Show the number of entities and relations extracted from each chunk:
+SELECT
+    chunk_id,
+    jsonb_array_length(entities) AS entity_count,
+    jsonb_array_length(relations) AS relation_count
+FROM entities
+ORDER BY chunk_id;
+
+8. Inspect summaries
+Count summaries at each level:
+SELECT level, scope, count(*)
+FROM summaries
+GROUP BY level, scope
+ORDER BY level, scope;
+Show summary previews:
+SELECT
+    node_id,
+    level,
+    scope,
+    left(summary_text, 250) AS preview
+FROM summaries
+ORDER BY level, node_id;
+
+Only document-level summaries:
+SELECT node_id, summary_text
+FROM summaries
+WHERE scope = 'document';
+
+Only catalog summaries:
+SELECT node_id, catalog_id, summary_text
+FROM summaries
+WHERE scope = 'catalog';

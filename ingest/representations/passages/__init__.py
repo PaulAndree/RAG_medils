@@ -1,0 +1,1 @@
+"""Passage representation builder."""

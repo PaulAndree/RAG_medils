@@ -1,5 +1,7 @@
+name: rag-medils
+
 services:
-  api:
+  api-medils:
     build: .
     command:
       - uvicorn
@@ -12,29 +14,42 @@ services:
       QDRANT_URL: http://qdrant:6333
       QDRANT_COLLECTION: documents_embeddings_live
       POSTGRES_HOST: postgres
+      EMBEDDING_URL: http://vectorizer:8089/embed
+      OLLAMA_BASE_URL: http://host.docker.internal:11436
+      DOCUMENT_PATH_PREFIX: ${RAG_MEDILS_SOURCE_ROOT:-/home/peyzaguirre/learning/RAG_medils}
+      DOCUMENT_ROOT: /documents
+    volumes:
+      - ./data:/documents/data:ro
+      - ./data_all_EN:/documents/data_all_EN:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - default
+      - n8n-net
     ports:
-      - "127.0.0.1:8002:8000"
+      - "127.0.0.1:${RAG_MEDILS_API_PORT:-8004}:8000"
     restart: unless-stopped
     depends_on:
       - postgres
       - qdrant
 
-  indexer:
+  summary-indexer:
     build: .
     command:
       - python
       - -m
-      - sql_rag.indexer
+      - indexing.summaries.indexer_qdrant
     environment:
+      PUSHGATEWAY_URL: http://pushgateway:9091
       QDRANT_URL: http://qdrant:6333
-      QDRANT_ALIAS: documents_embeddings_live
-      QDRANT_COLLECTION_PREFIX: documents_embeddings
       POSTGRES_HOST: postgres
     profiles:
       - jobs
     depends_on:
       - postgres
+      - pushgateway
       - qdrant
+
   postgres:
     image: postgres:16
     environment:
@@ -42,38 +57,70 @@ services:
       POSTGRES_USER: raguser
       POSTGRES_PASSWORD: ragpass
     ports:
-      - "5432:5432"
+      - "127.0.0.1:${RAG_MEDILS_POSTGRES_PORT:-5433}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   qdrant:
     image: qdrant/qdrant:latest
     ports:
-      - "6335:6333"
-      - "6336:6334"
+      - "127.0.0.1:${RAG_MEDILS_QDRANT_HTTP_PORT:-6337}:6333"
+      - "127.0.0.1:${RAG_MEDILS_QDRANT_GRPC_PORT:-6338}:6334"
     volumes:
       - qdrant_data:/qdrant/storage
+
+  neo4j:
+    image: neo4j:2026.09.0
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-ragpassword}
+    ports:
+      - "127.0.0.1:${RAG_MEDILS_NEO4J_HTTP_PORT:-7477}:7474"
+      - "127.0.0.1:${RAG_MEDILS_NEO4J_BOLT_PORT:-7690}:7687"
+    volumes:
+      - neo4j_data:/data
+    restart: unless-stopped
+
   prometheus:
     image: prom/prometheus:latest
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
     ports:
-      - "127.0.0.1:9090:9090"
+      - "127.0.0.1:${RAG_MEDILS_PROMETHEUS_PORT:-9092}:9090"
     depends_on:
-      - api
+      - api-medils
+      - pushgateway
+
+  pushgateway:
+    image: prom/pushgateway:latest
+    command:
+      - --persistence.file=/pushgateway/metrics.db
+      - --persistence.interval=30s
+    ports:
+      - "127.0.0.1:${RAG_MEDILS_PUSHGATEWAY_PORT:-9093}:9091"
+    volumes:
+      - pushgateway_data:/pushgateway
+    restart: unless-stopped
 
   grafana:
     image: grafana/grafana:latest
     ports:
-      - "3003:3000"
+      - "127.0.0.1:${RAG_MEDILS_GRAFANA_PORT:-3004}:3000"
     volumes:
       - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
     depends_on:
       - prometheus
 
 volumes:
   postgres_data:
   prometheus_data:
+  pushgateway_data:
   grafana_data:
   qdrant_data:
+  neo4j_data:
+  
+networks:
+  n8n-net:
+    external: true
