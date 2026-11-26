@@ -18,9 +18,7 @@ services:
       OLLAMA_BASE_URL: http://host.docker.internal:11436
       DOCUMENT_PATH_PREFIX: ${RAG_MEDILS_SOURCE_ROOT:-/home/peyzaguirre/learning/RAG_medils}
       DOCUMENT_ROOT: /documents
-    volumes:
-      - ./data:/documents/data:ro
-      - ./data_all_EN:/documents/data_all_EN:ro
+
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:

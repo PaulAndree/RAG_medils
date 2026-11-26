@@ -13,6 +13,8 @@ tests/*
 !tests/test_ingest_api.py
 !tests/test_ingest_processing.py
 !tests/test_ingest_integration.py
+!tests/test_corpus_loader.py
+!tests/test_experiment_metrics.py
 
 # Python-generated files
 __pycache__/

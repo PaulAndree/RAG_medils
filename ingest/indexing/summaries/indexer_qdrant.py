@@ -22,6 +22,7 @@ PUSHGATEWAY_URL = os.getenv("PUSHGATEWAY_URL", "http://localhost:9091")
 
 ACTIVE_ALIAS = "summaries_embeddings_live"
 COLLECTION_PREFIX = "summaries_embeddings"
+EMBEDDING_BATCH_SIZE = int(os.getenv("INDEX_EMBEDDING_BATCH_SIZE", "128"))
 DENSE_VECTOR = "dense"
 SPARSE_VECTOR = "sparse"
 
@@ -40,6 +41,41 @@ def summary_embedding_text(summary):
         return f"{title}\n\n{summary['summary_text']}"
 
     return summary["summary_text"]
+
+
+def _person(value):
+    if isinstance(value, dict):
+        return value.get("name") or value.get("email")
+    return value if isinstance(value, str) else None
+
+
+def document_payload(summary):
+    """Source-record metadata for single-document nodes; provenance only for catalogs.
+
+    Rows without the corpus join fields (legacy callers) add nothing.
+    """
+
+    if "source_dataset_ids" not in summary:
+        return {}
+    payload = {"source_dataset_ids": summary["source_dataset_ids"]}
+    metadata = summary.get("document_metadata")
+    if summary["scope"] == "catalog" or not isinstance(metadata, dict):
+        return payload
+    record_metadata = metadata.get("metadata")
+    record_metadata = record_metadata if isinstance(record_metadata, dict) else {}
+    payload.update({
+        "dataset_id": summary.get("dataset_id"),
+        "doc_type": metadata.get("type"),
+        "language": summary.get("document_language") or metadata.get("language"),
+        "tags": metadata.get("tags") or [],
+        "related": metadata.get("related") or [],
+        "doc_author": (
+            _person(record_metadata.get("author"))
+            or _person(record_metadata.get("from"))
+        ),
+        "metadata": record_metadata,
+    })
+    return payload
 
 
 def build_collection_name():
@@ -109,6 +145,14 @@ def create_collection(collection_name):
         wait=True,
     )
 
+    for field_name in ("dataset_id", "doc_type", "scope"):
+        client.create_payload_index(
+            collection_name=collection_name,
+            field_name=field_name,
+            field_schema=models.PayloadSchemaType.KEYWORD,
+            wait=True,
+        )
+
     print(
         f"Created collection {collection_name} "
         f"with vector size {DENSE_VECTOR_SIZE}"
@@ -120,8 +164,14 @@ def index_summaries(collection_name, summaries):
     vectors = []
     payloads = []
     texts = [summary_embedding_text(summary) for summary in summaries]
-    dense_vectors = embed_texts(texts, DENSE_MODEL)
-    sparse_vectors = embed_texts(texts, SPARSE_MODEL)
+    dense_vectors = []
+    sparse_vectors = []
+    for start in range(0, len(texts), EMBEDDING_BATCH_SIZE):
+        batch = texts[start:start + EMBEDDING_BATCH_SIZE]
+        dense_vectors.extend(embed_texts(batch, DENSE_MODEL))
+        sparse_vectors.extend(embed_texts(batch, SPARSE_MODEL))
+        if len(texts) > EMBEDDING_BATCH_SIZE:
+            print(f"[indexing] embedded {min(start + EMBEDDING_BATCH_SIZE, len(texts))}/{len(texts)}")
 
     for each_summary, dense_vector, sparse_vector in zip(
         summaries,
@@ -167,6 +217,7 @@ def index_summaries(collection_name, summaries):
                 "source_node_ids": each_summary["source_node_ids"],
                 "source_chunk_ids": each_summary["source_chunk_ids"],
                 "source_document_ids": each_summary["source_document_ids"],
+                **document_payload(each_summary),
             }
         )
 

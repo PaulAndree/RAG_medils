@@ -150,10 +150,16 @@ class RaptorParsingTests(unittest.TestCase):
         with self.assertRaisesRegex(InputValidationError, "source_key"):
             validate_summary_references(tuple(summaries), self.documents)
 
-    def test_passage_only_is_not_a_complete_representation(self):
+    def test_single_passage_is_an_independent_unit(self):
+        # Emails/events/notes/tasks: one passage and no summaries is complete.
         summaries = prepare_summaries(self.root / "summaries")
+        validate_summary_references(summaries[:1], self.documents)
+
+    def test_several_passages_require_a_document_summary(self):
+        summaries = prepare_summaries(self.root / "summaries")
+        passage = replace(summaries[0], node_id="extra", chunk_index=1, source_chunk_ids=("extra",))
         with self.assertRaisesRegex(InputValidationError, "document summary"):
-            validate_summary_references(summaries[:1], self.documents)
+            validate_summary_references((summaries[0], passage), self.documents)
 
     def test_unknown_document_is_rejected(self):
         summaries = prepare_summaries(self.root / "summaries")

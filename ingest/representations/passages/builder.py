@@ -16,7 +16,7 @@ from RAG_medils.ingest.representations.common import StageResult
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DATA_ROOT = PROJECT_ROOT / "ingest" / "data"
 CHUNKING_URL = os.getenv("CHUNKING_URL", "http://localhost:8085")
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11436")
 OLLAMA_GENERATION_MODEL = os.getenv("OLLAMA_GENERATION_MODEL", "qwen3:14b")
 OLLAMA_NUM_CTX = int(os.getenv("OLLAMA_NUM_CTX", "16384"))
 SHORT_DOCUMENT_TOKEN_LIMIT = 500
@@ -98,13 +98,23 @@ def _summarize_short_document(content: str, source: Path) -> tuple[str, int]:
     return summary, output_tokens
 
 
-def chunk_document(markdown_file: Path) -> dict[str, Any]:
-    """Chunk one Markdown document and return the validated API payload."""
+def chunk_document(
+    markdown_file: Path,
+    *,
+    single_unit: bool | None = None,
+) -> dict[str, Any]:
+    """Chunk one Markdown document and return the validated API payload.
+
+    ``single_unit`` selects one independent passage (summarized only when it
+    exceeds the short-document limit). ``None`` keeps the filename-prefix rule.
+    """
 
     content = markdown_file.read_text(encoding="utf-8")
-    if markdown_file.stem.startswith(
-        ("chat-", "email-", "event-", "note-")
-    ):
+    if single_unit is None:
+        single_unit = markdown_file.stem.startswith(
+            ("chat-", "email-", "event-", "note-")
+        )
+    if single_unit:
         token_count = len(content.split())
         if token_count >= SHORT_DOCUMENT_TOKEN_LIMIT:
             content, token_count = _summarize_short_document(

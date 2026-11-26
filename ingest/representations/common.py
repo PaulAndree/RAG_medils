@@ -15,6 +15,9 @@ class DocumentInput:
     catalog_id: str
     title: str
     has_summary: bool = False
+    # True: one independent passage, no summaries. False: RAPTOR hierarchy.
+    # None keeps the legacy filename-prefix rule used by the upload API.
+    single_unit: bool | None = None
 
 
 @dataclass(frozen=True, slots=True)

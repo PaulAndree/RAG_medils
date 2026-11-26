@@ -329,12 +329,26 @@ def get_indexable_summaries() -> list[dict[str, Any]]:
             s.token_count,
             s.source_node_ids,
             s.source_chunk_ids,
-            s.source_document_ids
+            s.source_document_ids,
+            d.source_key AS dataset_id,
+            d.language AS document_language,
+            d.metadata AS document_metadata
         FROM summaries AS s
+        LEFT JOIN documents AS d ON d.id = s.document_id
         ORDER BY s.level, s.node_id
     """
 
     with get_connection() as conn:
         with conn.cursor(row_factory=dict_row) as cursor:
             cursor.execute(query)
-            return cursor.fetchall()
+            rows = cursor.fetchall()
+            cursor.execute("SELECT id::text AS id, source_key FROM documents")
+            source_keys = {row["id"]: row["source_key"] for row in cursor.fetchall()}
+    for row in rows:
+        # Dataset ids of every contributing document (catalog nodes have many).
+        row["source_dataset_ids"] = sorted(
+            source_keys[document_id]
+            for document_id in row["source_document_ids"]
+            if document_id in source_keys
+        )
+    return rows

@@ -414,6 +414,9 @@ def validate_summary_references(
     for document_id, document_nodes in by_document.items():
         passages = [node for node in document_nodes if node.scope == "passage"]
         roots = [node for node in document_nodes if node.scope == "document"]
+        if len(passages) == 1 and len(document_nodes) == 1:
+            # Independent unit (email, event, note, task): one passage, no summaries.
+            continue
         if not passages or len(roots) != 1:
             raise InputValidationError(f"{document_id}: require passages and exactly one document summary")
         if len({node.catalog_id for node in document_nodes}) != 1:
@@ -426,5 +429,8 @@ def validate_summary_references(
     for catalog_id, catalog_nodes in by_catalog.items():
         roots = [node for node in catalog_nodes if node.scope == "catalog"]
         document_roots = {node.node_id for node in catalog_nodes if node.scope == "document"}
+        if not roots and not document_roots:
+            # Only independent units: nothing to summarize across documents.
+            continue
         if len(roots) != 1 or not document_roots or set(roots[0].source_node_ids) != document_roots:
             raise InputValidationError(f"{catalog_id}: require one catalog summary covering all document summaries")

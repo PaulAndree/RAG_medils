@@ -1,3 +1,4 @@
+import os
 from typing import Annotated, TypedDict
 
 from langchain_core.messages import AnyMessage
@@ -34,11 +35,22 @@ def create_graph(checkpointer):
         checkpointer=checkpointer
     )
 
+QUERY_REWRITE_ENABLED = os.getenv("QUERY_REWRITE_ENABLED", "false").lower() in {"1", "true", "yes"}
+
+
 async def analyze_query(question:str):
-    # Query rewritting and date filtering if exists
-    query_analyzed = await rewrite_query(question)
-    
-    return query_analyzed
+    """Return the search query and date filters.
+
+    Query rewriting is disabled by default: the question is searched verbatim
+    with no date filters. Set QUERY_REWRITE_ENABLED=true to restore it.
+    """
+    if not QUERY_REWRITE_ENABLED:
+        return {
+            "query": question,
+            "createdDate_greater_than": None,
+            "createdDate_less_than": None,
+        }
+    return await rewrite_query(question)
 async def retrieve(state: RAGState):
     query_analyzed  = await analyze_query(state["messages"][-1].content)
     question = query_analyzed["query"]
@@ -61,7 +73,8 @@ async def generate(state: RAGState):
     context = "\n\n".join(
         f"summary_text: {summary['summary_text']}\n"
         f"createdDateTime: {summary.get('createdDateTime') or 'Unknown'}\n"
-        f"title_document: {summary.get('title') or 'Untitled'}\n"
+        f"title_document: {summary.get('document_title') or summary.get('title') or 'Untitled'}\n"
+        f"doc_type: {summary.get('doc_type') or 'Unknown'}\n"
         f"doc_author: {summary.get('doc_author') or 'Unknown'}\n"
         for summary in state["summaries"]
     )

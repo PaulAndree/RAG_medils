@@ -287,7 +287,7 @@ async def health():
 
 @app.post("/retrieve", response_model=list[ScoredPoint], tags=["Evaluation"])
 async def retrieve(body: RetrievalRequest, user: CurrentUser):
-    """Rewrite the query, apply extracted date filters, and return ranked Qdrant points without answer generation."""
+    """Return ranked Qdrant points without answer generation (query rewrite only if QUERY_REWRITE_ENABLED)."""
     analyzed = await analyze_query(body.query)
     return await run_in_threadpool(
         search_summaries,

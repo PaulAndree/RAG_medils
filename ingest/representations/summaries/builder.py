@@ -200,7 +200,7 @@ def load_documents(
             )
             continue
 
-        data = chunk_document(path)
+        data = chunk_document(path, single_unit=document.single_unit)
         if registered_documents is None:
             catalog_id = _catalog_id(document_id, data)
         contents = data.get("chunk_list")
