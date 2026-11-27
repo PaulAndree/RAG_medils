@@ -10,7 +10,7 @@ This repository evaluates a Retrieval-Augmented Generation (RAG) system that use
 | Resource | Description |
 | --- | --- |
 | `data/*.json` | 6,142 pre-parsed records in six types: `document` (1,925), `email` (1,817), `chat` (846), `note` (777), `event` (399), `task` (378). Records are mostly Spanish. Each has `id`, `type`, `title`, `language`, `tags`, `related`, `metadata`, and `content`. No OCR is required. |
-| `evaluation/questions_easy.json` | 558 English questions (a cross-lingual setting). Each has a reference answer, `relevant_doc_ids`, and, for 398 questions, gold `evidence` text spans. The remaining 160 questions have computed answers with no verbatim span. |
+| `evaluation/questions_easy.json` | 578 English questions (a cross-lingual setting), all answerable from content text. Each question lists the **facts** its answer needs (962 in total). Each fact lists every place that states it (`alternatives`: a `doc_id` and, for text alternatives, the exact span). |
 
 Both resources are distributed separately and are excluded from version control.
 
@@ -52,27 +52,43 @@ Query rewriting is disabled, so each question is searched verbatim, with no date
 
 ## 3. Evaluation protocol
 
-Each question is issued verbatim and the top *k* = 10 retrieved nodes are scored.
+Each question is issued verbatim and the top *k* = 10 retrieved nodes are scored. Ten nodes cover 7.9 distinct records on average.
 
-**Document-level metrics.** Each node is mapped to its record id: chunks and single-document summaries map to their own `dataset_id`. Duplicate ids are removed in rank order. The catalog node covers the whole corpus and is not attributable to one record, so it is excluded from the ranking and its retrieval rate is reported separately. Relevance is binary with respect to `relevant_doc_ids`. All 558 questions are scored.
+**Document-level metrics.** Each node is mapped to its record id, and duplicate ids are removed in rank order. The catalog node covers the whole corpus and is not attributable to one record, so it is excluded from the ranking. Any `doc_id` among a question's alternatives is relevant. Alternatives are unordered and equivalent, so retrieving one of them suffices.
 
 | Metric | Definition |
 | --- | --- |
 | Hit@10 | 1 if any relevant record is in the top 10 |
-| Recall@10 | fraction of relevant records found in the top 10 |
 | MRR@10 | reciprocal rank of the first relevant record |
-| MAP@10 | average precision at the relevant ranks, normalized by the number of relevant records |
-| nDCG@10 | DCG with log₂ discount, normalized by the ideal DCG |
+| nDCG@10 | binary DCG with the ideal ranking taken as one relevant record at rank 1, i.e. 1/log₂(rank + 1) of the first hit |
 
-**Evidence-level metrics.** A gold `evidence.text` span is *found* if it appears as a substring of a retrieved node's text. Before matching, both texts are case-folded, whitespace is collapsed, and `**` is removed. For independent units the full serialized record is used, since over-limit units are stored as summaries. Text Evidence Recall@10 is the fraction of a question's spans that are found. Text Evidence Hit@10 indicates whether at least one span is found. Only the 398 questions with spans are scored. A lenient variant (`*_via_sources`) also matches against the source chunks of retrieved summaries.
+Document recall and MAP are not reported. Both divide by the number of relevant records, which varies from 1 to 859 per question, so they would penalize redundancy rather than retrieval quality.
 
-Scores are averaged over questions. Each run writes `summary.json` (overall results, and breakdowns by retrieval type, reasoning type, and relevant record type) and `per_question.jsonl` to `evaluation/results/<timestamp>/`.
+**Evidence-level metrics.** A fact is *found* if the `text` of any of its alternatives occurs in the text of a retrieved node, or in the source chunks of a retrieved summary. Both texts are case-folded before matching, whitespace is collapsed, and `**` is removed. For independent units the full serialized record is used. Text Evidence Recall@10 is the fraction of a question's facts that are found, and Text Evidence Hit@10 indicates whether at least one fact is found. A *strict* variant ignores the source chunks of summaries.
+
+Scores are averaged over questions. Each run writes `summary.json` (overall results, and breakdowns by answer type, retrieval type, reasoning type, and record type) and `per_question.jsonl` to `evaluation/results/<timestamp>/`. The evaluator also accepts the earlier `relevant_doc_ids` format.
 
 Answer correctness is not evaluated. The metrics measure retrieval only.
 
-## 4. Reproduction
+## 4. Results (rag/v2)
 
-### 4.1 Services
+578 questions, 16,172 indexed nodes. The detailed report is in [`evaluation/informe_rag_v2.md`](evaluation/informe_rag_v2.md) (in Spanish).
+
+| Metric | Value |
+| --- | --- |
+| Document Hit@10 | 0.891 |
+| Document MRR@10 | 0.698 |
+| Document nDCG@10 | 0.745 |
+| Text Evidence Recall@10 | 0.781 |
+| Text Evidence Hit@10 | 0.830 |
+| Text Evidence Recall@10 (strict) | 0.714 |
+| Text Evidence Hit@10 (strict) | 0.791 |
+
+A relevant record is retrieved for 89% of questions, usually at rank 1 or 2. Evidence recall drops for questions that need several facts: 0.39 when `retrieval_type` is `multiple` and 0.30 when `reasoning_type` is `implicit`. The catalog node was never retrieved.
+
+## 5. Reproduction
+
+### 5.1 Services
 
 | Service | Default address |
 | --- | --- |
@@ -84,7 +100,7 @@ Answer correctness is not evaluated. The metrics measure retrieval only.
 | Retrieval and chat API (FastAPI) | `127.0.0.1:8005` |
 | Chat UI (Next.js) | `127.0.0.1:3007` |
 
-### 4.2 Experiment CLI
+### 5.2 Experiment CLI
 
 Run all commands from the directory that contains `RAG_medils/`, using the project's virtual environment.
 
@@ -106,7 +122,7 @@ python -m RAG_medils.experiment create-user USERNAME   # chat UI account for the
 nohup python -u -m RAG_medils.experiment run > run.log 2>&1 &
 ```
 
-### 4.3 Chat interface
+### 5.3 Chat interface
 
 After indexing, start the API, then the UI (`npx next dev -H 127.0.0.1 -p 3007` in the UI project). Log in with an account created by `create-user`.
 
@@ -117,7 +133,7 @@ DOCUMENT_PATH_PREFIX=$PWD/RAG_medils/ingest/data \
 
 `DOCUMENT_PATH_PREFIX` lets the interface open source documents. `QUERY_REWRITE_ENABLED=true` restores LLM query rewriting.
 
-## 5. Repository layout
+## 6. Repository layout
 
 | Path | Content |
 | --- | --- |
@@ -128,9 +144,9 @@ DOCUMENT_PATH_PREFIX=$PWD/RAG_medils/ingest/data \
 | `retrieval_and_generation/` | Hybrid search, LangGraph workflow, chat API |
 | `tests/` | Unit tests (`python -m unittest RAG_medils/tests/<module>.py`) |
 
-## 6. Limitations
+## 7. Limitations
 
-- Each question has a single gold relevant record. Records that are needed only to compute an answer (`answer_doc_ids`) do not count as relevant.
+- Text evidence is matched on normalized text rather than character offsets, and a span counts in any retrieved node. Very short spans, such as amounts, may therefore match in unrelated records.
 - Summaries are produced by an LLM and may be written in English for Spanish sources. The independent units longer than 500 words (about 2% of them) are stored as summaries, not verbatim text.
 - One catalog summary spans the whole corpus. It is frequently retrieved, but it cannot be attributed to individual records.
 

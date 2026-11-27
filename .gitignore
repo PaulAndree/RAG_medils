@@ -7,7 +7,8 @@ data_DOC_ES/
 data/
 data_all_EN/
 representations.log
-evaluation/
+evaluation/*
+!evaluation/informe_rag_v2.md
 tests/*
 !tests/test_stores_raptor.py
 !tests/test_ingest_api.py

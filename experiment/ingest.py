@@ -149,6 +149,13 @@ def _load_checkpoint(work_dir: Path, document: CorpusDocument) -> dict[str, Any]
         return None
     if data.get("text_hash") != document.text_hash or data.get("single_unit") != document.single_unit:
         return None  # source text or strategy changed: rebuild
+    if any(
+        not isinstance(node.get("text"), str) or not node["text"].strip()
+        for nodes in data.get("levels", {}).values()
+        for node in nodes
+    ):
+        print(f"[ingest] {document.dataset_id}: checkpoint has a blank node; rebuilding")
+        return None
     return data
 
 

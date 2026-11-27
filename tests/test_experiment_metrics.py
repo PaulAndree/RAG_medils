@@ -10,6 +10,8 @@ from RAG_medils.experiment.evaluate import (
     ranked_dataset_ids,
     recall_at_k,
     hit_at_k,
+    ndcg_first_hit_at_k,
+    question_targets,
     score_question,
 )
 
@@ -47,7 +49,7 @@ class RankingTests(unittest.TestCase):
         self.assertEqual(ranked_dataset_ids(points), ["d1", "d2"])
 
     def test_evidence_normalizes_markdown_and_whitespace(self):
-        recall, hit = evidence_scores(["| Valor  estimado | 38.600,00 € |", "missing"],
+        recall, hit = evidence_scores([["| Valor  estimado | 38.600,00 € |"], ["missing"]],
                                       ["**| Valor estimado | 38.600,00 € |**"])
         self.assertEqual((recall, hit), (0.5, 1.0))
 
@@ -67,10 +69,47 @@ class RankingTests(unittest.TestCase):
                              unit_texts={"email1": "... original wording ..."},
                              chunk_texts={"c1": "a chunk detail here"})
         self.assertEqual(row["doc_hit@10"], 1.0)
-        self.assertEqual(row["evidence_recall@10"], 0.5)
-        self.assertEqual(row["evidence_recall_via_sources@10"], 1.0)
+        self.assertEqual(row["evidence_recall_strict@10"], 0.5)
+        self.assertEqual(row["evidence_recall@10"], 1.0)
         summary = aggregate([row])
         self.assertEqual(summary["doc_mrr@10"], 1.0)
+
+
+class FactsFormatTests(unittest.TestCase):
+    question = {
+        "id": "q2", "question": "?",
+        "evidence": [
+            {"alternatives": [
+                {"doc_id": "pcap2", "kind": "text", "text": "38.600,00 €"},
+                {"doc_id": "email33", "kind": "metadata", "field": "metadata.to"},
+            ]},
+            {"alternatives": [{"doc_id": "note6", "kind": "text", "text": "plazo de 15 días"}]},
+        ],
+    }
+
+    def test_relevant_set_is_every_alternative_doc(self):
+        question_format, relevant, facts = question_targets(self.question)
+        self.assertEqual(question_format, "facts")
+        self.assertEqual(relevant, {"pcap2", "email33", "note6"})
+        self.assertEqual(facts, [["38.600,00 €"], ["plazo de 15 días"]])
+
+    def test_ndcg_ideal_is_one_record_at_rank_one(self):
+        relevant = {f"d{i}" for i in range(50)}
+        self.assertEqual(ndcg_first_hit_at_k(["d1", "x"], relevant, 10), 1.0)
+        self.assertAlmostEqual(ndcg_first_hit_at_k(["x", "y", "d3"], relevant, 10), 0.5)
+        self.assertEqual(ndcg_first_hit_at_k(["x"], relevant, 10), 0.0)
+
+    def test_any_alternative_in_any_node_counts(self):
+        points = [
+            {"scope": "passage", "level": 0, "dataset_id": "other_doc", "summary_text": "Importe: 38.600,00 €"},
+            {"scope": "passage", "level": 0, "dataset_id": "email33", "summary_text": "..."},
+        ]
+        row = score_question(self.question, points, k=10, unit_texts={}, chunk_texts={})
+        self.assertEqual(row["doc_hit@10"], 1.0)
+        self.assertEqual(row["doc_mrr@10"], 0.5)  # other_doc is not relevant; email33 is at rank 2
+        self.assertEqual(row["evidence_recall@10"], 0.5)
+        self.assertEqual(row["evidence_hit@10"], 1.0)
+        self.assertNotIn("doc_recall@10", row)
 
 
 if __name__ == "__main__":

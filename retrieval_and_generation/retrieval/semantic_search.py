@@ -6,7 +6,7 @@ from qdrant_client import QdrantClient, models
 
 from RAG_medils.ingest.indexing.embedding_api import DENSE_MODEL, SPARSE_MODEL, embed_texts
 
-from metrics import RETRIEVAL_DURATION
+from RAG_medils.metrics import RETRIEVAL_DURATION
 
 
 QDRANT_URL = os.getenv("QDRANT_URL", "http://127.0.0.1:6337")

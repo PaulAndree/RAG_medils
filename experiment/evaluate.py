@@ -1,15 +1,24 @@
 """Retrieval evaluation over the benchmark questions (k = 10 by default).
 
-Document metrics rank the dataset ids of the top-k retrieved nodes:
-chunks and single-document summaries map to their own record id. The single
-catalog (corpus-level) node spans every document, so it is not attributable
-to one id and is skipped (its retrieval rate is reported).
+Two question formats are supported:
 
-Text evidence: a gold ``evidence.text`` span is found when its normalized
-text is a substring of a top-k node's own text. For independent units
-(email/event/note/task) the full rendered record is used, since an over-limit
-unit is stored as a summary. ``*_via_sources`` variants also accept a span
-found in the source chunks of a retrieved summary.
+* **facts** (current benchmark export): ``evidence`` is a list of facts, each
+  with ``alternatives`` — every place that states the fact (``doc_id`` and,
+  for text alternatives, the exact ``text``). Alternatives are unordered and
+  equivalent: any one of them suffices.
+* **legacy**: ``relevant_doc_ids`` plus ``evidence`` items with ``doc_id`` and
+  ``text``.
+
+Document metrics rank the record ids of the top-k nodes (duplicates removed,
+catalog node skipped). In the facts format the relevant set is every
+``doc_id`` of any alternative; Hit, MRR and nDCG use an ideal of one relevant
+record at rank 1, since retrieving any one of them answers the question.
+
+Text evidence: a fact is found when the normalized ``text`` of any of its
+alternatives is a substring of the text of a top-k node, or of the source
+chunks of a retrieved summary ("via sources"). Independent units
+(email/event/note/task) are matched on their full rendered record.
+Recall = facts found / facts; Hit = at least one fact found.
 """
 
 from __future__ import annotations
@@ -56,22 +65,45 @@ def map_at_k(ranked: Sequence[str], relevant: set[str], k: int) -> float:
     return total / len(relevant)
 
 
-def ndcg_at_k(ranked: Sequence[str], relevant: set[str], k: int) -> float:
+def ndcg_at_k(
+    ranked: Sequence[str],
+    relevant: set[str],
+    k: int,
+    *,
+    ideal_relevant: int | None = None,
+) -> float:
+    """Binary nDCG. ``ideal_relevant`` caps the ideal ranking (1 = any one record suffices)."""
+
     dcg = sum(
         1.0 / math.log2(rank + 1)
         for rank, doc in enumerate(ranked[:k], start=1)
         if doc in relevant
     )
-    ideal = sum(1.0 / math.log2(rank + 1) for rank in range(1, min(len(relevant), k) + 1))
-    return dcg / ideal
+    ideal_count = min(len(relevant) if ideal_relevant is None else ideal_relevant, k)
+    ideal = sum(1.0 / math.log2(rank + 1) for rank in range(1, ideal_count + 1))
+    return min(dcg / ideal, 1.0)
 
 
-DOCUMENT_METRICS: dict[str, Callable[[Sequence[str], set[str], int], float]] = {
+def ndcg_first_hit_at_k(ranked: Sequence[str], relevant: set[str], k: int) -> float:
+    """nDCG with the ideal ranking = one relevant record at rank 1."""
+
+    for rank, doc in enumerate(ranked[:k], start=1):
+        if doc in relevant:
+            return 1.0 / math.log2(rank + 1)
+    return 0.0
+
+
+LEGACY_DOCUMENT_METRICS: dict[str, Callable[[Sequence[str], set[str], int], float]] = {
     "hit": hit_at_k,
     "recall": recall_at_k,
     "ndcg": ndcg_at_k,
     "mrr": mrr_at_k,
     "map": map_at_k,
+}
+FACTS_DOCUMENT_METRICS: dict[str, Callable[[Sequence[str], set[str], int], float]] = {
+    "hit": hit_at_k,
+    "mrr": mrr_at_k,
+    "ndcg": ndcg_first_hit_at_k,
 }
 
 
@@ -81,14 +113,30 @@ def normalize_text(text: str) -> str:
     return re.sub(r"\s+", " ", text.replace("**", "")).strip().casefold()
 
 
-def evidence_scores(spans: Sequence[str], texts: Iterable[str]) -> tuple[float, float]:
-    """(recall, hit) of the evidence spans within the given texts."""
+def evidence_scores(facts: Sequence[Sequence[str]], texts: Iterable[str]) -> tuple[float, float]:
+    """(recall, hit) over facts; a fact is found when any one of its texts appears."""
 
     haystack = [normalize_text(text) for text in texts]
-    found = sum(
-        1 for span in spans if any(normalize_text(span) in text for text in haystack)
-    )
-    return found / len(spans), float(found > 0)
+    found = 0
+    for alternatives in facts:
+        needles = {normalize_text(text) for text in alternatives if text and text.strip()}
+        if any(needle in text for needle in needles for text in haystack):
+            found += 1
+    return found / len(facts), float(found > 0)
+
+
+def question_targets(question: dict[str, Any]) -> tuple[str, set[str], list[list[str]]]:
+    """(format, relevant record ids, evidence facts as lists of alternative texts)."""
+
+    evidence = question.get("evidence") or []
+    if any(isinstance(item, dict) and "alternatives" in item for item in evidence):
+        alternatives = [item.get("alternatives") or [] for item in evidence]
+        relevant = {alt["doc_id"] for alts in alternatives for alt in alts if alt.get("doc_id")}
+        facts = [[alt["text"] for alt in alts if alt.get("text")] for alts in alternatives]
+        return "facts", relevant, [fact for fact in facts if fact]
+    relevant = set(question.get("relevant_doc_ids") or [])
+    facts = [[item["text"]] for item in evidence if isinstance(item, dict) and item.get("text")]
+    return "legacy", relevant, facts
 
 
 def ranked_dataset_ids(points: Sequence[dict[str, Any]]) -> list[str]:
@@ -122,14 +170,19 @@ def score_question(
 ) -> dict[str, Any]:
     points = list(points[:k])
     ranked = ranked_dataset_ids(points)
-    relevant = set(question.get("relevant_doc_ids") or [])
+    question_format, relevant, facts = question_targets(question)
     row: dict[str, Any] = {
         "id": question["id"],
         "question": question["question"],
+        "format": question_format,
         "retrieval_type": question.get("retrieval_type"),
         "reasoning_type": question.get("reasoning_type"),
+        "answer_type": question.get("answer_type"),
         "relevant_doc_ids": sorted(relevant),
         "retrieved_doc_ids": ranked,
+        "first_relevant_rank": next(
+            (rank for rank, doc in enumerate(ranked, start=1) if doc in relevant), None
+        ),
         "retrieved_nodes": [
             {
                 "node_id": point.get("node_id"),
@@ -143,11 +196,11 @@ def score_question(
         "catalog_retrieved": any(point.get("scope") == "catalog" for point in points),
     }
     if relevant:
-        for name, metric in DOCUMENT_METRICS.items():
+        metrics = FACTS_DOCUMENT_METRICS if question_format == "facts" else LEGACY_DOCUMENT_METRICS
+        for name, metric in metrics.items():
             row[f"doc_{name}@{k}"] = metric(ranked, relevant, k)
 
-    spans = [item["text"] for item in question.get("evidence") or [] if item.get("text")]
-    if spans:
+    if facts:
         own_texts: list[str] = []
         source_texts: list[str] = []
         for point in points:
@@ -161,12 +214,15 @@ def score_question(
                 for chunk_id in point.get("source_chunk_ids") or []
                 if chunk_id in chunk_texts and point.get("scope") != "catalog"
             )
-        recall, hit = evidence_scores(spans, own_texts)
+        row["facts"] = len(facts)
+        # Headline: retrieved text plus the source chunks of retrieved summaries.
+        recall, hit = evidence_scores(facts, [*own_texts, *source_texts])
         row[f"evidence_recall@{k}"] = recall
         row[f"evidence_hit@{k}"] = hit
-        recall, hit = evidence_scores(spans, [*own_texts, *source_texts])
-        row[f"evidence_recall_via_sources@{k}"] = recall
-        row[f"evidence_hit_via_sources@{k}"] = hit
+        # Strict: only the retrieved nodes' own text.
+        recall, hit = evidence_scores(facts, own_texts)
+        row[f"evidence_recall_strict@{k}"] = recall
+        row[f"evidence_hit_strict@{k}"] = hit
     return row
 
 
@@ -256,18 +312,19 @@ def run_evaluation(
             if index % 25 == 0 or index == len(questions):
                 print(f"[evaluate] {index}/{len(questions)} questions ({time.perf_counter() - started:.0f}s)", flush=True)
 
-    def relevant_type(row: dict[str, Any]) -> str:
-        kinds = sorted({record_types.get(doc, "unknown") for doc in row["relevant_doc_ids"]})
-        return "+".join(kinds) or "none"
+    def first_relevant_type(row: dict[str, Any]) -> str:
+        retrieved = [doc for doc in row["retrieved_doc_ids"] if doc in set(row["relevant_doc_ids"])]
+        return record_types.get(retrieved[0], "unknown") if retrieved else "not_found"
 
     summary = {
         "questions_file": str(questions_path),
         "tenant_id": tenant_id,
         "k": k,
         "overall": aggregate(rows),
+        "by_answer_type": _breakdown(rows, lambda row: str(row["answer_type"])),
         "by_retrieval_type": _breakdown(rows, lambda row: str(row["retrieval_type"])),
         "by_reasoning_type": _breakdown(rows, lambda row: str(row["reasoning_type"])),
-        "by_relevant_doc_type": _breakdown(rows, relevant_type),
+        "by_first_relevant_record_type": _breakdown(rows, first_relevant_type),
     }
     (run_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     print_summary(summary["overall"], k)
@@ -284,12 +341,13 @@ def print_summary(overall: dict[str, Any], k: int) -> None:
         ("Document MAP", f"doc_map@{k}"),
         ("Text Evidence Recall", f"evidence_recall@{k}"),
         ("Text Evidence Hit", f"evidence_hit@{k}"),
-        ("Text Evidence Recall (via sources)", f"evidence_recall_via_sources@{k}"),
-        ("Text Evidence Hit (via sources)", f"evidence_hit_via_sources@{k}"),
+        ("Text Evidence Recall (strict)", f"evidence_recall_strict@{k}"),
+        ("Text Evidence Hit (strict)", f"evidence_hit_strict@{k}"),
     ]
     print(f"\n{'Metric':<40}{'Value':>8}{'n':>6}")
     for label, key in labels:
         value = overall.get(key)
-        shown = f"{value:.4f}" if isinstance(value, float) else "-"
-        print(f"{label + '@' + str(k):<40}{shown:>8}{overall.get('n_' + key, 0):>6}")
+        if value is None:
+            continue  # metric not defined for this question format
+        print(f"{label + '@' + str(k):<40}{value:>8.4f}{overall.get('n_' + key, 0):>6}")
     print(f"{'Catalog node retrieved (rate)':<40}{overall.get('catalog_retrieved_rate') or 0:>8.4f}\n")

@@ -61,6 +61,7 @@ MIN_NODES_FOR_NEXT_LEVEL = 10
 CLUSTER_THRESHOLD = 0.3
 REDUCTION_DIMENSION = 10
 RAPTOR_MAX_WORKERS = int(os.getenv("RAPTOR_MAX_WORKERS", "2"))
+SUMMARY_EMPTY_RETRIES = int(os.getenv("SUMMARY_EMPTY_RETRIES", "3"))
 
 if RAPTOR_MAX_WORKERS < 1:
     raise ValueError("RAPTOR_MAX_WORKERS must be at least 1")
@@ -384,16 +385,26 @@ def _invoke_summary(
     nodes: list[dict[str, Any]],
     summary_type: str,
 ) -> str:
-    with _LLM_SEMAPHORE:
-        response = _llm().invoke(
-            [
-                ("system", SYSTEM_PROMPT),
-                ("human", _summary_prompt(nodes, summary_type)),
-            ]
-        )
-    if not isinstance(response.content, str):
-        raise TypeError("The summarization model returned non-text content")
-    return response.content.strip()
+    # The model occasionally returns an empty message (e.g. when its whole
+    # generation budget goes to reasoning). Retry rather than store a blank node.
+    for attempt in range(1, SUMMARY_EMPTY_RETRIES + 1):
+        with _LLM_SEMAPHORE:
+            response = _llm().invoke(
+                [
+                    ("system", SYSTEM_PROMPT),
+                    ("human", _summary_prompt(nodes, summary_type)),
+                ]
+            )
+        if not isinstance(response.content, str):
+            raise TypeError("The summarization model returned non-text content")
+        text = response.content.strip()
+        if text:
+            return text
+        print(f"RAPTOR {summary_type}: empty summary (attempt {attempt}/{SUMMARY_EMPTY_RETRIES})")
+    raise RuntimeError(
+        f"The summarization model returned an empty {summary_type} summary "
+        f"{SUMMARY_EMPTY_RETRIES} times"
+    )
 
 
 def summarize(
